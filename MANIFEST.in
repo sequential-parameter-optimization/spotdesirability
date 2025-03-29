@@ -1,0 +1,11 @@
+include src/spotdesirability/data/*.csv
+include src/spotdesirability/data/*.json
+include src/spotdesirability/data/*.pkl
+include src/spotdesirability/hyperdict/*.json
+
+prune docs
+prune Figures.d
+prune lightning_logs
+prune notebooks
+prune runs
+prune runs_OLD
