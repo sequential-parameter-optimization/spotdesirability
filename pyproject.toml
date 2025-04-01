@@ -7,7 +7,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "spotdesirability"
-version = "0.0.3"
+version = "0.0.4"
 authors = [
   { name="T. Bartz-Beielstein", email="tbb@bartzundbartz.de" }
 ]
@@ -25,9 +25,6 @@ classifiers = [
 # PEP 621 dependencies declaration
 dependencies = [
   "build",
-  "captum",
-  "lightning>=2.0.0rc0",
-  "graphviz",
   "matplotlib",
   "mkdocs>=1.6.0",
   "mkdocs-material>=9.5.33",
@@ -39,20 +36,11 @@ dependencies = [
   "numpy",
   "nbformat",
   "pandas",
-  "plotly",
-  "PyQt6",
   "python-markdown-math",
   "pytorch-lightning>=1.4",
-  "scikit-learn",
   "scipy",
   "seaborn",
   "tabulate",
-  "tensorboard",
-  "torch",
-  "torch-tb-profiler",
-  "torchmetrics",
-  "torchvision",
-  "torchviz",
 ]
 # dynamic = ["version"]
 
