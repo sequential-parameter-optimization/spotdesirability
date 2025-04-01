@@ -1,7 +1,3 @@
-<p align="left">
-  <img height="200" src="img/spotLogo.png" alt="spot_logo">
-</p>
-
 # spotdesirability
 
 * `Python` implementation of the `R` package `desirability`, which provides  S3 classes for multivariate optimization using the desirability function by Derringer and Suich (1980).
