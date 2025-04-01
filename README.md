@@ -4,7 +4,13 @@
 
 # Installation
 
-* Installation can be done with `pip`: `pip install spotdesirability`
+* Installation can be done with `pip`: 
+
+```{bash}
+pip install spotdesirability
+```
+
+* Alternatively, you can clone the repository and install it manually.
 
 
 # Citation
