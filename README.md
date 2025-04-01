@@ -10,6 +10,23 @@
 
 * Installation can be done with `pip`: `pip install spotdesirability`
 
+
+# Citation
+
+```bibtex
+@misc{bartz25a,
+      title={Multi-Objective Optimization and Hyperparameter Tuning With Desirability Functions}, 
+      author={Thomas Bartz-Beielstein},
+      year={2025},
+      eprint={2503.23595},
+      archivePrefix={arXiv},
+      primaryClass={math.OC},
+      url={https://arxiv.org/abs/2503.23595}, 
+}
+```
+
+
+
 # References
 
 ## Desirability functions
