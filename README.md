@@ -27,6 +27,11 @@ pip install spotdesirability
 }
 ```
 
+# Documentation
+
+* The documentation is available at: [https://sequential-parameter-optimization.github.io/spotdesirability/](https://sequential-parameter-optimization.github.io/spotdesirability/)
+
+
 # References
 
 ## Desirability functions
