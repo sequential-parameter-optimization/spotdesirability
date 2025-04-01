@@ -21,8 +21,6 @@
 }
 ```
 
-
-
 # References
 
 ## Desirability functions
