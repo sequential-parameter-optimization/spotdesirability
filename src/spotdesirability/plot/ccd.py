@@ -1,14 +1,23 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from spotpython.plot.utils import save_or_show_plot
 
 
-def plotCCD(elev=20, azim=30)-> None:
+def plotCCD(elev=20, azim=30, figsize=(10, 8), filename=None, title="Central Composite Design (CCD) for k=3") -> None:
     """
     Plots a Central Composite Design (CCD) for k=3 with customizable viewpoint.
 
     Args:
-        elev (int): Elevation angle in the z-plane for the 3D plot.
-        azim (int): Azimuthal angle in the x,y-plane for the 3D plot.
+        elev (int):
+            Elevation angle in the z-plane for the 3D plot.
+        azim (int):
+            Azimuthal angle in the x,y-plane for the 3D plot.
+        figsize (tuple):
+            Size of the figure (width, height) in inches. Defaults to (10, 8).
+        filename (str, optional):
+            The name of the file to save the plot. If None, the plot will be shown instead. Supported formats: 'pdf', 'png'.
+        title (str):
+            Title of the plot. Defaults to "Central Composite Design (CCD) for k=3".
 
     Returns:
         None
@@ -35,7 +44,7 @@ def plotCCD(elev=20, azim=30)-> None:
     center_point = np.array([[0, 0, 0]])
 
     # Plot the CCD
-    fig = plt.figure(figsize=(10, 8))
+    fig = plt.figure(figsize=figsize)
     ax = fig.add_subplot(111, projection="3d")
 
     # Plot factorial points
@@ -65,13 +74,13 @@ def plotCCD(elev=20, azim=30)-> None:
     ax.set_xlabel("X1")
     ax.set_ylabel("X2")
     ax.set_zlabel("X3")
-    ax.set_title("Central Composite Design (CCD) for k=3")
+    if title is not None:
+        ax.set_title(title)
 
     # Set the viewpoint
     ax.view_init(elev=elev, azim=azim)
 
-    # Add legend
-    ax.legend()
+    # Add legend outside the plot
+    ax.legend(bbox_to_anchor=(1.05, 1), loc="upper left", borderaxespad=0)
 
-    # Show the plot
-    plt.show()
+    save_or_show_plot(plt, filename)

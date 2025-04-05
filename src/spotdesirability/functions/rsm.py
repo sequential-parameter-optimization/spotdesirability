@@ -56,16 +56,22 @@ def activity_pred(x) -> float:
     return 59.85 + 3.583 * x[0] + 0.2546 * x[1] + 2.2298 * x[2] + 0.83479 * x[0] ** 2 + 0.07484 * x[1] ** 2 + 0.05716 * x[2] ** 2 - 0.3875 * x[0] * x[1] - 0.375 * x[0] * x[2] + 0.3125 * x[1] * x[2]
 
 
-def rsm_opt(x, d_object, prediction_funcs, space="square") -> float:
+def rsm_opt(x, d_object, prediction_funcs, space="square", alpha=1.682) -> float:
     """
     Optimization function to calculate desirability.
     Optimizers minimize, so we return negative desirability.
 
     Args:
-        x (list or np.ndarray): Input parameters (e.g., time, temperature, catalyst).
-        d_object (DOverall): Overall desirability object.
-        prediction_funcs (list of callables): List of prediction functions to calculate outcomes.
-        space (str): Design space ("square" or "circular").
+        x (list or np.ndarray):
+            Input parameters (e.g., time, temperature, catalyst).
+        d_object (DOverall):
+            Overall desirability object.
+        prediction_funcs (list of callables):
+            List of prediction functions to calculate outcomes.
+        space (str):
+            Design space ("square" or "circular").
+        alpha (float):
+            Axial distance for the design space. Default is 1.682 for a rotatable CCD.
 
     Returns:
         float: Negative desirability.
@@ -74,8 +80,7 @@ def rsm_opt(x, d_object, prediction_funcs, space="square") -> float:
         ValueError: If `space` is not "square" or "circular".
 
     Examples:
-        >>> from spotdesirability.utils.desirability import DOverall, rsm_opt, DTarget
-        >>> from spotdesirability.utils.desirability import conversion_pred, activity_pred
+        >>> from spotdesirability.utils.desirability import DOverall, rsm_opt, DTarget, conversion_pred, activity_pred
         >>> d_object = DOverall(DTarget(0, 0.5, 1), DTarget(0, 0.5, 1))
         >>> prediction_funcs = [conversion_pred, activity_pred]
         >>> x = [1.0, 2.0, 3.0]
@@ -85,10 +90,10 @@ def rsm_opt(x, d_object, prediction_funcs, space="square") -> float:
     """
     # Apply space constraints first. We use 1.682 = (2^3)^(1/4), see Mont01 a, p.457, as the limit for both circular and square spaces.
     if space == "circular":
-        if np.sqrt(np.sum(np.array(x) ** 2)) > 1.682:
+        if np.sqrt(np.sum(np.array(x) ** 2)) > alpha:
             return 0.0
     elif space == "square":
-        if np.any(np.abs(np.array(x)) > 1.682):
+        if np.any(np.abs(np.array(x)) > alpha):
             return 0.0
     else:
         raise ValueError("space must be 'square' or 'circular'")
