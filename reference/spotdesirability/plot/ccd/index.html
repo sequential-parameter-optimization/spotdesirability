@@ -962,7 +962,7 @@
 
 
 <h2 id="spotdesirability.plot.ccd.plotCCD" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">plotCCD</span><span class="p">(</span><span class="n">elev</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">azim</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">plotCCD</span><span class="p">(</span><span class="n">elev</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">azim</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Central Composite Design (CCD) for k=3&#39;</span><span class="p">)</span></code>
 
 <a href="#spotdesirability.plot.ccd.plotCCD" class="headerlink" title="Permanent link">&para;</a></h2>
 
@@ -1011,6 +1011,48 @@
                   <code>30</code>
             </td>
           </tr>
+          <tr class="doc-section-item">
+            <td><code>figsize</code></td>
+            <td>
+                  <code>tuple</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Size of the figure (width, height) in inches. Defaults to (10, 8).</p>
+              </div>
+            </td>
+            <td>
+                  <code>(10, 8)</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>filename</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name of the file to save the plot. If None, the plot will be shown instead. Supported formats: &lsquo;pdf&rsquo;, &lsquo;png&rsquo;.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>title</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Title of the plot. Defaults to &ldquo;Central Composite Design (CCD) for k=3&rdquo;.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;Central Composite Design (CCD) for k=3&#39;</code>
+            </td>
+          </tr>
       </tbody>
     </table>
 
@@ -1039,8 +1081,7 @@
 
             <details class="quote">
               <summary>Source code in <code>spotdesirability/plot/ccd.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 5</span>
-<span class="normal"> 6</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 6</span>
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
@@ -1111,13 +1152,30 @@
 <span class="normal">74</span>
 <span class="normal">75</span>
 <span class="normal">76</span>
-<span class="normal">77</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">plotCCD</span><span class="p">(</span><span class="n">elev</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">azim</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span><span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">plotCCD</span><span class="p">(</span><span class="n">elev</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">azim</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Central Composite Design (CCD) for k=3&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Plots a Central Composite Design (CCD) for k=3 with customizable viewpoint.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        elev (int): Elevation angle in the z-plane for the 3D plot.</span>
-<span class="sd">        azim (int): Azimuthal angle in the x,y-plane for the 3D plot.</span>
+<span class="sd">        elev (int):</span>
+<span class="sd">            Elevation angle in the z-plane for the 3D plot.</span>
+<span class="sd">        azim (int):</span>
+<span class="sd">            Azimuthal angle in the x,y-plane for the 3D plot.</span>
+<span class="sd">        figsize (tuple):</span>
+<span class="sd">            Size of the figure (width, height) in inches. Defaults to (10, 8).</span>
+<span class="sd">        filename (str, optional):</span>
+<span class="sd">            The name of the file to save the plot. If None, the plot will be shown instead. Supported formats: &#39;pdf&#39;, &#39;png&#39;.</span>
+<span class="sd">        title (str):</span>
+<span class="sd">            Title of the plot. Defaults to &quot;Central Composite Design (CCD) for k=3&quot;.</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        None</span>
@@ -1144,7 +1202,7 @@
     <span class="n">center_point</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
 
     <span class="c1"># Plot the CCD</span>
-    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">)</span>
     <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s2">&quot;3d&quot;</span><span class="p">)</span>
 
     <span class="c1"># Plot factorial points</span>
@@ -1174,16 +1232,16 @@
     <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;X1&quot;</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;X2&quot;</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s2">&quot;X3&quot;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Central Composite Design (CCD) for k=3&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">title</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
 
     <span class="c1"># Set the viewpoint</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">view_init</span><span class="p">(</span><span class="n">elev</span><span class="o">=</span><span class="n">elev</span><span class="p">,</span> <span class="n">azim</span><span class="o">=</span><span class="n">azim</span><span class="p">)</span>
 
-    <span class="c1"># Add legend</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="c1"># Add legend outside the plot</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">,</span> <span class="n">borderaxespad</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
-    <span class="c1"># Show the plot</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="n">save_or_show_plot</span><span class="p">(</span><span class="n">plt</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
             </details>
     </div>
