@@ -2,6 +2,20 @@ import numpy as np
 import pytest
 from spotdesirability.utils.desirability import DOverall, DMax, DMin, DTarget, DArb, DBox, DCategorical
 
+
+def test_independent_objects():
+    """Test initialization of DMax with valid desirability objects."""
+    dmax_1 = DMax(low=0, high=10, scale=1)
+    dmax_2 = DMax(low=5, high=15, scale=2)
+    
+    assert dmax_1.low == 0
+    assert dmax_1.high == 10
+    assert dmax_1.scale == 1
+    assert dmax_2.low == 5
+    assert dmax_2.high == 15
+    assert dmax_2.scale == 2
+    assert dmax_1 != dmax_2  # Ensure they are independent objects
+ 
 def test_doverall_initialization():
     """Test initialization of DOverall with valid desirability objects."""
     dmax = DMax(low=0, high=10, scale=1)

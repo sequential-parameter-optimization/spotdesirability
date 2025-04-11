@@ -21,6 +21,10 @@ class DesirabilityBase:
         https://cran.r-project.org/package=desirability
     """
 
+    def __init__(self):
+        """Initializes the DesirabilityBase object."""
+        pass
+
     def print_class_attributes(self, indent=0):
         """
         Prints the attributes of the class object in a generic and recursive manner.
@@ -49,6 +53,47 @@ class DesirabilityBase:
         """Extend the range of values by a given factor."""
         range_span = max(values) - min(values)
         return [min(values) - factor * range_span, max(values) + factor * range_span]
+
+    def plot(self, add: bool = False, non_inform: bool = True, xlabel="Input", ylabel="Desirability", **kwargs: Dict[str, Any]) -> None:
+        """
+        Plots the continuous desirability functions, i.e., `DMax`, `DMin`, and `DTarget`.
+
+        Args:
+            add (bool, optional): Whether to add the plot to an existing figure. Defaults to False.
+            non_inform (bool, optional): Whether to display the non-informative value as a dashed line. Defaults to True.
+            **kwargs (Dict[str, Any]): Additional keyword arguments for the plot.
+
+        Examples:
+            >>> from spotdesirability.utils.desirability import DMax
+            >>> dmax = DMax(low=0, high=10, scale=1)
+            >>> dmax.plot()
+            >>> from spotdesirability.utils.desirability import DMin
+            >>> dmin = DMin(low=0, high=10, scale=1)
+            >>> dmin.plot()
+            >>> from spotdesirability.utils.desirability import DTarget
+            >>> dtarget = DTarget(low=0, target=5, high=10, low_scale=1, high_scale=1)
+            >>> dtarget.plot()
+            >>> from spotdesirability.utils.desirability import DArb
+            >>> x = [-5, 0, 5, 10]
+            >>> d = [0, 0.5, 1, 0.2]
+            >>> darb = DArb(x, d)
+            >>> darb.plot()
+        """
+        x_range = self.extend_range([self.low, self.high])
+        if not add:
+            plt.plot([], [])  # Create an empty plot
+            plt.xlim(x_range)
+            plt.ylim(0, 1)
+            plt.xlabel(xlabel)
+            plt.ylabel(ylabel)
+        plt.hlines(0, x_range[0], self.low, **kwargs)
+        plt.hlines(1, self.high, x_range[1], **kwargs)
+        input_values = np.linspace(self.low, self.high, 100)
+        output_values = self.predict(input_values)
+        plt.plot(input_values, output_values, **kwargs)
+        if non_inform:
+            plt.axhline(y=self.missing, linestyle="--", **kwargs)
+        plt.show()
 
 
 class DMax(DesirabilityBase):
@@ -82,16 +127,13 @@ class DMax(DesirabilityBase):
         >>> from spotdesirability.utils.desirability import DMax
         >>> import numpy as np
         >>> import matplotlib.pyplot as plt
-
         # Create a DMax object
         >>> dmax = DMax(low=0, high=10, scale=1)
-
         # Predict desirability for a range of inputs
         >>> inputs = np.array([-5, 0, 5, 10, 15])
         >>> desirability = dmax.predict(inputs)
         >>> print(desirability)
         [0. 0. 0.5 1. 1.]
-
         # Plot the desirability function
         >>> dmax.plot()
     """
@@ -111,6 +153,7 @@ class DMax(DesirabilityBase):
             ValueError: If `low` is greater than or equal to `high`.
             ValueError: If `scale` is less than or equal to 0.
         """
+        super().__init__()
         if low >= high:
             raise ValueError("The low value must be less than the high value.")
         if scale <= 0:
@@ -172,36 +215,6 @@ class DMax(DesirabilityBase):
             out[out == 0] = self.tol
         return out
 
-    def plot(self, add: bool = False, non_inform: bool = True, **kwargs: Dict[str, Any]) -> None:
-        """
-        Plots the desirability function.
-
-        Args:
-            add (bool, optional): Whether to add the plot to an existing figure. Defaults to False.
-            non_inform (bool, optional): Whether to display the non-informative value as a dashed line. Defaults to True.
-            **kwargs (Dict[str, Any]): Additional keyword arguments for the plot.
-
-        Examples:
-            >>> from spotdesirability.utils.desirability import DMax
-            >>> dmax = DMax(low=0, high=10, scale=1)
-            >>> dmax.plot()
-        """
-        x_range = self.extend_range([self.low, self.high])
-        if not add:
-            plt.plot([], [])  # Create an empty plot
-            plt.xlim(x_range)
-            plt.ylim(0, 1)
-            plt.xlabel("Input")
-            plt.ylabel("Desirability")
-        plt.hlines(0, x_range[0], self.low, **kwargs)
-        plt.hlines(1, self.high, x_range[1], **kwargs)
-        input_values = np.linspace(self.low, self.high, 100)
-        output_values = self.predict(input_values)
-        plt.plot(input_values, output_values, **kwargs)
-        if non_inform:
-            plt.axhline(y=self.missing, linestyle="--", **kwargs)
-        plt.show()
-
 
 class DMin(DesirabilityBase):
     """
@@ -234,16 +247,13 @@ class DMin(DesirabilityBase):
         >>> from spotdesirability.utils.desirability import DMin
         >>> import numpy as np
         >>> import matplotlib.pyplot as plt
-
         # Create a DMin object
         >>> dmin = DMin(low=0, high=10, scale=1)
-
         # Predict desirability for a range of inputs
         >>> inputs = np.array([-5, 0, 5, 10, 15])
         >>> desirability = dmin.predict(inputs)
         >>> print(desirability)
         [1. 1. 0.5 0. 0.]
-
         # Plot the desirability function
         >>> dmin.plot()
     """
@@ -263,6 +273,7 @@ class DMin(DesirabilityBase):
             ValueError: If `low` is greater than or equal to `high`.
             ValueError: If `scale` is less than or equal to 0.
         """
+        super().__init__()
         if low >= high:
             raise ValueError("The low value must be less than the high value.")
         if scale <= 0:
@@ -322,36 +333,6 @@ class DMin(DesirabilityBase):
         if self.tol is not None:
             out[out == 0] = self.tol
         return out
-
-    def plot(self, add: bool = False, non_inform: bool = True, **kwargs: Dict[str, Any]) -> None:
-        """
-        Plots the desirability function.
-
-        Args:
-            add (bool, optional): Whether to add the plot to an existing figure. Defaults to False.
-            non_inform (bool, optional): Whether to display the non-informative value as a dashed line. Defaults to True.
-            **kwargs: Additional keyword arguments for the plot.
-
-        Examples:
-            >>> from spotdesirability.utils.desirability import DMin
-            >>> dmin = DMin(low=0, high=10, scale=1)
-            >>> dmin.plot()
-        """
-        x_range = self.extend_range([self.low, self.high])
-        if not add:
-            plt.plot([], [])  # Create an empty plot
-            plt.xlim(x_range)
-            plt.ylim(0, 1)
-            plt.xlabel("Input")
-            plt.ylabel("Desirability")
-        plt.hlines(1, x_range[0], self.low, **kwargs)
-        plt.hlines(0, self.high, x_range[1], **kwargs)
-        input_values = np.linspace(self.low, self.high, 100)
-        output_values = self.predict(input_values)
-        plt.plot(input_values, output_values, **kwargs)
-        if non_inform:
-            plt.axhline(y=self.missing, linestyle="--", **kwargs)
-        plt.show()
 
 
 class DTarget(DesirabilityBase):
@@ -417,6 +398,7 @@ class DTarget(DesirabilityBase):
             ValueError: If `target` is greater than or equal to `high`.
             ValueError: If `low_scale` or `high_scale` is less than or equal to 0.
         """
+        super().__init__()
         if low >= high:
             raise ValueError("The low value must be less than the high value.")
         if low >= target:
@@ -486,36 +468,6 @@ class DTarget(DesirabilityBase):
             out[out == 0] = self.tol
         return out
 
-    def plot(self, add: bool = False, non_inform: bool = True, **kwargs: Dict[str, Any]) -> None:
-        """
-        Plots the desirability function.
-
-        Args:
-            add (bool, optional): Whether to add the plot to an existing figure. Defaults to False.
-            non_inform (bool, optional): Whether to display the non-informative value as a dashed line. Defaults to True.
-            **kwargs: Additional keyword arguments for the plot.
-
-        Examples:
-            >>> from spotdesirability.utils.desirability import DTarget
-            >>> dtarget = DTarget(low=0, target=5, high=10, low_scale=1, high_scale=1)
-            >>> dtarget.plot()
-        """
-        x_range = self.extend_range([self.low, self.high])
-        if not add:
-            plt.plot([], [])  # Create an empty plot
-            plt.xlim(x_range)
-            plt.ylim(0, 1)
-            plt.xlabel("Input")
-            plt.ylabel("Desirability")
-        plt.hlines(0, x_range[0], self.low, **kwargs)
-        plt.hlines(0, self.high, x_range[1], **kwargs)
-        input_values = np.linspace(self.low, self.high, 100)
-        output_values = self.predict(input_values)
-        plt.plot(input_values, output_values, **kwargs)
-        if non_inform:
-            plt.axhline(y=self.missing, linestyle="--", **kwargs)
-        plt.show()
-
 
 class DArb(DesirabilityBase):
     """
@@ -575,6 +527,7 @@ class DArb(DesirabilityBase):
             ValueError: If `x` and `d` do not have the same length.
             ValueError: If `x` or `d` has fewer than two values.
         """
+        super().__init__()
         if any(d > 1) or any(d < 0):
             raise ValueError("The desirability values must be 0 <= d <= 1.")
         if len(x) != len(d):
@@ -643,7 +596,7 @@ class DArb(DesirabilityBase):
             out[out == 0] = self.tol
         return out
 
-    def plot(self, add: bool = False, non_inform: bool = True, **kwargs: Dict[str, Any]) -> None:
+    def plot(self, add: bool = False, non_inform: bool = True, xlabel: str = "Input", ylabel: str = "Desirability", **kwargs: Dict[str, Any]) -> None:
         """
         Plots the desirability function.
 
@@ -664,8 +617,8 @@ class DArb(DesirabilityBase):
             plt.plot([], [])  # Create an empty plot
             plt.xlim(x_range)
             plt.ylim(0, 1)
-            plt.xlabel("Input")
-            plt.ylabel("Desirability")
+            plt.xlabel(xlabel)
+            plt.ylabel(ylabel)
         input_values = np.linspace(x_range[0], x_range[1], 100)
         output_values = self.predict(input_values)
         plt.plot(input_values, output_values, **kwargs)
@@ -727,6 +680,7 @@ class DBox(DesirabilityBase):
         Raises:
             ValueError: If `low` is greater than or equal to `high`.
         """
+        super().__init__()
         if low >= high:
             raise ValueError("The low value must be less than the high value.")
 
@@ -784,7 +738,7 @@ class DBox(DesirabilityBase):
             out[out == 0] = self.tol
         return out
 
-    def plot(self, add: bool = False, non_inform: bool = True, **kwargs: Dict[str, Any]) -> None:
+    def plot(self, add: bool = False, non_inform: bool = True, xlabel: str = "Input", ylabel: str = "Desirability", **kwargs: Dict[str, Any]) -> None:
         """
         Plots the desirability function.
 
@@ -803,8 +757,8 @@ class DBox(DesirabilityBase):
             plt.plot([], [])  # Create an empty plot
             plt.xlim(x_range)
             plt.ylim(0, 1)
-            plt.xlabel("Input")
-            plt.ylabel("Desirability")
+            plt.xlabel(xlabel)
+            plt.ylabel(ylabel)
         plt.hlines(0, x_range[0], self.low, **kwargs)
         plt.hlines(0, self.high, x_range[1], **kwargs)
         plt.vlines(self.low, 0, 1, **kwargs)
@@ -867,6 +821,7 @@ class DCategorical(DesirabilityBase):
             ValueError: If `values` has fewer than two entries.
             ValueError: If keys in `values` are not strings.
         """
+        super().__init__()
         if len(values) < 2:
             raise ValueError("'values' should have at least two values.")
         if not all(isinstance(k, str) for k in values.keys()):
@@ -930,7 +885,7 @@ class DCategorical(DesirabilityBase):
             out[out == 0] = self.tol
         return out
 
-    def plot(self, non_inform: bool = True, **kwargs: Dict[str, Any]) -> None:
+    def plot(self, non_inform: bool = True, xlabel: str = "Category", ylabel: str = "Desirability", **kwargs: Dict[str, Any]) -> None:
         """
         Plots the desirability function for the categorical inputs.
 
@@ -998,6 +953,7 @@ class DOverall(DesirabilityBase):
         Raises:
             ValueError: If any object is not an instance of a valid desirability class.
         """
+        super().__init__()
         valid_classes = (DMax, DMin, DTarget, DArb, DBox, DCategorical)
 
         if not all(isinstance(obj, valid_classes) for obj in d_objs):
