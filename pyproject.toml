@@ -13,13 +13,12 @@ authors = [
 ]
 description = "spotdesirability - a Python package for desirability"
 readme = "README.md"
-license = { text="GPL-2.0" }
+license = "GPL-2.0"
 requires-python = ">=3.10"
 classifiers = [
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
-  "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
   "Operating System :: OS Independent",
 ]
 # PEP 621 dependencies declaration
