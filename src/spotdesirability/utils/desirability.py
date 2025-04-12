@@ -84,6 +84,7 @@ class DesirabilityBase:
             plt.plot([], [])  # Create an empty plot
             plt.xlim(x_range)
             plt.ylim(0, 1)
+            plt.grid()
             plt.xlabel(xlabel)
             plt.ylabel(ylabel)
         plt.hlines(0, x_range[0], self.low, **kwargs)
