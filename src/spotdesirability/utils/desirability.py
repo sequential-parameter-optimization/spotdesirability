@@ -54,33 +54,43 @@ class DesirabilityBase:
         range_span = max(values) - min(values)
         return [min(values) - factor * range_span, max(values) + factor * range_span]
 
-    def plot(self, add: bool = False, non_inform: bool = True, xlabel="Input", ylabel="Desirability", **kwargs: Dict[str, Any]) -> None:
+    def plot(self, add: bool = False, non_inform: bool = True, xlabel="Input", ylabel="Desirability", figsize: tuple = (10, 8), **kwargs: Dict[str, Any]) -> None:
         """
         Plots the continuous desirability functions, i.e., `DMax`, `DMin`, and `DTarget`.
 
         Args:
-            add (bool, optional): Whether to add the plot to an existing figure. Defaults to False.
-            non_inform (bool, optional): Whether to display the non-informative value as a dashed line. Defaults to True.
-            **kwargs (Dict[str, Any]): Additional keyword arguments for the plot.
+            add (bool, optional):
+                Whether to add the plot to an existing figure. Defaults to False.
+            non_inform (bool, optional):
+                Whether to display the non-informative value as a dashed line. Defaults to True.
+            xlabel (str, optional):
+                Label for the x-axis. Defaults to "Input".
+            ylabel (str, optional):
+                Label for the y-axis. Defaults to "Desirability".
+            figsize (tuple, optional):
+                Size of the figure (width, height) in inches. Defaults to (10, 8).
+            **kwargs (Dict[str, Any]):
+                Additional keyword arguments for the plot.
 
         Examples:
             >>> from spotdesirability.utils.desirability import DMax
             >>> dmax = DMax(low=0, high=10, scale=1)
-            >>> dmax.plot()
+            >>> dmax.plot(figsize=(12, 6))  # Custom figure size
             >>> from spotdesirability.utils.desirability import DMin
             >>> dmin = DMin(low=0, high=10, scale=1)
-            >>> dmin.plot()
+            >>> dmin.plot()  # Default figure size
             >>> from spotdesirability.utils.desirability import DTarget
             >>> dtarget = DTarget(low=0, target=5, high=10, low_scale=1, high_scale=1)
-            >>> dtarget.plot()
+            >>> dtarget.plot(figsize=(8, 4))
             >>> from spotdesirability.utils.desirability import DArb
             >>> x = [-5, 0, 5, 10]
             >>> d = [0, 0.5, 1, 0.2]
             >>> darb = DArb(x, d)
-            >>> darb.plot()
+            >>> darb.plot(figsize=(15, 10))
         """
         x_range = self.extend_range([self.low, self.high])
         if not add:
+            plt.figure(figsize=figsize)  # Set the figure size
             plt.plot([], [])  # Create an empty plot
             plt.xlim(x_range)
             plt.ylim(0, 1)
@@ -597,24 +607,35 @@ class DArb(DesirabilityBase):
             out[out == 0] = self.tol
         return out
 
-    def plot(self, add: bool = False, non_inform: bool = True, xlabel: str = "Input", ylabel: str = "Desirability", **kwargs: Dict[str, Any]) -> None:
+    def plot(self, add: bool = False, non_inform: bool = True, xlabel: str = "Input", ylabel: str = "Desirability", figsize: tuple = (10, 8), **kwargs: Dict[str, Any]) -> None:
         """
-        Plots the desirability function.
+        Plots the arbitrary desirability function.
 
         Args:
-            add (bool, optional): Whether to add the plot to an existing figure. Defaults to False.
-            non_inform (bool, optional): Whether to display the non-informative value as a dashed line. Defaults to True.
-            **kwargs: Additional keyword arguments for the plot.
+            add (bool, optional):
+                Whether to add the plot to an existing figure. Defaults to False.
+            non_inform (bool, optional):
+                Whether to display the non-informative value as a dashed line. Defaults to True.
+            xlabel (str, optional):
+                Label for the x-axis. Defaults to "Input".
+            ylabel (str, optional):
+                Label for the y-axis. Defaults to "Desirability".
+            figsize (tuple, optional):
+                Size of the figure (width, height) in inches. Defaults to (10, 8).
+            **kwargs (Dict[str, Any]):
+                Additional keyword arguments for the plot.
 
         Examples:
             >>> from spotdesirability.utils.desirability import DArb
             >>> x = [-5, 0, 5, 10]
             >>> d = [0, 0.5, 1, 0.2]
             >>> darb = DArb(x, d)
-            >>> darb.plot()
+            >>> darb.plot()  # Default figure size
+            >>> darb.plot(figsize=(12, 6))  # Custom figure size
         """
         x_range = self.extend_range(self.x)
         if not add:
+            plt.figure(figsize=figsize)  # Set the figure size
             plt.plot([], [])  # Create an empty plot
             plt.xlim(x_range)
             plt.ylim(0, 1)
@@ -739,22 +760,33 @@ class DBox(DesirabilityBase):
             out[out == 0] = self.tol
         return out
 
-    def plot(self, add: bool = False, non_inform: bool = True, xlabel: str = "Input", ylabel: str = "Desirability", **kwargs: Dict[str, Any]) -> None:
+    def plot(self, add: bool = False, non_inform: bool = True, xlabel: str = "Input", ylabel: str = "Desirability", figsize: tuple = (10, 8), **kwargs: Dict[str, Any]) -> None:
         """
-        Plots the desirability function.
+        Plots the box-like desirability function.
 
         Args:
-            add (bool, optional): Whether to add the plot to an existing figure. Defaults to False.
-            non_inform (bool, optional): Whether to display the non-informative value as a dashed line. Defaults to True.
-            **kwargs: Additional keyword arguments for the plot.
+            add (bool, optional):
+                Whether to add the plot to an existing figure. Defaults to False.
+            non_inform (bool, optional):
+                Whether to display the non-informative value as a dashed line. Defaults to True.
+            xlabel (str, optional):
+                Label for the x-axis. Defaults to "Input".
+            ylabel (str, optional):
+                Label for the y-axis. Defaults to "Desirability".
+            figsize (tuple, optional):
+                Size of the figure (width, height) in inches. Defaults to (10, 8).
+            **kwargs (Dict[str, Any]):
+                Additional keyword arguments for the plot.
 
         Examples:
             >>> from spotdesirability.utils.desirability import DBox
             >>> dbox = DBox(low=-1.682, high=1.682)
-            >>> dbox.plot()
+            >>> dbox.plot()  # Default figure size
+            >>> dbox.plot(figsize=(12, 6))  # Custom figure size
         """
         x_range = self.extend_range([self.low, self.high])
         if not add:
+            plt.figure(figsize=figsize)  # Set the figure size
             plt.plot([], [])  # Create an empty plot
             plt.xlim(x_range)
             plt.ylim(0, 1)
@@ -886,22 +918,33 @@ class DCategorical(DesirabilityBase):
             out[out == 0] = self.tol
         return out
 
-    def plot(self, non_inform: bool = True, xlabel: str = "Category", ylabel: str = "Desirability", **kwargs: Dict[str, Any]) -> None:
+    def plot(self, non_inform: bool = True, xlabel: str = "Category", ylabel: str = "Desirability", figsize: tuple = (10, 8), **kwargs: Dict[str, Any]) -> None:
         """
         Plots the desirability function for the categorical inputs.
 
         Args:
-            non_inform (bool, optional): Whether to display the non-informative value as a dashed line. Defaults to True.
-            **kwargs: Additional keyword arguments for the plot.
+            non_inform (bool, optional):
+                Whether to display the non-informative value as a dashed line. Defaults to True.
+            xlabel (str, optional):
+                Label for the x-axis. Defaults to "Category".
+            ylabel (str, optional):
+                Label for the y-axis. Defaults to "Desirability".
+            figsize (tuple, optional):
+                Size of the figure (width, height) in inches. Defaults to (10, 8).
+            **kwargs (Dict[str, Any]):
+                Additional keyword arguments for the plot.
 
         Examples:
             >>> from spotdesirability.utils.desirability import DCategorical
             >>> values = {"A": 0.1, "B": 0.9, "C": 0.5}
             >>> dcat = DCategorical(values)
-            >>> dcat.plot()
+            >>> dcat.plot()  # Default figure size
+            >>> dcat.plot(figsize=(12, 6))  # Custom figure size
         """
+        plt.figure(figsize=figsize)  # Set the figure size
         plt.bar(range(len(self.values)), list(self.values.values()), tick_label=list(self.values.keys()), **kwargs)
-        plt.ylabel("Desirability")
+        plt.xlabel(xlabel)
+        plt.ylabel(ylabel)
         if non_inform:
             plt.axhline(y=self.missing, linestyle="--", **kwargs)
         plt.show()
