@@ -7,7 +7,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "spotdesirability"
-version = "0.0.9"
+version = "0.0.10"
 authors = [
   { name="T. Bartz-Beielstein", email="tbb@bartzundbartz.de" }
 ]
@@ -19,6 +19,7 @@ classifiers = [
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
   "Operating System :: OS Independent",
 ]
 # PEP 621 dependencies declaration
@@ -57,7 +58,7 @@ where = ["src"]
 
 [tool.black]
 line-length = 200
-target-version = ["py312"]
+target-version = ["py313"]
 
 [tool.pytest.ini_options]
 addopts = [
