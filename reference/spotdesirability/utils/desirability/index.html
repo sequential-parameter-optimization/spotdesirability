@@ -1952,7 +1952,7 @@ https://cran.r-project.org/package=desirability</p>
 </details>
 
 <p><span class="doc-section-title">Examples:</span></p>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability.utils.desirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DArb</span>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DArb</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="go"># Define input and desirability values</span>
@@ -2170,7 +2170,7 @@ https://cran.r-project.org/package=desirability</p>
 <span class="sd">        https://cran.r-project.org/package=desirability</span>
 
 <span class="sd">    Examples:</span>
-<span class="sd">        &gt;&gt;&gt; from spotdesirability.utils.desirability import DArb</span>
+<span class="sd">        &gt;&gt;&gt; from spotdesirability import DArb</span>
 <span class="sd">        &gt;&gt;&gt; import numpy as np</span>
 <span class="sd">        &gt;&gt;&gt; import matplotlib.pyplot as plt</span>
 <span class="sd">        # Define input and desirability values</span>
@@ -2240,7 +2240,7 @@ https://cran.r-project.org/package=desirability</p>
 <span class="sd">            (numpy.ndarray): The desirability values for the input data.</span>
 
 <span class="sd">        Examples:</span>
-<span class="sd">            &gt;&gt;&gt; from spotdesirability.utils.desirability import DArb</span>
+<span class="sd">            &gt;&gt;&gt; from spotdesirability import DArb</span>
 <span class="sd">            &gt;&gt;&gt; import numpy as np</span>
 <span class="sd">            # Define input and desirability values</span>
 <span class="sd">            &gt;&gt;&gt; x = [-5, 0, 5, 10]</span>
@@ -2290,7 +2290,7 @@ https://cran.r-project.org/package=desirability</p>
 <span class="sd">                Additional keyword arguments for the plot.</span>
 
 <span class="sd">        Examples:</span>
-<span class="sd">            &gt;&gt;&gt; from spotdesirability.utils.desirability import DArb</span>
+<span class="sd">            &gt;&gt;&gt; from spotdesirability import DArb</span>
 <span class="sd">            &gt;&gt;&gt; x = [-5, 0, 5, 10]</span>
 <span class="sd">            &gt;&gt;&gt; d = [0, 0.5, 1, 0.2]</span>
 <span class="sd">            &gt;&gt;&gt; darb = DArb(x, d)</span>
@@ -2654,7 +2654,7 @@ https://cran.r-project.org/package=desirability</p>
 
 
 <p><span class="doc-section-title">Examples:</span></p>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability.utils.desirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DArb</span>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DArb</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">darb</span> <span class="o">=</span> <span class="n">DArb</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
@@ -2723,7 +2723,7 @@ https://cran.r-project.org/package=desirability</p>
 <span class="sd">            Additional keyword arguments for the plot.</span>
 
 <span class="sd">    Examples:</span>
-<span class="sd">        &gt;&gt;&gt; from spotdesirability.utils.desirability import DArb</span>
+<span class="sd">        &gt;&gt;&gt; from spotdesirability import DArb</span>
 <span class="sd">        &gt;&gt;&gt; x = [-5, 0, 5, 10]</span>
 <span class="sd">        &gt;&gt;&gt; d = [0, 0.5, 1, 0.2]</span>
 <span class="sd">        &gt;&gt;&gt; darb = DArb(x, d)</span>
@@ -2836,7 +2836,7 @@ If None, an empty array is used. Defaults to None.</p>
 
 
 <p><span class="doc-section-title">Examples:</span></p>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability.utils.desirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DArb</span>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DArb</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="go"># Define input and desirability values</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
@@ -2906,7 +2906,7 @@ If None, an empty array is used. Defaults to None.</p>
 <span class="sd">        (numpy.ndarray): The desirability values for the input data.</span>
 
 <span class="sd">    Examples:</span>
-<span class="sd">        &gt;&gt;&gt; from spotdesirability.utils.desirability import DArb</span>
+<span class="sd">        &gt;&gt;&gt; from spotdesirability import DArb</span>
 <span class="sd">        &gt;&gt;&gt; import numpy as np</span>
 <span class="sd">        # Define input and desirability values</span>
 <span class="sd">        &gt;&gt;&gt; x = [-5, 0, 5, 10]</span>
@@ -3067,7 +3067,7 @@ https://cran.r-project.org/package=desirability</p>
 </details>
 
 <p><span class="doc-section-title">Examples:</span></p>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability.utils.desirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DBox</span>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DBox</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="go"># Create a DBox object</span>
@@ -3266,7 +3266,7 @@ https://cran.r-project.org/package=desirability</p>
 <span class="sd">        https://cran.r-project.org/package=desirability</span>
 
 <span class="sd">    Examples:</span>
-<span class="sd">        &gt;&gt;&gt; from spotdesirability.utils.desirability import DBox</span>
+<span class="sd">        &gt;&gt;&gt; from spotdesirability import DBox</span>
 <span class="sd">        &gt;&gt;&gt; import numpy as np</span>
 <span class="sd">        &gt;&gt;&gt; import matplotlib.pyplot as plt</span>
 <span class="sd">        # Create a DBox object</span>
@@ -3327,7 +3327,7 @@ https://cran.r-project.org/package=desirability</p>
 <span class="sd">            (numpy.ndarray): The desirability values for the input data.</span>
 
 <span class="sd">        Examples:</span>
-<span class="sd">            &gt;&gt;&gt; from spotdesirability.utils.desirability import DBox</span>
+<span class="sd">            &gt;&gt;&gt; from spotdesirability import DBox</span>
 <span class="sd">            &gt;&gt;&gt; import numpy as np</span>
 <span class="sd">            # Create a DBox object</span>
 <span class="sd">            &gt;&gt;&gt; dbox = DBox(low=-1.682, high=1.682)</span>
@@ -3370,7 +3370,7 @@ https://cran.r-project.org/package=desirability</p>
 <span class="sd">                Additional keyword arguments for the plot.</span>
 
 <span class="sd">        Examples:</span>
-<span class="sd">            &gt;&gt;&gt; from spotdesirability.utils.desirability import DBox</span>
+<span class="sd">            &gt;&gt;&gt; from spotdesirability import DBox</span>
 <span class="sd">            &gt;&gt;&gt; dbox = DBox(low=-1.682, high=1.682)</span>
 <span class="sd">            &gt;&gt;&gt; dbox.plot()  # Default figure size</span>
 <span class="sd">            &gt;&gt;&gt; dbox.plot(figsize=(12, 6))  # Custom figure size</span>
@@ -3702,7 +3702,7 @@ https://cran.r-project.org/package=desirability</p>
 
 
 <p><span class="doc-section-title">Examples:</span></p>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability.utils.desirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DBox</span>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DBox</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dbox</span> <span class="o">=</span> <span class="n">DBox</span><span class="p">(</span><span class="n">low</span><span class="o">=-</span><span class="mf">1.682</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mf">1.682</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dbox</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>  <span class="c1"># Default figure size</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dbox</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>  <span class="c1"># Custom figure size</span>
@@ -3769,7 +3769,7 @@ https://cran.r-project.org/package=desirability</p>
 <span class="sd">            Additional keyword arguments for the plot.</span>
 
 <span class="sd">    Examples:</span>
-<span class="sd">        &gt;&gt;&gt; from spotdesirability.utils.desirability import DBox</span>
+<span class="sd">        &gt;&gt;&gt; from spotdesirability import DBox</span>
 <span class="sd">        &gt;&gt;&gt; dbox = DBox(low=-1.682, high=1.682)</span>
 <span class="sd">        &gt;&gt;&gt; dbox.plot()  # Default figure size</span>
 <span class="sd">        &gt;&gt;&gt; dbox.plot(figsize=(12, 6))  # Custom figure size</span>
@@ -3882,7 +3882,7 @@ If None, an empty array is used. Defaults to None.</p>
 
 
 <p><span class="doc-section-title">Examples:</span></p>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability.utils.desirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DBox</span>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DBox</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="go"># Create a DBox object</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dbox</span> <span class="o">=</span> <span class="n">DBox</span><span class="p">(</span><span class="n">low</span><span class="o">=-</span><span class="mf">1.682</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mf">1.682</span><span class="p">)</span>
@@ -3943,7 +3943,7 @@ If None, an empty array is used. Defaults to None.</p>
 <span class="sd">        (numpy.ndarray): The desirability values for the input data.</span>
 
 <span class="sd">    Examples:</span>
-<span class="sd">        &gt;&gt;&gt; from spotdesirability.utils.desirability import DBox</span>
+<span class="sd">        &gt;&gt;&gt; from spotdesirability import DBox</span>
 <span class="sd">        &gt;&gt;&gt; import numpy as np</span>
 <span class="sd">        # Create a DBox object</span>
 <span class="sd">        &gt;&gt;&gt; dbox = DBox(low=-1.682, high=1.682)</span>
@@ -4085,7 +4085,7 @@ https://cran.r-project.org/package=desirability</p>
 </details>
 
 <p><span class="doc-section-title">Examples:</span></p>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability.utils.desirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DCategorical</span>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DCategorical</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="go"># Define desirability values for categories</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">values</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">:</span> <span class="mf">0.9</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">}</span>
@@ -4278,7 +4278,7 @@ https://cran.r-project.org/package=desirability</p>
 <span class="sd">        https://cran.r-project.org/package=desirability</span>
 
 <span class="sd">    Examples:</span>
-<span class="sd">        &gt;&gt;&gt; from spotdesirability.utils.desirability import DCategorical</span>
+<span class="sd">        &gt;&gt;&gt; from spotdesirability import DCategorical</span>
 <span class="sd">        &gt;&gt;&gt; import matplotlib.pyplot as plt</span>
 <span class="sd">        # Define desirability values for categories</span>
 <span class="sd">        &gt;&gt;&gt; values = {&quot;A&quot;: 0.1, &quot;B&quot;: 0.9, &quot;C&quot;: 0.5}</span>
@@ -4343,7 +4343,7 @@ https://cran.r-project.org/package=desirability</p>
 <span class="sd">            ValueError: If a category in `newdata` is not in the allowed categories.</span>
 
 <span class="sd">        Examples:</span>
-<span class="sd">            &gt;&gt;&gt; from spotdesirability.utils.desirability import DCategorical</span>
+<span class="sd">            &gt;&gt;&gt; from spotdesirability import DCategorical</span>
 <span class="sd">            &gt;&gt;&gt; values = {&quot;A&quot;: 0.1, &quot;B&quot;: 0.9, &quot;C&quot;: 0.5}</span>
 <span class="sd">            &gt;&gt;&gt; dcat = DCategorical(values)</span>
 <span class="sd">            &gt;&gt;&gt; inputs = [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;]</span>
@@ -4387,7 +4387,7 @@ https://cran.r-project.org/package=desirability</p>
 <span class="sd">                Additional keyword arguments for the plot.</span>
 
 <span class="sd">        Examples:</span>
-<span class="sd">            &gt;&gt;&gt; from spotdesirability.utils.desirability import DCategorical</span>
+<span class="sd">            &gt;&gt;&gt; from spotdesirability import DCategorical</span>
 <span class="sd">            &gt;&gt;&gt; values = {&quot;A&quot;: 0.1, &quot;B&quot;: 0.9, &quot;C&quot;: 0.5}</span>
 <span class="sd">            &gt;&gt;&gt; dcat = DCategorical(values)</span>
 <span class="sd">            &gt;&gt;&gt; dcat.plot()  # Default figure size</span>
@@ -4691,7 +4691,7 @@ https://cran.r-project.org/package=desirability</p>
 
 
 <p><span class="doc-section-title">Examples:</span></p>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability.utils.desirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DCategorical</span>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DCategorical</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">values</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">:</span> <span class="mf">0.9</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dcat</span> <span class="o">=</span> <span class="n">DCategorical</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dcat</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>  <span class="c1"># Default figure size</span>
@@ -4747,7 +4747,7 @@ https://cran.r-project.org/package=desirability</p>
 <span class="sd">            Additional keyword arguments for the plot.</span>
 
 <span class="sd">    Examples:</span>
-<span class="sd">        &gt;&gt;&gt; from spotdesirability.utils.desirability import DCategorical</span>
+<span class="sd">        &gt;&gt;&gt; from spotdesirability import DCategorical</span>
 <span class="sd">        &gt;&gt;&gt; values = {&quot;A&quot;: 0.1, &quot;B&quot;: 0.9, &quot;C&quot;: 0.5}</span>
 <span class="sd">        &gt;&gt;&gt; dcat = DCategorical(values)</span>
 <span class="sd">        &gt;&gt;&gt; dcat.plot()  # Default figure size</span>
@@ -4875,7 +4875,7 @@ If None, an empty array is used. Defaults to None.</p>
 
 
 <p><span class="doc-section-title">Examples:</span></p>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability.utils.desirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DCategorical</span>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DCategorical</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">values</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">:</span> <span class="mf">0.9</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dcat</span> <span class="o">=</span> <span class="n">DCategorical</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">inputs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">]</span>
@@ -4944,7 +4944,7 @@ If None, an empty array is used. Defaults to None.</p>
 <span class="sd">        ValueError: If a category in `newdata` is not in the allowed categories.</span>
 
 <span class="sd">    Examples:</span>
-<span class="sd">        &gt;&gt;&gt; from spotdesirability.utils.desirability import DCategorical</span>
+<span class="sd">        &gt;&gt;&gt; from spotdesirability import DCategorical</span>
 <span class="sd">        &gt;&gt;&gt; values = {&quot;A&quot;: 0.1, &quot;B&quot;: 0.9, &quot;C&quot;: 0.5}</span>
 <span class="sd">        &gt;&gt;&gt; dcat = DCategorical(values)</span>
 <span class="sd">        &gt;&gt;&gt; inputs = [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;]</span>
@@ -5113,7 +5113,7 @@ https://cran.r-project.org/package=desirability</p>
 </details>
 
 <p><span class="doc-section-title">Examples:</span></p>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability.utils.desirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DMax</span>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DMax</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="go"># Create a DMax object</span>
@@ -5281,7 +5281,7 @@ https://cran.r-project.org/package=desirability</p>
 <span class="sd">        https://cran.r-project.org/package=desirability</span>
 
 <span class="sd">    Examples:</span>
-<span class="sd">        &gt;&gt;&gt; from spotdesirability.utils.desirability import DMax</span>
+<span class="sd">        &gt;&gt;&gt; from spotdesirability import DMax</span>
 <span class="sd">        &gt;&gt;&gt; import numpy as np</span>
 <span class="sd">        &gt;&gt;&gt; import matplotlib.pyplot as plt</span>
 <span class="sd">        # Create a DMax object</span>
@@ -5347,7 +5347,7 @@ https://cran.r-project.org/package=desirability</p>
 <span class="sd">            numpy.ndarray: The desirability values for the input data.</span>
 
 <span class="sd">        Examples:</span>
-<span class="sd">            &gt;&gt;&gt; from spotdesirability.utils.desirability import DMax</span>
+<span class="sd">            &gt;&gt;&gt; from spotdesirability import DMax</span>
 <span class="sd">            &gt;&gt;&gt; import numpy as np</span>
 <span class="sd">            &gt;&gt;&gt; dmax = DMax(low=0, high=10, scale=1)</span>
 <span class="sd">            &gt;&gt;&gt; inputs = np.array([-5, 0, 5, 10, 15])</span>
@@ -5678,7 +5678,7 @@ If None, an empty array is used. Defaults to None.</p>
 
 
 <p><span class="doc-section-title">Examples:</span></p>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability.utils.desirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DMax</span>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DMax</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dmax</span> <span class="o">=</span> <span class="n">DMax</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">inputs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">])</span>
@@ -5739,7 +5739,7 @@ If None, an empty array is used. Defaults to None.</p>
 <span class="sd">        numpy.ndarray: The desirability values for the input data.</span>
 
 <span class="sd">    Examples:</span>
-<span class="sd">        &gt;&gt;&gt; from spotdesirability.utils.desirability import DMax</span>
+<span class="sd">        &gt;&gt;&gt; from spotdesirability import DMax</span>
 <span class="sd">        &gt;&gt;&gt; import numpy as np</span>
 <span class="sd">        &gt;&gt;&gt; dmax = DMax(low=0, high=10, scale=1)</span>
 <span class="sd">        &gt;&gt;&gt; inputs = np.array([-5, 0, 5, 10, 15])</span>
@@ -5906,7 +5906,7 @@ https://cran.r-project.org/package=desirability</p>
 </details>
 
 <p><span class="doc-section-title">Examples:</span></p>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability.utils.desirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DMin</span>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DMin</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="go"># Create a DMin object</span>
@@ -6073,7 +6073,7 @@ https://cran.r-project.org/package=desirability</p>
 <span class="sd">        https://cran.r-project.org/package=desirability</span>
 
 <span class="sd">    Examples:</span>
-<span class="sd">        &gt;&gt;&gt; from spotdesirability.utils.desirability import DMin</span>
+<span class="sd">        &gt;&gt;&gt; from spotdesirability import DMin</span>
 <span class="sd">        &gt;&gt;&gt; import numpy as np</span>
 <span class="sd">        &gt;&gt;&gt; import matplotlib.pyplot as plt</span>
 <span class="sd">        # Create a DMin object</span>
@@ -6139,7 +6139,7 @@ https://cran.r-project.org/package=desirability</p>
 <span class="sd">            (numpy.ndarray): The desirability values for the input data.</span>
 
 <span class="sd">        Examples:</span>
-<span class="sd">            &gt;&gt;&gt; from spotdesirability.utils.desirability import DMin</span>
+<span class="sd">            &gt;&gt;&gt; from spotdesirability import DMin</span>
 <span class="sd">            &gt;&gt;&gt; dmin = DMin(low=0, high=10, scale=1)</span>
 <span class="sd">            &gt;&gt;&gt; inputs = np.array([-5, 0, 5, 10, 15])</span>
 <span class="sd">            &gt;&gt;&gt; desirability = dmin.predict(inputs)</span>
@@ -6469,7 +6469,7 @@ If None, an empty array is used. Defaults to None.</p>
 
 
 <p><span class="doc-section-title">Examples:</span></p>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability.utils.desirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DMin</span>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DMin</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dmin</span> <span class="o">=</span> <span class="n">DMin</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">inputs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">desirability</span> <span class="o">=</span> <span class="n">dmin</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>
@@ -6528,7 +6528,7 @@ If None, an empty array is used. Defaults to None.</p>
 <span class="sd">        (numpy.ndarray): The desirability values for the input data.</span>
 
 <span class="sd">    Examples:</span>
-<span class="sd">        &gt;&gt;&gt; from spotdesirability.utils.desirability import DMin</span>
+<span class="sd">        &gt;&gt;&gt; from spotdesirability import DMin</span>
 <span class="sd">        &gt;&gt;&gt; dmin = DMin(low=0, high=10, scale=1)</span>
 <span class="sd">        &gt;&gt;&gt; inputs = np.array([-5, 0, 5, 10, 15])</span>
 <span class="sd">        &gt;&gt;&gt; desirability = dmin.predict(inputs)</span>
@@ -6641,7 +6641,7 @@ https://cran.r-project.org/package=desirability</p>
 </details>
 
 <p><span class="doc-section-title">Examples:</span></p>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability.utils.desirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DOverall</span><span class="p">,</span> <span class="n">DMax</span><span class="p">,</span> <span class="n">DMin</span>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DOverall</span><span class="p">,</span> <span class="n">DMax</span><span class="p">,</span> <span class="n">DMin</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="go"># Create individual desirability objects</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dmax</span> <span class="o">=</span> <span class="n">DMax</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -6790,7 +6790,7 @@ https://cran.r-project.org/package=desirability</p>
 <span class="sd">        https://cran.r-project.org/package=desirability</span>
 
 <span class="sd">    Examples:</span>
-<span class="sd">        &gt;&gt;&gt; from spotdesirability.utils.desirability import DOverall, DMax, DMin</span>
+<span class="sd">        &gt;&gt;&gt; from spotdesirability import DOverall, DMax, DMin</span>
 <span class="sd">        &gt;&gt;&gt; import numpy as np</span>
 <span class="sd">        # Create individual desirability objects</span>
 <span class="sd">        &gt;&gt;&gt; dmax = DMax(low=0, high=10, scale=1)</span>
@@ -6842,7 +6842,7 @@ https://cran.r-project.org/package=desirability</p>
 <span class="sd">            ValueError: If the number of columns in `newdata` does not match the number of desirability objects.</span>
 
 <span class="sd">        Examples:</span>
-<span class="sd">            &gt;&gt;&gt; from spotdesirability.utils.desirability import DOverall, DMax, DMin</span>
+<span class="sd">            &gt;&gt;&gt; from spotdesirability import DOverall, DMax, DMin</span>
 <span class="sd">            &gt;&gt;&gt; import numpy as np</span>
 <span class="sd">            # Create individual desirability objects</span>
 <span class="sd">            &gt;&gt;&gt; dmax = DMax(low=0, high=10, scale=1)</span>
@@ -7108,7 +7108,7 @@ Defaults to False.</p>
 
 
 <p><span class="doc-section-title">Examples:</span></p>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability.utils.desirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DOverall</span><span class="p">,</span> <span class="n">DMax</span><span class="p">,</span> <span class="n">DMin</span>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DOverall</span><span class="p">,</span> <span class="n">DMax</span><span class="p">,</span> <span class="n">DMin</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="go"># Create individual desirability objects</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dmax</span> <span class="o">=</span> <span class="n">DMax</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -7187,7 +7187,7 @@ Defaults to False.</p>
 <span class="sd">        ValueError: If the number of columns in `newdata` does not match the number of desirability objects.</span>
 
 <span class="sd">    Examples:</span>
-<span class="sd">        &gt;&gt;&gt; from spotdesirability.utils.desirability import DOverall, DMax, DMin</span>
+<span class="sd">        &gt;&gt;&gt; from spotdesirability import DOverall, DMax, DMin</span>
 <span class="sd">        &gt;&gt;&gt; import numpy as np</span>
 <span class="sd">        # Create individual desirability objects</span>
 <span class="sd">        &gt;&gt;&gt; dmax = DMax(low=0, high=10, scale=1)</span>
@@ -7384,7 +7384,7 @@ https://cran.r-project.org/package=desirability</p>
 </details>
 
 <p><span class="doc-section-title">Examples:</span></p>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability.utils.desirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DTarget</span>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DTarget</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="go"># Create a DTarget object</span>
@@ -7568,7 +7568,7 @@ https://cran.r-project.org/package=desirability</p>
 <span class="sd">        https://cran.r-project.org/package=desirability</span>
 
 <span class="sd">    Examples:</span>
-<span class="sd">        &gt;&gt;&gt; from spotdesirability.utils.desirability import DTarget</span>
+<span class="sd">        &gt;&gt;&gt; from spotdesirability import DTarget</span>
 <span class="sd">        &gt;&gt;&gt; import numpy as np</span>
 <span class="sd">        &gt;&gt;&gt; import matplotlib.pyplot as plt</span>
 <span class="sd">        # Create a DTarget object</span>
@@ -7644,7 +7644,7 @@ https://cran.r-project.org/package=desirability</p>
 <span class="sd">            (numpy.ndarray): The desirability values for the input data.</span>
 
 <span class="sd">        Examples:</span>
-<span class="sd">            &gt;&gt;&gt; from spotdesirability.utils.desirability import DTarget</span>
+<span class="sd">            &gt;&gt;&gt; from spotdesirability import DTarget</span>
 <span class="sd">            &gt;&gt;&gt; import numpy as np</span>
 <span class="sd">            # Create a DTarget object</span>
 <span class="sd">            &gt;&gt;&gt; dtarget = DTarget(low=0, target=5, high=10, low_scale=1, high_scale=1)</span>
@@ -8049,7 +8049,7 @@ If None, an empty array is used. Defaults to None.</p>
 
 
 <p><span class="doc-section-title">Examples:</span></p>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability.utils.desirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DTarget</span>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DTarget</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="go"># Create a DTarget object</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dtarget</span> <span class="o">=</span> <span class="n">DTarget</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">low_scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">high_scale</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -8113,7 +8113,7 @@ If None, an empty array is used. Defaults to None.</p>
 <span class="sd">        (numpy.ndarray): The desirability values for the input data.</span>
 
 <span class="sd">    Examples:</span>
-<span class="sd">        &gt;&gt;&gt; from spotdesirability.utils.desirability import DTarget</span>
+<span class="sd">        &gt;&gt;&gt; from spotdesirability import DTarget</span>
 <span class="sd">        &gt;&gt;&gt; import numpy as np</span>
 <span class="sd">        # Create a DTarget object</span>
 <span class="sd">        &gt;&gt;&gt; dtarget = DTarget(low=0, target=5, high=10, low_scale=1, high_scale=1)</span>
@@ -8387,16 +8387,16 @@ https://cran.r-project.org/package=desirability</p>
 <span class="sd">                Additional keyword arguments for the plot.</span>
 
 <span class="sd">        Examples:</span>
-<span class="sd">            &gt;&gt;&gt; from spotdesirability.utils.desirability import DMax</span>
+<span class="sd">            &gt;&gt;&gt; from spotdesirability import DMax</span>
 <span class="sd">            &gt;&gt;&gt; dmax = DMax(low=0, high=10, scale=1)</span>
 <span class="sd">            &gt;&gt;&gt; dmax.plot(figsize=(12, 6))  # Custom figure size</span>
-<span class="sd">            &gt;&gt;&gt; from spotdesirability.utils.desirability import DMin</span>
+<span class="sd">            &gt;&gt;&gt; from spotdesirability import DMin</span>
 <span class="sd">            &gt;&gt;&gt; dmin = DMin(low=0, high=10, scale=1)</span>
 <span class="sd">            &gt;&gt;&gt; dmin.plot()  # Default figure size</span>
-<span class="sd">            &gt;&gt;&gt; from spotdesirability.utils.desirability import DTarget</span>
+<span class="sd">            &gt;&gt;&gt; from spotdesirability import DTarget</span>
 <span class="sd">            &gt;&gt;&gt; dtarget = DTarget(low=0, target=5, high=10, low_scale=1, high_scale=1)</span>
 <span class="sd">            &gt;&gt;&gt; dtarget.plot(figsize=(8, 4))</span>
-<span class="sd">            &gt;&gt;&gt; from spotdesirability.utils.desirability import DArb</span>
+<span class="sd">            &gt;&gt;&gt; from spotdesirability import DArb</span>
 <span class="sd">            &gt;&gt;&gt; x = [-5, 0, 5, 10]</span>
 <span class="sd">            &gt;&gt;&gt; d = [0, 0.5, 1, 0.2]</span>
 <span class="sd">            &gt;&gt;&gt; darb = DArb(x, d)</span>
@@ -8617,16 +8617,16 @@ https://cran.r-project.org/package=desirability</p>
 
 
 <p><span class="doc-section-title">Examples:</span></p>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability.utils.desirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DMax</span>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DMax</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dmax</span> <span class="o">=</span> <span class="n">DMax</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dmax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>  <span class="c1"># Custom figure size</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability.utils.desirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DMin</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DMin</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dmin</span> <span class="o">=</span> <span class="n">DMin</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dmin</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>  <span class="c1"># Default figure size</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability.utils.desirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DTarget</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DTarget</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dtarget</span> <span class="o">=</span> <span class="n">DTarget</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">low_scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">high_scale</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dtarget</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability.utils.desirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DArb</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DArb</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">darb</span> <span class="o">=</span> <span class="n">DArb</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
@@ -8705,16 +8705,16 @@ https://cran.r-project.org/package=desirability</p>
 <span class="sd">            Additional keyword arguments for the plot.</span>
 
 <span class="sd">    Examples:</span>
-<span class="sd">        &gt;&gt;&gt; from spotdesirability.utils.desirability import DMax</span>
+<span class="sd">        &gt;&gt;&gt; from spotdesirability import DMax</span>
 <span class="sd">        &gt;&gt;&gt; dmax = DMax(low=0, high=10, scale=1)</span>
 <span class="sd">        &gt;&gt;&gt; dmax.plot(figsize=(12, 6))  # Custom figure size</span>
-<span class="sd">        &gt;&gt;&gt; from spotdesirability.utils.desirability import DMin</span>
+<span class="sd">        &gt;&gt;&gt; from spotdesirability import DMin</span>
 <span class="sd">        &gt;&gt;&gt; dmin = DMin(low=0, high=10, scale=1)</span>
 <span class="sd">        &gt;&gt;&gt; dmin.plot()  # Default figure size</span>
-<span class="sd">        &gt;&gt;&gt; from spotdesirability.utils.desirability import DTarget</span>
+<span class="sd">        &gt;&gt;&gt; from spotdesirability import DTarget</span>
 <span class="sd">        &gt;&gt;&gt; dtarget = DTarget(low=0, target=5, high=10, low_scale=1, high_scale=1)</span>
 <span class="sd">        &gt;&gt;&gt; dtarget.plot(figsize=(8, 4))</span>
-<span class="sd">        &gt;&gt;&gt; from spotdesirability.utils.desirability import DArb</span>
+<span class="sd">        &gt;&gt;&gt; from spotdesirability import DArb</span>
 <span class="sd">        &gt;&gt;&gt; x = [-5, 0, 5, 10]</span>
 <span class="sd">        &gt;&gt;&gt; d = [0, 0.5, 1, 0.2]</span>
 <span class="sd">        &gt;&gt;&gt; darb = DArb(x, d)</span>

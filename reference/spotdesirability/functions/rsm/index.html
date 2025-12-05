@@ -1593,7 +1593,7 @@ Optimizers minimize, so we return negative desirability.</p>
 
 
 <p><span class="doc-section-title">Examples:</span></p>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability.utils.desirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DOverall</span><span class="p">,</span> <span class="n">rsm_opt</span><span class="p">,</span> <span class="n">DTarget</span><span class="p">,</span> <span class="n">conversion_pred</span><span class="p">,</span> <span class="n">activity_pred</span>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">spotdesirability</span><span class="w"> </span><span class="kn">import</span> <span class="n">DOverall</span><span class="p">,</span> <span class="n">rsm_opt</span><span class="p">,</span> <span class="n">DTarget</span><span class="p">,</span> <span class="n">conversion_pred</span><span class="p">,</span> <span class="n">activity_pred</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">d_object</span> <span class="o">=</span> <span class="n">DOverall</span><span class="p">(</span><span class="n">DTarget</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">DTarget</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">prediction_funcs</span> <span class="o">=</span> <span class="p">[</span><span class="n">conversion_pred</span><span class="p">,</span> <span class="n">activity_pred</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">]</span>
@@ -1678,7 +1678,7 @@ Optimizers minimize, so we return negative desirability.</p>
 <span class="sd">        ValueError: If `space` is not &quot;square&quot; or &quot;circular&quot;.</span>
 
 <span class="sd">    Examples:</span>
-<span class="sd">        &gt;&gt;&gt; from spotdesirability.utils.desirability import DOverall, rsm_opt, DTarget, conversion_pred, activity_pred</span>
+<span class="sd">        &gt;&gt;&gt; from spotdesirability import DOverall, rsm_opt, DTarget, conversion_pred, activity_pred</span>
 <span class="sd">        &gt;&gt;&gt; d_object = DOverall(DTarget(0, 0.5, 1), DTarget(0, 0.5, 1))</span>
 <span class="sd">        &gt;&gt;&gt; prediction_funcs = [conversion_pred, activity_pred]</span>
 <span class="sd">        &gt;&gt;&gt; x = [1.0, 2.0, 3.0]</span>
