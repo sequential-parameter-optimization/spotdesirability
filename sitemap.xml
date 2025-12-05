@@ -2,46 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://github.com/sequential-parameter-optimization/spotdesirability/</loc>
-         <lastmod>2025-10-20</lastmod>
+         <lastmod>2025-12-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/sequential-parameter-optimization/spotdesirability/about/</loc>
-         <lastmod>2025-10-20</lastmod>
+         <lastmod>2025-12-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/sequential-parameter-optimization/spotdesirability/download/</loc>
-         <lastmod>2025-10-20</lastmod>
+         <lastmod>2025-12-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/sequential-parameter-optimization/spotdesirability/examples/</loc>
-         <lastmod>2025-10-20</lastmod>
+         <lastmod>2025-12-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/sequential-parameter-optimization/spotdesirability/hyperparameter-tuning-cookbook/</loc>
-         <lastmod>2025-10-20</lastmod>
+         <lastmod>2025-12-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/sequential-parameter-optimization/spotdesirability/reference/SUMMARY/</loc>
-         <lastmod>2025-10-20</lastmod>
+         <lastmod>2025-12-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/sequential-parameter-optimization/spotdesirability/reference/spotdesirability/data_utils/</loc>
-         <lastmod>2025-10-20</lastmod>
+         <lastmod>2025-12-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/sequential-parameter-optimization/spotdesirability/reference/spotdesirability/functions/rsm/</loc>
-         <lastmod>2025-10-20</lastmod>
-    </url>
-    <url>
-         <loc>https://github.com/sequential-parameter-optimization/spotdesirability/reference/spotdesirability/functions/zdt/</loc>
-         <lastmod>2025-10-20</lastmod>
+         <lastmod>2025-12-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/sequential-parameter-optimization/spotdesirability/reference/spotdesirability/plot/ccd/</loc>
-         <lastmod>2025-10-20</lastmod>
+         <lastmod>2025-12-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/sequential-parameter-optimization/spotdesirability/reference/spotdesirability/utils/desirability/</loc>
-         <lastmod>2025-10-20</lastmod>
+         <lastmod>2025-12-05</lastmod>
     </url>
 </urlset>
