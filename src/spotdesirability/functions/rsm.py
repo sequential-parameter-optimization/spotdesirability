@@ -80,7 +80,7 @@ def rsm_opt(x, d_object, prediction_funcs, space="square", alpha=1.682) -> float
         ValueError: If `space` is not "square" or "circular".
 
     Examples:
-        >>> from spotdesirability.utils.desirability import DOverall, rsm_opt, DTarget, conversion_pred, activity_pred
+        >>> from spotdesirability import DOverall, rsm_opt, DTarget, conversion_pred, activity_pred
         >>> d_object = DOverall(DTarget(0, 0.5, 1), DTarget(0, 0.5, 1))
         >>> prediction_funcs = [conversion_pred, activity_pred]
         >>> x = [1.0, 2.0, 3.0]

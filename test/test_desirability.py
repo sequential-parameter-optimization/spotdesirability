@@ -1,6 +1,6 @@
 import numpy as np
 import pytest
-from spotdesirability.utils.desirability import DOverall, DMax, DMin, DTarget, DArb, DBox, DCategorical
+from spotdesirability import DOverall, DMax, DMin, DTarget
 
 
 def test_independent_objects():
@@ -16,6 +16,7 @@ def test_independent_objects():
     assert dmax_2.scale == 2
     assert dmax_1 != dmax_2  # Ensure they are independent objects
  
+
 def test_doverall_initialization():
     """Test initialization of DOverall with valid desirability objects."""
     dmax = DMax(low=0, high=10, scale=1)
@@ -25,10 +26,12 @@ def test_doverall_initialization():
     assert isinstance(doverall.d_objs[0], DMax)
     assert isinstance(doverall.d_objs[1], DMin)
 
+
 def test_doverall_invalid_initialization():
     """Test initialization of DOverall with invalid objects."""
     with pytest.raises(ValueError, match="All objects must be instances of valid desirability classes."):
         DOverall(DMax(low=0, high=10, scale=1), "invalid_object")
+
 
 def test_doverall_predict():
     """Test the predict method of DOverall."""
@@ -40,6 +43,7 @@ def test_doverall_predict():
     overall_desirability = doverall.predict(inputs)
     assert overall_desirability.shape == (3,)
     assert np.all(overall_desirability >= 0) and np.all(overall_desirability <= 1)
+
 
 def test_doverall_predict_all():
     """Test the predict method of DOverall with all=True."""
@@ -55,7 +59,9 @@ def test_doverall_predict_all():
     assert overall.shape == (3,)
     assert np.all(overall >= 0) and np.all(overall <= 1)
 
+
 def test_doverall_invalid_input_shape():
+    """Test that DOverall raises error for mismatched input shape."""
     dmax = DMax(low=0, high=10, scale=1)
     dmin = DMin(low=5, high=15, scale=1)
     doverall = DOverall(dmax, dmin)
@@ -64,6 +70,7 @@ def test_doverall_invalid_input_shape():
     inputs = np.array([5, 10, 15])
     with pytest.raises(ValueError, match="The number of columns in newdata must match"):
         doverall.predict(inputs)
+
 
 def test_doverall_with_various_objects():
     """Test DOverall with a mix of desirability objects."""

@@ -73,16 +73,16 @@ class DesirabilityBase:
                 Additional keyword arguments for the plot.
 
         Examples:
-            >>> from spotdesirability.utils.desirability import DMax
+            >>> from spotdesirability import DMax
             >>> dmax = DMax(low=0, high=10, scale=1)
             >>> dmax.plot(figsize=(12, 6))  # Custom figure size
-            >>> from spotdesirability.utils.desirability import DMin
+            >>> from spotdesirability import DMin
             >>> dmin = DMin(low=0, high=10, scale=1)
             >>> dmin.plot()  # Default figure size
-            >>> from spotdesirability.utils.desirability import DTarget
+            >>> from spotdesirability import DTarget
             >>> dtarget = DTarget(low=0, target=5, high=10, low_scale=1, high_scale=1)
             >>> dtarget.plot(figsize=(8, 4))
-            >>> from spotdesirability.utils.desirability import DArb
+            >>> from spotdesirability import DArb
             >>> x = [-5, 0, 5, 10]
             >>> d = [0, 0.5, 1, 0.2]
             >>> darb = DArb(x, d)
@@ -135,7 +135,7 @@ class DMax(DesirabilityBase):
         https://cran.r-project.org/package=desirability
 
     Examples:
-        >>> from spotdesirability.utils.desirability import DMax
+        >>> from spotdesirability import DMax
         >>> import numpy as np
         >>> import matplotlib.pyplot as plt
         # Create a DMax object
@@ -201,7 +201,7 @@ class DMax(DesirabilityBase):
             numpy.ndarray: The desirability values for the input data.
 
         Examples:
-            >>> from spotdesirability.utils.desirability import DMax
+            >>> from spotdesirability import DMax
             >>> import numpy as np
             >>> dmax = DMax(low=0, high=10, scale=1)
             >>> inputs = np.array([-5, 0, 5, 10, 15])
@@ -255,7 +255,7 @@ class DMin(DesirabilityBase):
         https://cran.r-project.org/package=desirability
 
     Examples:
-        >>> from spotdesirability.utils.desirability import DMin
+        >>> from spotdesirability import DMin
         >>> import numpy as np
         >>> import matplotlib.pyplot as plt
         # Create a DMin object
@@ -321,7 +321,7 @@ class DMin(DesirabilityBase):
             (numpy.ndarray): The desirability values for the input data.
 
         Examples:
-            >>> from spotdesirability.utils.desirability import DMin
+            >>> from spotdesirability import DMin
             >>> dmin = DMin(low=0, high=10, scale=1)
             >>> inputs = np.array([-5, 0, 5, 10, 15])
             >>> desirability = dmin.predict(inputs)
@@ -376,7 +376,7 @@ class DTarget(DesirabilityBase):
         https://cran.r-project.org/package=desirability
 
     Examples:
-        >>> from spotdesirability.utils.desirability import DTarget
+        >>> from spotdesirability import DTarget
         >>> import numpy as np
         >>> import matplotlib.pyplot as plt
         # Create a DTarget object
@@ -452,7 +452,7 @@ class DTarget(DesirabilityBase):
             (numpy.ndarray): The desirability values for the input data.
 
         Examples:
-            >>> from spotdesirability.utils.desirability import DTarget
+            >>> from spotdesirability import DTarget
             >>> import numpy as np
             # Create a DTarget object
             >>> dtarget = DTarget(low=0, target=5, high=10, low_scale=1, high_scale=1)
@@ -506,7 +506,7 @@ class DArb(DesirabilityBase):
         https://cran.r-project.org/package=desirability
 
     Examples:
-        >>> from spotdesirability.utils.desirability import DArb
+        >>> from spotdesirability import DArb
         >>> import numpy as np
         >>> import matplotlib.pyplot as plt
         # Define input and desirability values
@@ -576,7 +576,7 @@ class DArb(DesirabilityBase):
             (numpy.ndarray): The desirability values for the input data.
 
         Examples:
-            >>> from spotdesirability.utils.desirability import DArb
+            >>> from spotdesirability import DArb
             >>> import numpy as np
             # Define input and desirability values
             >>> x = [-5, 0, 5, 10]
@@ -626,7 +626,7 @@ class DArb(DesirabilityBase):
                 Additional keyword arguments for the plot.
 
         Examples:
-            >>> from spotdesirability.utils.desirability import DArb
+            >>> from spotdesirability import DArb
             >>> x = [-5, 0, 5, 10]
             >>> d = [0, 0.5, 1, 0.2]
             >>> darb = DArb(x, d)
@@ -675,7 +675,7 @@ class DBox(DesirabilityBase):
         https://cran.r-project.org/package=desirability
 
     Examples:
-        >>> from spotdesirability.utils.desirability import DBox
+        >>> from spotdesirability import DBox
         >>> import numpy as np
         >>> import matplotlib.pyplot as plt
         # Create a DBox object
@@ -736,7 +736,7 @@ class DBox(DesirabilityBase):
             (numpy.ndarray): The desirability values for the input data.
 
         Examples:
-            >>> from spotdesirability.utils.desirability import DBox
+            >>> from spotdesirability import DBox
             >>> import numpy as np
             # Create a DBox object
             >>> dbox = DBox(low=-1.682, high=1.682)
@@ -779,7 +779,7 @@ class DBox(DesirabilityBase):
                 Additional keyword arguments for the plot.
 
         Examples:
-            >>> from spotdesirability.utils.desirability import DBox
+            >>> from spotdesirability import DBox
             >>> dbox = DBox(low=-1.682, high=1.682)
             >>> dbox.plot()  # Default figure size
             >>> dbox.plot(figsize=(12, 6))  # Custom figure size
@@ -826,7 +826,7 @@ class DCategorical(DesirabilityBase):
         https://cran.r-project.org/package=desirability
 
     Examples:
-        >>> from spotdesirability.utils.desirability import DCategorical
+        >>> from spotdesirability import DCategorical
         >>> import matplotlib.pyplot as plt
         # Define desirability values for categories
         >>> values = {"A": 0.1, "B": 0.9, "C": 0.5}
@@ -891,7 +891,7 @@ class DCategorical(DesirabilityBase):
             ValueError: If a category in `newdata` is not in the allowed categories.
 
         Examples:
-            >>> from spotdesirability.utils.desirability import DCategorical
+            >>> from spotdesirability import DCategorical
             >>> values = {"A": 0.1, "B": 0.9, "C": 0.5}
             >>> dcat = DCategorical(values)
             >>> inputs = ["A", "B", "C"]
@@ -935,7 +935,7 @@ class DCategorical(DesirabilityBase):
                 Additional keyword arguments for the plot.
 
         Examples:
-            >>> from spotdesirability.utils.desirability import DCategorical
+            >>> from spotdesirability import DCategorical
             >>> values = {"A": 0.1, "B": 0.9, "C": 0.5}
             >>> dcat = DCategorical(values)
             >>> dcat.plot()  # Default figure size
@@ -970,7 +970,7 @@ class DOverall(DesirabilityBase):
         https://cran.r-project.org/package=desirability
 
     Examples:
-        >>> from spotdesirability.utils.desirability import DOverall, DMax, DMin
+        >>> from spotdesirability import DOverall, DMax, DMin
         >>> import numpy as np
         # Create individual desirability objects
         >>> dmax = DMax(low=0, high=10, scale=1)
@@ -1022,7 +1022,7 @@ class DOverall(DesirabilityBase):
             ValueError: If the number of columns in `newdata` does not match the number of desirability objects.
 
         Examples:
-            >>> from spotdesirability.utils.desirability import DOverall, DMax, DMin
+            >>> from spotdesirability import DOverall, DMax, DMin
             >>> import numpy as np
             # Create individual desirability objects
             >>> dmax = DMax(low=0, high=10, scale=1)

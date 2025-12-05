@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from spotpython.plot.utils import save_or_show_plot
 
 
 def plotCCD(elev=20, azim=30, figsize=(10, 8), filename=None, title="Central Composite Design (CCD) for k=3") -> None:
@@ -82,5 +81,11 @@ def plotCCD(elev=20, azim=30, figsize=(10, 8), filename=None, title="Central Com
 
     # Add legend outside the plot
     ax.legend(bbox_to_anchor=(1.05, 1), loc="upper left", borderaxespad=0)
+    plt.tight_layout()
+    # Save or show the plot
+    if filename:
+        plt.savefig(filename, bbox_inches="tight")
+        plt.close()
+    else:
+        plt.show()
 
-    save_or_show_plot(plt, filename)
