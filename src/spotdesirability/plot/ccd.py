@@ -88,4 +88,3 @@ def plotCCD(elev=20, azim=30, figsize=(10, 8), filename=None, title="Central Com
         plt.close()
     else:
         plt.show()
-

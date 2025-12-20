@@ -54,7 +54,7 @@ class DesirabilityBase:
         range_span = max(values) - min(values)
         return [min(values) - factor * range_span, max(values) + factor * range_span]
 
-    def plot(self, add: bool = False, non_inform: bool = True, xlabel="Input", ylabel="Desirability", figsize: tuple = (10, 8), **kwargs: Dict[str, Any]) -> None:
+    def plot(self, add: bool = False, non_inform: bool = True, xlabel="Input", ylabel="Desirability", figsize: tuple = (10, 8), grid=True, **kwargs: Dict[str, Any]) -> None:
         """
         Plots the continuous desirability functions, i.e., `DMax`, `DMin`, and `DTarget`.
 
@@ -69,6 +69,8 @@ class DesirabilityBase:
                 Label for the y-axis. Defaults to "Desirability".
             figsize (tuple, optional):
                 Size of the figure (width, height) in inches. Defaults to (10, 8).
+            grid (bool, optional):
+                Whether to display a grid. Defaults to True.
             **kwargs (Dict[str, Any]):
                 Additional keyword arguments for the plot.
 
@@ -94,7 +96,7 @@ class DesirabilityBase:
             plt.plot([], [])  # Create an empty plot
             plt.xlim(x_range)
             plt.ylim(0, 1)
-            plt.grid()
+            plt.grid(grid)
             plt.xlabel(xlabel)
             plt.ylabel(ylabel)
         plt.hlines(0, x_range[0], self.low, **kwargs)
@@ -607,7 +609,7 @@ class DArb(DesirabilityBase):
             out[out == 0] = self.tol
         return out
 
-    def plot(self, add: bool = False, non_inform: bool = True, xlabel: str = "Input", ylabel: str = "Desirability", figsize: tuple = (10, 8), **kwargs: Dict[str, Any]) -> None:
+    def plot(self, add: bool = False, non_inform: bool = True, xlabel: str = "Input", ylabel: str = "Desirability", figsize: tuple = (10, 8), grid: bool = True, **kwargs: Dict[str, Any]) -> None:
         """
         Plots the arbitrary desirability function.
 
@@ -622,6 +624,8 @@ class DArb(DesirabilityBase):
                 Label for the y-axis. Defaults to "Desirability".
             figsize (tuple, optional):
                 Size of the figure (width, height) in inches. Defaults to (10, 8).
+            grid (bool, optional):
+                Whether to display a grid. Defaults to True.
             **kwargs (Dict[str, Any]):
                 Additional keyword arguments for the plot.
 
@@ -639,6 +643,7 @@ class DArb(DesirabilityBase):
             plt.plot([], [])  # Create an empty plot
             plt.xlim(x_range)
             plt.ylim(0, 1)
+            plt.grid(grid)
             plt.xlabel(xlabel)
             plt.ylabel(ylabel)
         input_values = np.linspace(x_range[0], x_range[1], 100)
