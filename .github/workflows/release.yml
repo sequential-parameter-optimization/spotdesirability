@@ -51,7 +51,8 @@ jobs:
 
       - name: Build distribution packages
         run: |
-          python -m build
+          rm -rf dist/ build/
+          uv build
           echo "Build artifacts created:"
           ls -lah dist/
 
