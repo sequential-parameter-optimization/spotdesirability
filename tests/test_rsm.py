@@ -1,7 +1,5 @@
 import pytest
 import numpy as np
-from spotdesirability.functions.rsm import conversion_pred
-from spotdesirability.functions.rsm import activity_pred
 from unittest.mock import Mock
 from spotdesirability.functions.rsm import rsm_opt, conversion_pred, activity_pred
 
@@ -37,16 +35,7 @@ def test_activity_pred_valid_input_list():
     x = [1.0, 2.0, 3.0]
     result = activity_pred(x)
     expected = (
-        59.85
-        + 3.583 * x[0]
-        + 0.2546 * x[1]
-        + 2.2298 * x[2]
-        + 0.83479 * x[0] ** 2
-        + 0.07484 * x[1] ** 2
-        + 0.05716 * x[2] ** 2
-        - 0.3875 * x[0] * x[1]
-        - 0.375 * x[0] * x[2]
-        + 0.3125 * x[1] * x[2]
+        59.85 + 3.583 * x[0] + 0.2546 * x[1] + 2.2298 * x[2] + 0.83479 * x[0] ** 2 + 0.07484 * x[1] ** 2 + 0.05716 * x[2] ** 2 - 0.3875 * x[0] * x[1] - 0.375 * x[0] * x[2] + 0.3125 * x[1] * x[2]
     )
     assert pytest.approx(result, rel=1e-6) == expected
 

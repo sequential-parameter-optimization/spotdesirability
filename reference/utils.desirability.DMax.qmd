@@ -36,19 +36,19 @@ https://cran.r-project.org/package=desirability
 
 ## Examples {.doc-section .doc-section-examples}
 
-```python
->>> from spotdesirability import DMax
->>> import numpy as np
->>> import matplotlib.pyplot as plt
+```{python}
+from spotdesirability import DMax
+import numpy as np
+import matplotlib.pyplot as plt
 # Create a DMax object
->>> dmax = DMax(low=0, high=10, scale=1)
+dmax = DMax(low=0, high=10, scale=1)
 # Predict desirability for a range of inputs
->>> inputs = np.array([-5, 0, 5, 10, 15])
->>> desirability = dmax.predict(inputs)
->>> print(desirability)
-[0. 0. 0.5 1. 1.]
+inputs = np.array([-5, 0, 5, 10, 15])
+desirability = dmax.predict(inputs)
+print(desirability)
+# [0. 0. 0.5 1. 1.]
 # Plot the desirability function
->>> dmax.plot()
+dmax.plot()
 ```
 
 ## Methods
@@ -80,12 +80,12 @@ Predicts the desirability values for the given input data.
 
 #### Examples {.doc-section .doc-section-examples}
 
-```python
->>> from spotdesirability import DMax
->>> import numpy as np
->>> dmax = DMax(low=0, high=10, scale=1)
->>> inputs = np.array([-5, 0, 5, 10, 15])
->>> desirability = dmax.predict(inputs)
->>> print(desirability)
-[0. 0. 0.5 1. 1.]
+```{python}
+from spotdesirability import DMax
+import numpy as np
+dmax = DMax(low=0, high=10, scale=1)
+inputs = np.array([-5, 0, 5, 10, 15])
+desirability = dmax.predict(inputs)
+print(desirability)
+# [0. 0. 0.5 1. 1.]
 ```

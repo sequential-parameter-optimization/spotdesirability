@@ -32,20 +32,20 @@ https://cran.r-project.org/package=desirability
 
 ## Examples {.doc-section .doc-section-examples}
 
-```python
->>> from spotdesirability import DCategorical
->>> import matplotlib.pyplot as plt
+```{python}
+from spotdesirability import DCategorical
+import matplotlib.pyplot as plt
 # Define desirability values for categories
->>> values = {"A": 0.1, "B": 0.9, "C": 0.5}
+values = {"A": 0.1, "B": 0.9, "C": 0.5}
 # Create a DCategorical object
->>> dcat = DCategorical(values)
+dcat = DCategorical(values)
 # Predict desirability for a list of categories
->>> inputs = ["A", "B", "C", "D"]
->>> desirability = dcat.predict(inputs)
->>> print(desirability)
-[0.1 0.9 0.5 ValueError: Value 'D' not in allowed values: ['A', 'B', 'C']]
+inputs = ["A", "B", "C"]
+desirability = dcat.predict(inputs)
+print(desirability)
+# [0.1 0.9 0.5]
 # Plot the desirability function
->>> dcat.plot()
+dcat.plot()
 ```
 
 ## Methods
@@ -81,12 +81,12 @@ Plots the desirability function for the categorical inputs.
 
 #### Examples {.doc-section .doc-section-examples}
 
-```python
->>> from spotdesirability import DCategorical
->>> values = {"A": 0.1, "B": 0.9, "C": 0.5}
->>> dcat = DCategorical(values)
->>> dcat.plot()  # Default figure size
->>> dcat.plot(figsize=(12, 6))  # Custom figure size
+```{python}
+from spotdesirability import DCategorical
+values = {"A": 0.1, "B": 0.9, "C": 0.5}
+dcat = DCategorical(values)
+dcat.plot()  # Default figure size
+dcat.plot(figsize=(12, 6))  # Custom figure size
 ```
 
 ### predict { #spotdesirability.utils.desirability.DCategorical.predict }
@@ -118,12 +118,12 @@ Predicts the desirability values for the given categorical input data.
 
 #### Examples {.doc-section .doc-section-examples}
 
-```python
->>> from spotdesirability import DCategorical
->>> values = {"A": 0.1, "B": 0.9, "C": 0.5}
->>> dcat = DCategorical(values)
->>> inputs = ["A", "B", "C"]
->>> desirability = dcat.predict(inputs)
->>> print(desirability)
-[0.1 0.9 0.5]
+```{python}
+from spotdesirability import DCategorical
+values = {"A": 0.1, "B": 0.9, "C": 0.5}
+dcat = DCategorical(values)
+inputs = ["A", "B", "C"]
+desirability = dcat.predict(inputs)
+print(desirability)
+# [0.1 0.9 0.5]
 ```

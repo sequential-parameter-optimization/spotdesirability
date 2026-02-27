@@ -20,9 +20,9 @@ Predicts the thermal activity based on the input vector x.
 
 ## Examples {.doc-section .doc-section-examples}
 
-```python
->>> from spotdesirability.functions.rsm import activity_pred
->>> x = [1.0, 2.0, 3.0]
->>> activity = activity_pred(x)
->>> print(activity)
+```{python}
+from spotdesirability.functions.rsm import activity_pred
+x = [1.0, 2.0, 3.0]
+activity = activity_pred(x)
+print(activity)
 ```
