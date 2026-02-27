@@ -40,84 +40,84 @@
     "href": "reference/utils.desirability.DCategorical.html",
     "title": "utils.desirability.DCategorical",
     "section": "",
-    "text": "utils.desirability.DCategorical(values, tol=None, missing=None)\nImplements a desirability function for categorical inputs.\nThis class allows users to define desirability values for specific categorical inputs.\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nvalues\ndict\nA dictionary where keys are category names (strings) and values are desirability scores (floats).\n\n\ntol\nfloat\nA tolerance value to replace desirability values of 0. Defaults to None.\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to a non-informative value.\n\n\n\n\n\n\nPredicts the desirability values for the given categorical input data.\nPlots the desirability function for the categorical inputs.\n\n\n\nMany thanks to Max Kuhn for his implementation of the ‘desirability’ package in R. This class is based on the ‘desirability’ package in R, see: https://cran.r-project.org/package=desirability\n\n\n\n&gt;&gt;&gt; from spotdesirability import DCategorical\n&gt;&gt;&gt; import matplotlib.pyplot as plt\n# Define desirability values for categories\n&gt;&gt;&gt; values = {\"A\": 0.1, \"B\": 0.9, \"C\": 0.5}\n# Create a DCategorical object\n&gt;&gt;&gt; dcat = DCategorical(values)\n# Predict desirability for a list of categories\n&gt;&gt;&gt; inputs = [\"A\", \"B\", \"C\", \"D\"]\n&gt;&gt;&gt; desirability = dcat.predict(inputs)\n&gt;&gt;&gt; print(desirability)\n[0.1 0.9 0.5 ValueError: Value 'D' not in allowed values: ['A', 'B', 'C']]\n# Plot the desirability function\n&gt;&gt;&gt; dcat.plot()\n\n\n\n\n\n\nName\nDescription\n\n\n\n\nplot\nPlots the desirability function for the categorical inputs.\n\n\npredict\nPredicts the desirability values for the given categorical input data.\n\n\n\n\n\nutils.desirability.DCategorical.plot(\n    non_inform=True,\n    xlabel='Category',\n    ylabel='Desirability',\n    figsize=(10, 8),\n    **kwargs,\n)\nPlots the desirability function for the categorical inputs.\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nnon_inform\nbool\nWhether to display the non-informative value as a dashed line. Defaults to True.\nTrue\n\n\nxlabel\nstr\nLabel for the x-axis. Defaults to “Category”.\n'Category'\n\n\nylabel\nstr\nLabel for the y-axis. Defaults to “Desirability”.\n'Desirability'\n\n\nfigsize\ntuple\nSize of the figure (width, height) in inches. Defaults to (10, 8).\n(10, 8)\n\n\n**kwargs\nDict[str, Any]\nAdditional keyword arguments for the plot.\n{}\n\n\n\n\n\n\n&gt;&gt;&gt; from spotdesirability import DCategorical\n&gt;&gt;&gt; values = {\"A\": 0.1, \"B\": 0.9, \"C\": 0.5}\n&gt;&gt;&gt; dcat = DCategorical(values)\n&gt;&gt;&gt; dcat.plot()  # Default figure size\n&gt;&gt;&gt; dcat.plot(figsize=(12, 6))  # Custom figure size\n\n\n\n\nutils.desirability.DCategorical.predict(newdata=None, missing=None)\nPredicts the desirability values for the given categorical input data.\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nnewdata\nlist or array - like\nA list or array of categorical inputs. If None, an empty array is used. Defaults to None.\nNone\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to the object’s missing attribute.\nNone\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nnumpy.ndarray\nThe desirability values for the input data.\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nValueError\nIf a category in newdata is not in the allowed categories.\n\n\n\n\n\n\n&gt;&gt;&gt; from spotdesirability import DCategorical\n&gt;&gt;&gt; values = {\"A\": 0.1, \"B\": 0.9, \"C\": 0.5}\n&gt;&gt;&gt; dcat = DCategorical(values)\n&gt;&gt;&gt; inputs = [\"A\", \"B\", \"C\"]\n&gt;&gt;&gt; desirability = dcat.predict(inputs)\n&gt;&gt;&gt; print(desirability)\n[0.1 0.9 0.5]"
+    "text": "utils.desirability.DCategorical(values, tol=None, missing=None)\nImplements a desirability function for categorical inputs.\nThis class allows users to define desirability values for specific categorical inputs."
   },
   {
     "objectID": "reference/utils.desirability.DCategorical.html#attributes",
     "href": "reference/utils.desirability.DCategorical.html#attributes",
     "title": "utils.desirability.DCategorical",
-    "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\nvalues\ndict\nA dictionary where keys are category names (strings) and values are desirability scores (floats).\n\n\ntol\nfloat\nA tolerance value to replace desirability values of 0. Defaults to None.\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to a non-informative value."
+    "section": "Attributes",
+    "text": "Attributes\n\n\n\nName\nType\nDescription\n\n\n\n\nvalues\ndict\nA dictionary where keys are category names (strings) and values are desirability scores (floats).\n\n\ntol\nfloat\nA tolerance value to replace desirability values of 0. Defaults to None.\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to a non-informative value."
   },
   {
     "objectID": "reference/utils.desirability.DCategorical.html#functions",
     "href": "reference/utils.desirability.DCategorical.html#functions",
     "title": "utils.desirability.DCategorical",
-    "section": "",
-    "text": "Predicts the desirability values for the given categorical input data.\nPlots the desirability function for the categorical inputs."
+    "section": "Functions",
+    "text": "Functions\nPredicts the desirability values for the given categorical input data.\nPlots the desirability function for the categorical inputs."
   },
   {
     "objectID": "reference/utils.desirability.DCategorical.html#references",
     "href": "reference/utils.desirability.DCategorical.html#references",
     "title": "utils.desirability.DCategorical",
-    "section": "",
-    "text": "Many thanks to Max Kuhn for his implementation of the ‘desirability’ package in R. This class is based on the ‘desirability’ package in R, see: https://cran.r-project.org/package=desirability"
+    "section": "References",
+    "text": "References\nMany thanks to Max Kuhn for his implementation of the ‘desirability’ package in R. This class is based on the ‘desirability’ package in R, see: https://cran.r-project.org/package=desirability"
   },
   {
     "objectID": "reference/utils.desirability.DCategorical.html#examples",
     "href": "reference/utils.desirability.DCategorical.html#examples",
     "title": "utils.desirability.DCategorical",
-    "section": "",
-    "text": "&gt;&gt;&gt; from spotdesirability import DCategorical\n&gt;&gt;&gt; import matplotlib.pyplot as plt\n# Define desirability values for categories\n&gt;&gt;&gt; values = {\"A\": 0.1, \"B\": 0.9, \"C\": 0.5}\n# Create a DCategorical object\n&gt;&gt;&gt; dcat = DCategorical(values)\n# Predict desirability for a list of categories\n&gt;&gt;&gt; inputs = [\"A\", \"B\", \"C\", \"D\"]\n&gt;&gt;&gt; desirability = dcat.predict(inputs)\n&gt;&gt;&gt; print(desirability)\n[0.1 0.9 0.5 ValueError: Value 'D' not in allowed values: ['A', 'B', 'C']]\n# Plot the desirability function\n&gt;&gt;&gt; dcat.plot()"
+    "section": "Examples",
+    "text": "Examples\n\nfrom spotdesirability import DCategorical\nimport matplotlib.pyplot as plt\n# Define desirability values for categories\nvalues = {\"A\": 0.1, \"B\": 0.9, \"C\": 0.5}\n# Create a DCategorical object\ndcat = DCategorical(values)\n# Predict desirability for a list of categories\ninputs = [\"A\", \"B\", \"C\"]\ndesirability = dcat.predict(inputs)\nprint(desirability)\n# [0.1 0.9 0.5]\n# Plot the desirability function\ndcat.plot()\n\n[0.1 0.9 0.5]"
   },
   {
     "objectID": "reference/utils.desirability.DCategorical.html#methods",
     "href": "reference/utils.desirability.DCategorical.html#methods",
     "title": "utils.desirability.DCategorical",
-    "section": "",
-    "text": "Name\nDescription\n\n\n\n\nplot\nPlots the desirability function for the categorical inputs.\n\n\npredict\nPredicts the desirability values for the given categorical input data.\n\n\n\n\n\nutils.desirability.DCategorical.plot(\n    non_inform=True,\n    xlabel='Category',\n    ylabel='Desirability',\n    figsize=(10, 8),\n    **kwargs,\n)\nPlots the desirability function for the categorical inputs.\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nnon_inform\nbool\nWhether to display the non-informative value as a dashed line. Defaults to True.\nTrue\n\n\nxlabel\nstr\nLabel for the x-axis. Defaults to “Category”.\n'Category'\n\n\nylabel\nstr\nLabel for the y-axis. Defaults to “Desirability”.\n'Desirability'\n\n\nfigsize\ntuple\nSize of the figure (width, height) in inches. Defaults to (10, 8).\n(10, 8)\n\n\n**kwargs\nDict[str, Any]\nAdditional keyword arguments for the plot.\n{}\n\n\n\n\n\n\n&gt;&gt;&gt; from spotdesirability import DCategorical\n&gt;&gt;&gt; values = {\"A\": 0.1, \"B\": 0.9, \"C\": 0.5}\n&gt;&gt;&gt; dcat = DCategorical(values)\n&gt;&gt;&gt; dcat.plot()  # Default figure size\n&gt;&gt;&gt; dcat.plot(figsize=(12, 6))  # Custom figure size\n\n\n\n\nutils.desirability.DCategorical.predict(newdata=None, missing=None)\nPredicts the desirability values for the given categorical input data.\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nnewdata\nlist or array - like\nA list or array of categorical inputs. If None, an empty array is used. Defaults to None.\nNone\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to the object’s missing attribute.\nNone\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nnumpy.ndarray\nThe desirability values for the input data.\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nValueError\nIf a category in newdata is not in the allowed categories.\n\n\n\n\n\n\n&gt;&gt;&gt; from spotdesirability import DCategorical\n&gt;&gt;&gt; values = {\"A\": 0.1, \"B\": 0.9, \"C\": 0.5}\n&gt;&gt;&gt; dcat = DCategorical(values)\n&gt;&gt;&gt; inputs = [\"A\", \"B\", \"C\"]\n&gt;&gt;&gt; desirability = dcat.predict(inputs)\n&gt;&gt;&gt; print(desirability)\n[0.1 0.9 0.5]"
+    "section": "Methods",
+    "text": "Methods\n\n\n\nName\nDescription\n\n\n\n\nplot\nPlots the desirability function for the categorical inputs.\n\n\npredict\nPredicts the desirability values for the given categorical input data.\n\n\n\n\nplot\nutils.desirability.DCategorical.plot(\n    non_inform=True,\n    xlabel='Category',\n    ylabel='Desirability',\n    figsize=(10, 8),\n    **kwargs,\n)\nPlots the desirability function for the categorical inputs.\n\nParameters\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nnon_inform\nbool\nWhether to display the non-informative value as a dashed line. Defaults to True.\nTrue\n\n\nxlabel\nstr\nLabel for the x-axis. Defaults to “Category”.\n'Category'\n\n\nylabel\nstr\nLabel for the y-axis. Defaults to “Desirability”.\n'Desirability'\n\n\nfigsize\ntuple\nSize of the figure (width, height) in inches. Defaults to (10, 8).\n(10, 8)\n\n\n**kwargs\nDict[str, Any]\nAdditional keyword arguments for the plot.\n{}\n\n\n\n\n\nExamples\n\nfrom spotdesirability import DCategorical\nvalues = {\"A\": 0.1, \"B\": 0.9, \"C\": 0.5}\ndcat = DCategorical(values)\ndcat.plot()  # Default figure size\ndcat.plot(figsize=(12, 6))  # Custom figure size\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\npredict\nutils.desirability.DCategorical.predict(newdata=None, missing=None)\nPredicts the desirability values for the given categorical input data.\n\nParameters\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nnewdata\nlist or array - like\nA list or array of categorical inputs. If None, an empty array is used. Defaults to None.\nNone\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to the object’s missing attribute.\nNone\n\n\n\n\n\nReturns\n\n\n\nName\nType\nDescription\n\n\n\n\n\nnumpy.ndarray\nThe desirability values for the input data.\n\n\n\n\n\nRaises\n\n\n\nName\nType\nDescription\n\n\n\n\n\nValueError\nIf a category in newdata is not in the allowed categories.\n\n\n\n\n\nExamples\n\nfrom spotdesirability import DCategorical\nvalues = {\"A\": 0.1, \"B\": 0.9, \"C\": 0.5}\ndcat = DCategorical(values)\ninputs = [\"A\", \"B\", \"C\"]\ndesirability = dcat.predict(inputs)\nprint(desirability)\n# [0.1 0.9 0.5]\n\n[0.1 0.9 0.5]"
   },
   {
     "objectID": "reference/utils.desirability.DOverall.html",
     "href": "reference/utils.desirability.DOverall.html",
     "title": "utils.desirability.DOverall",
     "section": "",
-    "text": "utils.desirability.DOverall(*d_objs)\nCombines multiple desirability objects into an overall desirability function.\nThis class computes the overall desirability by combining individual desirability objects using the geometric mean of their desirability scores.\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nd_objs\nlist\nA list of desirability objects (e.g., DMax, DMin, DTarget, etc.).\n\n\n\n\n\n\nPredicts the overall desirability based on the individual desirability objects.\n\n\n\nMany thanks to Max Kuhn for his implementation of the ‘desirability’ package in R. This class is based on the ‘desirability’ package in R, see: https://cran.r-project.org/package=desirability\n\n\n\n&gt;&gt;&gt; from spotdesirability import DOverall, DMax, DMin\n&gt;&gt;&gt; import numpy as np\n# Create individual desirability objects\n&gt;&gt;&gt; dmax = DMax(low=0, high=10, scale=1)\n&gt;&gt;&gt; dmin = DMin(low=5, high=15, scale=1)\n# Combine them into an overall desirability object\n&gt;&gt;&gt; doverall = DOverall(dmax, dmin)\n# Predict overall desirability for a set of inputs\n&gt;&gt;&gt; inputs = np.array([[5, 10], [0, 15], [10, 5]])\n&gt;&gt;&gt; overall_desirability = doverall.predict(inputs)\n&gt;&gt;&gt; print(overall_desirability)\n# Predict individual and overall desirabilities\n&gt;&gt;&gt; individual, overall = doverall.predict(inputs, all=True)\n&gt;&gt;&gt; print(\"Individual:\", individual)\n&gt;&gt;&gt; print(\"Overall:\", overall)\n\n\n\n\n\n\nName\nDescription\n\n\n\n\npredict\nPredicts the overall desirability based on the individual desirability objects.\n\n\n\n\n\nutils.desirability.DOverall.predict(newdata, all=False)\nPredicts the overall desirability based on the individual desirability objects.\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nnewdata\nlist or numpy.ndarray\nA list or array of predicted outcomes, one for each desirability object.\nrequired\n\n\nall\nbool\nWhether to return individual desirabilities along with the overall desirability. Defaults to False.\nFalse\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nfloat or tuple\nThe overall desirability score, or a tuple of individual and overall desirabilities if all=True.\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nValueError\nIf the number of columns in newdata does not match the number of desirability objects.\n\n\n\n\n\n\n&gt;&gt;&gt; from spotdesirability import DOverall, DMax, DMin\n&gt;&gt;&gt; import numpy as np\n# Create individual desirability objects\n&gt;&gt;&gt; dmax = DMax(low=0, high=10, scale=1)\n&gt;&gt;&gt; dmin = DMin(low=5, high=15, scale=1)\n&gt;&gt;&gt; doverall = DOverall(dmax, dmin)\n&gt;&gt;&gt; inputs = np.array([[5, 10], [0, 15], [10, 5]])\n&gt;&gt;&gt; overall_desirability = doverall.predict(inputs)\n&gt;&gt;&gt; print(overall_desirability)"
+    "text": "utils.desirability.DOverall(*d_objs)\nCombines multiple desirability objects into an overall desirability function.\nThis class computes the overall desirability by combining individual desirability objects using the geometric mean of their desirability scores."
   },
   {
     "objectID": "reference/utils.desirability.DOverall.html#attributes",
     "href": "reference/utils.desirability.DOverall.html#attributes",
     "title": "utils.desirability.DOverall",
-    "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\nd_objs\nlist\nA list of desirability objects (e.g., DMax, DMin, DTarget, etc.)."
+    "section": "Attributes",
+    "text": "Attributes\n\n\n\nName\nType\nDescription\n\n\n\n\nd_objs\nlist\nA list of desirability objects (e.g., DMax, DMin, DTarget, etc.)."
   },
   {
     "objectID": "reference/utils.desirability.DOverall.html#functions",
     "href": "reference/utils.desirability.DOverall.html#functions",
     "title": "utils.desirability.DOverall",
-    "section": "",
-    "text": "Predicts the overall desirability based on the individual desirability objects."
+    "section": "Functions",
+    "text": "Functions\nPredicts the overall desirability based on the individual desirability objects."
   },
   {
     "objectID": "reference/utils.desirability.DOverall.html#references",
     "href": "reference/utils.desirability.DOverall.html#references",
     "title": "utils.desirability.DOverall",
-    "section": "",
-    "text": "Many thanks to Max Kuhn for his implementation of the ‘desirability’ package in R. This class is based on the ‘desirability’ package in R, see: https://cran.r-project.org/package=desirability"
+    "section": "References",
+    "text": "References\nMany thanks to Max Kuhn for his implementation of the ‘desirability’ package in R. This class is based on the ‘desirability’ package in R, see: https://cran.r-project.org/package=desirability"
   },
   {
     "objectID": "reference/utils.desirability.DOverall.html#examples",
     "href": "reference/utils.desirability.DOverall.html#examples",
     "title": "utils.desirability.DOverall",
-    "section": "",
-    "text": "&gt;&gt;&gt; from spotdesirability import DOverall, DMax, DMin\n&gt;&gt;&gt; import numpy as np\n# Create individual desirability objects\n&gt;&gt;&gt; dmax = DMax(low=0, high=10, scale=1)\n&gt;&gt;&gt; dmin = DMin(low=5, high=15, scale=1)\n# Combine them into an overall desirability object\n&gt;&gt;&gt; doverall = DOverall(dmax, dmin)\n# Predict overall desirability for a set of inputs\n&gt;&gt;&gt; inputs = np.array([[5, 10], [0, 15], [10, 5]])\n&gt;&gt;&gt; overall_desirability = doverall.predict(inputs)\n&gt;&gt;&gt; print(overall_desirability)\n# Predict individual and overall desirabilities\n&gt;&gt;&gt; individual, overall = doverall.predict(inputs, all=True)\n&gt;&gt;&gt; print(\"Individual:\", individual)\n&gt;&gt;&gt; print(\"Overall:\", overall)"
+    "section": "Examples",
+    "text": "Examples\n\nfrom spotdesirability import DOverall, DMax, DMin\nimport numpy as np\n# Create individual desirability objects\ndmax = DMax(low=0, high=10, scale=1)\ndmin = DMin(low=5, high=15, scale=1)\n# Combine them into an overall desirability object\ndoverall = DOverall(dmax, dmin)\n# Predict overall desirability for a set of inputs\ninputs = np.array([[5, 10], [0, 15], [10, 5]])\noverall_desirability = doverall.predict(inputs)\nprint(overall_desirability)\n# Predict individual and overall desirabilities\nindividual, overall = doverall.predict(inputs, all=True)\nprint(\"Individual:\", individual)\nprint(\"Overall:\", overall)\n\n[ 0.5 -0.   1. ]\nIndividual: [array([0.5, 0. , 1. ]), array([ 0.5, -0. ,  1. ])]\nOverall: [ 0.5 -0.   1. ]"
   },
   {
     "objectID": "reference/utils.desirability.DOverall.html#methods",
     "href": "reference/utils.desirability.DOverall.html#methods",
     "title": "utils.desirability.DOverall",
-    "section": "",
-    "text": "Name\nDescription\n\n\n\n\npredict\nPredicts the overall desirability based on the individual desirability objects.\n\n\n\n\n\nutils.desirability.DOverall.predict(newdata, all=False)\nPredicts the overall desirability based on the individual desirability objects.\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nnewdata\nlist or numpy.ndarray\nA list or array of predicted outcomes, one for each desirability object.\nrequired\n\n\nall\nbool\nWhether to return individual desirabilities along with the overall desirability. Defaults to False.\nFalse\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nfloat or tuple\nThe overall desirability score, or a tuple of individual and overall desirabilities if all=True.\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nValueError\nIf the number of columns in newdata does not match the number of desirability objects.\n\n\n\n\n\n\n&gt;&gt;&gt; from spotdesirability import DOverall, DMax, DMin\n&gt;&gt;&gt; import numpy as np\n# Create individual desirability objects\n&gt;&gt;&gt; dmax = DMax(low=0, high=10, scale=1)\n&gt;&gt;&gt; dmin = DMin(low=5, high=15, scale=1)\n&gt;&gt;&gt; doverall = DOverall(dmax, dmin)\n&gt;&gt;&gt; inputs = np.array([[5, 10], [0, 15], [10, 5]])\n&gt;&gt;&gt; overall_desirability = doverall.predict(inputs)\n&gt;&gt;&gt; print(overall_desirability)"
+    "section": "Methods",
+    "text": "Methods\n\n\n\nName\nDescription\n\n\n\n\npredict\nPredicts the overall desirability based on the individual desirability objects.\n\n\n\n\npredict\nutils.desirability.DOverall.predict(newdata, all=False)\nPredicts the overall desirability based on the individual desirability objects.\n\nParameters\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nnewdata\nlist or numpy.ndarray\nA list or array of predicted outcomes, one for each desirability object.\nrequired\n\n\nall\nbool\nWhether to return individual desirabilities along with the overall desirability. Defaults to False.\nFalse\n\n\n\n\n\nReturns\n\n\n\nName\nType\nDescription\n\n\n\n\n\nfloat or tuple\nThe overall desirability score, or a tuple of individual and overall desirabilities if all=True.\n\n\n\n\n\nRaises\n\n\n\nName\nType\nDescription\n\n\n\n\n\nValueError\nIf the number of columns in newdata does not match the number of desirability objects.\n\n\n\n\n\nExamples\n\nfrom spotdesirability import DOverall, DMax, DMin\nimport numpy as np\n# Create individual desirability objects\ndmax = DMax(low=0, high=10, scale=1)\ndmin = DMin(low=5, high=15, scale=1)\ndoverall = DOverall(dmax, dmin)\ninputs = np.array([[5, 10], [0, 15], [10, 5]])\noverall_desirability = doverall.predict(inputs)\nprint(overall_desirability)\n\n[ 0.5 -0.   1. ]"
   },
   {
     "objectID": "reference/functions.rsm.conversion_pred.html",
@@ -152,70 +152,70 @@
     "href": "reference/utils.desirability.DMin.html",
     "title": "utils.desirability.DMin",
     "section": "",
-    "text": "utils.desirability.DMin(low, high, scale=1, tol=None, missing=None)\nImplements a desirability function for minimization.\nThe desirability function assigns a value of 1 for inputs below the low threshold, a value of 0 for inputs above the high threshold, and scales the desirability between 1 and 0 for inputs within the range [low, high] using a specified scale factor.\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nlow\nfloat\nThe lower threshold for the desirability function.\n\n\nhigh\nfloat\nThe upper threshold for the desirability function.\n\n\nscale\nfloat\nThe scaling factor for the desirability function. Must be greater than 0.\n\n\ntol\nfloat\nA tolerance value to replace desirability values of 0. Defaults to None.\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to a non-informative value.\n\n\n\n\n\n\nPredicts the desirability values for the given input data.\nPlots the desirability function.\n\n\n\nMany thanks to Max Kuhn for his implementation of the ‘desirability’ package in R. This class is based on the ‘desirability’ package in R, see: https://cran.r-project.org/package=desirability\n\n\n\n&gt;&gt;&gt; from spotdesirability import DMin\n&gt;&gt;&gt; import numpy as np\n&gt;&gt;&gt; import matplotlib.pyplot as plt\n# Create a DMin object\n&gt;&gt;&gt; dmin = DMin(low=0, high=10, scale=1)\n# Predict desirability for a range of inputs\n&gt;&gt;&gt; inputs = np.array([-5, 0, 5, 10, 15])\n&gt;&gt;&gt; desirability = dmin.predict(inputs)\n&gt;&gt;&gt; print(desirability)\n[1. 1. 0.5 0. 0.]\n# Plot the desirability function\n&gt;&gt;&gt; dmin.plot()\n\n\n\n\n\n\nName\nDescription\n\n\n\n\npredict\nPredicts the desirability values for the given input data.\n\n\n\n\n\nutils.desirability.DMin.predict(newdata=None, missing=None)\nPredicts the desirability values for the given input data.\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nnewdata\narray - like\nThe input data for which to compute desirability values. If None, an empty array is used. Defaults to None.\nNone\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to the object’s missing attribute.\nNone\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nnumpy.ndarray\nThe desirability values for the input data.\n\n\n\n\n\n\n&gt;&gt;&gt; from spotdesirability import DMin\n&gt;&gt;&gt; dmin = DMin(low=0, high=10, scale=1)\n&gt;&gt;&gt; inputs = np.array([-5, 0, 5, 10, 15])\n&gt;&gt;&gt; desirability = dmin.predict(inputs)\n&gt;&gt;&gt; print(desirability)\n[1. 1. 0.5 0. 0.]"
+    "text": "utils.desirability.DMin(low, high, scale=1, tol=None, missing=None)\nImplements a desirability function for minimization.\nThe desirability function assigns a value of 1 for inputs below the low threshold, a value of 0 for inputs above the high threshold, and scales the desirability between 1 and 0 for inputs within the range [low, high] using a specified scale factor."
   },
   {
     "objectID": "reference/utils.desirability.DMin.html#attributes",
     "href": "reference/utils.desirability.DMin.html#attributes",
     "title": "utils.desirability.DMin",
-    "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\nlow\nfloat\nThe lower threshold for the desirability function.\n\n\nhigh\nfloat\nThe upper threshold for the desirability function.\n\n\nscale\nfloat\nThe scaling factor for the desirability function. Must be greater than 0.\n\n\ntol\nfloat\nA tolerance value to replace desirability values of 0. Defaults to None.\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to a non-informative value."
+    "section": "Attributes",
+    "text": "Attributes\n\n\n\nName\nType\nDescription\n\n\n\n\nlow\nfloat\nThe lower threshold for the desirability function.\n\n\nhigh\nfloat\nThe upper threshold for the desirability function.\n\n\nscale\nfloat\nThe scaling factor for the desirability function. Must be greater than 0.\n\n\ntol\nfloat\nA tolerance value to replace desirability values of 0. Defaults to None.\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to a non-informative value."
   },
   {
     "objectID": "reference/utils.desirability.DMin.html#functions",
     "href": "reference/utils.desirability.DMin.html#functions",
     "title": "utils.desirability.DMin",
-    "section": "",
-    "text": "Predicts the desirability values for the given input data.\nPlots the desirability function."
+    "section": "Functions",
+    "text": "Functions\nPredicts the desirability values for the given input data.\nPlots the desirability function."
   },
   {
     "objectID": "reference/utils.desirability.DMin.html#references",
     "href": "reference/utils.desirability.DMin.html#references",
     "title": "utils.desirability.DMin",
-    "section": "",
-    "text": "Many thanks to Max Kuhn for his implementation of the ‘desirability’ package in R. This class is based on the ‘desirability’ package in R, see: https://cran.r-project.org/package=desirability"
+    "section": "References",
+    "text": "References\nMany thanks to Max Kuhn for his implementation of the ‘desirability’ package in R. This class is based on the ‘desirability’ package in R, see: https://cran.r-project.org/package=desirability"
   },
   {
     "objectID": "reference/utils.desirability.DMin.html#examples",
     "href": "reference/utils.desirability.DMin.html#examples",
     "title": "utils.desirability.DMin",
-    "section": "",
-    "text": "&gt;&gt;&gt; from spotdesirability import DMin\n&gt;&gt;&gt; import numpy as np\n&gt;&gt;&gt; import matplotlib.pyplot as plt\n# Create a DMin object\n&gt;&gt;&gt; dmin = DMin(low=0, high=10, scale=1)\n# Predict desirability for a range of inputs\n&gt;&gt;&gt; inputs = np.array([-5, 0, 5, 10, 15])\n&gt;&gt;&gt; desirability = dmin.predict(inputs)\n&gt;&gt;&gt; print(desirability)\n[1. 1. 0.5 0. 0.]\n# Plot the desirability function\n&gt;&gt;&gt; dmin.plot()"
+    "section": "Examples",
+    "text": "Examples\n\nfrom spotdesirability import DMin\nimport numpy as np\nimport matplotlib.pyplot as plt\n# Create a DMin object\ndmin = DMin(low=0, high=10, scale=1)\n# Predict desirability for a range of inputs\ninputs = np.array([-5, 0, 5, 10, 15])\ndesirability = dmin.predict(inputs)\nprint(desirability)\n# [1. 1. 0.5 0. 0.]\n# Plot the desirability function\ndmin.plot()\n\n[ 1.   1.   0.5 -0.   0. ]"
   },
   {
     "objectID": "reference/utils.desirability.DMin.html#methods",
     "href": "reference/utils.desirability.DMin.html#methods",
     "title": "utils.desirability.DMin",
-    "section": "",
-    "text": "Name\nDescription\n\n\n\n\npredict\nPredicts the desirability values for the given input data.\n\n\n\n\n\nutils.desirability.DMin.predict(newdata=None, missing=None)\nPredicts the desirability values for the given input data.\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nnewdata\narray - like\nThe input data for which to compute desirability values. If None, an empty array is used. Defaults to None.\nNone\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to the object’s missing attribute.\nNone\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nnumpy.ndarray\nThe desirability values for the input data.\n\n\n\n\n\n\n&gt;&gt;&gt; from spotdesirability import DMin\n&gt;&gt;&gt; dmin = DMin(low=0, high=10, scale=1)\n&gt;&gt;&gt; inputs = np.array([-5, 0, 5, 10, 15])\n&gt;&gt;&gt; desirability = dmin.predict(inputs)\n&gt;&gt;&gt; print(desirability)\n[1. 1. 0.5 0. 0.]"
+    "section": "Methods",
+    "text": "Methods\n\n\n\nName\nDescription\n\n\n\n\npredict\nPredicts the desirability values for the given input data.\n\n\n\n\npredict\nutils.desirability.DMin.predict(newdata=None, missing=None)\nPredicts the desirability values for the given input data.\n\nParameters\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nnewdata\narray - like\nThe input data for which to compute desirability values. If None, an empty array is used. Defaults to None.\nNone\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to the object’s missing attribute.\nNone\n\n\n\n\n\nReturns\n\n\n\nName\nType\nDescription\n\n\n\n\n\nnumpy.ndarray\nThe desirability values for the input data.\n\n\n\n\n\nExamples\n\nfrom spotdesirability import DMin\nimport numpy as np\ndmin = DMin(low=0, high=10, scale=1)\ninputs = np.array([-5, 0, 5, 10, 15])\ndesirability = dmin.predict(inputs)\nprint(desirability)\n# [1. 1. 0.5 0. 0.]\n\n[ 1.   1.   0.5 -0.   0. ]"
   },
   {
     "objectID": "reference/utils.desirability.DesirabilityBase.html",
     "href": "reference/utils.desirability.DesirabilityBase.html",
     "title": "utils.desirability.DesirabilityBase",
     "section": "",
-    "text": "utils.desirability.DesirabilityBase()\nBase class for all desirability functions.\nProvides a method to print class attributes and extend the range of values.\n\n\nPrints the attributes of the class object in a generic and recursive manner.\nExtends the range of values by a given factor.\n\n\n\nMany thanks to Max Kuhn for his implementation of the ‘desirability’ package in R. This class is based on the ‘desirability’ package in R, see: https://cran.r-project.org/package=desirability\n\n\n\n\n\n\nName\nDescription\n\n\n\n\nextend_range\nExtend the range of values by a given factor.\n\n\nplot\nPlots the continuous desirability functions, i.e., DMax, DMin, and DTarget.\n\n\nprint_class_attributes\nPrints the attributes of the class object in a generic and recursive manner.\n\n\n\n\n\nutils.desirability.DesirabilityBase.extend_range(values, factor=0.05)\nExtend the range of values by a given factor.\n\n\n\nutils.desirability.DesirabilityBase.plot(\n    add=False,\n    non_inform=True,\n    xlabel='Input',\n    ylabel='Desirability',\n    figsize=(10, 8),\n    grid=True,\n    **kwargs,\n)\nPlots the continuous desirability functions, i.e., DMax, DMin, and DTarget.\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nadd\nbool\nWhether to add the plot to an existing figure. Defaults to False.\nFalse\n\n\nnon_inform\nbool\nWhether to display the non-informative value as a dashed line. Defaults to True.\nTrue\n\n\nxlabel\nstr\nLabel for the x-axis. Defaults to “Input”.\n'Input'\n\n\nylabel\nstr\nLabel for the y-axis. Defaults to “Desirability”.\n'Desirability'\n\n\nfigsize\ntuple\nSize of the figure (width, height) in inches. Defaults to (10, 8).\n(10, 8)\n\n\ngrid\nbool\nWhether to display a grid. Defaults to True.\nTrue\n\n\n**kwargs\nDict[str, Any]\nAdditional keyword arguments for the plot.\n{}\n\n\n\n\n\n\n&gt;&gt;&gt; from spotdesirability import DMax\n&gt;&gt;&gt; dmax = DMax(low=0, high=10, scale=1)\n&gt;&gt;&gt; dmax.plot(figsize=(12, 6))  # Custom figure size\n&gt;&gt;&gt; from spotdesirability import DMin\n&gt;&gt;&gt; dmin = DMin(low=0, high=10, scale=1)\n&gt;&gt;&gt; dmin.plot()  # Default figure size\n&gt;&gt;&gt; from spotdesirability import DTarget\n&gt;&gt;&gt; dtarget = DTarget(low=0, target=5, high=10, low_scale=1, high_scale=1)\n&gt;&gt;&gt; dtarget.plot(figsize=(8, 4))\n&gt;&gt;&gt; from spotdesirability import DArb\n&gt;&gt;&gt; x = [-5, 0, 5, 10]\n&gt;&gt;&gt; d = [0, 0.5, 1, 0.2]\n&gt;&gt;&gt; darb = DArb(x, d)\n&gt;&gt;&gt; darb.plot(figsize=(15, 10))\n\n\n\n\nutils.desirability.DesirabilityBase.print_class_attributes(indent=0)\nPrints the attributes of the class object in a generic and recursive manner.\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nindent\nint\nThe indentation level for nested objects.\n0"
+    "text": "utils.desirability.DesirabilityBase()\nBase class for all desirability functions.\nProvides a method to print class attributes and extend the range of values."
   },
   {
     "objectID": "reference/utils.desirability.DesirabilityBase.html#functions",
     "href": "reference/utils.desirability.DesirabilityBase.html#functions",
     "title": "utils.desirability.DesirabilityBase",
-    "section": "",
-    "text": "Prints the attributes of the class object in a generic and recursive manner.\nExtends the range of values by a given factor."
+    "section": "Functions",
+    "text": "Functions\nPrints the attributes of the class object in a generic and recursive manner.\nExtends the range of values by a given factor."
   },
   {
     "objectID": "reference/utils.desirability.DesirabilityBase.html#references",
     "href": "reference/utils.desirability.DesirabilityBase.html#references",
     "title": "utils.desirability.DesirabilityBase",
-    "section": "",
-    "text": "Many thanks to Max Kuhn for his implementation of the ‘desirability’ package in R. This class is based on the ‘desirability’ package in R, see: https://cran.r-project.org/package=desirability"
+    "section": "References",
+    "text": "References\nMany thanks to Max Kuhn for his implementation of the ‘desirability’ package in R. This class is based on the ‘desirability’ package in R, see: https://cran.r-project.org/package=desirability"
   },
   {
     "objectID": "reference/utils.desirability.DesirabilityBase.html#methods",
     "href": "reference/utils.desirability.DesirabilityBase.html#methods",
     "title": "utils.desirability.DesirabilityBase",
-    "section": "",
-    "text": "Name\nDescription\n\n\n\n\nextend_range\nExtend the range of values by a given factor.\n\n\nplot\nPlots the continuous desirability functions, i.e., DMax, DMin, and DTarget.\n\n\nprint_class_attributes\nPrints the attributes of the class object in a generic and recursive manner.\n\n\n\n\n\nutils.desirability.DesirabilityBase.extend_range(values, factor=0.05)\nExtend the range of values by a given factor.\n\n\n\nutils.desirability.DesirabilityBase.plot(\n    add=False,\n    non_inform=True,\n    xlabel='Input',\n    ylabel='Desirability',\n    figsize=(10, 8),\n    grid=True,\n    **kwargs,\n)\nPlots the continuous desirability functions, i.e., DMax, DMin, and DTarget.\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nadd\nbool\nWhether to add the plot to an existing figure. Defaults to False.\nFalse\n\n\nnon_inform\nbool\nWhether to display the non-informative value as a dashed line. Defaults to True.\nTrue\n\n\nxlabel\nstr\nLabel for the x-axis. Defaults to “Input”.\n'Input'\n\n\nylabel\nstr\nLabel for the y-axis. Defaults to “Desirability”.\n'Desirability'\n\n\nfigsize\ntuple\nSize of the figure (width, height) in inches. Defaults to (10, 8).\n(10, 8)\n\n\ngrid\nbool\nWhether to display a grid. Defaults to True.\nTrue\n\n\n**kwargs\nDict[str, Any]\nAdditional keyword arguments for the plot.\n{}\n\n\n\n\n\n\n&gt;&gt;&gt; from spotdesirability import DMax\n&gt;&gt;&gt; dmax = DMax(low=0, high=10, scale=1)\n&gt;&gt;&gt; dmax.plot(figsize=(12, 6))  # Custom figure size\n&gt;&gt;&gt; from spotdesirability import DMin\n&gt;&gt;&gt; dmin = DMin(low=0, high=10, scale=1)\n&gt;&gt;&gt; dmin.plot()  # Default figure size\n&gt;&gt;&gt; from spotdesirability import DTarget\n&gt;&gt;&gt; dtarget = DTarget(low=0, target=5, high=10, low_scale=1, high_scale=1)\n&gt;&gt;&gt; dtarget.plot(figsize=(8, 4))\n&gt;&gt;&gt; from spotdesirability import DArb\n&gt;&gt;&gt; x = [-5, 0, 5, 10]\n&gt;&gt;&gt; d = [0, 0.5, 1, 0.2]\n&gt;&gt;&gt; darb = DArb(x, d)\n&gt;&gt;&gt; darb.plot(figsize=(15, 10))\n\n\n\n\nutils.desirability.DesirabilityBase.print_class_attributes(indent=0)\nPrints the attributes of the class object in a generic and recursive manner.\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nindent\nint\nThe indentation level for nested objects.\n0"
+    "section": "Methods",
+    "text": "Methods\n\n\n\nName\nDescription\n\n\n\n\nextend_range\nExtend the range of values by a given factor.\n\n\nplot\nPlots the continuous desirability functions, i.e., DMax, DMin, and DTarget.\n\n\nprint_class_attributes\nPrints the attributes of the class object in a generic and recursive manner.\n\n\n\n\nextend_range\nutils.desirability.DesirabilityBase.extend_range(values, factor=0.05)\nExtend the range of values by a given factor.\n\n\nplot\nutils.desirability.DesirabilityBase.plot(\n    add=False,\n    non_inform=True,\n    xlabel='Input',\n    ylabel='Desirability',\n    figsize=(10, 8),\n    grid=True,\n    **kwargs,\n)\nPlots the continuous desirability functions, i.e., DMax, DMin, and DTarget.\n\nParameters\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nadd\nbool\nWhether to add the plot to an existing figure. Defaults to False.\nFalse\n\n\nnon_inform\nbool\nWhether to display the non-informative value as a dashed line. Defaults to True.\nTrue\n\n\nxlabel\nstr\nLabel for the x-axis. Defaults to “Input”.\n'Input'\n\n\nylabel\nstr\nLabel for the y-axis. Defaults to “Desirability”.\n'Desirability'\n\n\nfigsize\ntuple\nSize of the figure (width, height) in inches. Defaults to (10, 8).\n(10, 8)\n\n\ngrid\nbool\nWhether to display a grid. Defaults to True.\nTrue\n\n\n**kwargs\nDict[str, Any]\nAdditional keyword arguments for the plot.\n{}\n\n\n\n\n\nExamples\n\nfrom spotdesirability import DMax\ndmax = DMax(low=0, high=10, scale=1)\ndmax.plot(figsize=(12, 6))  # Custom figure size\n\n\n\n\n\n\n\n\n\nfrom spotdesirability import DMin\ndmin = DMin(low=0, high=10, scale=1)\ndmin.plot()  # Default figure size\n\n\n\n\n\n\n\n\n\nfrom spotdesirability import DTarget\ndtarget = DTarget(low=0, target=5, high=10, low_scale=1, high_scale=1)\ndtarget.plot(figsize=(8, 4))\n\n\n\n\n\n\n\n\n\nfrom spotdesirability import DArb\nx = [-5, 0, 5, 10]\nd = [0, 0.5, 1, 0.2]\ndarb = DArb(x, d)\ndarb.plot(figsize=(15, 10))\n\n\n\n\n\n\n\n\n\n\n\nprint_class_attributes\nutils.desirability.DesirabilityBase.print_class_attributes(indent=0)\nPrints the attributes of the class object in a generic and recursive manner.\n\nParameters\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nindent\nint\nThe indentation level for nested objects.\n0"
   },
   {
     "objectID": "reference/functions.rsm.activity_pred.html",
@@ -355,23 +355,23 @@
     "href": "CHANGELOG.html",
     "title": "spotdesirability",
     "section": "",
-    "text": "Merge branch ‘main’ into develop (d5ba393)\nMerge pull request #7 from sequential-parameter-optimization/develop (1a2e3a4), closes #7\nchore(release): 0.0.21-rc.2 [skip ci] (593b8f9)\nchore(release): 0.0.21-rc.3 [skip ci] (2fa96a2)\nchore(release): 0.0.22-rc.1 [skip ci] (1aba1b2)\nfix: restore REUSE compliance for new documentation files (e926da9)\ndocs: refine documentation structure and fix landing page (6cdecd4)\ndocs: updated index (e2a0cb1)",
+    "text": "fix: input list handling (7e99824)\ndocs: add living examples and deep tests for conversion_pred (de5ffd6)\ndocs: spotdesirability instead of spotpython (527385a)\ndocs: use Quarto living code blocks in rsm.py docstrings (6b8153b)\nchore: add dependabot configuration for actions and pip (78e7861)\nchore: exclude Quarto build artifacts from git (b73a871)\nDelete makefile.sh (d973a00)",
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.22 (2026-02-27)</small>"
+      "<small>0.0.22-rc.2 (2026-02-27)</small>"
     ]
   },
   {
-    "objectID": "CHANGELOG.html#section",
-    "href": "CHANGELOG.html#section",
+    "objectID": "CHANGELOG.html#rc.2-2026-02-27",
+    "href": "CHANGELOG.html#rc.2-2026-02-27",
     "title": "spotdesirability",
     "section": "",
-    "text": "Merge branch ‘main’ into develop (d5ba393)\nMerge pull request #7 from sequential-parameter-optimization/develop (1a2e3a4), closes #7\nchore(release): 0.0.21-rc.2 [skip ci] (593b8f9)\nchore(release): 0.0.21-rc.3 [skip ci] (2fa96a2)\nchore(release): 0.0.22-rc.1 [skip ci] (1aba1b2)\nfix: restore REUSE compliance for new documentation files (e926da9)\ndocs: refine documentation structure and fix landing page (6cdecd4)\ndocs: updated index (e2a0cb1)",
+    "text": "fix: input list handling (7e99824)\ndocs: add living examples and deep tests for conversion_pred (de5ffd6)\ndocs: spotdesirability instead of spotpython (527385a)\ndocs: use Quarto living code blocks in rsm.py docstrings (6b8153b)\nchore: add dependabot configuration for actions and pip (78e7861)\nchore: exclude Quarto build artifacts from git (b73a871)\nDelete makefile.sh (d973a00)",
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.22 (2026-02-27)</small>"
+      "<small>0.0.22-rc.2 (2026-02-27)</small>"
     ]
   },
   {
@@ -383,7 +383,7 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.22 (2026-02-27)</small>"
+      "<small>0.0.22-rc.2 (2026-02-27)</small>"
     ]
   },
   {
@@ -395,19 +395,19 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.22 (2026-02-27)</small>"
+      "<small>0.0.22-rc.2 (2026-02-27)</small>"
     ]
   },
   {
-    "objectID": "CHANGELOG.html#rc.2-2026-02-27",
-    "href": "CHANGELOG.html#rc.2-2026-02-27",
+    "objectID": "CHANGELOG.html#rc.2-2026-02-27-1",
+    "href": "CHANGELOG.html#rc.2-2026-02-27-1",
     "title": "spotdesirability",
     "section": "0.0.21-rc.2 (2026-02-27)",
     "text": "0.0.21-rc.2 (2026-02-27)\n\nfix(release): use pinned semantic-release-action for security (5258133) ## 0.0.21 (2026-02-27)\nMerge branch ‘main’ into develop (f0bf0c3)\nMerge pull request #6 from sequential-parameter-optimization/develop (b804b70), closes #6\nfix: restore REUSE compliance and clean up mkdocs.yml (b6479e2)\nfix(release): use pinned semantic-release-action for security (5258133)\nchore(release): 0.0.20-rc.2 [skip ci] (cd96ccc)\nchore(release): 0.0.21-rc.1 [skip ci] (f6ca60e)",
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.22 (2026-02-27)</small>"
+      "<small>0.0.22-rc.2 (2026-02-27)</small>"
     ]
   },
   {
@@ -419,31 +419,31 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.22 (2026-02-27)</small>"
+      "<small>0.0.22-rc.2 (2026-02-27)</small>"
     ]
   },
   {
-    "objectID": "CHANGELOG.html#rc.2-2026-02-27-1",
-    "href": "CHANGELOG.html#rc.2-2026-02-27-1",
+    "objectID": "CHANGELOG.html#rc.2-2026-02-27-2",
+    "href": "CHANGELOG.html#rc.2-2026-02-27-2",
     "title": "spotdesirability",
     "section": "0.0.20-rc.2 (2026-02-27)",
     "text": "0.0.20-rc.2 (2026-02-27)",
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.22 (2026-02-27)</small>"
+      "<small>0.0.22-rc.2 (2026-02-27)</small>"
     ]
   },
   {
-    "objectID": "CHANGELOG.html#section-1",
-    "href": "CHANGELOG.html#section-1",
+    "objectID": "CHANGELOG.html#section",
+    "href": "CHANGELOG.html#section",
     "title": "spotdesirability",
     "section": "0.0.20 (2026-02-27)",
     "text": "0.0.20 (2026-02-27)\n\nBug Fixes\n\nrestore REUSE compliance and clean up mkdocs.yml (b6479e2)\nci: output bandit results as SARIF for SAST visibility (46d6665)\nswitch to uv_build backend for robust metadata generation (92f8cc4)\ntests: correct indentation for test_activity_pred_valid_input_list (d809f15)",
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.22 (2026-02-27)</small>"
+      "<small>0.0.22-rc.2 (2026-02-27)</small>"
     ]
   },
   {
@@ -455,31 +455,31 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.22 (2026-02-27)</small>"
+      "<small>0.0.22-rc.2 (2026-02-27)</small>"
     ]
   },
   {
-    "objectID": "CHANGELOG.html#rc.2-2026-02-27-2",
-    "href": "CHANGELOG.html#rc.2-2026-02-27-2",
+    "objectID": "CHANGELOG.html#rc.2-2026-02-27-3",
+    "href": "CHANGELOG.html#rc.2-2026-02-27-3",
     "title": "spotdesirability",
     "section": "0.0.19-rc.2 (2026-02-27)",
     "text": "0.0.19-rc.2 (2026-02-27)",
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.22 (2026-02-27)</small>"
+      "<small>0.0.22-rc.2 (2026-02-27)</small>"
     ]
   },
   {
-    "objectID": "CHANGELOG.html#section-2",
-    "href": "CHANGELOG.html#section-2",
+    "objectID": "CHANGELOG.html#section-1",
+    "href": "CHANGELOG.html#section-1",
     "title": "spotdesirability",
     "section": "0.0.19 (2026-02-27)",
     "text": "0.0.19 (2026-02-27)\n\nBug Fixes\n\nswitch to uv_build backend for robust metadata generation (92f8cc4)\nremove MANIFEST.in, stale mkdocs deps and update license (3e1799f)",
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.22 (2026-02-27)</small>"
+      "<small>0.0.22-rc.2 (2026-02-27)</small>"
     ]
   },
   {
@@ -491,31 +491,31 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.22 (2026-02-27)</small>"
+      "<small>0.0.22-rc.2 (2026-02-27)</small>"
     ]
   },
   {
-    "objectID": "CHANGELOG.html#rc.2-2026-02-27-3",
-    "href": "CHANGELOG.html#rc.2-2026-02-27-3",
+    "objectID": "CHANGELOG.html#rc.2-2026-02-27-4",
+    "href": "CHANGELOG.html#rc.2-2026-02-27-4",
     "title": "spotdesirability",
     "section": "0.0.18-rc.2 (2026-02-27)",
     "text": "0.0.18-rc.2 (2026-02-27)",
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.22 (2026-02-27)</small>"
+      "<small>0.0.22-rc.2 (2026-02-27)</small>"
     ]
   },
   {
-    "objectID": "CHANGELOG.html#section-3",
-    "href": "CHANGELOG.html#section-3",
+    "objectID": "CHANGELOG.html#section-2",
+    "href": "CHANGELOG.html#section-2",
     "title": "spotdesirability",
     "section": "0.0.18 (2026-02-27)",
     "text": "0.0.18 (2026-02-27)\n\nBug Fixes\n\nremove MANIFEST.in, stale mkdocs deps and update license (3e1799f)\nrestore early build in release.yml and add flake8 (7ee6fcc)\n\n\n\nDocumentation\n\nformatting (41fcece)",
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.22 (2026-02-27)</small>"
+      "<small>0.0.22-rc.2 (2026-02-27)</small>"
     ]
   },
   {
@@ -527,7 +527,7 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.22 (2026-02-27)</small>"
+      "<small>0.0.22-rc.2 (2026-02-27)</small>"
     ]
   },
   {
@@ -539,31 +539,31 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.22 (2026-02-27)</small>"
+      "<small>0.0.22-rc.2 (2026-02-27)</small>"
     ]
   },
   {
-    "objectID": "CHANGELOG.html#section-4",
-    "href": "CHANGELOG.html#section-4",
+    "objectID": "CHANGELOG.html#section-3",
+    "href": "CHANGELOG.html#section-3",
     "title": "spotdesirability",
     "section": "0.0.17 (2026-02-27)",
     "text": "0.0.17 (2026-02-27)\n\nBug Fixes\n\nrestore early build in release.yml and add flake8 (7ee6fcc)\n\n\n\nDocumentation\n\nformatting (41fcece)\nnormalize semantic-release pre-release version to PEP 440 (cb31e21)\nremove setuptools_scm, fix double-build in release workflow (33ad086)",
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.22 (2026-02-27)</small>"
+      "<small>0.0.22-rc.2 (2026-02-27)</small>"
     ]
   },
   {
-    "objectID": "CHANGELOG.html#rc.2-2026-02-27-4",
-    "href": "CHANGELOG.html#rc.2-2026-02-27-4",
+    "objectID": "CHANGELOG.html#rc.2-2026-02-27-5",
+    "href": "CHANGELOG.html#rc.2-2026-02-27-5",
     "title": "spotdesirability",
     "section": "0.0.17-rc.2 (2026-02-27)",
     "text": "0.0.17-rc.2 (2026-02-27)\n\nBug Fixes\n\nnormalize semantic-release pre-release version to PEP 440 (cb31e21)",
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.22 (2026-02-27)</small>"
+      "<small>0.0.22-rc.2 (2026-02-27)</small>"
     ]
   },
   {
@@ -575,31 +575,31 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.22 (2026-02-27)</small>"
+      "<small>0.0.22-rc.2 (2026-02-27)</small>"
     ]
   },
   {
-    "objectID": "CHANGELOG.html#section-5",
-    "href": "CHANGELOG.html#section-5",
+    "objectID": "CHANGELOG.html#section-4",
+    "href": "CHANGELOG.html#section-4",
     "title": "spotdesirability",
     "section": "0.0.16 (2026-02-27)",
     "text": "0.0.16 (2026-02-27)\n\nBug Fixes\n\nurllib and pillow (391ab73)",
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.22 (2026-02-27)</small>"
+      "<small>0.0.22-rc.2 (2026-02-27)</small>"
     ]
   },
   {
-    "objectID": "CHANGELOG.html#section-6",
-    "href": "CHANGELOG.html#section-6",
+    "objectID": "CHANGELOG.html#section-5",
+    "href": "CHANGELOG.html#section-5",
     "title": "spotdesirability",
     "section": "0.0.15 (2026-02-27)",
     "text": "0.0.15 (2026-02-27)\n\nBug Fixes\n\ncorrect quartodoc module paths in _quarto.yml (2452ee7)",
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.22 (2026-02-27)</small>"
+      "<small>0.0.22-rc.2 (2026-02-27)</small>"
     ]
   },
   {
@@ -716,168 +716,168 @@
     "href": "reference/utils.desirability.DBox.html",
     "title": "utils.desirability.DBox",
     "section": "",
-    "text": "utils.desirability.DBox(low, high, tol=None, missing=None)\nImplements a box-like desirability function.\nThe desirability function assigns a value of 1 for inputs within the range [low, high] and a value of 0 for inputs outside this range.\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nlow\nfloat\nThe lower threshold for the desirability function.\n\n\nhigh\nfloat\nThe upper threshold for the desirability function.\n\n\ntol\nfloat\nA tolerance value to replace desirability values of 0. Defaults to None.\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to a non-informative value.\n\n\n\n\n\n\nPredicts the desirability values for the given input data.\nPlots the desirability function.\n\n\n\nMany thanks to Max Kuhn for his implementation of the ‘desirability’ package in R. This class is based on the ‘desirability’ package in R, see: https://cran.r-project.org/package=desirability\n\n\n\n&gt;&gt;&gt; from spotdesirability import DBox\n&gt;&gt;&gt; import numpy as np\n&gt;&gt;&gt; import matplotlib.pyplot as plt\n# Create a DBox object\n&gt;&gt;&gt; dbox = DBox(low=-1.682, high=1.682)\n# Predict desirability for a range of inputs\n&gt;&gt;&gt; inputs = np.array([-3, -1.682, 0, 1.682, 3])\n&gt;&gt;&gt; desirability = dbox.predict(inputs)\n&gt;&gt;&gt; print(desirability)\n[0. 1. 1. 1. 0.]\n# Plot the desirability function\n&gt;&gt;&gt; dbox.plot()\n\n\n\n\n\n\nName\nDescription\n\n\n\n\nplot\nPlots the box-like desirability function.\n\n\npredict\nPredicts the desirability values for the given input data.\n\n\n\n\n\nutils.desirability.DBox.plot(\n    add=False,\n    non_inform=True,\n    xlabel='Input',\n    ylabel='Desirability',\n    figsize=(10, 8),\n    **kwargs,\n)\nPlots the box-like desirability function.\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nadd\nbool\nWhether to add the plot to an existing figure. Defaults to False.\nFalse\n\n\nnon_inform\nbool\nWhether to display the non-informative value as a dashed line. Defaults to True.\nTrue\n\n\nxlabel\nstr\nLabel for the x-axis. Defaults to “Input”.\n'Input'\n\n\nylabel\nstr\nLabel for the y-axis. Defaults to “Desirability”.\n'Desirability'\n\n\nfigsize\ntuple\nSize of the figure (width, height) in inches. Defaults to (10, 8).\n(10, 8)\n\n\n**kwargs\nDict[str, Any]\nAdditional keyword arguments for the plot.\n{}\n\n\n\n\n\n\n&gt;&gt;&gt; from spotdesirability import DBox\n&gt;&gt;&gt; dbox = DBox(low=-1.682, high=1.682)\n&gt;&gt;&gt; dbox.plot()  # Default figure size\n&gt;&gt;&gt; dbox.plot(figsize=(12, 6))  # Custom figure size\n\n\n\n\nutils.desirability.DBox.predict(newdata=None, missing=None)\nPredicts the desirability values for the given input data.\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nnewdata\narray - like\nThe input data for which to compute desirability values. If None, an empty array is used. Defaults to None.\nNone\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to the object’s missing attribute.\nNone\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nnumpy.ndarray\nThe desirability values for the input data.\n\n\n\n\n\n\n&gt;&gt;&gt; from spotdesirability import DBox\n&gt;&gt;&gt; import numpy as np\n# Create a DBox object\n&gt;&gt;&gt; dbox = DBox(low=-1.682, high=1.682)\n&gt;&gt;&gt; inputs = np.array([-3, -1.682, 0, 1.682, 3])\n&gt;&gt;&gt; desirability = dbox.predict(inputs)\n&gt;&gt;&gt; print(desirability)\n[0. 1. 1. 1. 0.]"
+    "text": "utils.desirability.DBox(low, high, tol=None, missing=None)\nImplements a box-like desirability function.\nThe desirability function assigns a value of 1 for inputs within the range [low, high] and a value of 0 for inputs outside this range."
   },
   {
     "objectID": "reference/utils.desirability.DBox.html#attributes",
     "href": "reference/utils.desirability.DBox.html#attributes",
     "title": "utils.desirability.DBox",
-    "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\nlow\nfloat\nThe lower threshold for the desirability function.\n\n\nhigh\nfloat\nThe upper threshold for the desirability function.\n\n\ntol\nfloat\nA tolerance value to replace desirability values of 0. Defaults to None.\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to a non-informative value."
+    "section": "Attributes",
+    "text": "Attributes\n\n\n\nName\nType\nDescription\n\n\n\n\nlow\nfloat\nThe lower threshold for the desirability function.\n\n\nhigh\nfloat\nThe upper threshold for the desirability function.\n\n\ntol\nfloat\nA tolerance value to replace desirability values of 0. Defaults to None.\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to a non-informative value."
   },
   {
     "objectID": "reference/utils.desirability.DBox.html#functions",
     "href": "reference/utils.desirability.DBox.html#functions",
     "title": "utils.desirability.DBox",
-    "section": "",
-    "text": "Predicts the desirability values for the given input data.\nPlots the desirability function."
+    "section": "Functions",
+    "text": "Functions\nPredicts the desirability values for the given input data.\nPlots the desirability function."
   },
   {
     "objectID": "reference/utils.desirability.DBox.html#references",
     "href": "reference/utils.desirability.DBox.html#references",
     "title": "utils.desirability.DBox",
-    "section": "",
-    "text": "Many thanks to Max Kuhn for his implementation of the ‘desirability’ package in R. This class is based on the ‘desirability’ package in R, see: https://cran.r-project.org/package=desirability"
+    "section": "References",
+    "text": "References\nMany thanks to Max Kuhn for his implementation of the ‘desirability’ package in R. This class is based on the ‘desirability’ package in R, see: https://cran.r-project.org/package=desirability"
   },
   {
     "objectID": "reference/utils.desirability.DBox.html#examples",
     "href": "reference/utils.desirability.DBox.html#examples",
     "title": "utils.desirability.DBox",
-    "section": "",
-    "text": "&gt;&gt;&gt; from spotdesirability import DBox\n&gt;&gt;&gt; import numpy as np\n&gt;&gt;&gt; import matplotlib.pyplot as plt\n# Create a DBox object\n&gt;&gt;&gt; dbox = DBox(low=-1.682, high=1.682)\n# Predict desirability for a range of inputs\n&gt;&gt;&gt; inputs = np.array([-3, -1.682, 0, 1.682, 3])\n&gt;&gt;&gt; desirability = dbox.predict(inputs)\n&gt;&gt;&gt; print(desirability)\n[0. 1. 1. 1. 0.]\n# Plot the desirability function\n&gt;&gt;&gt; dbox.plot()"
+    "section": "Examples",
+    "text": "Examples\n\nfrom spotdesirability import DBox\nimport numpy as np\nimport matplotlib.pyplot as plt\n# Create a DBox object\ndbox = DBox(low=-1.682, high=1.682)\n# Predict desirability for a range of inputs\ninputs = np.array([-3, -1.682, 0, 1.682, 3])\ndesirability = dbox.predict(inputs)\nprint(desirability)\n# [0. 1. 1. 1. 0.]\n# Plot the desirability function\ndbox.plot()\n\n[0. 1. 1. 1. 0.]"
   },
   {
     "objectID": "reference/utils.desirability.DBox.html#methods",
     "href": "reference/utils.desirability.DBox.html#methods",
     "title": "utils.desirability.DBox",
-    "section": "",
-    "text": "Name\nDescription\n\n\n\n\nplot\nPlots the box-like desirability function.\n\n\npredict\nPredicts the desirability values for the given input data.\n\n\n\n\n\nutils.desirability.DBox.plot(\n    add=False,\n    non_inform=True,\n    xlabel='Input',\n    ylabel='Desirability',\n    figsize=(10, 8),\n    **kwargs,\n)\nPlots the box-like desirability function.\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nadd\nbool\nWhether to add the plot to an existing figure. Defaults to False.\nFalse\n\n\nnon_inform\nbool\nWhether to display the non-informative value as a dashed line. Defaults to True.\nTrue\n\n\nxlabel\nstr\nLabel for the x-axis. Defaults to “Input”.\n'Input'\n\n\nylabel\nstr\nLabel for the y-axis. Defaults to “Desirability”.\n'Desirability'\n\n\nfigsize\ntuple\nSize of the figure (width, height) in inches. Defaults to (10, 8).\n(10, 8)\n\n\n**kwargs\nDict[str, Any]\nAdditional keyword arguments for the plot.\n{}\n\n\n\n\n\n\n&gt;&gt;&gt; from spotdesirability import DBox\n&gt;&gt;&gt; dbox = DBox(low=-1.682, high=1.682)\n&gt;&gt;&gt; dbox.plot()  # Default figure size\n&gt;&gt;&gt; dbox.plot(figsize=(12, 6))  # Custom figure size\n\n\n\n\nutils.desirability.DBox.predict(newdata=None, missing=None)\nPredicts the desirability values for the given input data.\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nnewdata\narray - like\nThe input data for which to compute desirability values. If None, an empty array is used. Defaults to None.\nNone\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to the object’s missing attribute.\nNone\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nnumpy.ndarray\nThe desirability values for the input data.\n\n\n\n\n\n\n&gt;&gt;&gt; from spotdesirability import DBox\n&gt;&gt;&gt; import numpy as np\n# Create a DBox object\n&gt;&gt;&gt; dbox = DBox(low=-1.682, high=1.682)\n&gt;&gt;&gt; inputs = np.array([-3, -1.682, 0, 1.682, 3])\n&gt;&gt;&gt; desirability = dbox.predict(inputs)\n&gt;&gt;&gt; print(desirability)\n[0. 1. 1. 1. 0.]"
+    "section": "Methods",
+    "text": "Methods\n\n\n\nName\nDescription\n\n\n\n\nplot\nPlots the box-like desirability function.\n\n\npredict\nPredicts the desirability values for the given input data.\n\n\n\n\nplot\nutils.desirability.DBox.plot(\n    add=False,\n    non_inform=True,\n    xlabel='Input',\n    ylabel='Desirability',\n    figsize=(10, 8),\n    **kwargs,\n)\nPlots the box-like desirability function.\n\nParameters\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nadd\nbool\nWhether to add the plot to an existing figure. Defaults to False.\nFalse\n\n\nnon_inform\nbool\nWhether to display the non-informative value as a dashed line. Defaults to True.\nTrue\n\n\nxlabel\nstr\nLabel for the x-axis. Defaults to “Input”.\n'Input'\n\n\nylabel\nstr\nLabel for the y-axis. Defaults to “Desirability”.\n'Desirability'\n\n\nfigsize\ntuple\nSize of the figure (width, height) in inches. Defaults to (10, 8).\n(10, 8)\n\n\n**kwargs\nDict[str, Any]\nAdditional keyword arguments for the plot.\n{}\n\n\n\n\n\nExamples\n\nfrom spotdesirability import DBox\ndbox = DBox(low=-1.682, high=1.682)\ndbox.plot()  # Default figure size\ndbox.plot(figsize=(12, 6))  # Custom figure size\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\npredict\nutils.desirability.DBox.predict(newdata=None, missing=None)\nPredicts the desirability values for the given input data.\n\nParameters\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nnewdata\narray - like\nThe input data for which to compute desirability values. If None, an empty array is used. Defaults to None.\nNone\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to the object’s missing attribute.\nNone\n\n\n\n\n\nReturns\n\n\n\nName\nType\nDescription\n\n\n\n\n\nnumpy.ndarray\nThe desirability values for the input data.\n\n\n\n\n\nExamples\n\nfrom spotdesirability import DBox\nimport numpy as np\n# Create a DBox object\ndbox = DBox(low=-1.682, high=1.682)\ninputs = np.array([-3, -1.682, 0, 1.682, 3])\ndesirability = dbox.predict(inputs)\nprint(desirability)\n# [0. 1. 1. 1. 0.]\n\n[0. 1. 1. 1. 0.]"
   },
   {
     "objectID": "reference/utils.desirability.DArb.html",
     "href": "reference/utils.desirability.DArb.html",
     "title": "utils.desirability.DArb",
     "section": "",
-    "text": "utils.desirability.DArb(x, d, tol=None, missing=None)\nImplements an arbitrary desirability function.\nThis class allows users to define a custom desirability function by specifying input values (x) and their corresponding desirability values (d).\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nx\nnumpy.ndarray\nThe input values for the desirability function.\n\n\nd\nnumpy.ndarray\nThe desirability values corresponding to the input values.\n\n\ntol\nfloat\nA tolerance value to replace desirability values of 0. Defaults to None.\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to a non-informative value.\n\n\n\n\n\n\nPredicts the desirability values for the given input data.\nPlots the desirability function.\n\n\n\nMany thanks to Max Kuhn for his implementation of the ‘desirability’ package in R. This class is based on the ‘desirability’ package in R, see: https://cran.r-project.org/package=desirability\n\n\n\n&gt;&gt;&gt; from spotdesirability import DArb\n&gt;&gt;&gt; import numpy as np\n&gt;&gt;&gt; import matplotlib.pyplot as plt\n# Define input and desirability values\n&gt;&gt;&gt; x = [-5, 0, 5, 10]\n&gt;&gt;&gt; d = [0, 0.5, 1, 0.2]\n# Create a DArb object\n&gt;&gt;&gt; darb = DArb(x, d)\n# Predict desirability for a range of inputs\n&gt;&gt;&gt; inputs = np.array([-10, -5, 0, 5, 10, 15])\n&gt;&gt;&gt; desirability = darb.predict(inputs)\n&gt;&gt;&gt; print(desirability)\n[0.  0.  0.5 1.  0.2 0.2]\n# Plot the desirability function\n&gt;&gt;&gt; darb.plot()\n\n\n\n\n\n\nName\nDescription\n\n\n\n\nplot\nPlots the arbitrary desirability function.\n\n\npredict\nPredicts the desirability values for the given input data.\n\n\n\n\n\nutils.desirability.DArb.plot(\n    add=False,\n    non_inform=True,\n    xlabel='Input',\n    ylabel='Desirability',\n    figsize=(10, 8),\n    grid=True,\n    **kwargs,\n)\nPlots the arbitrary desirability function.\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nadd\nbool\nWhether to add the plot to an existing figure. Defaults to False.\nFalse\n\n\nnon_inform\nbool\nWhether to display the non-informative value as a dashed line. Defaults to True.\nTrue\n\n\nxlabel\nstr\nLabel for the x-axis. Defaults to “Input”.\n'Input'\n\n\nylabel\nstr\nLabel for the y-axis. Defaults to “Desirability”.\n'Desirability'\n\n\nfigsize\ntuple\nSize of the figure (width, height) in inches. Defaults to (10, 8).\n(10, 8)\n\n\ngrid\nbool\nWhether to display a grid. Defaults to True.\nTrue\n\n\n**kwargs\nDict[str, Any]\nAdditional keyword arguments for the plot.\n{}\n\n\n\n\n\n\n&gt;&gt;&gt; from spotdesirability import DArb\n&gt;&gt;&gt; x = [-5, 0, 5, 10]\n&gt;&gt;&gt; d = [0, 0.5, 1, 0.2]\n&gt;&gt;&gt; darb = DArb(x, d)\n&gt;&gt;&gt; darb.plot()  # Default figure size\n&gt;&gt;&gt; darb.plot(figsize=(12, 6))  # Custom figure size\n\n\n\n\nutils.desirability.DArb.predict(newdata=None, missing=None)\nPredicts the desirability values for the given input data.\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nnewdata\narray - like\nThe input data for which to compute desirability values. If None, an empty array is used. Defaults to None.\nNone\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to the object’s missing attribute.\nNone\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nnumpy.ndarray\nThe desirability values for the input data.\n\n\n\n\n\n\n&gt;&gt;&gt; from spotdesirability import DArb\n&gt;&gt;&gt; import numpy as np\n# Define input and desirability values\n&gt;&gt;&gt; x = [-5, 0, 5, 10]\n&gt;&gt;&gt; d = [0, 0.5, 1, 0.2]\n&gt;&gt;&gt; darb = DArb(x, d)\n&gt;&gt;&gt; inputs = np.array([-10, -5, 0, 5, 10, 15])\n&gt;&gt;&gt; desirability = darb.predict(inputs)\n&gt;&gt;&gt; print(desirability)\n[0.  0.  0.5 1.  0.2 0.2]"
+    "text": "utils.desirability.DArb(x, d, tol=None, missing=None)\nImplements an arbitrary desirability function.\nThis class allows users to define a custom desirability function by specifying input values (x) and their corresponding desirability values (d)."
   },
   {
     "objectID": "reference/utils.desirability.DArb.html#attributes",
     "href": "reference/utils.desirability.DArb.html#attributes",
     "title": "utils.desirability.DArb",
-    "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\nx\nnumpy.ndarray\nThe input values for the desirability function.\n\n\nd\nnumpy.ndarray\nThe desirability values corresponding to the input values.\n\n\ntol\nfloat\nA tolerance value to replace desirability values of 0. Defaults to None.\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to a non-informative value."
+    "section": "Attributes",
+    "text": "Attributes\n\n\n\nName\nType\nDescription\n\n\n\n\nx\nnumpy.ndarray\nThe input values for the desirability function.\n\n\nd\nnumpy.ndarray\nThe desirability values corresponding to the input values.\n\n\ntol\nfloat\nA tolerance value to replace desirability values of 0. Defaults to None.\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to a non-informative value."
   },
   {
     "objectID": "reference/utils.desirability.DArb.html#functions",
     "href": "reference/utils.desirability.DArb.html#functions",
     "title": "utils.desirability.DArb",
-    "section": "",
-    "text": "Predicts the desirability values for the given input data.\nPlots the desirability function."
+    "section": "Functions",
+    "text": "Functions\nPredicts the desirability values for the given input data.\nPlots the desirability function."
   },
   {
     "objectID": "reference/utils.desirability.DArb.html#references",
     "href": "reference/utils.desirability.DArb.html#references",
     "title": "utils.desirability.DArb",
-    "section": "",
-    "text": "Many thanks to Max Kuhn for his implementation of the ‘desirability’ package in R. This class is based on the ‘desirability’ package in R, see: https://cran.r-project.org/package=desirability"
+    "section": "References",
+    "text": "References\nMany thanks to Max Kuhn for his implementation of the ‘desirability’ package in R. This class is based on the ‘desirability’ package in R, see: https://cran.r-project.org/package=desirability"
   },
   {
     "objectID": "reference/utils.desirability.DArb.html#examples",
     "href": "reference/utils.desirability.DArb.html#examples",
     "title": "utils.desirability.DArb",
-    "section": "",
-    "text": "&gt;&gt;&gt; from spotdesirability import DArb\n&gt;&gt;&gt; import numpy as np\n&gt;&gt;&gt; import matplotlib.pyplot as plt\n# Define input and desirability values\n&gt;&gt;&gt; x = [-5, 0, 5, 10]\n&gt;&gt;&gt; d = [0, 0.5, 1, 0.2]\n# Create a DArb object\n&gt;&gt;&gt; darb = DArb(x, d)\n# Predict desirability for a range of inputs\n&gt;&gt;&gt; inputs = np.array([-10, -5, 0, 5, 10, 15])\n&gt;&gt;&gt; desirability = darb.predict(inputs)\n&gt;&gt;&gt; print(desirability)\n[0.  0.  0.5 1.  0.2 0.2]\n# Plot the desirability function\n&gt;&gt;&gt; darb.plot()"
+    "section": "Examples",
+    "text": "Examples\n\nfrom spotdesirability import DArb\nimport numpy as np\nimport matplotlib.pyplot as plt\n# Define input and desirability values\nx = [-5, 0, 5, 10]\nd = [0, 0.5, 1, 0.2]\n# Create a DArb object\ndarb = DArb(x, d)\n# Predict desirability for a range of inputs\ninputs = np.array([-10, -5, 0, 5, 10, 15])\ndesirability = darb.predict(inputs)\nprint(desirability)\n# [0.  0.  0.5 1.  0.2 0.2]\n# Plot the desirability function\ndarb.plot()\n\n[0.  0.  0.5 1.  0.2 0.2]"
   },
   {
     "objectID": "reference/utils.desirability.DArb.html#methods",
     "href": "reference/utils.desirability.DArb.html#methods",
     "title": "utils.desirability.DArb",
-    "section": "",
-    "text": "Name\nDescription\n\n\n\n\nplot\nPlots the arbitrary desirability function.\n\n\npredict\nPredicts the desirability values for the given input data.\n\n\n\n\n\nutils.desirability.DArb.plot(\n    add=False,\n    non_inform=True,\n    xlabel='Input',\n    ylabel='Desirability',\n    figsize=(10, 8),\n    grid=True,\n    **kwargs,\n)\nPlots the arbitrary desirability function.\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nadd\nbool\nWhether to add the plot to an existing figure. Defaults to False.\nFalse\n\n\nnon_inform\nbool\nWhether to display the non-informative value as a dashed line. Defaults to True.\nTrue\n\n\nxlabel\nstr\nLabel for the x-axis. Defaults to “Input”.\n'Input'\n\n\nylabel\nstr\nLabel for the y-axis. Defaults to “Desirability”.\n'Desirability'\n\n\nfigsize\ntuple\nSize of the figure (width, height) in inches. Defaults to (10, 8).\n(10, 8)\n\n\ngrid\nbool\nWhether to display a grid. Defaults to True.\nTrue\n\n\n**kwargs\nDict[str, Any]\nAdditional keyword arguments for the plot.\n{}\n\n\n\n\n\n\n&gt;&gt;&gt; from spotdesirability import DArb\n&gt;&gt;&gt; x = [-5, 0, 5, 10]\n&gt;&gt;&gt; d = [0, 0.5, 1, 0.2]\n&gt;&gt;&gt; darb = DArb(x, d)\n&gt;&gt;&gt; darb.plot()  # Default figure size\n&gt;&gt;&gt; darb.plot(figsize=(12, 6))  # Custom figure size\n\n\n\n\nutils.desirability.DArb.predict(newdata=None, missing=None)\nPredicts the desirability values for the given input data.\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nnewdata\narray - like\nThe input data for which to compute desirability values. If None, an empty array is used. Defaults to None.\nNone\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to the object’s missing attribute.\nNone\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nnumpy.ndarray\nThe desirability values for the input data.\n\n\n\n\n\n\n&gt;&gt;&gt; from spotdesirability import DArb\n&gt;&gt;&gt; import numpy as np\n# Define input and desirability values\n&gt;&gt;&gt; x = [-5, 0, 5, 10]\n&gt;&gt;&gt; d = [0, 0.5, 1, 0.2]\n&gt;&gt;&gt; darb = DArb(x, d)\n&gt;&gt;&gt; inputs = np.array([-10, -5, 0, 5, 10, 15])\n&gt;&gt;&gt; desirability = darb.predict(inputs)\n&gt;&gt;&gt; print(desirability)\n[0.  0.  0.5 1.  0.2 0.2]"
+    "section": "Methods",
+    "text": "Methods\n\n\n\nName\nDescription\n\n\n\n\nplot\nPlots the arbitrary desirability function.\n\n\npredict\nPredicts the desirability values for the given input data.\n\n\n\n\nplot\nutils.desirability.DArb.plot(\n    add=False,\n    non_inform=True,\n    xlabel='Input',\n    ylabel='Desirability',\n    figsize=(10, 8),\n    grid=True,\n    **kwargs,\n)\nPlots the arbitrary desirability function.\n\nParameters\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nadd\nbool\nWhether to add the plot to an existing figure. Defaults to False.\nFalse\n\n\nnon_inform\nbool\nWhether to display the non-informative value as a dashed line. Defaults to True.\nTrue\n\n\nxlabel\nstr\nLabel for the x-axis. Defaults to “Input”.\n'Input'\n\n\nylabel\nstr\nLabel for the y-axis. Defaults to “Desirability”.\n'Desirability'\n\n\nfigsize\ntuple\nSize of the figure (width, height) in inches. Defaults to (10, 8).\n(10, 8)\n\n\ngrid\nbool\nWhether to display a grid. Defaults to True.\nTrue\n\n\n**kwargs\nDict[str, Any]\nAdditional keyword arguments for the plot.\n{}\n\n\n\n\n\nExamples\n\nfrom spotdesirability import DArb\nx = [-5, 0, 5, 10]\nd = [0, 0.5, 1, 0.2]\ndarb = DArb(x, d)\ndarb.plot()  # Default figure size\ndarb.plot(figsize=(12, 6))  # Custom figure size\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\npredict\nutils.desirability.DArb.predict(newdata=None, missing=None)\nPredicts the desirability values for the given input data.\n\nParameters\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nnewdata\narray - like\nThe input data for which to compute desirability values. If None, an empty array is used. Defaults to None.\nNone\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to the object’s missing attribute.\nNone\n\n\n\n\n\nReturns\n\n\n\nName\nType\nDescription\n\n\n\n\n\nnumpy.ndarray\nThe desirability values for the input data.\n\n\n\n\n\nExamples\n\nfrom spotdesirability import DArb\nimport numpy as np\n# Define input and desirability values\nx = [-5, 0, 5, 10]\nd = [0, 0.5, 1, 0.2]\ndarb = DArb(x, d)\ninputs = np.array([-10, -5, 0, 5, 10, 15])\ndesirability = darb.predict(inputs)\nprint(desirability)\n# [0.  0.  0.5 1.  0.2 0.2]\n\n[0.  0.  0.5 1.  0.2 0.2]"
   },
   {
     "objectID": "reference/utils.desirability.DTarget.html",
     "href": "reference/utils.desirability.DTarget.html",
     "title": "utils.desirability.DTarget",
     "section": "",
-    "text": "utils.desirability.DTarget(\n    low,\n    target,\n    high,\n    low_scale=1,\n    high_scale=1,\n    tol=None,\n    missing=None,\n)\nImplements a desirability function for target optimization.\nThe desirability function assigns a value of 0 for inputs outside the range [low, high], scales the desirability between 0 and 1 for inputs within [low, target] using low_scale, and scales the desirability between 1 and 0 for inputs within [target, high] using high_scale.\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nlow\nfloat\nThe lower threshold for the desirability function.\n\n\ntarget\nfloat\nThe target value for the desirability function.\n\n\nhigh\nfloat\nThe upper threshold for the desirability function.\n\n\nlow_scale\nfloat\nThe scaling factor for the desirability function below the target. Must be greater than 0.\n\n\nhigh_scale\nfloat\nThe scaling factor for the desirability function above the target. Must be greater than 0.\n\n\ntol\nfloat\nA tolerance value to replace desirability values of 0. Defaults to None.\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to a non-informative value.\n\n\n\n\n\n\nPredicts the desirability values for the given input data.\nPlots the desirability function.\n\n\n\nMany thanks to Max Kuhn for his implementation of the ‘desirability’ package in R. This class is based on the ‘desirability’ package in R, see: https://cran.r-project.org/package=desirability\n\n\n\n&gt;&gt;&gt; from spotdesirability import DTarget\n&gt;&gt;&gt; import numpy as np\n&gt;&gt;&gt; import matplotlib.pyplot as plt\n# Create a DTarget object\n&gt;&gt;&gt; dtarget = DTarget(low=0, target=5, high=10, low_scale=1, high_scale=1)\n# Predict desirability for a range of inputs\n&gt;&gt;&gt; inputs = np.array([-5, 0, 2.5, 5, 7.5, 10, 15])\n&gt;&gt;&gt; desirability = dtarget.predict(inputs)\n&gt;&gt;&gt; print(desirability)\n[0.   0.   0.5  1.   0.5  0.   0.  ]\n# Plot the desirability function\n&gt;&gt;&gt; dtarget.plot()\n\n\n\n\n\n\nName\nDescription\n\n\n\n\npredict\nPredicts the desirability values for the given input data.\n\n\n\n\n\nutils.desirability.DTarget.predict(newdata=None, missing=None)\nPredicts the desirability values for the given input data.\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nnewdata\narray - like\nThe input data for which to compute desirability values. If None, an empty array is used. Defaults to None.\nNone\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to the object’s missing attribute.\nNone\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nnumpy.ndarray\nThe desirability values for the input data.\n\n\n\n\n\n\n&gt;&gt;&gt; from spotdesirability import DTarget\n&gt;&gt;&gt; import numpy as np\n# Create a DTarget object\n&gt;&gt;&gt; dtarget = DTarget(low=0, target=5, high=10, low_scale=1, high_scale=1)\n&gt;&gt;&gt; inputs = np.array([-5, 0, 2.5, 5, 7.5, 10, 15])\n&gt;&gt;&gt; desirability = dtarget.predict(inputs)\n&gt;&gt;&gt; print(desirability)\n[0.   0.   0.5  1.   0.5  0.   0.  ]"
+    "text": "utils.desirability.DTarget(\n    low,\n    target,\n    high,\n    low_scale=1,\n    high_scale=1,\n    tol=None,\n    missing=None,\n)\nImplements a desirability function for target optimization.\nThe desirability function assigns a value of 0 for inputs outside the range [low, high], scales the desirability between 0 and 1 for inputs within [low, target] using low_scale, and scales the desirability between 1 and 0 for inputs within [target, high] using high_scale."
   },
   {
     "objectID": "reference/utils.desirability.DTarget.html#attributes",
     "href": "reference/utils.desirability.DTarget.html#attributes",
     "title": "utils.desirability.DTarget",
-    "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\nlow\nfloat\nThe lower threshold for the desirability function.\n\n\ntarget\nfloat\nThe target value for the desirability function.\n\n\nhigh\nfloat\nThe upper threshold for the desirability function.\n\n\nlow_scale\nfloat\nThe scaling factor for the desirability function below the target. Must be greater than 0.\n\n\nhigh_scale\nfloat\nThe scaling factor for the desirability function above the target. Must be greater than 0.\n\n\ntol\nfloat\nA tolerance value to replace desirability values of 0. Defaults to None.\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to a non-informative value."
+    "section": "Attributes",
+    "text": "Attributes\n\n\n\nName\nType\nDescription\n\n\n\n\nlow\nfloat\nThe lower threshold for the desirability function.\n\n\ntarget\nfloat\nThe target value for the desirability function.\n\n\nhigh\nfloat\nThe upper threshold for the desirability function.\n\n\nlow_scale\nfloat\nThe scaling factor for the desirability function below the target. Must be greater than 0.\n\n\nhigh_scale\nfloat\nThe scaling factor for the desirability function above the target. Must be greater than 0.\n\n\ntol\nfloat\nA tolerance value to replace desirability values of 0. Defaults to None.\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to a non-informative value."
   },
   {
     "objectID": "reference/utils.desirability.DTarget.html#functions",
     "href": "reference/utils.desirability.DTarget.html#functions",
     "title": "utils.desirability.DTarget",
-    "section": "",
-    "text": "Predicts the desirability values for the given input data.\nPlots the desirability function."
+    "section": "Functions",
+    "text": "Functions\nPredicts the desirability values for the given input data.\nPlots the desirability function."
   },
   {
     "objectID": "reference/utils.desirability.DTarget.html#references",
     "href": "reference/utils.desirability.DTarget.html#references",
     "title": "utils.desirability.DTarget",
-    "section": "",
-    "text": "Many thanks to Max Kuhn for his implementation of the ‘desirability’ package in R. This class is based on the ‘desirability’ package in R, see: https://cran.r-project.org/package=desirability"
+    "section": "References",
+    "text": "References\nMany thanks to Max Kuhn for his implementation of the ‘desirability’ package in R. This class is based on the ‘desirability’ package in R, see: https://cran.r-project.org/package=desirability"
   },
   {
     "objectID": "reference/utils.desirability.DTarget.html#examples",
     "href": "reference/utils.desirability.DTarget.html#examples",
     "title": "utils.desirability.DTarget",
-    "section": "",
-    "text": "&gt;&gt;&gt; from spotdesirability import DTarget\n&gt;&gt;&gt; import numpy as np\n&gt;&gt;&gt; import matplotlib.pyplot as plt\n# Create a DTarget object\n&gt;&gt;&gt; dtarget = DTarget(low=0, target=5, high=10, low_scale=1, high_scale=1)\n# Predict desirability for a range of inputs\n&gt;&gt;&gt; inputs = np.array([-5, 0, 2.5, 5, 7.5, 10, 15])\n&gt;&gt;&gt; desirability = dtarget.predict(inputs)\n&gt;&gt;&gt; print(desirability)\n[0.   0.   0.5  1.   0.5  0.   0.  ]\n# Plot the desirability function\n&gt;&gt;&gt; dtarget.plot()"
+    "section": "Examples",
+    "text": "Examples\n\nfrom spotdesirability import DTarget\nimport numpy as np\nimport matplotlib.pyplot as plt\n# Create a DTarget object\ndtarget = DTarget(low=0, target=5, high=10, low_scale=1, high_scale=1)\n# Predict desirability for a range of inputs\ninputs = np.array([-5, 0, 2.5, 5, 7.5, 10, 15])\ndesirability = dtarget.predict(inputs)\nprint(desirability)\n# [0.   0.   0.5  1.   0.5  0.   0.  ]\n# Plot the desirability function\ndtarget.plot()\n\n[ 0.   0.   0.5  1.   0.5 -0.   0. ]"
   },
   {
     "objectID": "reference/utils.desirability.DTarget.html#methods",
     "href": "reference/utils.desirability.DTarget.html#methods",
     "title": "utils.desirability.DTarget",
-    "section": "",
-    "text": "Name\nDescription\n\n\n\n\npredict\nPredicts the desirability values for the given input data.\n\n\n\n\n\nutils.desirability.DTarget.predict(newdata=None, missing=None)\nPredicts the desirability values for the given input data.\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nnewdata\narray - like\nThe input data for which to compute desirability values. If None, an empty array is used. Defaults to None.\nNone\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to the object’s missing attribute.\nNone\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nnumpy.ndarray\nThe desirability values for the input data.\n\n\n\n\n\n\n&gt;&gt;&gt; from spotdesirability import DTarget\n&gt;&gt;&gt; import numpy as np\n# Create a DTarget object\n&gt;&gt;&gt; dtarget = DTarget(low=0, target=5, high=10, low_scale=1, high_scale=1)\n&gt;&gt;&gt; inputs = np.array([-5, 0, 2.5, 5, 7.5, 10, 15])\n&gt;&gt;&gt; desirability = dtarget.predict(inputs)\n&gt;&gt;&gt; print(desirability)\n[0.   0.   0.5  1.   0.5  0.   0.  ]"
+    "section": "Methods",
+    "text": "Methods\n\n\n\nName\nDescription\n\n\n\n\npredict\nPredicts the desirability values for the given input data.\n\n\n\n\npredict\nutils.desirability.DTarget.predict(newdata=None, missing=None)\nPredicts the desirability values for the given input data.\n\nParameters\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nnewdata\narray - like\nThe input data for which to compute desirability values. If None, an empty array is used. Defaults to None.\nNone\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to the object’s missing attribute.\nNone\n\n\n\n\n\nReturns\n\n\n\nName\nType\nDescription\n\n\n\n\n\nnumpy.ndarray\nThe desirability values for the input data.\n\n\n\n\n\nExamples\n\nfrom spotdesirability import DTarget\nimport numpy as np\n# Create a DTarget object\ndtarget = DTarget(low=0, target=5, high=10, low_scale=1, high_scale=1)\ninputs = np.array([-5, 0, 2.5, 5, 7.5, 10, 15])\ndesirability = dtarget.predict(inputs)\nprint(desirability)\n# [0.   0.   0.5  1.   0.5  0.   0.  ]\n\n[ 0.   0.   0.5  1.   0.5 -0.   0. ]"
   },
   {
     "objectID": "reference/utils.desirability.DMax.html",
     "href": "reference/utils.desirability.DMax.html",
     "title": "utils.desirability.DMax",
     "section": "",
-    "text": "utils.desirability.DMax(low, high, scale=1, tol=None, missing=None)\nImplements a desirability function for maximization.\nThe desirability function assigns a value of 0 for inputs below the low threshold, a value of 1 for inputs above the high threshold, and scales the desirability between 0 and 1 for inputs within the range [low, high] using a specified scale factor.\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nlow\nfloat\nThe lower threshold for the desirability function.\n\n\nhigh\nfloat\nThe upper threshold for the desirability function.\n\n\nscale\nfloat\nThe scaling factor for the desirability function. Must be greater than 0.\n\n\ntol\nfloat\nA tolerance value to replace desirability values of 0. Defaults to None.\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to a non-informative value.\n\n\n\n\n\n\nPredicts the desirability values for the given input data.\nPlots the desirability function.\n\n\n\nMany thanks to Max Kuhn for his implementation of the ‘desirability’ package in R. This class is based on the ‘desirability’ package in R, see: https://cran.r-project.org/package=desirability\n\n\n\n&gt;&gt;&gt; from spotdesirability import DMax\n&gt;&gt;&gt; import numpy as np\n&gt;&gt;&gt; import matplotlib.pyplot as plt\n# Create a DMax object\n&gt;&gt;&gt; dmax = DMax(low=0, high=10, scale=1)\n# Predict desirability for a range of inputs\n&gt;&gt;&gt; inputs = np.array([-5, 0, 5, 10, 15])\n&gt;&gt;&gt; desirability = dmax.predict(inputs)\n&gt;&gt;&gt; print(desirability)\n[0. 0. 0.5 1. 1.]\n# Plot the desirability function\n&gt;&gt;&gt; dmax.plot()\n\n\n\n\n\n\nName\nDescription\n\n\n\n\npredict\nPredicts the desirability values for the given input data.\n\n\n\n\n\nutils.desirability.DMax.predict(newdata=None, missing=None)\nPredicts the desirability values for the given input data.\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nnewdata\narray - like\nThe input data for which to compute desirability values. If None, an empty array is used. Defaults to None.\nNone\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to the object’s missing attribute.\nNone\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nnp.ndarray\nnumpy.ndarray: The desirability values for the input data.\n\n\n\n\n\n\n&gt;&gt;&gt; from spotdesirability import DMax\n&gt;&gt;&gt; import numpy as np\n&gt;&gt;&gt; dmax = DMax(low=0, high=10, scale=1)\n&gt;&gt;&gt; inputs = np.array([-5, 0, 5, 10, 15])\n&gt;&gt;&gt; desirability = dmax.predict(inputs)\n&gt;&gt;&gt; print(desirability)\n[0. 0. 0.5 1. 1.]"
+    "text": "utils.desirability.DMax(low, high, scale=1, tol=None, missing=None)\nImplements a desirability function for maximization.\nThe desirability function assigns a value of 0 for inputs below the low threshold, a value of 1 for inputs above the high threshold, and scales the desirability between 0 and 1 for inputs within the range [low, high] using a specified scale factor."
   },
   {
     "objectID": "reference/utils.desirability.DMax.html#attributes",
     "href": "reference/utils.desirability.DMax.html#attributes",
     "title": "utils.desirability.DMax",
-    "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\nlow\nfloat\nThe lower threshold for the desirability function.\n\n\nhigh\nfloat\nThe upper threshold for the desirability function.\n\n\nscale\nfloat\nThe scaling factor for the desirability function. Must be greater than 0.\n\n\ntol\nfloat\nA tolerance value to replace desirability values of 0. Defaults to None.\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to a non-informative value."
+    "section": "Attributes",
+    "text": "Attributes\n\n\n\nName\nType\nDescription\n\n\n\n\nlow\nfloat\nThe lower threshold for the desirability function.\n\n\nhigh\nfloat\nThe upper threshold for the desirability function.\n\n\nscale\nfloat\nThe scaling factor for the desirability function. Must be greater than 0.\n\n\ntol\nfloat\nA tolerance value to replace desirability values of 0. Defaults to None.\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to a non-informative value."
   },
   {
     "objectID": "reference/utils.desirability.DMax.html#functions",
     "href": "reference/utils.desirability.DMax.html#functions",
     "title": "utils.desirability.DMax",
-    "section": "",
-    "text": "Predicts the desirability values for the given input data.\nPlots the desirability function."
+    "section": "Functions",
+    "text": "Functions\nPredicts the desirability values for the given input data.\nPlots the desirability function."
   },
   {
     "objectID": "reference/utils.desirability.DMax.html#references",
     "href": "reference/utils.desirability.DMax.html#references",
     "title": "utils.desirability.DMax",
-    "section": "",
-    "text": "Many thanks to Max Kuhn for his implementation of the ‘desirability’ package in R. This class is based on the ‘desirability’ package in R, see: https://cran.r-project.org/package=desirability"
+    "section": "References",
+    "text": "References\nMany thanks to Max Kuhn for his implementation of the ‘desirability’ package in R. This class is based on the ‘desirability’ package in R, see: https://cran.r-project.org/package=desirability"
   },
   {
     "objectID": "reference/utils.desirability.DMax.html#examples",
     "href": "reference/utils.desirability.DMax.html#examples",
     "title": "utils.desirability.DMax",
-    "section": "",
-    "text": "&gt;&gt;&gt; from spotdesirability import DMax\n&gt;&gt;&gt; import numpy as np\n&gt;&gt;&gt; import matplotlib.pyplot as plt\n# Create a DMax object\n&gt;&gt;&gt; dmax = DMax(low=0, high=10, scale=1)\n# Predict desirability for a range of inputs\n&gt;&gt;&gt; inputs = np.array([-5, 0, 5, 10, 15])\n&gt;&gt;&gt; desirability = dmax.predict(inputs)\n&gt;&gt;&gt; print(desirability)\n[0. 0. 0.5 1. 1.]\n# Plot the desirability function\n&gt;&gt;&gt; dmax.plot()"
+    "section": "Examples",
+    "text": "Examples\n\nfrom spotdesirability import DMax\nimport numpy as np\nimport matplotlib.pyplot as plt\n# Create a DMax object\ndmax = DMax(low=0, high=10, scale=1)\n# Predict desirability for a range of inputs\ninputs = np.array([-5, 0, 5, 10, 15])\ndesirability = dmax.predict(inputs)\nprint(desirability)\n# [0. 0. 0.5 1. 1.]\n# Plot the desirability function\ndmax.plot()\n\n[0.  0.  0.5 1.  1. ]"
   },
   {
     "objectID": "reference/utils.desirability.DMax.html#methods",
     "href": "reference/utils.desirability.DMax.html#methods",
     "title": "utils.desirability.DMax",
-    "section": "",
-    "text": "Name\nDescription\n\n\n\n\npredict\nPredicts the desirability values for the given input data.\n\n\n\n\n\nutils.desirability.DMax.predict(newdata=None, missing=None)\nPredicts the desirability values for the given input data.\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nnewdata\narray - like\nThe input data for which to compute desirability values. If None, an empty array is used. Defaults to None.\nNone\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to the object’s missing attribute.\nNone\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nnp.ndarray\nnumpy.ndarray: The desirability values for the input data.\n\n\n\n\n\n\n&gt;&gt;&gt; from spotdesirability import DMax\n&gt;&gt;&gt; import numpy as np\n&gt;&gt;&gt; dmax = DMax(low=0, high=10, scale=1)\n&gt;&gt;&gt; inputs = np.array([-5, 0, 5, 10, 15])\n&gt;&gt;&gt; desirability = dmax.predict(inputs)\n&gt;&gt;&gt; print(desirability)\n[0. 0. 0.5 1. 1.]"
+    "section": "Methods",
+    "text": "Methods\n\n\n\nName\nDescription\n\n\n\n\npredict\nPredicts the desirability values for the given input data.\n\n\n\n\npredict\nutils.desirability.DMax.predict(newdata=None, missing=None)\nPredicts the desirability values for the given input data.\n\nParameters\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nnewdata\narray - like\nThe input data for which to compute desirability values. If None, an empty array is used. Defaults to None.\nNone\n\n\nmissing\nfloat\nThe value to use for missing inputs. Defaults to the object’s missing attribute.\nNone\n\n\n\n\n\nReturns\n\n\n\nName\nType\nDescription\n\n\n\n\n\nnp.ndarray\nnumpy.ndarray: The desirability values for the input data.\n\n\n\n\n\nExamples\n\nfrom spotdesirability import DMax\nimport numpy as np\ndmax = DMax(low=0, high=10, scale=1)\ninputs = np.array([-5, 0, 5, 10, 15])\ndesirability = dmax.predict(inputs)\nprint(desirability)\n# [0. 0. 0.5 1. 1.]\n\n[0.  0.  0.5 1.  1. ]"
   },
   {
     "objectID": "examples.html",
