@@ -7,13 +7,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "spotdesirability"
-version = "0.0.18"
+version = "0.0.19rc1"
 authors = [
   { name="T. Bartz-Beielstein", email="tbb@bartzundbartz.de" }
 ]
 description = "spotdesirability - a Python package for desirability"
 readme = "README.md"
-license = "GPL-2.0"
+license = {text = "GPL-2.0-or-later"}
 requires-python = ">=3.10"
 classifiers = [
   "Programming Language :: Python :: 3.10",
@@ -26,13 +26,6 @@ classifiers = [
 dependencies = [
   "build",
   "matplotlib",
-  "mkdocs>=1.6.0",
-  "mkdocs-material>=9.5.33",
-  "mkdocstrings-python>=1.10.8",
-  "mkdocs-exclude>=1.0.2",
-  "mkdocs-gen-files>=0.5.0",
-  "mkdocs-literate-nav>=0.6.1",
-  "mkdocs-section-index>=0.3.9",
   "numpy",
   "nbformat",
   "pandas",
