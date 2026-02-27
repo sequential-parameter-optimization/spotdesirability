@@ -4,6 +4,30 @@
 
 `spotdesirability` implements the Derringer & Suich (1980) desirability framework, providing a flexible set of tools for multi-objective optimization through desirability functions.
 
-*   **Documentation**: See the [Hyperparameter Tuning Cookbook](cookbook.qmd) for a guide on using desirability functions with scikit-learn, PyTorch, and more.
+### Core Functions: conversion_pred
+
+The `conversion_pred` function implements a second-order Response Surface Methodology (RSM) model. It predicts percent conversion based on three coded factors: x1 (Reaction Time), x2 (Temperature), and x3 (Amount of Catalyst).
+
+The model equation is:
+y = 81.09 + 1.03x1 + 4.04x2 + 6.20x3 - 1.84x1^2 + 2.94x2^2 - 5.19x3^2 + 2.22x1x2 + 11.38x1x3 - 3.88x2x3
+
+#### Example: Predict Conversion
+
+The following living code block demonstrates how to use the function with numpy arrays:
+
+```{python}
+import numpy as np
+from spotdesirability.functions.rsm import conversion_pred
+
+# Define input parameters [x1, x2, x3]
+x = np.array([1.0, 0.5, -0.2])
+
+# Calculate predicted conversion
+pred = conversion_pred(x)
+
+print(f"Predicted conversion for {x}: {pred:.2f}%")
+```
+
+*   **Documentation**: See the [Sequential Parameter Optimization Cookbook](cookbook.qmd) for a guide on using desirability functions with scikit-learn, PyTorch, and more.
 *   **API Reference**: Detailed documentation of all classes and functions can be found in the [Reference](reference/index.qmd) section.
 *   **News**: For updates related to this project and other SPOT tools, visit [SPOTSeven](https://www.spotseven.de/spot/).
