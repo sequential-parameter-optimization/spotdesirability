@@ -9,36 +9,14 @@ from spotdesirability.functions.rsm import rsm_opt, conversion_pred, activity_pr
 def test_conversion_pred_valid_input_list():
     x = [1.0, 2.0, 3.0]
     result = conversion_pred(x)
-    expected = (
-        81.09
-        + 1.0284 * x[0]
-        + 4.043 * x[1]
-        + 6.2037 * x[2]
-        - 1.8366 * x[0] ** 2
-        + 2.9382 * x[1] ** 2
-        - 5.1915 * x[2] ** 2
-        + 2.2150 * x[0] * x[1]
-        + 11.375 * x[0] * x[2]
-        - 3.875 * x[1] * x[2]
-    )
+    expected = 81.09 + 1.0284 * x[0] + 4.043 * x[1] + 6.2037 * x[2] - 1.8366 * x[0] ** 2 + 2.9382 * x[1] ** 2 - 5.1915 * x[2] ** 2 + 2.2150 * x[0] * x[1] + 11.375 * x[0] * x[2] - 3.875 * x[1] * x[2]
     assert pytest.approx(result, rel=1e-6) == expected
 
 
 def test_conversion_pred_valid_input_numpy_array():
     x = np.array([1.0, 2.0, 3.0])
     result = conversion_pred(x)
-    expected = (
-        81.09
-        + 1.0284 * x[0]
-        + 4.043 * x[1]
-        + 6.2037 * x[2]
-        - 1.8366 * x[0] ** 2
-        + 2.9382 * x[1] ** 2
-        - 5.1915 * x[2] ** 2
-        + 2.2150 * x[0] * x[1]
-        + 11.375 * x[0] * x[2]
-        - 3.875 * x[1] * x[2]
-    )
+    expected = 81.09 + 1.0284 * x[0] + 4.043 * x[1] + 6.2037 * x[2] - 1.8366 * x[0] ** 2 + 2.9382 * x[1] ** 2 - 5.1915 * x[2] ** 2 + 2.2150 * x[0] * x[1] + 11.375 * x[0] * x[2] - 3.875 * x[1] * x[2]
     assert pytest.approx(result, rel=1e-6) == expected
 
 
@@ -53,6 +31,7 @@ def test_conversion_pred_invalid_input_wrong_shape():
 
     with pytest.raises(ValueError, match="Input x must be a 3-element vector."):
         conversion_pred([1.0, 2.0, 3.0, 4.0])  # More than 3 elements
+
         def test_activity_pred_valid_input_list():
             x = [1.0, 2.0, 3.0]
             result = activity_pred(x)
@@ -75,16 +54,7 @@ def test_activity_pred_valid_input_numpy_array():
     x = np.array([1.0, 2.0, 3.0])
     result = activity_pred(x)
     expected = (
-        59.85
-        + 3.583 * x[0]
-        + 0.2546 * x[1]
-        + 2.2298 * x[2]
-        + 0.83479 * x[0] ** 2
-        + 0.07484 * x[1] ** 2
-        + 0.05716 * x[2] ** 2
-        - 0.3875 * x[0] * x[1]
-        - 0.375 * x[0] * x[2]
-        + 0.3125 * x[1] * x[2]
+        59.85 + 3.583 * x[0] + 0.2546 * x[1] + 2.2298 * x[2] + 0.83479 * x[0] ** 2 + 0.07484 * x[1] ** 2 + 0.05716 * x[2] ** 2 - 0.3875 * x[0] * x[1] - 0.375 * x[0] * x[2] + 0.3125 * x[1] * x[2]
     )
     assert pytest.approx(result, rel=1e-6) == expected
 
