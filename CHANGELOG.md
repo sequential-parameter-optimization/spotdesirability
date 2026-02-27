@@ -7,6 +7,16 @@
 * chore: add dependabot configuration for actions and pip ([78e7861](https://github.com/sequential-parameter-optimization/spotdesirability/commit/78e7861))
 * chore: exclude Quarto build artifacts from git ([b73a871](https://github.com/sequential-parameter-optimization/spotdesirability/commit/b73a871))
 * Delete makefile.sh ([d973a00](https://github.com/sequential-parameter-optimization/spotdesirability/commit/d973a00))
+## <small>0.0.22 (2026-02-27)</small>
+
+* Merge branch 'main' into develop ([d5ba393](https://github.com/sequential-parameter-optimization/spotdesirability/commit/d5ba393))
+* Merge pull request #7 from sequential-parameter-optimization/develop ([1a2e3a4](https://github.com/sequential-parameter-optimization/spotdesirability/commit/1a2e3a4)), closes [#7](https://github.com/sequential-parameter-optimization/spotdesirability/issues/7)
+* chore(release): 0.0.21-rc.2 [skip ci] ([593b8f9](https://github.com/sequential-parameter-optimization/spotdesirability/commit/593b8f9))
+* chore(release): 0.0.21-rc.3 [skip ci] ([2fa96a2](https://github.com/sequential-parameter-optimization/spotdesirability/commit/2fa96a2))
+* chore(release): 0.0.22-rc.1 [skip ci] ([1aba1b2](https://github.com/sequential-parameter-optimization/spotdesirability/commit/1aba1b2))
+* fix: restore REUSE compliance for new documentation files ([e926da9](https://github.com/sequential-parameter-optimization/spotdesirability/commit/e926da9))
+* docs: refine documentation structure and fix landing page ([6cdecd4](https://github.com/sequential-parameter-optimization/spotdesirability/commit/6cdecd4))
+* docs: updated index ([e2a0cb1](https://github.com/sequential-parameter-optimization/spotdesirability/commit/e2a0cb1))
 
 ## <small>0.0.22-rc.1 (2026-02-27)</small>
 
