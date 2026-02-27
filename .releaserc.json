@@ -135,7 +135,7 @@
         [
             "@semantic-release/exec",
             {
-                "prepareCmd": "sed -i 's/^version = .*/version = \"${nextRelease.version}\"/' pyproject.toml"
+                "prepareCmd": "python -c \"import re, sys; v='${nextRelease.version}'; pep440=re.sub(r'-rc\\.([0-9]+)$', r'rc\\1', v); content=open('pyproject.toml').read(); open('pyproject.toml','w').write(re.sub(r'^version = .*', 'version = \\\"'+pep440+'\\\"', content, flags=re.MULTILINE)); print('Version set to:', pep440)\""
             }
         ],
         [

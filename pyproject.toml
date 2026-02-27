@@ -1,13 +1,13 @@
 [build-system]
 requires = [
   "setuptools>=61.0",
-  "setuptools_scm[toml]"
+  "wheel"
 ]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "spotdesirability"
-version = "0.0.16"
+version = "0.0.17rc2"
 authors = [
   { name="T. Bartz-Beielstein", email="tbb@bartzundbartz.de" }
 ]

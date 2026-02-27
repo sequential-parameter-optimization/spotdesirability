@@ -37,7 +37,6 @@ jobs:
 
       - name: Install dependencies
         run: |
-          uv pip install --system build twine
           uv pip install --system -e ".[dev]"
 
       - name: Run tests
@@ -49,11 +48,9 @@ jobs:
           grep -q "name = \"spotdesirability\"" pyproject.toml || (echo "ERROR: Package name mismatch in pyproject.toml" && exit 1)
           echo "✓ Package name verified: spotdesirability"
 
-      - name: Build distribution packages
+      - name: Clean dist/ before release build
         run: |
-          python -m build
-          echo "Build artifacts created:"
-          ls -lah dist/
+          rm -rf dist/ build/ *.egg-info
 
       - name: Setup Node.js
         uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af  # v4.1.0
