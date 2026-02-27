@@ -1,9 +1,11 @@
 ## [0.0.19-rc.2](https://github.com/sequential-parameter-optimization/spotdesirability/compare/v0.0.19-rc.1...v0.0.19-rc.2) (2026-02-27)
+## [0.0.19](https://github.com/sequential-parameter-optimization/spotdesirability/compare/v0.0.18...v0.0.19) (2026-02-27)
 
 
 ### Bug Fixes
 
 * switch to uv_build backend for robust metadata generation ([92f8cc4](https://github.com/sequential-parameter-optimization/spotdesirability/commit/92f8cc40a8dcae7be693b22c900458ef733b8680))
+* remove MANIFEST.in, stale mkdocs deps and update license ([3e1799f](https://github.com/sequential-parameter-optimization/spotdesirability/commit/3e1799fcafc193306a7d0394083a746118b580e6))
 
 ## [0.0.19-rc.1](https://github.com/sequential-parameter-optimization/spotdesirability/compare/v0.0.18...v0.0.19-rc.1) (2026-02-27)
 
