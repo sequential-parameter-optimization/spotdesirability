@@ -1,3 +1,13 @@
+# =============================================================================
+# _quarto.yml  —  Quarto project + quartodoc API reference configuration
+# =============================================================================
+# Run `quartodoc build --config _quarto.yml` before `quarto render`.
+# Generated files land in docs/reference/ and are committed to the repo (or
+# generated fresh in CI before every render — see docs.yml workflow).
+#
+# Documentation: https://machow.github.io/quartodoc/
+# =============================================================================
+
 project:
   type: website
   output-dir: _site
@@ -13,23 +23,59 @@ website:
         href: index.qmd
       - text: "Reference"
         href: reference/index.qmd
-      - text: "About"
-        href: docs/about.qmd
 
 quartodoc:
   package: spotdesirability
+  # Path to the Python source tree (relative to this file)
   source_dir: src
-  title: "API Reference"
-  sidebar: reference/_sidebar.yml
+  # Output directory for generated .qmd stub files
+  dir: reference
+  # Google Docstring parser — matches the project's docstring style
+  parser: google
+  # Enable cross-package interlinks using @-style references in docstrings
+  render_interlinks: true
+
   sections:
+
+    # ── Desirability Classes ──────────────────────────────────────────────────
     - title: "Desirability Classes"
-      desc: "Core desirability function classes"
+      desc: |
+        Core desirability function classes for multivariate optimisation.
+        Implements the Derringer & Suich (1980) desirability framework.
       contents:
-        - spotdesirability.desirability
+        - utils.desirability.DesirabilityBase
+        - utils.desirability.DMax
+        - utils.desirability.DMin
+        - utils.desirability.DTarget
+        - utils.desirability.DArb
+        - utils.desirability.DBox
+        - utils.desirability.DCategorical
+        - utils.desirability.DOverall
+
+    # ── RSM Functions ─────────────────────────────────────────────────────────
     - title: "RSM Functions"
-      desc: "Response Surface Methodology helper functions"
+      desc: |
+        Response Surface Methodology (RSM) helper functions for the
+        Derringer & Suich case study.
       contents:
-        - spotdesirability.functions.rsm
+        - functions.rsm.conversion_pred
+        - functions.rsm.activity_pred
+        - functions.rsm.rsm_opt
+
+    # ── Plotting ──────────────────────────────────────────────────────────────
+    - title: "Plotting"
+      desc: |
+        Visualisation utilities for Central Composite Designs (CCD) and
+        desirability surfaces.
+      contents:
+        - plot.ccd.plotCCD
+
+    # ── Data Utilities ────────────────────────────────────────────────────────
+    - title: "Data Utilities"
+      desc: |
+        Data loading and processing utilities.
+      contents:
+        - data_utils
 
 format:
   html:
