@@ -1,3 +1,10 @@
+## [0.0.19-rc.2](https://github.com/sequential-parameter-optimization/spotdesirability/compare/v0.0.19-rc.1...v0.0.19-rc.2) (2026-02-27)
+
+
+### Bug Fixes
+
+* switch to uv_build backend for robust metadata generation ([92f8cc4](https://github.com/sequential-parameter-optimization/spotdesirability/commit/92f8cc40a8dcae7be693b22c900458ef733b8680))
+
 ## [0.0.19-rc.1](https://github.com/sequential-parameter-optimization/spotdesirability/compare/v0.0.18...v0.0.19-rc.1) (2026-02-27)
 
 
