@@ -298,14 +298,14 @@
     "href": "CHANGELOG.html",
     "title": "spotdesirability",
     "section": "",
-    "text": "fix(release): use pinned semantic-release-action for security (5258133)"
+    "text": "Merge branch ‘main’ into develop (f0bf0c3)\nMerge pull request #6 from sequential-parameter-optimization/develop (b804b70), closes #6\nfix: restore REUSE compliance and clean up mkdocs.yml (b6479e2)\nfix(release): use pinned semantic-release-action for security (5258133)\nchore(release): 0.0.20-rc.2 [skip ci] (cd96ccc)\nchore(release): 0.0.21-rc.1 [skip ci] (f6ca60e)"
   },
   {
-    "objectID": "CHANGELOG.html#rc.2-2026-02-27",
-    "href": "CHANGELOG.html#rc.2-2026-02-27",
+    "objectID": "CHANGELOG.html#section",
+    "href": "CHANGELOG.html#section",
     "title": "spotdesirability",
     "section": "",
-    "text": "fix(release): use pinned semantic-release-action for security (5258133)"
+    "text": "Merge branch ‘main’ into develop (f0bf0c3)\nMerge pull request #6 from sequential-parameter-optimization/develop (b804b70), closes #6\nfix: restore REUSE compliance and clean up mkdocs.yml (b6479e2)\nfix(release): use pinned semantic-release-action for security (5258133)\nchore(release): 0.0.20-rc.2 [skip ci] (cd96ccc)\nchore(release): 0.0.21-rc.1 [skip ci] (f6ca60e)"
   },
   {
     "objectID": "CHANGELOG.html#rc.1-2026-02-27",
@@ -315,15 +315,15 @@
     "text": "0.0.21-rc.1 (2026-02-27)\n\nBug Fixes\n\nrestore REUSE compliance and clean up mkdocs.yml (b6479e2)"
   },
   {
-    "objectID": "CHANGELOG.html#rc.2-2026-02-27-1",
-    "href": "CHANGELOG.html#rc.2-2026-02-27-1",
+    "objectID": "CHANGELOG.html#rc.2-2026-02-27",
+    "href": "CHANGELOG.html#rc.2-2026-02-27",
     "title": "spotdesirability",
     "section": "0.0.20-rc.2 (2026-02-27)",
     "text": "0.0.20-rc.2 (2026-02-27)"
   },
   {
-    "objectID": "CHANGELOG.html#section",
-    "href": "CHANGELOG.html#section",
+    "objectID": "CHANGELOG.html#section-1",
+    "href": "CHANGELOG.html#section-1",
     "title": "spotdesirability",
     "section": "0.0.20 (2026-02-27)",
     "text": "0.0.20 (2026-02-27)\n\nBug Fixes\n\nrestore REUSE compliance and clean up mkdocs.yml (b6479e2)\nci: output bandit results as SARIF for SAST visibility (46d6665)\nswitch to uv_build backend for robust metadata generation (92f8cc4)\ntests: correct indentation for test_activity_pred_valid_input_list (d809f15)"
@@ -336,15 +336,15 @@
     "text": "0.0.20-rc.1 (2026-02-27)\n\nBug Fixes\n\nci: output bandit results as SARIF for SAST visibility (46d6665)\nswitch to uv_build backend for robust metadata generation (92f8cc4)\ntests: correct indentation for test_activity_pred_valid_input_list (d809f15)"
   },
   {
-    "objectID": "CHANGELOG.html#rc.2-2026-02-27-2",
-    "href": "CHANGELOG.html#rc.2-2026-02-27-2",
+    "objectID": "CHANGELOG.html#rc.2-2026-02-27-1",
+    "href": "CHANGELOG.html#rc.2-2026-02-27-1",
     "title": "spotdesirability",
     "section": "0.0.19-rc.2 (2026-02-27)",
     "text": "0.0.19-rc.2 (2026-02-27)"
   },
   {
-    "objectID": "CHANGELOG.html#section-1",
-    "href": "CHANGELOG.html#section-1",
+    "objectID": "CHANGELOG.html#section-2",
+    "href": "CHANGELOG.html#section-2",
     "title": "spotdesirability",
     "section": "0.0.19 (2026-02-27)",
     "text": "0.0.19 (2026-02-27)\n\nBug Fixes\n\nswitch to uv_build backend for robust metadata generation (92f8cc4)\nremove MANIFEST.in, stale mkdocs deps and update license (3e1799f)"
@@ -357,15 +357,15 @@
     "text": "0.0.19-rc.1 (2026-02-27)\n\nBug Fixes\n\nremove MANIFEST.in, stale mkdocs deps and update license (3e1799f)"
   },
   {
-    "objectID": "CHANGELOG.html#rc.2-2026-02-27-3",
-    "href": "CHANGELOG.html#rc.2-2026-02-27-3",
+    "objectID": "CHANGELOG.html#rc.2-2026-02-27-2",
+    "href": "CHANGELOG.html#rc.2-2026-02-27-2",
     "title": "spotdesirability",
     "section": "0.0.18-rc.2 (2026-02-27)",
     "text": "0.0.18-rc.2 (2026-02-27)"
   },
   {
-    "objectID": "CHANGELOG.html#section-2",
-    "href": "CHANGELOG.html#section-2",
+    "objectID": "CHANGELOG.html#section-3",
+    "href": "CHANGELOG.html#section-3",
     "title": "spotdesirability",
     "section": "0.0.18 (2026-02-27)",
     "text": "0.0.18 (2026-02-27)\n\nBug Fixes\n\nremove MANIFEST.in, stale mkdocs deps and update license (3e1799f)\nrestore early build in release.yml and add flake8 (7ee6fcc)\n\n\n\nDocumentation\n\nformatting (41fcece)"
@@ -385,15 +385,15 @@
     "text": "0.0.17-rc.3 (2026-02-27)"
   },
   {
-    "objectID": "CHANGELOG.html#section-3",
-    "href": "CHANGELOG.html#section-3",
+    "objectID": "CHANGELOG.html#section-4",
+    "href": "CHANGELOG.html#section-4",
     "title": "spotdesirability",
     "section": "0.0.17 (2026-02-27)",
     "text": "0.0.17 (2026-02-27)\n\nBug Fixes\n\nrestore early build in release.yml and add flake8 (7ee6fcc)\n\n\n\nDocumentation\n\nformatting (41fcece)\nnormalize semantic-release pre-release version to PEP 440 (cb31e21)\nremove setuptools_scm, fix double-build in release workflow (33ad086)"
   },
   {
-    "objectID": "CHANGELOG.html#rc.2-2026-02-27-4",
-    "href": "CHANGELOG.html#rc.2-2026-02-27-4",
+    "objectID": "CHANGELOG.html#rc.2-2026-02-27-3",
+    "href": "CHANGELOG.html#rc.2-2026-02-27-3",
     "title": "spotdesirability",
     "section": "0.0.17-rc.2 (2026-02-27)",
     "text": "0.0.17-rc.2 (2026-02-27)\n\nBug Fixes\n\nnormalize semantic-release pre-release version to PEP 440 (cb31e21)"
@@ -406,15 +406,15 @@
     "text": "0.0.17-rc.1 (2026-02-27)\n\nBug Fixes\n\nremove setuptools_scm, fix double-build in release workflow (33ad086)"
   },
   {
-    "objectID": "CHANGELOG.html#section-4",
-    "href": "CHANGELOG.html#section-4",
+    "objectID": "CHANGELOG.html#section-5",
+    "href": "CHANGELOG.html#section-5",
     "title": "spotdesirability",
     "section": "0.0.16 (2026-02-27)",
     "text": "0.0.16 (2026-02-27)\n\nBug Fixes\n\nurllib and pillow (391ab73)"
   },
   {
-    "objectID": "CHANGELOG.html#section-5",
-    "href": "CHANGELOG.html#section-5",
+    "objectID": "CHANGELOG.html#section-6",
+    "href": "CHANGELOG.html#section-6",
     "title": "spotdesirability",
     "section": "0.0.15 (2026-02-27)",
     "text": "0.0.15 (2026-02-27)\n\nBug Fixes\n\ncorrect quartodoc module paths in _quarto.yml (2452ee7)"
