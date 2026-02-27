@@ -52,7 +52,7 @@
 
 `spotdesirability` is a `Python` implementation of the `R` package `desirability`, which provides  S3 classes for multivariate optimization using the desirability function by Derringer and Suich (1980).
 
-# Installation
+## Installation
 
 Installation can be done with `pip`: 
 
