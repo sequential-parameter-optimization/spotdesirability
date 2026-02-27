@@ -1,3 +1,9 @@
+## <small>0.0.21-rc.3 (2026-02-27)</small>
+
+* fix: restore REUSE compliance for new documentation files ([e926da9](https://github.com/sequential-parameter-optimization/spotdesirability/commit/e926da9))
+* docs: refine documentation structure and fix landing page ([6cdecd4](https://github.com/sequential-parameter-optimization/spotdesirability/commit/6cdecd4))
+* docs: updated index ([e2a0cb1](https://github.com/sequential-parameter-optimization/spotdesirability/commit/e2a0cb1))
+
 ## <small>0.0.21-rc.2 (2026-02-27)</small>
 
 * fix(release): use pinned semantic-release-action for security ([5258133](https://github.com/sequential-parameter-optimization/spotdesirability/commit/5258133))
