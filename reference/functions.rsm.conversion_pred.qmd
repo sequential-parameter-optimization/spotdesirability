@@ -20,9 +20,9 @@ Predicts the percent conversion based on the input vector x.
 
 ## Examples {.doc-section .doc-section-examples}
 
-```python
->>> from spotdesirability.functions.rsm import conversion_pred
->>> x = [1.0, 2.0, 3.0]
->>> conversion = conversion_pred(x)
->>> print(conversion)
+```{python}
+from spotdesirability.functions.rsm import conversion_pred
+x = [1.0, 2.0, 3.0]
+conversion = conversion_pred(x)
+print(conversion)
 ```

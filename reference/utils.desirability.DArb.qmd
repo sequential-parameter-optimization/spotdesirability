@@ -34,22 +34,22 @@ https://cran.r-project.org/package=desirability
 
 ## Examples {.doc-section .doc-section-examples}
 
-```python
->>> from spotdesirability import DArb
->>> import numpy as np
->>> import matplotlib.pyplot as plt
+```{python}
+from spotdesirability import DArb
+import numpy as np
+import matplotlib.pyplot as plt
 # Define input and desirability values
->>> x = [-5, 0, 5, 10]
->>> d = [0, 0.5, 1, 0.2]
+x = [-5, 0, 5, 10]
+d = [0, 0.5, 1, 0.2]
 # Create a DArb object
->>> darb = DArb(x, d)
+darb = DArb(x, d)
 # Predict desirability for a range of inputs
->>> inputs = np.array([-10, -5, 0, 5, 10, 15])
->>> desirability = darb.predict(inputs)
->>> print(desirability)
-[0.  0.  0.5 1.  0.2 0.2]
+inputs = np.array([-10, -5, 0, 5, 10, 15])
+desirability = darb.predict(inputs)
+print(desirability)
+# [0.  0.  0.5 1.  0.2 0.2]
 # Plot the desirability function
->>> darb.plot()
+darb.plot()
 ```
 
 ## Methods
@@ -89,13 +89,13 @@ Plots the arbitrary desirability function.
 
 #### Examples {.doc-section .doc-section-examples}
 
-```python
->>> from spotdesirability import DArb
->>> x = [-5, 0, 5, 10]
->>> d = [0, 0.5, 1, 0.2]
->>> darb = DArb(x, d)
->>> darb.plot()  # Default figure size
->>> darb.plot(figsize=(12, 6))  # Custom figure size
+```{python}
+from spotdesirability import DArb
+x = [-5, 0, 5, 10]
+d = [0, 0.5, 1, 0.2]
+darb = DArb(x, d)
+darb.plot()  # Default figure size
+darb.plot(figsize=(12, 6))  # Custom figure size
 ```
 
 ### predict { #spotdesirability.utils.desirability.DArb.predict }
@@ -121,15 +121,15 @@ Predicts the desirability values for the given input data.
 
 #### Examples {.doc-section .doc-section-examples}
 
-```python
->>> from spotdesirability import DArb
->>> import numpy as np
+```{python}
+from spotdesirability import DArb
+import numpy as np
 # Define input and desirability values
->>> x = [-5, 0, 5, 10]
->>> d = [0, 0.5, 1, 0.2]
->>> darb = DArb(x, d)
->>> inputs = np.array([-10, -5, 0, 5, 10, 15])
->>> desirability = darb.predict(inputs)
->>> print(desirability)
-[0.  0.  0.5 1.  0.2 0.2]
+x = [-5, 0, 5, 10]
+d = [0, 0.5, 1, 0.2]
+darb = DArb(x, d)
+inputs = np.array([-10, -5, 0, 5, 10, 15])
+desirability = darb.predict(inputs)
+print(desirability)
+# [0.  0.  0.5 1.  0.2 0.2]
 ```

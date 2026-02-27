@@ -34,19 +34,19 @@ https://cran.r-project.org/package=desirability
 
 ## Examples {.doc-section .doc-section-examples}
 
-```python
->>> from spotdesirability import DBox
->>> import numpy as np
->>> import matplotlib.pyplot as plt
+```{python}
+from spotdesirability import DBox
+import numpy as np
+import matplotlib.pyplot as plt
 # Create a DBox object
->>> dbox = DBox(low=-1.682, high=1.682)
+dbox = DBox(low=-1.682, high=1.682)
 # Predict desirability for a range of inputs
->>> inputs = np.array([-3, -1.682, 0, 1.682, 3])
->>> desirability = dbox.predict(inputs)
->>> print(desirability)
-[0. 1. 1. 1. 0.]
+inputs = np.array([-3, -1.682, 0, 1.682, 3])
+desirability = dbox.predict(inputs)
+print(desirability)
+# [0. 1. 1. 1. 0.]
 # Plot the desirability function
->>> dbox.plot()
+dbox.plot()
 ```
 
 ## Methods
@@ -84,11 +84,11 @@ Plots the box-like desirability function.
 
 #### Examples {.doc-section .doc-section-examples}
 
-```python
->>> from spotdesirability import DBox
->>> dbox = DBox(low=-1.682, high=1.682)
->>> dbox.plot()  # Default figure size
->>> dbox.plot(figsize=(12, 6))  # Custom figure size
+```{python}
+from spotdesirability import DBox
+dbox = DBox(low=-1.682, high=1.682)
+dbox.plot()  # Default figure size
+dbox.plot(figsize=(12, 6))  # Custom figure size
 ```
 
 ### predict { #spotdesirability.utils.desirability.DBox.predict }
@@ -114,13 +114,13 @@ Predicts the desirability values for the given input data.
 
 #### Examples {.doc-section .doc-section-examples}
 
-```python
->>> from spotdesirability import DBox
->>> import numpy as np
+```{python}
+from spotdesirability import DBox
+import numpy as np
 # Create a DBox object
->>> dbox = DBox(low=-1.682, high=1.682)
->>> inputs = np.array([-3, -1.682, 0, 1.682, 3])
->>> desirability = dbox.predict(inputs)
->>> print(desirability)
-[0. 1. 1. 1. 0.]
+dbox = DBox(low=-1.682, high=1.682)
+inputs = np.array([-3, -1.682, 0, 1.682, 3])
+desirability = dbox.predict(inputs)
+print(desirability)
+# [0. 1. 1. 1. 0.]
 ```

@@ -1,3 +1,25 @@
+## <small>0.0.23-rc.1 (2026-02-27)</small>
+
+* Delete makefile.sh ([d973a00](https://github.com/sequential-parameter-optimization/spotdesirability/commit/d973a00))
+* Merge branch 'main' into develop ([715b03c](https://github.com/sequential-parameter-optimization/spotdesirability/commit/715b03c))
+* Merge pull request #8 from sequential-parameter-optimization/develop ([7acb305](https://github.com/sequential-parameter-optimization/spotdesirability/commit/7acb305)), closes [#8](https://github.com/sequential-parameter-optimization/spotdesirability/issues/8)
+* chore: add dependabot configuration for actions and pip ([78e7861](https://github.com/sequential-parameter-optimization/spotdesirability/commit/78e7861))
+* chore: exclude Quarto build artifacts from git ([b73a871](https://github.com/sequential-parameter-optimization/spotdesirability/commit/b73a871))
+* chore(release): 0.0.22-rc.2 [skip ci] ([d6b9f20](https://github.com/sequential-parameter-optimization/spotdesirability/commit/d6b9f20))
+* fix: input list handling ([7e99824](https://github.com/sequential-parameter-optimization/spotdesirability/commit/7e99824))
+* docs: add living examples and deep tests for conversion_pred ([de5ffd6](https://github.com/sequential-parameter-optimization/spotdesirability/commit/de5ffd6))
+* docs: spotdesirability instead of spotpython ([527385a](https://github.com/sequential-parameter-optimization/spotdesirability/commit/527385a))
+* docs: use Quarto living code blocks in rsm.py docstrings ([6b8153b](https://github.com/sequential-parameter-optimization/spotdesirability/commit/6b8153b))
+
+## <small>0.0.22-rc.2 (2026-02-27)</small>
+
+* fix: input list handling ([7e99824](https://github.com/sequential-parameter-optimization/spotdesirability/commit/7e99824))
+* docs: add living examples and deep tests for conversion_pred ([de5ffd6](https://github.com/sequential-parameter-optimization/spotdesirability/commit/de5ffd6))
+* docs: spotdesirability instead of spotpython ([527385a](https://github.com/sequential-parameter-optimization/spotdesirability/commit/527385a))
+* docs: use Quarto living code blocks in rsm.py docstrings ([6b8153b](https://github.com/sequential-parameter-optimization/spotdesirability/commit/6b8153b))
+* chore: add dependabot configuration for actions and pip ([78e7861](https://github.com/sequential-parameter-optimization/spotdesirability/commit/78e7861))
+* chore: exclude Quarto build artifacts from git ([b73a871](https://github.com/sequential-parameter-optimization/spotdesirability/commit/b73a871))
+* Delete makefile.sh ([d973a00](https://github.com/sequential-parameter-optimization/spotdesirability/commit/d973a00))
 ## <small>0.0.22 (2026-02-27)</small>
 
 * Merge branch 'main' into develop ([d5ba393](https://github.com/sequential-parameter-optimization/spotdesirability/commit/d5ba393))

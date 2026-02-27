@@ -75,20 +75,28 @@ class DesirabilityBase:
                 Additional keyword arguments for the plot.
 
         Examples:
-            >>> from spotdesirability import DMax
-            >>> dmax = DMax(low=0, high=10, scale=1)
-            >>> dmax.plot(figsize=(12, 6))  # Custom figure size
-            >>> from spotdesirability import DMin
-            >>> dmin = DMin(low=0, high=10, scale=1)
-            >>> dmin.plot()  # Default figure size
-            >>> from spotdesirability import DTarget
-            >>> dtarget = DTarget(low=0, target=5, high=10, low_scale=1, high_scale=1)
-            >>> dtarget.plot(figsize=(8, 4))
-            >>> from spotdesirability import DArb
-            >>> x = [-5, 0, 5, 10]
-            >>> d = [0, 0.5, 1, 0.2]
-            >>> darb = DArb(x, d)
-            >>> darb.plot(figsize=(15, 10))
+            ```{python}
+            from spotdesirability import DMax
+            dmax = DMax(low=0, high=10, scale=1)
+            dmax.plot(figsize=(12, 6))  # Custom figure size
+            ```
+            ```{python}
+            from spotdesirability import DMin
+            dmin = DMin(low=0, high=10, scale=1)
+            dmin.plot()  # Default figure size
+            ```
+            ```{python}
+            from spotdesirability import DTarget
+            dtarget = DTarget(low=0, target=5, high=10, low_scale=1, high_scale=1)
+            dtarget.plot(figsize=(8, 4))
+            ```
+            ```{python}
+            from spotdesirability import DArb
+            x = [-5, 0, 5, 10]
+            d = [0, 0.5, 1, 0.2]
+            darb = DArb(x, d)
+            darb.plot(figsize=(15, 10))
+            ```
         """
         x_range = self.extend_range([self.low, self.high])
         if not add:
@@ -137,18 +145,20 @@ class DMax(DesirabilityBase):
         https://cran.r-project.org/package=desirability
 
     Examples:
-        >>> from spotdesirability import DMax
-        >>> import numpy as np
-        >>> import matplotlib.pyplot as plt
+        ```{python}
+        from spotdesirability import DMax
+        import numpy as np
+        import matplotlib.pyplot as plt
         # Create a DMax object
-        >>> dmax = DMax(low=0, high=10, scale=1)
+        dmax = DMax(low=0, high=10, scale=1)
         # Predict desirability for a range of inputs
-        >>> inputs = np.array([-5, 0, 5, 10, 15])
-        >>> desirability = dmax.predict(inputs)
-        >>> print(desirability)
-        [0. 0. 0.5 1. 1.]
+        inputs = np.array([-5, 0, 5, 10, 15])
+        desirability = dmax.predict(inputs)
+        print(desirability)
+        # [0. 0. 0.5 1. 1.]
         # Plot the desirability function
-        >>> dmax.plot()
+        dmax.plot()
+        ```
     """
 
     def __init__(self, low, high, scale=1, tol=None, missing=None):
@@ -203,18 +213,20 @@ class DMax(DesirabilityBase):
             numpy.ndarray: The desirability values for the input data.
 
         Examples:
-            >>> from spotdesirability import DMax
-            >>> import numpy as np
-            >>> dmax = DMax(low=0, high=10, scale=1)
-            >>> inputs = np.array([-5, 0, 5, 10, 15])
-            >>> desirability = dmax.predict(inputs)
-            >>> print(desirability)
-            [0. 0. 0.5 1. 1.]
+            ```{python}
+            from spotdesirability import DMax
+            import numpy as np
+            dmax = DMax(low=0, high=10, scale=1)
+            inputs = np.array([-5, 0, 5, 10, 15])
+            desirability = dmax.predict(inputs)
+            print(desirability)
+            # [0. 0. 0.5 1. 1.]
+            ```
         """
         if newdata is None:
             newdata = np.array([])
-        elif isinstance(newdata, (int, float)):  # Handle single float or int input
-            newdata = np.array([newdata])
+        else:
+            newdata = np.atleast_1d(newdata)
         if missing is None:
             missing = self.missing
 
@@ -257,18 +269,20 @@ class DMin(DesirabilityBase):
         https://cran.r-project.org/package=desirability
 
     Examples:
-        >>> from spotdesirability import DMin
-        >>> import numpy as np
-        >>> import matplotlib.pyplot as plt
+        ```{python}
+        from spotdesirability import DMin
+        import numpy as np
+        import matplotlib.pyplot as plt
         # Create a DMin object
-        >>> dmin = DMin(low=0, high=10, scale=1)
+        dmin = DMin(low=0, high=10, scale=1)
         # Predict desirability for a range of inputs
-        >>> inputs = np.array([-5, 0, 5, 10, 15])
-        >>> desirability = dmin.predict(inputs)
-        >>> print(desirability)
-        [1. 1. 0.5 0. 0.]
+        inputs = np.array([-5, 0, 5, 10, 15])
+        desirability = dmin.predict(inputs)
+        print(desirability)
+        # [1. 1. 0.5 0. 0.]
         # Plot the desirability function
-        >>> dmin.plot()
+        dmin.plot()
+        ```
     """
 
     def __init__(self, low, high, scale=1, tol=None, missing=None):
@@ -323,17 +337,20 @@ class DMin(DesirabilityBase):
             (numpy.ndarray): The desirability values for the input data.
 
         Examples:
-            >>> from spotdesirability import DMin
-            >>> dmin = DMin(low=0, high=10, scale=1)
-            >>> inputs = np.array([-5, 0, 5, 10, 15])
-            >>> desirability = dmin.predict(inputs)
-            >>> print(desirability)
-            [1. 1. 0.5 0. 0.]
+            ```{python}
+            from spotdesirability import DMin
+            import numpy as np
+            dmin = DMin(low=0, high=10, scale=1)
+            inputs = np.array([-5, 0, 5, 10, 15])
+            desirability = dmin.predict(inputs)
+            print(desirability)
+            # [1. 1. 0.5 0. 0.]
+            ```
         """
         if newdata is None:
             newdata = np.array([])
-        elif isinstance(newdata, (int, float)):  # Handle single float or int input
-            newdata = np.array([newdata])
+        else:
+            newdata = np.atleast_1d(newdata)
         if missing is None:
             missing = self.missing
 
@@ -378,18 +395,20 @@ class DTarget(DesirabilityBase):
         https://cran.r-project.org/package=desirability
 
     Examples:
-        >>> from spotdesirability import DTarget
-        >>> import numpy as np
-        >>> import matplotlib.pyplot as plt
+        ```{python}
+        from spotdesirability import DTarget
+        import numpy as np
+        import matplotlib.pyplot as plt
         # Create a DTarget object
-        >>> dtarget = DTarget(low=0, target=5, high=10, low_scale=1, high_scale=1)
+        dtarget = DTarget(low=0, target=5, high=10, low_scale=1, high_scale=1)
         # Predict desirability for a range of inputs
-        >>> inputs = np.array([-5, 0, 2.5, 5, 7.5, 10, 15])
-        >>> desirability = dtarget.predict(inputs)
-        >>> print(desirability)
-        [0.   0.   0.5  1.   0.5  0.   0.  ]
+        inputs = np.array([-5, 0, 2.5, 5, 7.5, 10, 15])
+        desirability = dtarget.predict(inputs)
+        print(desirability)
+        # [0.   0.   0.5  1.   0.5  0.   0.  ]
         # Plot the desirability function
-        >>> dtarget.plot()
+        dtarget.plot()
+        ```
     """
 
     def __init__(self, low, target, high, low_scale=1, high_scale=1, tol=None, missing=None):
@@ -454,19 +473,21 @@ class DTarget(DesirabilityBase):
             (numpy.ndarray): The desirability values for the input data.
 
         Examples:
-            >>> from spotdesirability import DTarget
-            >>> import numpy as np
+            ```{python}
+            from spotdesirability import DTarget
+            import numpy as np
             # Create a DTarget object
-            >>> dtarget = DTarget(low=0, target=5, high=10, low_scale=1, high_scale=1)
-            >>> inputs = np.array([-5, 0, 2.5, 5, 7.5, 10, 15])
-            >>> desirability = dtarget.predict(inputs)
-            >>> print(desirability)
-            [0.   0.   0.5  1.   0.5  0.   0.  ]
+            dtarget = DTarget(low=0, target=5, high=10, low_scale=1, high_scale=1)
+            inputs = np.array([-5, 0, 2.5, 5, 7.5, 10, 15])
+            desirability = dtarget.predict(inputs)
+            print(desirability)
+            # [0.   0.   0.5  1.   0.5  0.   0.  ]
+            ```
         """
         if newdata is None:
             newdata = np.array([])
-        elif isinstance(newdata, (int, float)):  # Handle single float or int input
-            newdata = np.array([newdata])
+        else:
+            newdata = np.atleast_1d(newdata)
         if missing is None:
             missing = self.missing
 
@@ -508,21 +529,23 @@ class DArb(DesirabilityBase):
         https://cran.r-project.org/package=desirability
 
     Examples:
-        >>> from spotdesirability import DArb
-        >>> import numpy as np
-        >>> import matplotlib.pyplot as plt
+        ```{python}
+        from spotdesirability import DArb
+        import numpy as np
+        import matplotlib.pyplot as plt
         # Define input and desirability values
-        >>> x = [-5, 0, 5, 10]
-        >>> d = [0, 0.5, 1, 0.2]
+        x = [-5, 0, 5, 10]
+        d = [0, 0.5, 1, 0.2]
         # Create a DArb object
-        >>> darb = DArb(x, d)
+        darb = DArb(x, d)
         # Predict desirability for a range of inputs
-        >>> inputs = np.array([-10, -5, 0, 5, 10, 15])
-        >>> desirability = darb.predict(inputs)
-        >>> print(desirability)
-        [0.  0.  0.5 1.  0.2 0.2]
+        inputs = np.array([-10, -5, 0, 5, 10, 15])
+        desirability = darb.predict(inputs)
+        print(desirability)
+        # [0.  0.  0.5 1.  0.2 0.2]
         # Plot the desirability function
-        >>> darb.plot()
+        darb.plot()
+        ```
     """
 
     def __init__(self, x, d, tol=None, missing=None):
@@ -541,15 +564,15 @@ class DArb(DesirabilityBase):
             ValueError: If `x` or `d` has fewer than two values.
         """
         super().__init__()
-        if any(d > 1) or any(d < 0):
-            raise ValueError("The desirability values must be 0 <= d <= 1.")
-        if len(x) != len(d):
-            raise ValueError("x and d must have the same length.")
-        if len(x) < 2 or len(d) < 2:
-            raise ValueError("x and d must have at least two values.")
+        self.x = np.atleast_1d(x)
+        self.d = np.atleast_1d(d)
 
-        self.x = np.array(x)
-        self.d = np.array(d)
+        if np.any(self.d > 1) or np.any(self.d < 0):
+            raise ValueError("The desirability values must be 0 <= d <= 1.")
+        if len(self.x) != len(self.d):
+            raise ValueError("x and d must have the same length.")
+        if len(self.x) < 2 or len(self.d) < 2:
+            raise ValueError("x and d must have at least two values.")
         self.tol = tol
         self.missing = missing
         if self.missing is None:
@@ -578,21 +601,23 @@ class DArb(DesirabilityBase):
             (numpy.ndarray): The desirability values for the input data.
 
         Examples:
-            >>> from spotdesirability import DArb
-            >>> import numpy as np
+            ```{python}
+            from spotdesirability import DArb
+            import numpy as np
             # Define input and desirability values
-            >>> x = [-5, 0, 5, 10]
-            >>> d = [0, 0.5, 1, 0.2]
-            >>> darb = DArb(x, d)
-            >>> inputs = np.array([-10, -5, 0, 5, 10, 15])
-            >>> desirability = darb.predict(inputs)
-            >>> print(desirability)
-            [0.  0.  0.5 1.  0.2 0.2]
+            x = [-5, 0, 5, 10]
+            d = [0, 0.5, 1, 0.2]
+            darb = DArb(x, d)
+            inputs = np.array([-10, -5, 0, 5, 10, 15])
+            desirability = darb.predict(inputs)
+            print(desirability)
+            # [0.  0.  0.5 1.  0.2 0.2]
+            ```
         """
         if newdata is None:
             newdata = np.array([])
-        elif isinstance(newdata, (int, float)):  # Handle single float or int input
-            newdata = np.array([newdata])
+        else:
+            newdata = np.atleast_1d(newdata)
         if missing is None:
             missing = self.missing
 
@@ -630,12 +655,14 @@ class DArb(DesirabilityBase):
                 Additional keyword arguments for the plot.
 
         Examples:
-            >>> from spotdesirability import DArb
-            >>> x = [-5, 0, 5, 10]
-            >>> d = [0, 0.5, 1, 0.2]
-            >>> darb = DArb(x, d)
-            >>> darb.plot()  # Default figure size
-            >>> darb.plot(figsize=(12, 6))  # Custom figure size
+            ```{python}
+            from spotdesirability import DArb
+            x = [-5, 0, 5, 10]
+            d = [0, 0.5, 1, 0.2]
+            darb = DArb(x, d)
+            darb.plot()  # Default figure size
+            darb.plot(figsize=(12, 6))  # Custom figure size
+            ```
         """
         x_range = self.extend_range(self.x)
         if not add:
@@ -680,18 +707,20 @@ class DBox(DesirabilityBase):
         https://cran.r-project.org/package=desirability
 
     Examples:
-        >>> from spotdesirability import DBox
-        >>> import numpy as np
-        >>> import matplotlib.pyplot as plt
+        ```{python}
+        from spotdesirability import DBox
+        import numpy as np
+        import matplotlib.pyplot as plt
         # Create a DBox object
-        >>> dbox = DBox(low=-1.682, high=1.682)
+        dbox = DBox(low=-1.682, high=1.682)
         # Predict desirability for a range of inputs
-        >>> inputs = np.array([-3, -1.682, 0, 1.682, 3])
-        >>> desirability = dbox.predict(inputs)
-        >>> print(desirability)
-        [0. 1. 1. 1. 0.]
+        inputs = np.array([-3, -1.682, 0, 1.682, 3])
+        desirability = dbox.predict(inputs)
+        print(desirability)
+        # [0. 1. 1. 1. 0.]
         # Plot the desirability function
-        >>> dbox.plot()
+        dbox.plot()
+        ```
     """
 
     def __init__(self, low, high, tol=None, missing=None):
@@ -741,19 +770,21 @@ class DBox(DesirabilityBase):
             (numpy.ndarray): The desirability values for the input data.
 
         Examples:
-            >>> from spotdesirability import DBox
-            >>> import numpy as np
+            ```{python}
+            from spotdesirability import DBox
+            import numpy as np
             # Create a DBox object
-            >>> dbox = DBox(low=-1.682, high=1.682)
-            >>> inputs = np.array([-3, -1.682, 0, 1.682, 3])
-            >>> desirability = dbox.predict(inputs)
-            >>> print(desirability)
-            [0. 1. 1. 1. 0.]
+            dbox = DBox(low=-1.682, high=1.682)
+            inputs = np.array([-3, -1.682, 0, 1.682, 3])
+            desirability = dbox.predict(inputs)
+            print(desirability)
+            # [0. 1. 1. 1. 0.]
+            ```
         """
         if newdata is None:
             newdata = np.array([])
-        elif isinstance(newdata, (int, float)):  # Handle single float or int input
-            newdata = np.array([newdata])
+        else:
+            newdata = np.atleast_1d(newdata)
         if missing is None:
             missing = self.missing
 
@@ -784,10 +815,12 @@ class DBox(DesirabilityBase):
                 Additional keyword arguments for the plot.
 
         Examples:
-            >>> from spotdesirability import DBox
-            >>> dbox = DBox(low=-1.682, high=1.682)
-            >>> dbox.plot()  # Default figure size
-            >>> dbox.plot(figsize=(12, 6))  # Custom figure size
+            ```{python}
+            from spotdesirability import DBox
+            dbox = DBox(low=-1.682, high=1.682)
+            dbox.plot()  # Default figure size
+            dbox.plot(figsize=(12, 6))  # Custom figure size
+            ```
         """
         x_range = self.extend_range([self.low, self.high])
         if not add:
@@ -831,19 +864,21 @@ class DCategorical(DesirabilityBase):
         https://cran.r-project.org/package=desirability
 
     Examples:
-        >>> from spotdesirability import DCategorical
-        >>> import matplotlib.pyplot as plt
+        ```{python}
+        from spotdesirability import DCategorical
+        import matplotlib.pyplot as plt
         # Define desirability values for categories
-        >>> values = {"A": 0.1, "B": 0.9, "C": 0.5}
+        values = {"A": 0.1, "B": 0.9, "C": 0.5}
         # Create a DCategorical object
-        >>> dcat = DCategorical(values)
+        dcat = DCategorical(values)
         # Predict desirability for a list of categories
-        >>> inputs = ["A", "B", "C", "D"]
-        >>> desirability = dcat.predict(inputs)
-        >>> print(desirability)
-        [0.1 0.9 0.5 ValueError: Value 'D' not in allowed values: ['A', 'B', 'C']]
+        inputs = ["A", "B", "C"]
+        desirability = dcat.predict(inputs)
+        print(desirability)
+        # [0.1 0.9 0.5]
         # Plot the desirability function
-        >>> dcat.plot()
+        dcat.plot()
+        ```
     """
 
     def __init__(self, values, tol=None, missing=None):
@@ -896,18 +931,20 @@ class DCategorical(DesirabilityBase):
             ValueError: If a category in `newdata` is not in the allowed categories.
 
         Examples:
-            >>> from spotdesirability import DCategorical
-            >>> values = {"A": 0.1, "B": 0.9, "C": 0.5}
-            >>> dcat = DCategorical(values)
-            >>> inputs = ["A", "B", "C"]
-            >>> desirability = dcat.predict(inputs)
-            >>> print(desirability)
-            [0.1 0.9 0.5]
+            ```{python}
+            from spotdesirability import DCategorical
+            values = {"A": 0.1, "B": 0.9, "C": 0.5}
+            dcat = DCategorical(values)
+            inputs = ["A", "B", "C"]
+            desirability = dcat.predict(inputs)
+            print(desirability)
+            # [0.1 0.9 0.5]
+            ```
         """
         if newdata is None:
             newdata = np.array([])
-        elif isinstance(newdata, (int, float)):  # Handle single float or int input
-            newdata = np.array([newdata])
+        else:
+            newdata = np.atleast_1d(newdata)
         if missing is None:
             missing = self.missing
 
@@ -940,11 +977,13 @@ class DCategorical(DesirabilityBase):
                 Additional keyword arguments for the plot.
 
         Examples:
-            >>> from spotdesirability import DCategorical
-            >>> values = {"A": 0.1, "B": 0.9, "C": 0.5}
-            >>> dcat = DCategorical(values)
-            >>> dcat.plot()  # Default figure size
-            >>> dcat.plot(figsize=(12, 6))  # Custom figure size
+            ```{python}
+            from spotdesirability import DCategorical
+            values = {"A": 0.1, "B": 0.9, "C": 0.5}
+            dcat = DCategorical(values)
+            dcat.plot()  # Default figure size
+            dcat.plot(figsize=(12, 6))  # Custom figure size
+            ```
         """
         plt.figure(figsize=figsize)  # Set the figure size
         plt.bar(range(len(self.values)), list(self.values.values()), tick_label=list(self.values.keys()), **kwargs)
@@ -975,21 +1014,23 @@ class DOverall(DesirabilityBase):
         https://cran.r-project.org/package=desirability
 
     Examples:
-        >>> from spotdesirability import DOverall, DMax, DMin
-        >>> import numpy as np
+        ```{python}
+        from spotdesirability import DOverall, DMax, DMin
+        import numpy as np
         # Create individual desirability objects
-        >>> dmax = DMax(low=0, high=10, scale=1)
-        >>> dmin = DMin(low=5, high=15, scale=1)
+        dmax = DMax(low=0, high=10, scale=1)
+        dmin = DMin(low=5, high=15, scale=1)
         # Combine them into an overall desirability object
-        >>> doverall = DOverall(dmax, dmin)
+        doverall = DOverall(dmax, dmin)
         # Predict overall desirability for a set of inputs
-        >>> inputs = np.array([[5, 10], [0, 15], [10, 5]])
-        >>> overall_desirability = doverall.predict(inputs)
-        >>> print(overall_desirability)
+        inputs = np.array([[5, 10], [0, 15], [10, 5]])
+        overall_desirability = doverall.predict(inputs)
+        print(overall_desirability)
         # Predict individual and overall desirabilities
-        >>> individual, overall = doverall.predict(inputs, all=True)
-        >>> print("Individual:", individual)
-        >>> print("Overall:", overall)
+        individual, overall = doverall.predict(inputs, all=True)
+        print("Individual:", individual)
+        print("Overall:", overall)
+        ```
     """
 
     def __init__(self, *d_objs):
@@ -1027,15 +1068,17 @@ class DOverall(DesirabilityBase):
             ValueError: If the number of columns in `newdata` does not match the number of desirability objects.
 
         Examples:
-            >>> from spotdesirability import DOverall, DMax, DMin
-            >>> import numpy as np
+            ```{python}
+            from spotdesirability import DOverall, DMax, DMin
+            import numpy as np
             # Create individual desirability objects
-            >>> dmax = DMax(low=0, high=10, scale=1)
-            >>> dmin = DMin(low=5, high=15, scale=1)
-            >>> doverall = DOverall(dmax, dmin)
-            >>> inputs = np.array([[5, 10], [0, 15], [10, 5]])
-            >>> overall_desirability = doverall.predict(inputs)
-            >>> print(overall_desirability)
+            dmax = DMax(low=0, high=10, scale=1)
+            dmin = DMin(low=5, high=15, scale=1)
+            doverall = DOverall(dmax, dmin)
+            inputs = np.array([[5, 10], [0, 15], [10, 5]])
+            overall_desirability = doverall.predict(inputs)
+            print(overall_desirability)
+            ```
         """
         # Ensure newdata is a NumPy array
         newdata = np.array(newdata)

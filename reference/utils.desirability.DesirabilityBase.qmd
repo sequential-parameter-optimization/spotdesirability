@@ -68,21 +68,27 @@ Plots the continuous desirability functions, i.e., `DMax`, `DMin`, and `DTarget`
 
 #### Examples {.doc-section .doc-section-examples}
 
-```python
->>> from spotdesirability import DMax
->>> dmax = DMax(low=0, high=10, scale=1)
->>> dmax.plot(figsize=(12, 6))  # Custom figure size
->>> from spotdesirability import DMin
->>> dmin = DMin(low=0, high=10, scale=1)
->>> dmin.plot()  # Default figure size
->>> from spotdesirability import DTarget
->>> dtarget = DTarget(low=0, target=5, high=10, low_scale=1, high_scale=1)
->>> dtarget.plot(figsize=(8, 4))
->>> from spotdesirability import DArb
->>> x = [-5, 0, 5, 10]
->>> d = [0, 0.5, 1, 0.2]
->>> darb = DArb(x, d)
->>> darb.plot(figsize=(15, 10))
+```{python}
+from spotdesirability import DMax
+dmax = DMax(low=0, high=10, scale=1)
+dmax.plot(figsize=(12, 6))  # Custom figure size
+```
+```{python}
+from spotdesirability import DMin
+dmin = DMin(low=0, high=10, scale=1)
+dmin.plot()  # Default figure size
+```
+```{python}
+from spotdesirability import DTarget
+dtarget = DTarget(low=0, target=5, high=10, low_scale=1, high_scale=1)
+dtarget.plot(figsize=(8, 4))
+```
+```{python}
+from spotdesirability import DArb
+x = [-5, 0, 5, 10]
+d = [0, 0.5, 1, 0.2]
+darb = DArb(x, d)
+darb.plot(figsize=(15, 10))
 ```
 
 ### print_class_attributes { #spotdesirability.utils.desirability.DesirabilityBase.print_class_attributes }

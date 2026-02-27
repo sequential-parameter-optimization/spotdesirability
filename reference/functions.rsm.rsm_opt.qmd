@@ -37,12 +37,11 @@ Optimizers minimize, so we return negative desirability.
 
 ## Examples {.doc-section .doc-section-examples}
 
-```python
->>> from spotdesirability import DOverall, rsm_opt, DTarget, conversion_pred, activity_pred
->>> d_object = DOverall(DTarget(0, 0.5, 1), DTarget(0, 0.5, 1))
->>> prediction_funcs = [conversion_pred, activity_pred]
->>> x = [1.0, 2.0, 3.0]
->>> desirability = rsm_opt(x, d_object, prediction_funcs)
->>> print(desirability)
--0.5
+```{python}
+from spotdesirability import DOverall, rsm_opt, DTarget, conversion_pred, activity_pred
+d_object = DOverall(DTarget(0, 0.5, 1), DTarget(0, 0.5, 1))
+prediction_funcs = [conversion_pred, activity_pred]
+x = [1.0, 2.0, 3.0]
+desirability = rsm_opt(x, d_object, prediction_funcs)
+print(desirability)
 ```
