@@ -16,7 +16,7 @@ SPDX-FileCopyrightText = "2026 bartzbeielstein"
 SPDX-License-Identifier = "GPL-2.0-or-later"
 
 [[annotations]]
-path = ["docs/**", "README.md", "CHANGELOG.md", "SECURITY.md"]
+path = ["*.md", "*.qmd", "docs/**", "reference/**", "objects.json"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2026 bartzbeielstein"
 SPDX-License-Identifier = "GPL-2.0-or-later"
