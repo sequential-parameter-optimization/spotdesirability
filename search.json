@@ -277,14 +277,35 @@
     "href": "CHANGELOG.html",
     "title": "spotdesirability",
     "section": "",
-    "text": "correct quartodoc module paths in _quarto.yml (2452ee7)"
+    "text": "normalize semantic-release pre-release version to PEP 440 (cb31e21)"
+  },
+  {
+    "objectID": "CHANGELOG.html#rc.2-2026-02-27",
+    "href": "CHANGELOG.html#rc.2-2026-02-27",
+    "title": "spotdesirability",
+    "section": "",
+    "text": "normalize semantic-release pre-release version to PEP 440 (cb31e21)"
+  },
+  {
+    "objectID": "CHANGELOG.html#rc.1-2026-02-27",
+    "href": "CHANGELOG.html#rc.1-2026-02-27",
+    "title": "spotdesirability",
+    "section": "0.0.17-rc.1 (2026-02-27)",
+    "text": "0.0.17-rc.1 (2026-02-27)\n\nBug Fixes\n\nremove setuptools_scm, fix double-build in release workflow (33ad086)"
   },
   {
     "objectID": "CHANGELOG.html#section",
     "href": "CHANGELOG.html#section",
     "title": "spotdesirability",
-    "section": "",
-    "text": "correct quartodoc module paths in _quarto.yml (2452ee7)"
+    "section": "0.0.16 (2026-02-27)",
+    "text": "0.0.16 (2026-02-27)\n\nBug Fixes\n\nurllib and pillow (391ab73)"
+  },
+  {
+    "objectID": "CHANGELOG.html#section-1",
+    "href": "CHANGELOG.html#section-1",
+    "title": "spotdesirability",
+    "section": "0.0.15 (2026-02-27)",
+    "text": "0.0.15 (2026-02-27)\n\nBug Fixes\n\ncorrect quartodoc module paths in _quarto.yml (2452ee7)"
   },
   {
     "objectID": "docs/examples.html",
