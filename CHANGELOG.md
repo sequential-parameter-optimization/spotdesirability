@@ -1,3 +1,7 @@
+## <small>0.0.23-rc.2 (2026-02-27)</small>
+
+* fix: reuse information ([3763806](https://github.com/sequential-parameter-optimization/spotdesirability/commit/3763806))
+
 ## <small>0.0.23-rc.1 (2026-02-27)</small>
 
 * Delete makefile.sh ([d973a00](https://github.com/sequential-parameter-optimization/spotdesirability/commit/d973a00))
