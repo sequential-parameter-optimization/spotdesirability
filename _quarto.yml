@@ -1,0 +1,37 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "spotdesirability"
+  description: "spotdesirability – Python implementation of desirability functions for multivariate optimisation"
+  repo-url: https://github.com/sequential-parameter-optimization/spotdesirability
+  repo-actions: [edit, issue]
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Reference"
+        href: reference/index.qmd
+      - text: "About"
+        href: docs/about.qmd
+
+quartodoc:
+  package: spotdesirability
+  source_dir: src
+  title: "API Reference"
+  sidebar: reference/_sidebar.yml
+  sections:
+    - title: "Desirability Classes"
+      desc: "Core desirability function classes"
+      contents:
+        - spotdesirability.desirability
+    - title: "RSM Functions"
+      desc: "Response Surface Methodology helper functions"
+      contents:
+        - spotdesirability.functions.rsm
+
+format:
+  html:
+    theme: cosmo
+    toc: true

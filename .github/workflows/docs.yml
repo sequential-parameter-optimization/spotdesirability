@@ -1,0 +1,114 @@
+# =============================================================================
+# .github/workflows/docs.yml  —  Documentation Build & Deploy
+# =============================================================================
+# Pipeline:
+#   1. Checkout (full history — needed for quartodoc and git-based versioning)
+#   2. Set up Python + uv
+#   3. Install Python deps (including quartodoc, from pyproject.toml dev group)
+#   4. Install Quarto CLI (PINNED version — never float in safety-critical CI)
+#   5. Verify Quarto installation integrity
+#   6. Generate API reference stubs with quartodoc
+#   7. Render the full Quarto site
+#   8. Publish rendered output to the gh-pages branch
+#
+# ⚠️  Version pinning policy:
+#     Update QUARTO_VERSION deliberately and document the reason in the commit
+#     message.  During a certification or audit cycle, do NOT update this pin
+#     without re-running the full verification checklist.
+# =============================================================================
+
+name: Documentation
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+      - '_quarto.yml'
+      - 'src/spotdesirability/**'
+      - 'pyproject.toml'
+  workflow_dispatch:
+
+# ---------------------------------------------------------------------------
+# Principle of Least Privilege: base permissions are read-only.
+# The deploy job elevates only what it needs (contents: write).
+# ---------------------------------------------------------------------------
+permissions: read-all
+
+# ---------------------------------------------------------------------------
+# Pinned versions — change these deliberately, never via Dependabot auto-merge.
+# ---------------------------------------------------------------------------
+env:
+  QUARTO_VERSION: "1.7.29"
+  PYTHON_VERSION: "3.13"
+
+jobs:
+  deploy-docs:
+    name: Build & Deploy Documentation
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write   # push to gh-pages branch
+
+    steps:
+      # ── 1. Checkout ──────────────────────────────────────────────────────
+      - name: Checkout (full history)
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683  # v4.2.2
+        with:
+          fetch-depth: 0   # full history required for quartodoc and interlinks
+
+      # ── 2. Python ────────────────────────────────────────────────────────
+      - name: Set up Python ${{ env.PYTHON_VERSION }}
+        uses: actions/setup-python@0b93645e9fea7318ecaed2b359559ac225c90a2b  # v5.3.0
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      # ── 3. uv ────────────────────────────────────────────────────────────
+      - name: Set up uv
+        uses: astral-sh/setup-uv@d4b2f3b6ecc6e67c4457f6d3e41ec42d3d0fcb86  # v5.4.2
+
+      # ── 4. Python dependencies ───────────────────────────────────────────
+      # Installs the package in editable mode plus the dev group which
+      # contains quartodoc (see pyproject.toml).
+      - name: Install Python dependencies
+        run: |
+          uv sync --group dev
+
+      # ── 5. Quarto CLI (pinned) ────────────────────────────────────────────
+      - name: Install Quarto CLI ${{ env.QUARTO_VERSION }}
+        uses: quarto-dev/quarto-actions/setup@8a96df13519ee81fd526f2dfca5962811136661b  # v2.2.0
+        with:
+          version: ${{ env.QUARTO_VERSION }}
+
+      # ── 6. Verify Quarto integrity ────────────────────────────────────────
+      # `quarto check` verifies the installation, Pandoc, knitr/Jupyter kernels.
+      # A failing check aborts the pipeline before any rendering occurs.
+      - name: Verify Quarto installation
+        run: quarto check
+
+      # ── 7. Generate API reference stubs ───────────────────────────────────
+      # quartodoc reads _quarto.yml (the `quartodoc:` section) and writes
+      # .qmd stubs to docs/reference/.  Must run before `quarto render`.
+      - name: Generate API reference with quartodoc
+        run: |
+          # docs/quartodoc_build.py patches a griffe/quartodoc incompatibility
+          # (missing DocstringSectionWarns renderer) then runs the normal build.
+          uv run python docs/quartodoc_build.py
+          uv run quartodoc interlinks  # build interlink inventory for cross-refs
+
+      # ── 8. Render Quarto site ─────────────────────────────────────────────
+      # --no-cache: ensures a fully reproducible, audit-clean render.
+      - name: Render Quarto site
+        run: uv run quarto render --no-cache
+
+      # ── 9. Deploy to GitHub Pages (gh-pages branch) ───────────────────────
+      # The quarto-actions/publish action creates a clean commit on gh-pages.
+      - name: Deploy to GitHub Pages
+        uses: quarto-dev/quarto-actions/publish@8a96df13519ee81fd526f2dfca5962811136661b  # v2.2.0
+        with:
+          target: gh-pages
+          path: _site
+          render: "false"   # already rendered in step 8
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

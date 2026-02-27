@@ -49,6 +49,25 @@ dependencies = [
 Issues = "https://github.com/sequential-parameter-optimization/spotdesirability/issues"
 Repository = "https://github.com/sequential-parameter-optimization/spotdesirability"
 
+[project.optional-dependencies]
+dev = [
+    # ── Testing ─────────────────────────────────────────────────────────────
+    "pytest>=9.0.1",
+    "pytest-cov>=6.0.0,<7.0",
+    # ── Documentation (Quarto + quartodoc) ──────────────────────────────────
+    "quartodoc>=0.9.1,<1.0",
+    "ipykernel>=7.1.0",
+    "jupyter>=1.1.1",
+    "nbformat>=5.10.4",
+    # ── Linting / formatting ─────────────────────────────────────────────────
+    "black>=24.1.0,<25.0",
+    "isort>=5.13.0,<6.0",
+    "ruff>=0.3.0,<1.0",
+    # ── Security scanning ────────────────────────────────────────────────────
+    "safety>=3.0.0,<4.0",
+    "bandit>=1.8.0,<2.0",
+]
+
 [tool.setuptools]
 include-package-data = true
 
@@ -64,8 +83,25 @@ target-version = ["py313"]
 addopts = [
     "--import-mode=importlib",
 ]
+testpaths = ["test"]
 
 [dependency-groups]
 dev = [
+    # ── Testing ─────────────────────────────────────────────────────────────
     "pytest>=9.0.1",
+    "pytest-cov>=6.0.0,<7.0",
+    # ── Documentation (Quarto + quartodoc) ──────────────────────────────────
+    # Pin quartodoc to a minor-version range; upgrade deliberately.
+    # The Quarto CLI binary itself is pinned in .github/workflows/docs.yml.
+    "quartodoc>=0.9.1,<1.0",
+    "ipykernel>=7.1.0",
+    "jupyter>=1.1.1",
+    "nbformat>=5.10.4",
+    # ── Linting / formatting ─────────────────────────────────────────────────
+    "black>=24.1.0,<25.0",
+    "isort>=5.13.0,<6.0",
+    "ruff>=0.3.0,<1.0",
+    # ── Security scanning ────────────────────────────────────────────────────
+    "safety>=3.0.0,<4.0",
+    "bandit>=1.8.0,<2.0",
 ]
