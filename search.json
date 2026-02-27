@@ -355,23 +355,35 @@
     "href": "CHANGELOG.html",
     "title": "spotdesirability",
     "section": "",
-    "text": "fix(release): use pinned semantic-release-action for security (5258133)",
+    "text": "fix: restore REUSE compliance for new documentation files (e926da9)\ndocs: refine documentation structure and fix landing page (6cdecd4)\ndocs: updated index (e2a0cb1)",
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.21-rc.2 (2026-02-27)</small>"
+      "<small>0.0.21-rc.3 (2026-02-27)</small>"
+    ]
+  },
+  {
+    "objectID": "CHANGELOG.html#rc.3-2026-02-27",
+    "href": "CHANGELOG.html#rc.3-2026-02-27",
+    "title": "spotdesirability",
+    "section": "",
+    "text": "fix: restore REUSE compliance for new documentation files (e926da9)\ndocs: refine documentation structure and fix landing page (6cdecd4)\ndocs: updated index (e2a0cb1)",
+    "crumbs": [
+      "Home",
+      "About",
+      "<small>0.0.21-rc.3 (2026-02-27)</small>"
     ]
   },
   {
     "objectID": "CHANGELOG.html#rc.2-2026-02-27",
     "href": "CHANGELOG.html#rc.2-2026-02-27",
     "title": "spotdesirability",
-    "section": "",
-    "text": "fix(release): use pinned semantic-release-action for security (5258133)",
+    "section": "0.0.21-rc.2 (2026-02-27)",
+    "text": "0.0.21-rc.2 (2026-02-27)\n\nfix(release): use pinned semantic-release-action for security (5258133)",
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.21-rc.2 (2026-02-27)</small>"
+      "<small>0.0.21-rc.3 (2026-02-27)</small>"
     ]
   },
   {
@@ -383,7 +395,7 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.21-rc.2 (2026-02-27)</small>"
+      "<small>0.0.21-rc.3 (2026-02-27)</small>"
     ]
   },
   {
@@ -395,7 +407,7 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.21-rc.2 (2026-02-27)</small>"
+      "<small>0.0.21-rc.3 (2026-02-27)</small>"
     ]
   },
   {
@@ -407,7 +419,7 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.21-rc.2 (2026-02-27)</small>"
+      "<small>0.0.21-rc.3 (2026-02-27)</small>"
     ]
   },
   {
@@ -419,7 +431,7 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.21-rc.2 (2026-02-27)</small>"
+      "<small>0.0.21-rc.3 (2026-02-27)</small>"
     ]
   },
   {
@@ -431,7 +443,7 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.21-rc.2 (2026-02-27)</small>"
+      "<small>0.0.21-rc.3 (2026-02-27)</small>"
     ]
   },
   {
@@ -443,7 +455,7 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.21-rc.2 (2026-02-27)</small>"
+      "<small>0.0.21-rc.3 (2026-02-27)</small>"
     ]
   },
   {
@@ -455,7 +467,7 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.21-rc.2 (2026-02-27)</small>"
+      "<small>0.0.21-rc.3 (2026-02-27)</small>"
     ]
   },
   {
@@ -467,7 +479,7 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.21-rc.2 (2026-02-27)</small>"
+      "<small>0.0.21-rc.3 (2026-02-27)</small>"
     ]
   },
   {
@@ -479,7 +491,7 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.21-rc.2 (2026-02-27)</small>"
+      "<small>0.0.21-rc.3 (2026-02-27)</small>"
     ]
   },
   {
@@ -491,19 +503,19 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.21-rc.2 (2026-02-27)</small>"
+      "<small>0.0.21-rc.3 (2026-02-27)</small>"
     ]
   },
   {
-    "objectID": "CHANGELOG.html#rc.3-2026-02-27",
-    "href": "CHANGELOG.html#rc.3-2026-02-27",
+    "objectID": "CHANGELOG.html#rc.3-2026-02-27-1",
+    "href": "CHANGELOG.html#rc.3-2026-02-27-1",
     "title": "spotdesirability",
     "section": "0.0.17-rc.3 (2026-02-27)",
     "text": "0.0.17-rc.3 (2026-02-27)",
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.21-rc.2 (2026-02-27)</small>"
+      "<small>0.0.21-rc.3 (2026-02-27)</small>"
     ]
   },
   {
@@ -515,7 +527,7 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.21-rc.2 (2026-02-27)</small>"
+      "<small>0.0.21-rc.3 (2026-02-27)</small>"
     ]
   },
   {
@@ -527,7 +539,7 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.21-rc.2 (2026-02-27)</small>"
+      "<small>0.0.21-rc.3 (2026-02-27)</small>"
     ]
   },
   {
@@ -539,7 +551,7 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.21-rc.2 (2026-02-27)</small>"
+      "<small>0.0.21-rc.3 (2026-02-27)</small>"
     ]
   },
   {
@@ -551,7 +563,7 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.21-rc.2 (2026-02-27)</small>"
+      "<small>0.0.21-rc.3 (2026-02-27)</small>"
     ]
   },
   {
@@ -563,7 +575,7 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.21-rc.2 (2026-02-27)</small>"
+      "<small>0.0.21-rc.3 (2026-02-27)</small>"
     ]
   },
   {
