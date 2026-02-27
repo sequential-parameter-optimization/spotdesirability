@@ -12,10 +12,12 @@ def conversion_pred(x) -> float:
         float: The predicted percent conversion.
 
     Examples:
-        >>> from spotdesirability.functions.rsm import conversion_pred
-        >>> x = [1.0, 2.0, 3.0]
-        >>> conversion = conversion_pred(x)
-        >>> print(conversion)
+        ```{python}
+        from spotdesirability.functions.rsm import conversion_pred
+        x = [1.0, 2.0, 3.0]
+        conversion = conversion_pred(x)
+        print(conversion)
+        ```
     """
     # check if x is a list or numpy array
     if isinstance(x, list):
@@ -39,10 +41,12 @@ def activity_pred(x) -> float:
         float: The predicted thermal activity.
 
     Examples:
-        >>> from spotdesirability.functions.rsm import activity_pred
-        >>> x = [1.0, 2.0, 3.0]
-        >>> activity = activity_pred(x)
-        >>> print(activity)
+        ```{python}
+        from spotdesirability.functions.rsm import activity_pred
+        x = [1.0, 2.0, 3.0]
+        activity = activity_pred(x)
+        print(activity)
+        ```
     """
     # check if x is a list or numpy array
     if isinstance(x, list):
@@ -80,13 +84,14 @@ def rsm_opt(x, d_object, prediction_funcs, space="square", alpha=1.682) -> float
         ValueError: If `space` is not "square" or "circular".
 
     Examples:
-        >>> from spotdesirability import DOverall, rsm_opt, DTarget, conversion_pred, activity_pred
-        >>> d_object = DOverall(DTarget(0, 0.5, 1), DTarget(0, 0.5, 1))
-        >>> prediction_funcs = [conversion_pred, activity_pred]
-        >>> x = [1.0, 2.0, 3.0]
-        >>> desirability = rsm_opt(x, d_object, prediction_funcs)
-        >>> print(desirability)
-        -0.5
+        ```{python}
+        from spotdesirability import DOverall, rsm_opt, DTarget, conversion_pred, activity_pred
+        d_object = DOverall(DTarget(0, 0.5, 1), DTarget(0, 0.5, 1))
+        prediction_funcs = [conversion_pred, activity_pred]
+        x = [1.0, 2.0, 3.0]
+        desirability = rsm_opt(x, d_object, prediction_funcs)
+        print(desirability)
+        ```
     """
     # Apply space constraints first. We use 1.682 = (2^3)^(1/4), see Mont01 a, p.457, as the limit for both circular and square spaces.
     if space == "circular":
