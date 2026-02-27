@@ -20,6 +20,14 @@ def plotCCD(elev=20, azim=30, figsize=(10, 8), filename=None, title="Central Com
 
     Returns:
         None
+
+    Examples:
+        ```{python}
+        from spotdesirability.plot.ccd import plotCCD
+        import matplotlib.pyplot as plt
+        # Simple plot
+        plotCCD(elev=20, azim=30, title="CCD Plot Example")
+        ```
     """
     # Define the number of factors (k) and axial distance (alpha)
     k = 3

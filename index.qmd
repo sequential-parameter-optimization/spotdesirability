@@ -3,6 +3,8 @@
 ## Python implementation of desirability functions for multivariate optimisation
 
 `spotdesirability` implements the Derringer & Suich (1980) desirability framework, providing a flexible set of tools for multi-objective optimization through desirability functions.
+`spotdesirability` is a `Python` implementation of the `R` package `desirability`, which provides  S3 classes for multivariate optimization using the desirability function by Derringer and Suich (1980).
+The `R` `desirability` package is maintained and developed by Max Kuhn. It is is available on CRAN:  https://CRAN.R-project.org/package=desirability,  DOI: https://doi.org/10.32614/CRAN.package.desirability
 
 ### Core Functions: conversion_pred
 
