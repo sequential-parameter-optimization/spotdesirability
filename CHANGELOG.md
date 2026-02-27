@@ -1,3 +1,15 @@
+## [0.0.18-rc.1](https://github.com/sequential-parameter-optimization/spotdesirability/compare/v0.0.17...v0.0.18-rc.1) (2026-02-27)
+
+
+### Bug Fixes
+
+* restore early build in release.yml and add flake8 ([7ee6fcc](https://github.com/sequential-parameter-optimization/spotdesirability/commit/7ee6fcc710cf636d48f563ffac770aaa4bd1f3fe))
+
+
+### Documentation
+
+* formatting ([41fcece](https://github.com/sequential-parameter-optimization/spotdesirability/commit/41fcece6ed0212a45843d134a3cbbbab9a76ae79))
+
 ## [0.0.17-rc.3](https://github.com/sequential-parameter-optimization/spotdesirability/compare/v0.0.17-rc.2...v0.0.17-rc.3) (2026-02-27)
 ## [0.0.17](https://github.com/sequential-parameter-optimization/spotdesirability/compare/v0.0.16...v0.0.17) (2026-02-27)
 
