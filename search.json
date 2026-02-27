@@ -273,8 +273,36 @@
     "text": "Install spotpython\npip install spotpython"
   },
   {
+    "objectID": "SECURITY.html",
+    "href": "SECURITY.html",
+    "title": "Security Policy",
+    "section": "",
+    "text": "Use this section to tell people about which versions of your project are currently being supported with security updates.\n\n\n\nVersion\nSupported\n\n\n\n\n5.1.x\n:white_check_mark:\n\n\n5.0.x\n:x:\n\n\n4.0.x\n:white_check_mark:\n\n\n&lt; 4.0\n:x:\n\n\n\n\n\n\nUse this section to tell people how to report a vulnerability.\nTell them where to go, how often they can expect to get an update on a reported vulnerability, what to expect if the vulnerability is accepted or declined, etc."
+  },
+  {
+    "objectID": "SECURITY.html#supported-versions",
+    "href": "SECURITY.html#supported-versions",
+    "title": "Security Policy",
+    "section": "",
+    "text": "Use this section to tell people about which versions of your project are currently being supported with security updates.\n\n\n\nVersion\nSupported\n\n\n\n\n5.1.x\n:white_check_mark:\n\n\n5.0.x\n:x:\n\n\n4.0.x\n:white_check_mark:\n\n\n&lt; 4.0\n:x:"
+  },
+  {
+    "objectID": "SECURITY.html#reporting-a-vulnerability",
+    "href": "SECURITY.html#reporting-a-vulnerability",
+    "title": "Security Policy",
+    "section": "",
+    "text": "Use this section to tell people how to report a vulnerability.\nTell them where to go, how often they can expect to get an update on a reported vulnerability, what to expect if the vulnerability is accepted or declined, etc."
+  },
+  {
     "objectID": "CHANGELOG.html",
     "href": "CHANGELOG.html",
+    "title": "spotdesirability",
+    "section": "",
+    "text": "restore REUSE compliance and clean up mkdocs.yml (b6479e2)"
+  },
+  {
+    "objectID": "CHANGELOG.html#rc.1-2026-02-27",
+    "href": "CHANGELOG.html#rc.1-2026-02-27",
     "title": "spotdesirability",
     "section": "",
     "text": "restore REUSE compliance and clean up mkdocs.yml (b6479e2)"
@@ -283,12 +311,19 @@
     "objectID": "CHANGELOG.html#rc.2-2026-02-27",
     "href": "CHANGELOG.html#rc.2-2026-02-27",
     "title": "spotdesirability",
-    "section": "",
-    "text": "restore REUSE compliance and clean up mkdocs.yml (b6479e2)"
+    "section": "0.0.20-rc.2 (2026-02-27)",
+    "text": "0.0.20-rc.2 (2026-02-27)"
   },
   {
-    "objectID": "CHANGELOG.html#rc.1-2026-02-27",
-    "href": "CHANGELOG.html#rc.1-2026-02-27",
+    "objectID": "CHANGELOG.html#section",
+    "href": "CHANGELOG.html#section",
+    "title": "spotdesirability",
+    "section": "0.0.20 (2026-02-27)",
+    "text": "0.0.20 (2026-02-27)\n\nBug Fixes\n\nrestore REUSE compliance and clean up mkdocs.yml (b6479e2)\nci: output bandit results as SARIF for SAST visibility (46d6665)\nswitch to uv_build backend for robust metadata generation (92f8cc4)\ntests: correct indentation for test_activity_pred_valid_input_list (d809f15)"
+  },
+  {
+    "objectID": "CHANGELOG.html#rc.1-2026-02-27-1",
+    "href": "CHANGELOG.html#rc.1-2026-02-27-1",
     "title": "spotdesirability",
     "section": "0.0.20-rc.1 (2026-02-27)",
     "text": "0.0.20-rc.1 (2026-02-27)\n\nBug Fixes\n\nci: output bandit results as SARIF for SAST visibility (46d6665)\nswitch to uv_build backend for robust metadata generation (92f8cc4)\ntests: correct indentation for test_activity_pred_valid_input_list (d809f15)"
@@ -301,15 +336,15 @@
     "text": "0.0.19-rc.2 (2026-02-27)"
   },
   {
-    "objectID": "CHANGELOG.html#section",
-    "href": "CHANGELOG.html#section",
+    "objectID": "CHANGELOG.html#section-1",
+    "href": "CHANGELOG.html#section-1",
     "title": "spotdesirability",
     "section": "0.0.19 (2026-02-27)",
     "text": "0.0.19 (2026-02-27)\n\nBug Fixes\n\nswitch to uv_build backend for robust metadata generation (92f8cc4)\nremove MANIFEST.in, stale mkdocs deps and update license (3e1799f)"
   },
   {
-    "objectID": "CHANGELOG.html#rc.1-2026-02-27-1",
-    "href": "CHANGELOG.html#rc.1-2026-02-27-1",
+    "objectID": "CHANGELOG.html#rc.1-2026-02-27-2",
+    "href": "CHANGELOG.html#rc.1-2026-02-27-2",
     "title": "spotdesirability",
     "section": "0.0.19-rc.1 (2026-02-27)",
     "text": "0.0.19-rc.1 (2026-02-27)\n\nBug Fixes\n\nremove MANIFEST.in, stale mkdocs deps and update license (3e1799f)"
@@ -322,15 +357,15 @@
     "text": "0.0.18-rc.2 (2026-02-27)"
   },
   {
-    "objectID": "CHANGELOG.html#section-1",
-    "href": "CHANGELOG.html#section-1",
+    "objectID": "CHANGELOG.html#section-2",
+    "href": "CHANGELOG.html#section-2",
     "title": "spotdesirability",
     "section": "0.0.18 (2026-02-27)",
     "text": "0.0.18 (2026-02-27)\n\nBug Fixes\n\nremove MANIFEST.in, stale mkdocs deps and update license (3e1799f)\nrestore early build in release.yml and add flake8 (7ee6fcc)\n\n\n\nDocumentation\n\nformatting (41fcece)"
   },
   {
-    "objectID": "CHANGELOG.html#rc.1-2026-02-27-2",
-    "href": "CHANGELOG.html#rc.1-2026-02-27-2",
+    "objectID": "CHANGELOG.html#rc.1-2026-02-27-3",
+    "href": "CHANGELOG.html#rc.1-2026-02-27-3",
     "title": "spotdesirability",
     "section": "0.0.18-rc.1 (2026-02-27)",
     "text": "0.0.18-rc.1 (2026-02-27)\n\nBug Fixes\n\nrestore early build in release.yml and add flake8 (7ee6fcc)\n\n\n\nDocumentation\n\nformatting (41fcece)"
@@ -343,8 +378,8 @@
     "text": "0.0.17-rc.3 (2026-02-27)"
   },
   {
-    "objectID": "CHANGELOG.html#section-2",
-    "href": "CHANGELOG.html#section-2",
+    "objectID": "CHANGELOG.html#section-3",
+    "href": "CHANGELOG.html#section-3",
     "title": "spotdesirability",
     "section": "0.0.17 (2026-02-27)",
     "text": "0.0.17 (2026-02-27)\n\nBug Fixes\n\nrestore early build in release.yml and add flake8 (7ee6fcc)\n\n\n\nDocumentation\n\nformatting (41fcece)\nnormalize semantic-release pre-release version to PEP 440 (cb31e21)\nremove setuptools_scm, fix double-build in release workflow (33ad086)"
@@ -357,22 +392,22 @@
     "text": "0.0.17-rc.2 (2026-02-27)\n\nBug Fixes\n\nnormalize semantic-release pre-release version to PEP 440 (cb31e21)"
   },
   {
-    "objectID": "CHANGELOG.html#rc.1-2026-02-27-3",
-    "href": "CHANGELOG.html#rc.1-2026-02-27-3",
+    "objectID": "CHANGELOG.html#rc.1-2026-02-27-4",
+    "href": "CHANGELOG.html#rc.1-2026-02-27-4",
     "title": "spotdesirability",
     "section": "0.0.17-rc.1 (2026-02-27)",
     "text": "0.0.17-rc.1 (2026-02-27)\n\nBug Fixes\n\nremove setuptools_scm, fix double-build in release workflow (33ad086)"
   },
   {
-    "objectID": "CHANGELOG.html#section-3",
-    "href": "CHANGELOG.html#section-3",
+    "objectID": "CHANGELOG.html#section-4",
+    "href": "CHANGELOG.html#section-4",
     "title": "spotdesirability",
     "section": "0.0.16 (2026-02-27)",
     "text": "0.0.16 (2026-02-27)\n\nBug Fixes\n\nurllib and pillow (391ab73)"
   },
   {
-    "objectID": "CHANGELOG.html#section-4",
-    "href": "CHANGELOG.html#section-4",
+    "objectID": "CHANGELOG.html#section-5",
+    "href": "CHANGELOG.html#section-5",
     "title": "spotdesirability",
     "section": "0.0.15 (2026-02-27)",
     "text": "0.0.15 (2026-02-27)\n\nBug Fixes\n\ncorrect quartodoc module paths in _quarto.yml (2452ee7)"
