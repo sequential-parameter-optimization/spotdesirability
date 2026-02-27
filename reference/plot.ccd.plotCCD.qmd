@@ -27,3 +27,12 @@ Plots a Central Composite Design (CCD) for k=3 with customizable viewpoint.
 | Name   | Type   | Description   |
 |--------|--------|---------------|
 |        | None   | None          |
+
+## Examples {.doc-section .doc-section-examples}
+
+```{python}
+from spotdesirability.plot.ccd import plotCCD
+import matplotlib.pyplot as plt
+# Simple plot
+plotCCD(elev=20, azim=30, title="CCD Plot Example")
+```
