@@ -176,4 +176,6 @@ cython_debug/
 scripts/init_pypi.sh
 
 /.quarto/
+/_site/
+.jupyter_cache/
 **/*.quarto_ipynb
