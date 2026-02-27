@@ -1,0 +1,9 @@
+# spotdesirability
+
+## Python implementation of desirability functions for multivariate optimisation
+
+`spotdesirability` implements the Derringer & Suich (1980) desirability framework, providing a flexible set of tools for multi-objective optimization through desirability functions.
+
+*   **Documentation**: See the [Hyperparameter Tuning Cookbook](cookbook.qmd) for a guide on using desirability functions with scikit-learn, PyTorch, and more.
+*   **API Reference**: Detailed documentation of all classes and functions can be found in the [Reference](reference/index.qmd) section.
+*   **News**: For updates related to this project and other SPOT tools, visit [SPOTSeven](https://www.spotseven.de/spot/).
