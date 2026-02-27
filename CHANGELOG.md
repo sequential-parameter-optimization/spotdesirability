@@ -1,3 +1,13 @@
+## <small>0.0.24-rc.1 (2026-02-27)</small>
+
+* Merge branch 'main' into develop ([d8c1424](https://github.com/sequential-parameter-optimization/spotdesirability/commit/d8c1424))
+* Merge pull request #10 from sequential-parameter-optimization/dependabot/github_actions/actions-baec ([ab5d677](https://github.com/sequential-parameter-optimization/spotdesirability/commit/ab5d677)), closes [#10](https://github.com/sequential-parameter-optimization/spotdesirability/issues/10)
+* Merge pull request #9 from sequential-parameter-optimization/dependabot/pip/python-deps-00caa5c3ae ([e8a751f](https://github.com/sequential-parameter-optimization/spotdesirability/commit/e8a751f)), closes [#9](https://github.com/sequential-parameter-optimization/spotdesirability/issues/9)
+* chore(deps-dev): bump the python-deps group with 4 updates ([fc6f4d0](https://github.com/sequential-parameter-optimization/spotdesirability/commit/fc6f4d0))
+* chore(deps): bump the actions group with 8 updates ([ae6c993](https://github.com/sequential-parameter-optimization/spotdesirability/commit/ae6c993))
+* chore(release): 0.0.23-rc.2 [skip ci] ([9d46af1](https://github.com/sequential-parameter-optimization/spotdesirability/commit/9d46af1))
+* fix: reuse information ([3763806](https://github.com/sequential-parameter-optimization/spotdesirability/commit/3763806))
+
 ## <small>0.0.23-rc.2 (2026-02-27)</small>
 
 * fix: reuse information ([3763806](https://github.com/sequential-parameter-optimization/spotdesirability/commit/3763806))
