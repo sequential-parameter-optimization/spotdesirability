@@ -362,35 +362,47 @@
     "href": "CHANGELOG.html",
     "title": "spotdesirability",
     "section": "",
-    "text": "fix: reuse information (3763806)",
+    "text": "Merge branch ‘main’ into develop (d8c1424)\nMerge pull request #10 from sequential-parameter-optimization/dependabot/github_actions/actions-baec (ab5d677), closes #10\nMerge pull request #9 from sequential-parameter-optimization/dependabot/pip/python-deps-00caa5c3ae (e8a751f), closes #9\nchore(deps-dev): bump the python-deps group with 4 updates (fc6f4d0)\nchore(deps): bump the actions group with 8 updates (ae6c993)\nchore(release): 0.0.23-rc.2 [skip ci] (9d46af1)\nfix: reuse information (3763806)",
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.23-rc.2 (2026-02-27)</small>"
-    ]
-  },
-  {
-    "objectID": "CHANGELOG.html#rc.2-2026-02-27",
-    "href": "CHANGELOG.html#rc.2-2026-02-27",
-    "title": "spotdesirability",
-    "section": "",
-    "text": "fix: reuse information (3763806)",
-    "crumbs": [
-      "Home",
-      "About",
-      "<small>0.0.23-rc.2 (2026-02-27)</small>"
+      "<small>0.0.24-rc.1 (2026-02-27)</small>"
     ]
   },
   {
     "objectID": "CHANGELOG.html#rc.1-2026-02-27",
     "href": "CHANGELOG.html#rc.1-2026-02-27",
     "title": "spotdesirability",
+    "section": "",
+    "text": "Merge branch ‘main’ into develop (d8c1424)\nMerge pull request #10 from sequential-parameter-optimization/dependabot/github_actions/actions-baec (ab5d677), closes #10\nMerge pull request #9 from sequential-parameter-optimization/dependabot/pip/python-deps-00caa5c3ae (e8a751f), closes #9\nchore(deps-dev): bump the python-deps group with 4 updates (fc6f4d0)\nchore(deps): bump the actions group with 8 updates (ae6c993)\nchore(release): 0.0.23-rc.2 [skip ci] (9d46af1)\nfix: reuse information (3763806)",
+    "crumbs": [
+      "Home",
+      "About",
+      "<small>0.0.24-rc.1 (2026-02-27)</small>"
+    ]
+  },
+  {
+    "objectID": "CHANGELOG.html#rc.2-2026-02-27",
+    "href": "CHANGELOG.html#rc.2-2026-02-27",
+    "title": "spotdesirability",
+    "section": "0.0.23-rc.2 (2026-02-27)",
+    "text": "0.0.23-rc.2 (2026-02-27)\n\nfix: reuse information (3763806) ## 0.0.23 (2026-02-27)\nDelete makefile.sh (d973a00)\nMerge branch ‘main’ into develop (715b03c)\nMerge pull request #11 from sequential-parameter-optimization/develop (26c4095), closes #11\nMerge pull request #8 from sequential-parameter-optimization/develop (7acb305), closes #8\nchore: add dependabot configuration for actions and pip (78e7861)\nchore: exclude Quarto build artifacts from git (b73a871)\nchore(release): 0.0.22-rc.2 [skip ci] (d6b9f20)\nchore(release): 0.0.23-rc.1 [skip ci] (e3cd4bb)\nfix: input list handling (7e99824)\ndocs: add living examples and deep tests for conversion_pred (de5ffd6)\ndocs: spotdesirability instead of spotpython (527385a)\ndocs: use Quarto living code blocks in rsm.py docstrings (6b8153b)",
+    "crumbs": [
+      "Home",
+      "About",
+      "<small>0.0.24-rc.1 (2026-02-27)</small>"
+    ]
+  },
+  {
+    "objectID": "CHANGELOG.html#rc.1-2026-02-27-1",
+    "href": "CHANGELOG.html#rc.1-2026-02-27-1",
+    "title": "spotdesirability",
     "section": "0.0.23-rc.1 (2026-02-27)",
     "text": "0.0.23-rc.1 (2026-02-27)\n\nDelete makefile.sh (d973a00)\nMerge branch ‘main’ into develop (715b03c)\nMerge pull request #8 from sequential-parameter-optimization/develop (7acb305), closes #8\nchore: add dependabot configuration for actions and pip (78e7861)\nchore: exclude Quarto build artifacts from git (b73a871)\nchore(release): 0.0.22-rc.2 [skip ci] (d6b9f20)\nfix: input list handling (7e99824)\ndocs: add living examples and deep tests for conversion_pred (de5ffd6)\ndocs: spotdesirability instead of spotpython (527385a)\ndocs: use Quarto living code blocks in rsm.py docstrings (6b8153b)",
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.23-rc.2 (2026-02-27)</small>"
+      "<small>0.0.24-rc.1 (2026-02-27)</small>"
     ]
   },
   {
@@ -402,19 +414,19 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.23-rc.2 (2026-02-27)</small>"
+      "<small>0.0.24-rc.1 (2026-02-27)</small>"
     ]
   },
   {
-    "objectID": "CHANGELOG.html#rc.1-2026-02-27-1",
-    "href": "CHANGELOG.html#rc.1-2026-02-27-1",
+    "objectID": "CHANGELOG.html#rc.1-2026-02-27-2",
+    "href": "CHANGELOG.html#rc.1-2026-02-27-2",
     "title": "spotdesirability",
     "section": "0.0.22-rc.1 (2026-02-27)",
     "text": "0.0.22-rc.1 (2026-02-27)\n\nMerge branch ‘main’ into develop (d5ba393)\nchore(release): 0.0.21-rc.2 [skip ci] (593b8f9)\nchore(release): 0.0.21-rc.3 [skip ci] (2fa96a2)\nfix: restore REUSE compliance for new documentation files (e926da9)\ndocs: refine documentation structure and fix landing page (6cdecd4)\ndocs: updated index (e2a0cb1)",
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.23-rc.2 (2026-02-27)</small>"
+      "<small>0.0.24-rc.1 (2026-02-27)</small>"
     ]
   },
   {
@@ -426,7 +438,7 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.23-rc.2 (2026-02-27)</small>"
+      "<small>0.0.24-rc.1 (2026-02-27)</small>"
     ]
   },
   {
@@ -438,19 +450,19 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.23-rc.2 (2026-02-27)</small>"
+      "<small>0.0.24-rc.1 (2026-02-27)</small>"
     ]
   },
   {
-    "objectID": "CHANGELOG.html#rc.1-2026-02-27-2",
-    "href": "CHANGELOG.html#rc.1-2026-02-27-2",
+    "objectID": "CHANGELOG.html#rc.1-2026-02-27-3",
+    "href": "CHANGELOG.html#rc.1-2026-02-27-3",
     "title": "spotdesirability",
     "section": "0.0.21-rc.1 (2026-02-27)",
     "text": "0.0.21-rc.1 (2026-02-27)\n\nBug Fixes\n\nrestore REUSE compliance and clean up mkdocs.yml (b6479e2)",
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.23-rc.2 (2026-02-27)</small>"
+      "<small>0.0.24-rc.1 (2026-02-27)</small>"
     ]
   },
   {
@@ -462,7 +474,7 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.23-rc.2 (2026-02-27)</small>"
+      "<small>0.0.24-rc.1 (2026-02-27)</small>"
     ]
   },
   {
@@ -474,19 +486,19 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.23-rc.2 (2026-02-27)</small>"
+      "<small>0.0.24-rc.1 (2026-02-27)</small>"
     ]
   },
   {
-    "objectID": "CHANGELOG.html#rc.1-2026-02-27-3",
-    "href": "CHANGELOG.html#rc.1-2026-02-27-3",
+    "objectID": "CHANGELOG.html#rc.1-2026-02-27-4",
+    "href": "CHANGELOG.html#rc.1-2026-02-27-4",
     "title": "spotdesirability",
     "section": "0.0.20-rc.1 (2026-02-27)",
     "text": "0.0.20-rc.1 (2026-02-27)\n\nBug Fixes\n\nci: output bandit results as SARIF for SAST visibility (46d6665)\nswitch to uv_build backend for robust metadata generation (92f8cc4)\ntests: correct indentation for test_activity_pred_valid_input_list (d809f15)",
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.23-rc.2 (2026-02-27)</small>"
+      "<small>0.0.24-rc.1 (2026-02-27)</small>"
     ]
   },
   {
@@ -498,7 +510,7 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.23-rc.2 (2026-02-27)</small>"
+      "<small>0.0.24-rc.1 (2026-02-27)</small>"
     ]
   },
   {
@@ -510,19 +522,19 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.23-rc.2 (2026-02-27)</small>"
+      "<small>0.0.24-rc.1 (2026-02-27)</small>"
     ]
   },
   {
-    "objectID": "CHANGELOG.html#rc.1-2026-02-27-4",
-    "href": "CHANGELOG.html#rc.1-2026-02-27-4",
+    "objectID": "CHANGELOG.html#rc.1-2026-02-27-5",
+    "href": "CHANGELOG.html#rc.1-2026-02-27-5",
     "title": "spotdesirability",
     "section": "0.0.19-rc.1 (2026-02-27)",
     "text": "0.0.19-rc.1 (2026-02-27)\n\nBug Fixes\n\nremove MANIFEST.in, stale mkdocs deps and update license (3e1799f)",
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.23-rc.2 (2026-02-27)</small>"
+      "<small>0.0.24-rc.1 (2026-02-27)</small>"
     ]
   },
   {
@@ -534,7 +546,7 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.23-rc.2 (2026-02-27)</small>"
+      "<small>0.0.24-rc.1 (2026-02-27)</small>"
     ]
   },
   {
@@ -546,19 +558,19 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.23-rc.2 (2026-02-27)</small>"
+      "<small>0.0.24-rc.1 (2026-02-27)</small>"
     ]
   },
   {
-    "objectID": "CHANGELOG.html#rc.1-2026-02-27-5",
-    "href": "CHANGELOG.html#rc.1-2026-02-27-5",
+    "objectID": "CHANGELOG.html#rc.1-2026-02-27-6",
+    "href": "CHANGELOG.html#rc.1-2026-02-27-6",
     "title": "spotdesirability",
     "section": "0.0.18-rc.1 (2026-02-27)",
     "text": "0.0.18-rc.1 (2026-02-27)\n\nBug Fixes\n\nrestore early build in release.yml and add flake8 (7ee6fcc)\n\n\n\nDocumentation\n\nformatting (41fcece)",
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.23-rc.2 (2026-02-27)</small>"
+      "<small>0.0.24-rc.1 (2026-02-27)</small>"
     ]
   },
   {
@@ -570,7 +582,7 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.23-rc.2 (2026-02-27)</small>"
+      "<small>0.0.24-rc.1 (2026-02-27)</small>"
     ]
   },
   {
@@ -582,7 +594,7 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.23-rc.2 (2026-02-27)</small>"
+      "<small>0.0.24-rc.1 (2026-02-27)</small>"
     ]
   },
   {
@@ -594,19 +606,19 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.23-rc.2 (2026-02-27)</small>"
+      "<small>0.0.24-rc.1 (2026-02-27)</small>"
     ]
   },
   {
-    "objectID": "CHANGELOG.html#rc.1-2026-02-27-6",
-    "href": "CHANGELOG.html#rc.1-2026-02-27-6",
+    "objectID": "CHANGELOG.html#rc.1-2026-02-27-7",
+    "href": "CHANGELOG.html#rc.1-2026-02-27-7",
     "title": "spotdesirability",
     "section": "0.0.17-rc.1 (2026-02-27)",
     "text": "0.0.17-rc.1 (2026-02-27)\n\nBug Fixes\n\nremove setuptools_scm, fix double-build in release workflow (33ad086)",
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.23-rc.2 (2026-02-27)</small>"
+      "<small>0.0.24-rc.1 (2026-02-27)</small>"
     ]
   },
   {
@@ -618,7 +630,7 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.23-rc.2 (2026-02-27)</small>"
+      "<small>0.0.24-rc.1 (2026-02-27)</small>"
     ]
   },
   {
@@ -630,7 +642,7 @@
     "crumbs": [
       "Home",
       "About",
-      "<small>0.0.23-rc.2 (2026-02-27)</small>"
+      "<small>0.0.24-rc.1 (2026-02-27)</small>"
     ]
   },
   {
