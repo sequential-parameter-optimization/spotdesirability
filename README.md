@@ -36,7 +36,7 @@
 [![codecov](https://codecov.io/gh/sequential-parameter-optimization/spotdesirability/branch/develop/graph/badge.svg)](https://codecov.io/gh/sequential-parameter-optimization/spotdesirability)
 [![REUSE status](https://api.reuse.software/badge/github.com/sequential-parameter-optimization/spotdesirability)](https://api.reuse.software/info/github.com/sequential-parameter-optimization/spotdesirability)
 
-### Scores
+### Scores (OpenSSF Scorecard)
 
 [![OpenSSF Scorecard](https://img.shields.io/ossf-scorecard/github.com/sequential-parameter-optimization/spotdesirability)](https://scorecard.dev/viewer/?uri=github.com/sequential-parameter-optimization/spotdesirability)
 
@@ -50,16 +50,15 @@
 
 ## About
 
-* `spotdesirability` is a `Python` implementation of the `R` package `desirability`, which provides  S3 classes for multivariate optimization using the desirability function by Derringer and Suich (1980).
+`spotdesirability` is a `Python` implementation of the `R` package `desirability`, which provides  S3 classes for multivariate optimization using the desirability function by Derringer and Suich (1980).
 
 # Installation
 
-* Installation can be done with `pip`: 
+Installation can be done with `pip`: 
 
 ```{bash}
 pip install spotdesirability
 ```
-
 
 or `uv`:
 
@@ -67,10 +66,14 @@ or `uv`:
 uv install spotdesirability
 ```
 
-* Alternatively, you can clone the repository and install it manually.
+Alternatively, you can clone the repository and install it manually.
+
+## Documentation
+
+The documentation is available at: [https://sequential-parameter-optimization.github.io/spotdesirability/](https://sequential-parameter-optimization.github.io/spotdesirability/)
 
 
-# Citation
+## Citation
 
 ```bibtex
 @misc{bartz25a,
@@ -84,17 +87,17 @@ uv install spotdesirability
 }
 ```
 
-# Documentation
+## Documentation
 
 * The documentation is available at: [https://sequential-parameter-optimization.github.io/spotdesirability/](https://sequential-parameter-optimization.github.io/spotdesirability/)
 
 
-# References
+## References
 
-## Desirability functions
+### Desirability functions
 
 * Derringer, G., and Suich, R. Simultaneous optimization of several response variables. Journal of Quality Technology 12 (1980), 214–219.
 
-## The `R` `desirability` package
+### The `R` `desirability` package
 
 * The `R` `desirability` package is maintained and developed by Max Kuhn. It is is available on CRAN:  https://CRAN.R-project.org/package=desirability,  DOI: https://doi.org/10.32614/CRAN.package.desirability
