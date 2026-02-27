@@ -7,7 +7,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "spotdesirability"
-version = "0.0.17"
+version = "0.0.18rc1"
 authors = [
   { name="T. Bartz-Beielstein", email="tbb@bartzundbartz.de" }
 ]
@@ -85,7 +85,7 @@ target-version = ["py313"]
 addopts = [
     "--import-mode=importlib",
 ]
-testpaths = ["test"]
+testpaths = ["tests"]
 
 [dependency-groups]
 dev = [
@@ -103,6 +103,7 @@ dev = [
     "black>=24.1.0,<25.0",
     "isort>=5.13.0,<6.0",
     "ruff>=0.3.0,<1.0",
+    "flake8>=7.3.0",
     # ── Security scanning ────────────────────────────────────────────────────
     "safety>=3.0.0,<4.0",
     "bandit>=1.8.0,<2.0",

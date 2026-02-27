@@ -38,7 +38,6 @@
 
 ### Scores
 
-[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/11932/badge)](https://www.bestpractices.dev/projects/11932)
 [![OpenSSF Scorecard](https://img.shields.io/ossf-scorecard/github.com/sequential-parameter-optimization/spotdesirability)](https://scorecard.dev/viewer/?uri=github.com/sequential-parameter-optimization/spotdesirability)
 
 
