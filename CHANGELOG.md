@@ -1,3 +1,14 @@
+## <small>0.0.25 (2026-02-27)</small>
+
+* Merge pull request #13 from sequential-parameter-optimization/develop ([e476484](https://github.com/sequential-parameter-optimization/spotdesirability/commit/e476484)), closes [#13](https://github.com/sequential-parameter-optimization/spotdesirability/issues/13)
+* Merge pull request #14 from sequential-parameter-optimization/develop ([ea14a64](https://github.com/sequential-parameter-optimization/spotdesirability/commit/ea14a64)), closes [#14](https://github.com/sequential-parameter-optimization/spotdesirability/issues/14)
+* Merge pull request #15 from sequential-parameter-optimization/develop ([e0feb16](https://github.com/sequential-parameter-optimization/spotdesirability/commit/e0feb16)), closes [#15](https://github.com/sequential-parameter-optimization/spotdesirability/issues/15)
+* Merge pull request #16 from sequential-parameter-optimization/develop ([bb73411](https://github.com/sequential-parameter-optimization/spotdesirability/commit/bb73411)), closes [#16](https://github.com/sequential-parameter-optimization/spotdesirability/issues/16)
+* Update README.md ([45c4f35](https://github.com/sequential-parameter-optimization/spotdesirability/commit/45c4f35))
+* fix: quartodoc ([b5ac3f7](https://github.com/sequential-parameter-optimization/spotdesirability/commit/b5ac3f7))
+* docs: README ([d3ed255](https://github.com/sequential-parameter-optimization/spotdesirability/commit/d3ed255))
+* docs: README ([d75f20d](https://github.com/sequential-parameter-optimization/spotdesirability/commit/d75f20d))
+
 ## <small>0.0.24 (2026-02-27)</small>
 
 * Merge branch 'main' into develop ([d8c1424](https://github.com/sequential-parameter-optimization/spotdesirability/commit/d8c1424))
