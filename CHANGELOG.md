@@ -1,3 +1,7 @@
+## <small>0.0.21-rc.2 (2026-02-27)</small>
+
+* fix(release): use pinned semantic-release-action for security ([5258133](https://github.com/sequential-parameter-optimization/spotdesirability/commit/5258133))
+
 ## [0.0.21-rc.1](https://github.com/sequential-parameter-optimization/spotdesirability/compare/v0.0.20...v0.0.21-rc.1) (2026-02-27)
 
 
