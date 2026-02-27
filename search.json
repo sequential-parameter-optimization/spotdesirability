@@ -124,28 +124,28 @@
     "href": "reference/functions.rsm.conversion_pred.html",
     "title": "functions.rsm.conversion_pred",
     "section": "",
-    "text": "functions.rsm.conversion_pred(x)\nPredicts the percent conversion based on the input vector x.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nx\nlist or numpy array\nA vector of three input values [x1, x2, x3].\nrequired\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nfloat\nfloat\nThe predicted percent conversion.\n\n\n\n\n\n\n&gt;&gt;&gt; from spotdesirability.functions.rsm import conversion_pred\n&gt;&gt;&gt; x = [1.0, 2.0, 3.0]\n&gt;&gt;&gt; conversion = conversion_pred(x)\n&gt;&gt;&gt; print(conversion)"
+    "text": "functions.rsm.conversion_pred(x)\nPredicts the percent conversion based on the input vector x."
   },
   {
     "objectID": "reference/functions.rsm.conversion_pred.html#parameters",
     "href": "reference/functions.rsm.conversion_pred.html#parameters",
     "title": "functions.rsm.conversion_pred",
-    "section": "",
-    "text": "Name\nType\nDescription\nDefault\n\n\n\n\nx\nlist or numpy array\nA vector of three input values [x1, x2, x3].\nrequired"
+    "section": "Parameters",
+    "text": "Parameters\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nx\nlist or numpy array\nA vector of three input values [x1, x2, x3].\nrequired"
   },
   {
     "objectID": "reference/functions.rsm.conversion_pred.html#returns",
     "href": "reference/functions.rsm.conversion_pred.html#returns",
     "title": "functions.rsm.conversion_pred",
-    "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\nfloat\nfloat\nThe predicted percent conversion."
+    "section": "Returns",
+    "text": "Returns\n\n\n\nName\nType\nDescription\n\n\n\n\nfloat\nfloat\nThe predicted percent conversion."
   },
   {
     "objectID": "reference/functions.rsm.conversion_pred.html#examples",
     "href": "reference/functions.rsm.conversion_pred.html#examples",
     "title": "functions.rsm.conversion_pred",
-    "section": "",
-    "text": "&gt;&gt;&gt; from spotdesirability.functions.rsm import conversion_pred\n&gt;&gt;&gt; x = [1.0, 2.0, 3.0]\n&gt;&gt;&gt; conversion = conversion_pred(x)\n&gt;&gt;&gt; print(conversion)"
+    "section": "Examples",
+    "text": "Examples\n\nfrom spotdesirability.functions.rsm import conversion_pred\nx = [1.0, 2.0, 3.0]\nconversion = conversion_pred(x)\nprint(conversion)\n\n87.31320000000002"
   },
   {
     "objectID": "reference/utils.desirability.DMin.html",
@@ -222,28 +222,28 @@
     "href": "reference/functions.rsm.activity_pred.html",
     "title": "functions.rsm.activity_pred",
     "section": "",
-    "text": "functions.rsm.activity_pred(x)\nPredicts the thermal activity based on the input vector x.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nx\nlist or numpy array\nA vector of three input values [x1, x2, x3].\nrequired\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nfloat\nfloat\nThe predicted thermal activity.\n\n\n\n\n\n\n&gt;&gt;&gt; from spotdesirability.functions.rsm import activity_pred\n&gt;&gt;&gt; x = [1.0, 2.0, 3.0]\n&gt;&gt;&gt; activity = activity_pred(x)\n&gt;&gt;&gt; print(activity)"
+    "text": "functions.rsm.activity_pred(x)\nPredicts the thermal activity based on the input vector x."
   },
   {
     "objectID": "reference/functions.rsm.activity_pred.html#parameters",
     "href": "reference/functions.rsm.activity_pred.html#parameters",
     "title": "functions.rsm.activity_pred",
-    "section": "",
-    "text": "Name\nType\nDescription\nDefault\n\n\n\n\nx\nlist or numpy array\nA vector of three input values [x1, x2, x3].\nrequired"
+    "section": "Parameters",
+    "text": "Parameters\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nx\nlist or numpy array\nA vector of three input values [x1, x2, x3].\nrequired"
   },
   {
     "objectID": "reference/functions.rsm.activity_pred.html#returns",
     "href": "reference/functions.rsm.activity_pred.html#returns",
     "title": "functions.rsm.activity_pred",
-    "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\nfloat\nfloat\nThe predicted thermal activity."
+    "section": "Returns",
+    "text": "Returns\n\n\n\nName\nType\nDescription\n\n\n\n\nfloat\nfloat\nThe predicted thermal activity."
   },
   {
     "objectID": "reference/functions.rsm.activity_pred.html#examples",
     "href": "reference/functions.rsm.activity_pred.html#examples",
     "title": "functions.rsm.activity_pred",
-    "section": "",
-    "text": "&gt;&gt;&gt; from spotdesirability.functions.rsm import activity_pred\n&gt;&gt;&gt; x = [1.0, 2.0, 3.0]\n&gt;&gt;&gt; activity = activity_pred(x)\n&gt;&gt;&gt; print(activity)"
+    "section": "Examples",
+    "text": "Examples\n\nfrom spotdesirability.functions.rsm import activity_pred\nx = [1.0, 2.0, 3.0]\nactivity = activity_pred(x)\nprint(activity)\n\n72.25518999999998"
   },
   {
     "objectID": "reference/plot.ccd.plotCCD.html",
@@ -655,35 +655,35 @@
     "href": "reference/functions.rsm.rsm_opt.html",
     "title": "functions.rsm.rsm_opt",
     "section": "",
-    "text": "functions.rsm.rsm_opt(\n    x,\n    d_object,\n    prediction_funcs,\n    space='square',\n    alpha=1.682,\n)\nOptimization function to calculate desirability. Optimizers minimize, so we return negative desirability.\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nx\nlist or np.ndarray\nInput parameters (e.g., time, temperature, catalyst).\nrequired\n\n\nd_object\nDOverall\nOverall desirability object.\nrequired\n\n\nprediction_funcs\nlist of callables\nList of prediction functions to calculate outcomes.\nrequired\n\n\nspace\nstr\nDesign space (“square” or “circular”).\n'square'\n\n\nalpha\nfloat\nAxial distance for the design space. Default is 1.682 for a rotatable CCD.\n1.682\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nfloat\nfloat\nNegative desirability.\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nValueError\nIf space is not “square” or “circular”.\n\n\n\n\n\n\n&gt;&gt;&gt; from spotdesirability import DOverall, rsm_opt, DTarget, conversion_pred, activity_pred\n&gt;&gt;&gt; d_object = DOverall(DTarget(0, 0.5, 1), DTarget(0, 0.5, 1))\n&gt;&gt;&gt; prediction_funcs = [conversion_pred, activity_pred]\n&gt;&gt;&gt; x = [1.0, 2.0, 3.0]\n&gt;&gt;&gt; desirability = rsm_opt(x, d_object, prediction_funcs)\n&gt;&gt;&gt; print(desirability)\n-0.5"
+    "text": "functions.rsm.rsm_opt(\n    x,\n    d_object,\n    prediction_funcs,\n    space='square',\n    alpha=1.682,\n)\nOptimization function to calculate desirability. Optimizers minimize, so we return negative desirability."
   },
   {
     "objectID": "reference/functions.rsm.rsm_opt.html#parameters",
     "href": "reference/functions.rsm.rsm_opt.html#parameters",
     "title": "functions.rsm.rsm_opt",
-    "section": "",
-    "text": "Name\nType\nDescription\nDefault\n\n\n\n\nx\nlist or np.ndarray\nInput parameters (e.g., time, temperature, catalyst).\nrequired\n\n\nd_object\nDOverall\nOverall desirability object.\nrequired\n\n\nprediction_funcs\nlist of callables\nList of prediction functions to calculate outcomes.\nrequired\n\n\nspace\nstr\nDesign space (“square” or “circular”).\n'square'\n\n\nalpha\nfloat\nAxial distance for the design space. Default is 1.682 for a rotatable CCD.\n1.682"
+    "section": "Parameters",
+    "text": "Parameters\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nx\nlist or np.ndarray\nInput parameters (e.g., time, temperature, catalyst).\nrequired\n\n\nd_object\nDOverall\nOverall desirability object.\nrequired\n\n\nprediction_funcs\nlist of callables\nList of prediction functions to calculate outcomes.\nrequired\n\n\nspace\nstr\nDesign space (“square” or “circular”).\n'square'\n\n\nalpha\nfloat\nAxial distance for the design space. Default is 1.682 for a rotatable CCD.\n1.682"
   },
   {
     "objectID": "reference/functions.rsm.rsm_opt.html#returns",
     "href": "reference/functions.rsm.rsm_opt.html#returns",
     "title": "functions.rsm.rsm_opt",
-    "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\nfloat\nfloat\nNegative desirability."
+    "section": "Returns",
+    "text": "Returns\n\n\n\nName\nType\nDescription\n\n\n\n\nfloat\nfloat\nNegative desirability."
   },
   {
     "objectID": "reference/functions.rsm.rsm_opt.html#raises",
     "href": "reference/functions.rsm.rsm_opt.html#raises",
     "title": "functions.rsm.rsm_opt",
-    "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\n\nValueError\nIf space is not “square” or “circular”."
+    "section": "Raises",
+    "text": "Raises\n\n\n\nName\nType\nDescription\n\n\n\n\n\nValueError\nIf space is not “square” or “circular”."
   },
   {
     "objectID": "reference/functions.rsm.rsm_opt.html#examples",
     "href": "reference/functions.rsm.rsm_opt.html#examples",
     "title": "functions.rsm.rsm_opt",
-    "section": "",
-    "text": "&gt;&gt;&gt; from spotdesirability import DOverall, rsm_opt, DTarget, conversion_pred, activity_pred\n&gt;&gt;&gt; d_object = DOverall(DTarget(0, 0.5, 1), DTarget(0, 0.5, 1))\n&gt;&gt;&gt; prediction_funcs = [conversion_pred, activity_pred]\n&gt;&gt;&gt; x = [1.0, 2.0, 3.0]\n&gt;&gt;&gt; desirability = rsm_opt(x, d_object, prediction_funcs)\n&gt;&gt;&gt; print(desirability)\n-0.5"
+    "section": "Examples",
+    "text": "Examples\n\nfrom spotdesirability import DOverall, rsm_opt, DTarget, conversion_pred, activity_pred\nd_object = DOverall(DTarget(0, 0.5, 1), DTarget(0, 0.5, 1))\nprediction_funcs = [conversion_pred, activity_pred]\nx = [1.0, 2.0, 3.0]\ndesirability = rsm_opt(x, d_object, prediction_funcs)\nprint(desirability)\n\n0.0"
   },
   {
     "objectID": "reference/data_utils.html",
