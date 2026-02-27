@@ -269,13 +269,13 @@
   {
     "objectID": "cookbook.html",
     "href": "cookbook.html",
-    "title": "Hyperparameter Tuning Cookbook",
+    "title": "Sequential Parameter Optimization Cookbook",
     "section": "",
-    "text": "Hyperparameter Tuning Cookbook\nThe following is a cookbook of hyperparameter tuning recipes. It is not meant to be exhaustive, but instead act as a place to capture a number of the common patterns used in hyperparameter tuning.\nHyperparameter Tuning Cookbook",
+    "text": "Sequential Parameter Optimization Cookbook\nThe following is a cookbook of hyperparameter tuning recipes. It is not meant to be exhaustive, but instead act as a place to capture a number of the common patterns used in hyperparameter tuning.\nSequential Parameter Optimization Cookbook",
     "crumbs": [
       "Home",
       "Guides",
-      "Hyperparameter Tuning Cookbook"
+      "Sequential Parameter Optimization Cookbook"
     ]
   },
   {
@@ -341,13 +341,13 @@
   {
     "objectID": "download.html",
     "href": "download.html",
-    "title": "Install spotpython",
+    "title": "Install spotdesirability",
     "section": "",
-    "text": "Install spotpython\npip install spotpython",
+    "text": "Install spotdesirability\npip install spotdesirability",
     "crumbs": [
       "Home",
       "Getting Started",
-      "Install spotpython"
+      "Install spotdesirability"
     ]
   },
   {
@@ -872,7 +872,7 @@
     "href": "examples.html",
     "title": "SPOT Examples",
     "section": "",
-    "text": "SPOT Examples\nExamples can be found in the Hyperparameter Tuning Cookbook, e.g., Documentation of the Sequential Parameter Optimization.",
+    "text": "SPOT Examples\nExamples can be found in the spotoptim Cookbook, e.g., Sequential Parameter Optimization Cookbook.",
     "crumbs": [
       "Home",
       "Getting Started",
