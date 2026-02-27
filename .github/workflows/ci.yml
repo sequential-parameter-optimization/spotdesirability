@@ -138,7 +138,7 @@ jobs:
 
       - name: Security scan with bandit
         run: |
-          bandit -r src/spotdesirability/ -f json -o bandit-report.json
+          bandit -r src/spotdesirability/ -f sarif -o bandit-report.sarif
         continue-on-error: true
 
       - name: Upload bandit report to security tab
