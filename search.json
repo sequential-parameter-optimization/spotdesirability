@@ -277,18 +277,32 @@
     "href": "CHANGELOG.html",
     "title": "spotdesirability",
     "section": "",
-    "text": "switch to uv_build backend for robust metadata generation (92f8cc4)"
+    "text": "ci: output bandit results as SARIF for SAST visibility (46d6665)\nswitch to uv_build backend for robust metadata generation (92f8cc4)\ntests: correct indentation for test_activity_pred_valid_input_list (d809f15)"
+  },
+  {
+    "objectID": "CHANGELOG.html#rc.1-2026-02-27",
+    "href": "CHANGELOG.html#rc.1-2026-02-27",
+    "title": "spotdesirability",
+    "section": "",
+    "text": "ci: output bandit results as SARIF for SAST visibility (46d6665)\nswitch to uv_build backend for robust metadata generation (92f8cc4)\ntests: correct indentation for test_activity_pred_valid_input_list (d809f15)"
   },
   {
     "objectID": "CHANGELOG.html#rc.2-2026-02-27",
     "href": "CHANGELOG.html#rc.2-2026-02-27",
     "title": "spotdesirability",
-    "section": "",
-    "text": "switch to uv_build backend for robust metadata generation (92f8cc4)"
+    "section": "0.0.19-rc.2 (2026-02-27)",
+    "text": "0.0.19-rc.2 (2026-02-27)"
   },
   {
-    "objectID": "CHANGELOG.html#rc.1-2026-02-27",
-    "href": "CHANGELOG.html#rc.1-2026-02-27",
+    "objectID": "CHANGELOG.html#section",
+    "href": "CHANGELOG.html#section",
+    "title": "spotdesirability",
+    "section": "0.0.19 (2026-02-27)",
+    "text": "0.0.19 (2026-02-27)\n\nBug Fixes\n\nswitch to uv_build backend for robust metadata generation (92f8cc4)\nremove MANIFEST.in, stale mkdocs deps and update license (3e1799f)"
+  },
+  {
+    "objectID": "CHANGELOG.html#rc.1-2026-02-27-1",
+    "href": "CHANGELOG.html#rc.1-2026-02-27-1",
     "title": "spotdesirability",
     "section": "0.0.19-rc.1 (2026-02-27)",
     "text": "0.0.19-rc.1 (2026-02-27)\n\nBug Fixes\n\nremove MANIFEST.in, stale mkdocs deps and update license (3e1799f)"
@@ -301,15 +315,15 @@
     "text": "0.0.18-rc.2 (2026-02-27)"
   },
   {
-    "objectID": "CHANGELOG.html#section",
-    "href": "CHANGELOG.html#section",
+    "objectID": "CHANGELOG.html#section-1",
+    "href": "CHANGELOG.html#section-1",
     "title": "spotdesirability",
     "section": "0.0.18 (2026-02-27)",
     "text": "0.0.18 (2026-02-27)\n\nBug Fixes\n\nremove MANIFEST.in, stale mkdocs deps and update license (3e1799f)\nrestore early build in release.yml and add flake8 (7ee6fcc)\n\n\n\nDocumentation\n\nformatting (41fcece)"
   },
   {
-    "objectID": "CHANGELOG.html#rc.1-2026-02-27-1",
-    "href": "CHANGELOG.html#rc.1-2026-02-27-1",
+    "objectID": "CHANGELOG.html#rc.1-2026-02-27-2",
+    "href": "CHANGELOG.html#rc.1-2026-02-27-2",
     "title": "spotdesirability",
     "section": "0.0.18-rc.1 (2026-02-27)",
     "text": "0.0.18-rc.1 (2026-02-27)\n\nBug Fixes\n\nrestore early build in release.yml and add flake8 (7ee6fcc)\n\n\n\nDocumentation\n\nformatting (41fcece)"
@@ -322,8 +336,8 @@
     "text": "0.0.17-rc.3 (2026-02-27)"
   },
   {
-    "objectID": "CHANGELOG.html#section-1",
-    "href": "CHANGELOG.html#section-1",
+    "objectID": "CHANGELOG.html#section-2",
+    "href": "CHANGELOG.html#section-2",
     "title": "spotdesirability",
     "section": "0.0.17 (2026-02-27)",
     "text": "0.0.17 (2026-02-27)\n\nBug Fixes\n\nrestore early build in release.yml and add flake8 (7ee6fcc)\n\n\n\nDocumentation\n\nformatting (41fcece)\nnormalize semantic-release pre-release version to PEP 440 (cb31e21)\nremove setuptools_scm, fix double-build in release workflow (33ad086)"
@@ -336,22 +350,22 @@
     "text": "0.0.17-rc.2 (2026-02-27)\n\nBug Fixes\n\nnormalize semantic-release pre-release version to PEP 440 (cb31e21)"
   },
   {
-    "objectID": "CHANGELOG.html#rc.1-2026-02-27-2",
-    "href": "CHANGELOG.html#rc.1-2026-02-27-2",
+    "objectID": "CHANGELOG.html#rc.1-2026-02-27-3",
+    "href": "CHANGELOG.html#rc.1-2026-02-27-3",
     "title": "spotdesirability",
     "section": "0.0.17-rc.1 (2026-02-27)",
     "text": "0.0.17-rc.1 (2026-02-27)\n\nBug Fixes\n\nremove setuptools_scm, fix double-build in release workflow (33ad086)"
   },
   {
-    "objectID": "CHANGELOG.html#section-2",
-    "href": "CHANGELOG.html#section-2",
+    "objectID": "CHANGELOG.html#section-3",
+    "href": "CHANGELOG.html#section-3",
     "title": "spotdesirability",
     "section": "0.0.16 (2026-02-27)",
     "text": "0.0.16 (2026-02-27)\n\nBug Fixes\n\nurllib and pillow (391ab73)"
   },
   {
-    "objectID": "CHANGELOG.html#section-3",
-    "href": "CHANGELOG.html#section-3",
+    "objectID": "CHANGELOG.html#section-4",
+    "href": "CHANGELOG.html#section-4",
     "title": "spotdesirability",
     "section": "0.0.15 (2026-02-27)",
     "text": "0.0.15 (2026-02-27)\n\nBug Fixes\n\ncorrect quartodoc module paths in _quarto.yml (2452ee7)"
