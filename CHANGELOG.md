@@ -1,3 +1,12 @@
+## [0.0.20-rc.1](https://github.com/sequential-parameter-optimization/spotdesirability/compare/v0.0.19...v0.0.20-rc.1) (2026-02-27)
+
+
+### Bug Fixes
+
+* **ci:** output bandit results as SARIF for SAST visibility ([46d6665](https://github.com/sequential-parameter-optimization/spotdesirability/commit/46d6665d6b18cad6b20c0810e40b879c971896ed))
+* switch to uv_build backend for robust metadata generation ([92f8cc4](https://github.com/sequential-parameter-optimization/spotdesirability/commit/92f8cc40a8dcae7be693b22c900458ef733b8680))
+* **tests:** correct indentation for test_activity_pred_valid_input_list ([d809f15](https://github.com/sequential-parameter-optimization/spotdesirability/commit/d809f15c5aba0fae2f6594414c914673e04922af))
+
 ## [0.0.19-rc.2](https://github.com/sequential-parameter-optimization/spotdesirability/compare/v0.0.19-rc.1...v0.0.19-rc.2) (2026-02-27)
 ## [0.0.19](https://github.com/sequential-parameter-optimization/spotdesirability/compare/v0.0.18...v0.0.19) (2026-02-27)
 
