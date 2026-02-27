@@ -141,7 +141,7 @@
         [
             "@semantic-release/exec",
             {
-                "prepareCmd": "python -m build"
+                "prepareCmd": "uv build"
             }
         ],
         [
