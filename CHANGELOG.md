@@ -1,3 +1,12 @@
+## <small>0.0.22-rc.1 (2026-02-27)</small>
+
+* Merge branch 'main' into develop ([d5ba393](https://github.com/sequential-parameter-optimization/spotdesirability/commit/d5ba393))
+* chore(release): 0.0.21-rc.2 [skip ci] ([593b8f9](https://github.com/sequential-parameter-optimization/spotdesirability/commit/593b8f9))
+* chore(release): 0.0.21-rc.3 [skip ci] ([2fa96a2](https://github.com/sequential-parameter-optimization/spotdesirability/commit/2fa96a2))
+* fix: restore REUSE compliance for new documentation files ([e926da9](https://github.com/sequential-parameter-optimization/spotdesirability/commit/e926da9))
+* docs: refine documentation structure and fix landing page ([6cdecd4](https://github.com/sequential-parameter-optimization/spotdesirability/commit/6cdecd4))
+* docs: updated index ([e2a0cb1](https://github.com/sequential-parameter-optimization/spotdesirability/commit/e2a0cb1))
+
 ## <small>0.0.21-rc.3 (2026-02-27)</small>
 
 * fix: restore REUSE compliance for new documentation files ([e926da9](https://github.com/sequential-parameter-optimization/spotdesirability/commit/e926da9))
