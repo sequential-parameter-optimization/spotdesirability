@@ -41,7 +41,7 @@ jobs:
 
       - name: Run tests
         run: |
-          uv run pytest test/ -v
+          uv run pytest tests/ -v
 
       - name: Verify package name in pyproject.toml
         run: |

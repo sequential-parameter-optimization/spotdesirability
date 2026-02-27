@@ -85,7 +85,7 @@ target-version = ["py313"]
 addopts = [
     "--import-mode=importlib",
 ]
-testpaths = ["test"]
+testpaths = ["tests"]
 
 [dependency-groups]
 dev = [

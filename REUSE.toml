@@ -40,7 +40,7 @@ SPDX-FileCopyrightText = "2026 bartzbeielstein"
 SPDX-License-Identifier = "GPL-2.0-or-later"
 
 [[annotations]]
-path = "test/**"
+path = "tests/**"
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2026 bartzbeielstein"
 SPDX-License-Identifier = "GPL-2.0-or-later"
