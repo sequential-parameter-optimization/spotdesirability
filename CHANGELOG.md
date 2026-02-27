@@ -1,3 +1,10 @@
+## [0.0.19-rc.1](https://github.com/sequential-parameter-optimization/spotdesirability/compare/v0.0.18...v0.0.19-rc.1) (2026-02-27)
+
+
+### Bug Fixes
+
+* remove MANIFEST.in, stale mkdocs deps and update license ([3e1799f](https://github.com/sequential-parameter-optimization/spotdesirability/commit/3e1799fcafc193306a7d0394083a746118b580e6))
+
 ## [0.0.18-rc.2](https://github.com/sequential-parameter-optimization/spotdesirability/compare/v0.0.18-rc.1...v0.0.18-rc.2) (2026-02-27)
 ## [0.0.18](https://github.com/sequential-parameter-optimization/spotdesirability/compare/v0.0.17...v0.0.18) (2026-02-27)
 
