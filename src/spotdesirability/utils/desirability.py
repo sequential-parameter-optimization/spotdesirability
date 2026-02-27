@@ -1,3 +1,13 @@
+# SPDX-FileCopyrightText: 2026 bartzbeielstein
+# SPDX-FileCopyrightText: Max Kuhn
+# SPDX-License-Identifier: GPL-2.0-or-later
+#
+# The R 'desirability' package is maintained and developed by Max Kuhn.
+# It is available on CRAN: https://CRAN.R-project.org/package=desirability
+# DOI: https://doi.org/10.32614/CRAN.package.desirability
+#
+# This Python implementation (spotdesirability) is a port by bartzbeielstein.
+
 import numpy as np
 import matplotlib.pyplot as plt
 from typing import Any, Dict
