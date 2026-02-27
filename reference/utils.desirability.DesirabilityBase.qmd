@@ -1,0 +1,100 @@
+# utils.desirability.DesirabilityBase { #spotdesirability.utils.desirability.DesirabilityBase }
+
+```python
+utils.desirability.DesirabilityBase()
+```
+
+Base class for all desirability functions.
+
+Provides a method to print class attributes and extend the range of values.
+
+## Functions {.doc-section .doc-section-functions}
+
+
+Prints the attributes of the class object in a generic and recursive manner.
+
+
+Extends the range of values by a given factor.
+
+## References {.doc-section .doc-section-references}
+
+Many thanks to Max Kuhn for his implementation of the 'desirability' package in R.
+This class is based on the 'desirability' package in R, see:
+https://cran.r-project.org/package=desirability
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [extend_range](#spotdesirability.utils.desirability.DesirabilityBase.extend_range) | Extend the range of values by a given factor. |
+| [plot](#spotdesirability.utils.desirability.DesirabilityBase.plot) | Plots the continuous desirability functions, i.e., `DMax`, `DMin`, and `DTarget`. |
+| [print_class_attributes](#spotdesirability.utils.desirability.DesirabilityBase.print_class_attributes) | Prints the attributes of the class object in a generic and recursive manner. |
+
+### extend_range { #spotdesirability.utils.desirability.DesirabilityBase.extend_range }
+
+```python
+utils.desirability.DesirabilityBase.extend_range(values, factor=0.05)
+```
+
+Extend the range of values by a given factor.
+
+### plot { #spotdesirability.utils.desirability.DesirabilityBase.plot }
+
+```python
+utils.desirability.DesirabilityBase.plot(
+    add=False,
+    non_inform=True,
+    xlabel='Input',
+    ylabel='Desirability',
+    figsize=(10, 8),
+    grid=True,
+    **kwargs,
+)
+```
+
+Plots the continuous desirability functions, i.e., `DMax`, `DMin`, and `DTarget`.
+
+#### Parameters {.doc-section .doc-section-parameters}
+
+| Name       | Type                                                       | Description                                                                      | Default          |
+|------------|------------------------------------------------------------|----------------------------------------------------------------------------------|------------------|
+| add        | [bool](`bool`)                                             | Whether to add the plot to an existing figure. Defaults to False.                | `False`          |
+| non_inform | [bool](`bool`)                                             | Whether to display the non-informative value as a dashed line. Defaults to True. | `True`           |
+| xlabel     | [str](`str`)                                               | Label for the x-axis. Defaults to "Input".                                       | `'Input'`        |
+| ylabel     | [str](`str`)                                               | Label for the y-axis. Defaults to "Desirability".                                | `'Desirability'` |
+| figsize    | [tuple](`tuple`)                                           | Size of the figure (width, height) in inches. Defaults to (10, 8).               | `(10, 8)`        |
+| grid       | [bool](`bool`)                                             | Whether to display a grid. Defaults to True.                                     | `True`           |
+| **kwargs   | [Dict](`typing.Dict`)\[[str](`str`), [Any](`typing.Any`)\] | Additional keyword arguments for the plot.                                       | `{}`             |
+
+#### Examples {.doc-section .doc-section-examples}
+
+```python
+>>> from spotdesirability import DMax
+>>> dmax = DMax(low=0, high=10, scale=1)
+>>> dmax.plot(figsize=(12, 6))  # Custom figure size
+>>> from spotdesirability import DMin
+>>> dmin = DMin(low=0, high=10, scale=1)
+>>> dmin.plot()  # Default figure size
+>>> from spotdesirability import DTarget
+>>> dtarget = DTarget(low=0, target=5, high=10, low_scale=1, high_scale=1)
+>>> dtarget.plot(figsize=(8, 4))
+>>> from spotdesirability import DArb
+>>> x = [-5, 0, 5, 10]
+>>> d = [0, 0.5, 1, 0.2]
+>>> darb = DArb(x, d)
+>>> darb.plot(figsize=(15, 10))
+```
+
+### print_class_attributes { #spotdesirability.utils.desirability.DesirabilityBase.print_class_attributes }
+
+```python
+utils.desirability.DesirabilityBase.print_class_attributes(indent=0)
+```
+
+Prints the attributes of the class object in a generic and recursive manner.
+
+#### Parameters {.doc-section .doc-section-parameters}
+
+| Name   | Type         | Description                               | Default   |
+|--------|--------------|-------------------------------------------|-----------|
+| indent | [int](`int`) | The indentation level for nested objects. | `0`       |

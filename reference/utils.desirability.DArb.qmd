@@ -1,0 +1,135 @@
+# utils.desirability.DArb { #spotdesirability.utils.desirability.DArb }
+
+```python
+utils.desirability.DArb(x, d, tol=None, missing=None)
+```
+
+Implements an arbitrary desirability function.
+
+This class allows users to define a custom desirability function by specifying
+input values (`x`) and their corresponding desirability values (`d`).
+
+## Attributes {.doc-section .doc-section-attributes}
+
+| Name    | Type                                        | Description                                                               |
+|---------|---------------------------------------------|---------------------------------------------------------------------------|
+| x       | [numpy](`numpy`).[ndarray](`numpy.ndarray`) | The input values for the desirability function.                           |
+| d       | [numpy](`numpy`).[ndarray](`numpy.ndarray`) | The desirability values corresponding to the input values.                |
+| tol     | [float](`float`)                            | A tolerance value to replace desirability values of 0. Defaults to None.  |
+| missing | [float](`float`)                            | The value to use for missing inputs. Defaults to a non-informative value. |
+
+## Functions {.doc-section .doc-section-functions}
+
+
+Predicts the desirability values for the given input data.
+
+
+Plots the desirability function.
+
+## References {.doc-section .doc-section-references}
+
+Many thanks to Max Kuhn for his implementation of the 'desirability' package in R.
+This class is based on the 'desirability' package in R, see:
+https://cran.r-project.org/package=desirability
+
+## Examples {.doc-section .doc-section-examples}
+
+```python
+>>> from spotdesirability import DArb
+>>> import numpy as np
+>>> import matplotlib.pyplot as plt
+# Define input and desirability values
+>>> x = [-5, 0, 5, 10]
+>>> d = [0, 0.5, 1, 0.2]
+# Create a DArb object
+>>> darb = DArb(x, d)
+# Predict desirability for a range of inputs
+>>> inputs = np.array([-10, -5, 0, 5, 10, 15])
+>>> desirability = darb.predict(inputs)
+>>> print(desirability)
+[0.  0.  0.5 1.  0.2 0.2]
+# Plot the desirability function
+>>> darb.plot()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [plot](#spotdesirability.utils.desirability.DArb.plot) | Plots the arbitrary desirability function. |
+| [predict](#spotdesirability.utils.desirability.DArb.predict) | Predicts the desirability values for the given input data. |
+
+### plot { #spotdesirability.utils.desirability.DArb.plot }
+
+```python
+utils.desirability.DArb.plot(
+    add=False,
+    non_inform=True,
+    xlabel='Input',
+    ylabel='Desirability',
+    figsize=(10, 8),
+    grid=True,
+    **kwargs,
+)
+```
+
+Plots the arbitrary desirability function.
+
+#### Parameters {.doc-section .doc-section-parameters}
+
+| Name       | Type                                                       | Description                                                                      | Default          |
+|------------|------------------------------------------------------------|----------------------------------------------------------------------------------|------------------|
+| add        | [bool](`bool`)                                             | Whether to add the plot to an existing figure. Defaults to False.                | `False`          |
+| non_inform | [bool](`bool`)                                             | Whether to display the non-informative value as a dashed line. Defaults to True. | `True`           |
+| xlabel     | [str](`str`)                                               | Label for the x-axis. Defaults to "Input".                                       | `'Input'`        |
+| ylabel     | [str](`str`)                                               | Label for the y-axis. Defaults to "Desirability".                                | `'Desirability'` |
+| figsize    | [tuple](`tuple`)                                           | Size of the figure (width, height) in inches. Defaults to (10, 8).               | `(10, 8)`        |
+| grid       | [bool](`bool`)                                             | Whether to display a grid. Defaults to True.                                     | `True`           |
+| **kwargs   | [Dict](`typing.Dict`)\[[str](`str`), [Any](`typing.Any`)\] | Additional keyword arguments for the plot.                                       | `{}`             |
+
+#### Examples {.doc-section .doc-section-examples}
+
+```python
+>>> from spotdesirability import DArb
+>>> x = [-5, 0, 5, 10]
+>>> d = [0, 0.5, 1, 0.2]
+>>> darb = DArb(x, d)
+>>> darb.plot()  # Default figure size
+>>> darb.plot(figsize=(12, 6))  # Custom figure size
+```
+
+### predict { #spotdesirability.utils.desirability.DArb.predict }
+
+```python
+utils.desirability.DArb.predict(newdata=None, missing=None)
+```
+
+Predicts the desirability values for the given input data.
+
+#### Parameters {.doc-section .doc-section-parameters}
+
+| Name    | Type                              | Description                                                                                                 | Default   |
+|---------|-----------------------------------|-------------------------------------------------------------------------------------------------------------|-----------|
+| newdata | [array](`array`) - [like](`like`) | The input data for which to compute desirability values. If None, an empty array is used. Defaults to None. | `None`    |
+| missing | [float](`float`)                  | The value to use for missing inputs. Defaults to the object's `missing` attribute.                          | `None`    |
+
+#### Returns {.doc-section .doc-section-returns}
+
+| Name   | Type                                        | Description                                 |
+|--------|---------------------------------------------|---------------------------------------------|
+|        | [numpy](`numpy`).[ndarray](`numpy.ndarray`) | The desirability values for the input data. |
+
+#### Examples {.doc-section .doc-section-examples}
+
+```python
+>>> from spotdesirability import DArb
+>>> import numpy as np
+# Define input and desirability values
+>>> x = [-5, 0, 5, 10]
+>>> d = [0, 0.5, 1, 0.2]
+>>> darb = DArb(x, d)
+>>> inputs = np.array([-10, -5, 0, 5, 10, 15])
+>>> desirability = darb.predict(inputs)
+>>> print(desirability)
+[0.  0.  0.5 1.  0.2 0.2]
+```

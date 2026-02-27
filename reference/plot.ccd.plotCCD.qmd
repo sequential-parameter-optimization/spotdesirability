@@ -1,0 +1,29 @@
+# plot.ccd.plotCCD { #spotdesirability.plot.ccd.plotCCD }
+
+```python
+plot.ccd.plotCCD(
+    elev=20,
+    azim=30,
+    figsize=(10, 8),
+    filename=None,
+    title='Central Composite Design (CCD) for k=3',
+)
+```
+
+Plots a Central Composite Design (CCD) for k=3 with customizable viewpoint.
+
+## Parameters {.doc-section .doc-section-parameters}
+
+| Name     | Type             | Description                                                                                                      | Default                                    |
+|----------|------------------|------------------------------------------------------------------------------------------------------------------|--------------------------------------------|
+| elev     | [int](`int`)     | Elevation angle in the z-plane for the 3D plot.                                                                  | `20`                                       |
+| azim     | [int](`int`)     | Azimuthal angle in the x,y-plane for the 3D plot.                                                                | `30`                                       |
+| figsize  | [tuple](`tuple`) | Size of the figure (width, height) in inches. Defaults to (10, 8).                                               | `(10, 8)`                                  |
+| filename | [str](`str`)     | The name of the file to save the plot. If None, the plot will be shown instead. Supported formats: 'pdf', 'png'. | `None`                                     |
+| title    | [str](`str`)     | Title of the plot. Defaults to "Central Composite Design (CCD) for k=3".                                         | `'Central Composite Design (CCD) for k=3'` |
+
+## Returns {.doc-section .doc-section-returns}
+
+| Name   | Type   | Description   |
+|--------|--------|---------------|
+|        | None   | None          |

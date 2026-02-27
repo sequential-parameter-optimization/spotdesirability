@@ -14,15 +14,36 @@ project:
 
 website:
   title: "spotdesirability"
-  description: "spotdesirability – Python implementation of desirability functions for multivariate optimisation"
+  description: "Python implementation of desirability functions for multivariate optimisation"
   repo-url: https://github.com/sequential-parameter-optimization/spotdesirability
   repo-actions: [edit, issue]
   navbar:
     left:
       - text: "Home"
         href: index.qmd
+      - text: "Guides"
+        href: cookbook.qmd
       - text: "Reference"
         href: reference/index.qmd
+  sidebar:
+    style: "floating"
+    contents:
+      - section: "Getting Started"
+        contents:
+          - index.qmd
+          - download.qmd
+          - examples.qmd
+      - section: "Guides"
+        contents:
+          - cookbook.qmd
+      - section: "Reference"
+        contents:
+          - reference/index.qmd
+      - section: "About"
+        contents:
+          - about.qmd
+          - SECURITY.md
+          - CHANGELOG.md
 
 quartodoc:
   package: spotdesirability

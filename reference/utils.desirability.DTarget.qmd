@@ -1,0 +1,102 @@
+# utils.desirability.DTarget { #spotdesirability.utils.desirability.DTarget }
+
+```python
+utils.desirability.DTarget(
+    low,
+    target,
+    high,
+    low_scale=1,
+    high_scale=1,
+    tol=None,
+    missing=None,
+)
+```
+
+Implements a desirability function for target optimization.
+
+The desirability function assigns a value of 0 for inputs outside the range `[low, high]`,
+scales the desirability between 0 and 1 for inputs within `[low, target]` using `low_scale`,
+and scales the desirability between 1 and 0 for inputs within `[target, high]` using `high_scale`.
+
+## Attributes {.doc-section .doc-section-attributes}
+
+| Name       | Type             | Description                                                                                |
+|------------|------------------|--------------------------------------------------------------------------------------------|
+| low        | [float](`float`) | The lower threshold for the desirability function.                                         |
+| target     | [float](`float`) | The target value for the desirability function.                                            |
+| high       | [float](`float`) | The upper threshold for the desirability function.                                         |
+| low_scale  | [float](`float`) | The scaling factor for the desirability function below the target. Must be greater than 0. |
+| high_scale | [float](`float`) | The scaling factor for the desirability function above the target. Must be greater than 0. |
+| tol        | [float](`float`) | A tolerance value to replace desirability values of 0. Defaults to None.                   |
+| missing    | [float](`float`) | The value to use for missing inputs. Defaults to a non-informative value.                  |
+
+## Functions {.doc-section .doc-section-functions}
+
+
+Predicts the desirability values for the given input data.
+
+
+Plots the desirability function.
+
+## References {.doc-section .doc-section-references}
+
+Many thanks to Max Kuhn for his implementation of the 'desirability' package in R.
+This class is based on the 'desirability' package in R, see:
+https://cran.r-project.org/package=desirability
+
+## Examples {.doc-section .doc-section-examples}
+
+```python
+>>> from spotdesirability import DTarget
+>>> import numpy as np
+>>> import matplotlib.pyplot as plt
+# Create a DTarget object
+>>> dtarget = DTarget(low=0, target=5, high=10, low_scale=1, high_scale=1)
+# Predict desirability for a range of inputs
+>>> inputs = np.array([-5, 0, 2.5, 5, 7.5, 10, 15])
+>>> desirability = dtarget.predict(inputs)
+>>> print(desirability)
+[0.   0.   0.5  1.   0.5  0.   0.  ]
+# Plot the desirability function
+>>> dtarget.plot()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [predict](#spotdesirability.utils.desirability.DTarget.predict) | Predicts the desirability values for the given input data. |
+
+### predict { #spotdesirability.utils.desirability.DTarget.predict }
+
+```python
+utils.desirability.DTarget.predict(newdata=None, missing=None)
+```
+
+Predicts the desirability values for the given input data.
+
+#### Parameters {.doc-section .doc-section-parameters}
+
+| Name    | Type                              | Description                                                                                                 | Default   |
+|---------|-----------------------------------|-------------------------------------------------------------------------------------------------------------|-----------|
+| newdata | [array](`array`) - [like](`like`) | The input data for which to compute desirability values. If None, an empty array is used. Defaults to None. | `None`    |
+| missing | [float](`float`)                  | The value to use for missing inputs. Defaults to the object's `missing` attribute.                          | `None`    |
+
+#### Returns {.doc-section .doc-section-returns}
+
+| Name   | Type                                        | Description                                 |
+|--------|---------------------------------------------|---------------------------------------------|
+|        | [numpy](`numpy`).[ndarray](`numpy.ndarray`) | The desirability values for the input data. |
+
+#### Examples {.doc-section .doc-section-examples}
+
+```python
+>>> from spotdesirability import DTarget
+>>> import numpy as np
+# Create a DTarget object
+>>> dtarget = DTarget(low=0, target=5, high=10, low_scale=1, high_scale=1)
+>>> inputs = np.array([-5, 0, 2.5, 5, 7.5, 10, 15])
+>>> desirability = dtarget.predict(inputs)
+>>> print(desirability)
+[0.   0.   0.5  1.   0.5  0.   0.  ]
+```
