@@ -1,3 +1,10 @@
+## [0.0.17-rc.1](https://github.com/sequential-parameter-optimization/spotdesirability/compare/v0.0.16...v0.0.17-rc.1) (2026-02-27)
+
+
+### Bug Fixes
+
+* remove setuptools_scm, fix double-build in release workflow ([33ad086](https://github.com/sequential-parameter-optimization/spotdesirability/commit/33ad086fd23a094940e180c236887f2054d46394))
+
 ## [0.0.16](https://github.com/sequential-parameter-optimization/spotdesirability/compare/v0.0.15...v0.0.16) (2026-02-27)
 
 
