@@ -1,3 +1,3 @@
-# Install spotpython
+# Install spotdesirability
 
-    pip install spotpython
+    pip install spotdesirability
