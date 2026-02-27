@@ -1,3 +1,10 @@
+## [0.0.20-rc.2](https://github.com/sequential-parameter-optimization/spotdesirability/compare/v0.0.20-rc.1...v0.0.20-rc.2) (2026-02-27)
+
+
+### Bug Fixes
+
+* restore REUSE compliance and clean up mkdocs.yml ([b6479e2](https://github.com/sequential-parameter-optimization/spotdesirability/commit/b6479e210b07e4f6df72941477bc64c2fb2a9f5f))
+
 ## [0.0.20-rc.1](https://github.com/sequential-parameter-optimization/spotdesirability/compare/v0.0.19...v0.0.20-rc.1) (2026-02-27)
 
 
