@@ -4,7 +4,7 @@ build-backend = "uv_build"
 
 [project]
 name = "spotdesirability"
-version = "0.0.22rc1"
+version = "0.0.22rc2"
 authors = [
   { name="T. Bartz-Beielstein", email="tbb@bartzundbartz.de" }
 ]
