@@ -1,3 +1,12 @@
+## <small>0.0.21 (2026-02-27)</small>
+
+* Merge branch 'main' into develop ([f0bf0c3](https://github.com/sequential-parameter-optimization/spotdesirability/commit/f0bf0c3))
+* Merge pull request #6 from sequential-parameter-optimization/develop ([b804b70](https://github.com/sequential-parameter-optimization/spotdesirability/commit/b804b70)), closes [#6](https://github.com/sequential-parameter-optimization/spotdesirability/issues/6)
+* fix: restore REUSE compliance and clean up mkdocs.yml ([b6479e2](https://github.com/sequential-parameter-optimization/spotdesirability/commit/b6479e2))
+* fix(release): use pinned semantic-release-action for security ([5258133](https://github.com/sequential-parameter-optimization/spotdesirability/commit/5258133))
+* chore(release): 0.0.20-rc.2 [skip ci] ([cd96ccc](https://github.com/sequential-parameter-optimization/spotdesirability/commit/cd96ccc))
+* chore(release): 0.0.21-rc.1 [skip ci] ([f6ca60e](https://github.com/sequential-parameter-optimization/spotdesirability/commit/f6ca60e))
+
 ## [0.0.21-rc.1](https://github.com/sequential-parameter-optimization/spotdesirability/compare/v0.0.20...v0.0.21-rc.1) (2026-02-27)
 
 
