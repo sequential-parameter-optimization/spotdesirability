@@ -1,3 +1,18 @@
+## <small>0.0.26 (2026-02-28)</small>
+
+* Merge branch 'main' into develop ([7a2309d](https://github.com/sequential-parameter-optimization/spotdesirability/commit/7a2309d))
+* Merge pull request #17 from sequential-parameter-optimization/develop ([b4740ca](https://github.com/sequential-parameter-optimization/spotdesirability/commit/b4740ca)), closes [#17](https://github.com/sequential-parameter-optimization/spotdesirability/issues/17)
+* Merge pull request #18 from sequential-parameter-optimization/develop ([28f9ca1](https://github.com/sequential-parameter-optimization/spotdesirability/commit/28f9ca1)), closes [#18](https://github.com/sequential-parameter-optimization/spotdesirability/issues/18)
+* chore(ci): pin GitHub Actions to full commit SHAs for security hardening ([95ff09f](https://github.com/sequential-parameter-optimization/spotdesirability/commit/95ff09f))
+* chore(release): 0.0.24-rc.2 [skip ci] ([944d278](https://github.com/sequential-parameter-optimization/spotdesirability/commit/944d278))
+* chore(release): 0.0.26-rc.1 [skip ci] ([cb613ec](https://github.com/sequential-parameter-optimization/spotdesirability/commit/cb613ec))
+* chore(release): 0.0.26-rc.2 [skip ci] ([e7f68a3](https://github.com/sequential-parameter-optimization/spotdesirability/commit/e7f68a3))
+* docs: enable quartodoc cross-project interlinks ([4e20741](https://github.com/sequential-parameter-optimization/spotdesirability/commit/4e20741))
+* docs: generated reference files ([133906f](https://github.com/sequential-parameter-optimization/spotdesirability/commit/133906f))
+* docs: implement quartodoc configuration mirroring spotforecast2_safe and ensure REUSE compliance ([e02911e](https://github.com/sequential-parameter-optimization/spotdesirability/commit/e02911e))
+* fix: interlinks activated ([3054ea4](https://github.com/sequential-parameter-optimization/spotdesirability/commit/3054ea4))
+* fix(docs): move quartodoc outputs to docs/reference, pin quarto to 1.8.27, fix DArb type error ([6018312](https://github.com/sequential-parameter-optimization/spotdesirability/commit/6018312))
+
 ## <small>0.0.26-rc.2 (2026-02-28)</small>
 
 * docs: generated reference files ([133906f](https://github.com/sequential-parameter-optimization/spotdesirability/commit/133906f))
