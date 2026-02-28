@@ -77,7 +77,7 @@ jobs:
 
       - name: Register Jupyter Kernel
         run: |
-          uv run python -m ipykernel install --user --name spotdesirability --display-name "spotdesirability environment"
+          uv run python -m ipykernel install --sys-prefix --name spotdesirability --display-name "spotdesirability environment"
 
       - name: Render Quarto site
         run: uv run quarto render --no-cache
