@@ -1,3 +1,8 @@
+## <small>0.0.26-rc.2 (2026-02-28)</small>
+
+* docs: generated reference files ([133906f](https://github.com/sequential-parameter-optimization/spotdesirability/commit/133906f))
+* fix(docs): move quartodoc outputs to docs/reference, pin quarto to 1.8.27, fix DArb type error ([6018312](https://github.com/sequential-parameter-optimization/spotdesirability/commit/6018312))
+
 ## <small>0.0.26-rc.1 (2026-02-28)</small>
 
 * fix: interlinks activated ([3054ea4](https://github.com/sequential-parameter-optimization/spotdesirability/commit/3054ea4))
