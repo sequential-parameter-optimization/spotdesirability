@@ -1,3 +1,7 @@
+## <small>0.0.26-rc.3 (2026-02-28)</small>
+
+* fix(docs): resolve broken link targets to quartodoc pages ([c810716](https://github.com/sequential-parameter-optimization/spotdesirability/commit/c810716))
+
 ## <small>0.0.26-rc.2 (2026-02-28)</small>
 
 * docs: generated reference files ([133906f](https://github.com/sequential-parameter-optimization/spotdesirability/commit/133906f))
