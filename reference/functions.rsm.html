@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>utils.desirability.dtarget – spotdesirability</title>
+<title>functions.rsm – spotdesirability</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,41 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -305,7 +270,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">utils.desirability.DTarget</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -493,138 +458,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#attributes" id="toc-attributes" class="nav-link active" data-scroll-target="#attributes">Attributes</a></li>
-  <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions">Functions</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
-  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a></li>
-  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a>
+  <li><a href="#spotdesirability.functions.rsm" id="toc-spotdesirability.functions.rsm" class="nav-link active" data-scroll-target="#spotdesirability.functions.rsm">functions.rsm</a>
   <ul class="collapse">
-  <li><a href="#spotdesirability.utils.desirability.DTarget.predict" id="toc-spotdesirability.utils.desirability.DTarget.predict" class="nav-link" data-scroll-target="#spotdesirability.utils.desirability.DTarget.predict">predict</a></li>
+  <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions">Functions</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/sequential-parameter-optimization/spotdesirability/edit/main/reference/utils.desirability.DTarget.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sequential-parameter-optimization/spotdesirability/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/sequential-parameter-optimization/spotdesirability/edit/main/reference/functions.rsm.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sequential-parameter-optimization/spotdesirability/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">utils.desirability.DTarget</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
 
 
-</header>
-
-
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>utils.desirability.DTarget(</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    low,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    target,</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    high,</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    low_scale<span class="op">=</span><span class="dv">1</span>,</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    high_scale<span class="op">=</span><span class="dv">1</span>,</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    tol<span class="op">=</span><span class="va">None</span>,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    missing<span class="op">=</span><span class="va">None</span>,</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Implements a desirability function for target optimization.</p>
-<p>The desirability function assigns a value of 0 for inputs outside the range <code>[low, high]</code>, scales the desirability between 0 and 1 for inputs within <code>[low, target]</code> using <code>low_scale</code>, and scales the desirability between 1 and 0 for inputs within <code>[target, high]</code> using <code>high_scale</code>.</p>
-<section id="attributes" class="level2 doc-section doc-section-attributes">
-<h2 class="doc-section doc-section-attributes anchored" data-anchor-id="attributes">Attributes</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>low</td>
-<td><a href="`float`">float</a></td>
-<td>The lower threshold for the desirability function.</td>
-</tr>
-<tr class="even">
-<td>target</td>
-<td><a href="`float`">float</a></td>
-<td>The target value for the desirability function.</td>
-</tr>
-<tr class="odd">
-<td>high</td>
-<td><a href="`float`">float</a></td>
-<td>The upper threshold for the desirability function.</td>
-</tr>
-<tr class="even">
-<td>low_scale</td>
-<td><a href="`float`">float</a></td>
-<td>The scaling factor for the desirability function below the target. Must be greater than 0.</td>
-</tr>
-<tr class="odd">
-<td>high_scale</td>
-<td><a href="`float`">float</a></td>
-<td>The scaling factor for the desirability function above the target. Must be greater than 0.</td>
-</tr>
-<tr class="even">
-<td>tol</td>
-<td><a href="`float`">float</a></td>
-<td>A tolerance value to replace desirability values of 0. Defaults to None.</td>
-</tr>
-<tr class="odd">
-<td>missing</td>
-<td><a href="`float`">float</a></td>
-<td>The value to use for missing inputs. Defaults to a non-informative value.</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="functions" class="level2 doc-section doc-section-functions">
-<h2 class="doc-section doc-section-functions anchored" data-anchor-id="functions">Functions</h2>
-<p>Predicts the desirability values for the given input data.</p>
-<p>Plots the desirability function.</p>
-</section>
-<section id="references" class="level2 doc-section doc-section-references">
-<h2 class="doc-section doc-section-references anchored" data-anchor-id="references">References</h2>
-<p>Many thanks to Max Kuhn for his implementation of the ‘desirability’ package in R. This class is based on the ‘desirability’ package in R, see: https://cran.r-project.org/package=desirability</p>
-</section>
-<section id="examples" class="level2 doc-section doc-section-examples">
-<h2 class="doc-section doc-section-examples anchored" data-anchor-id="examples">Examples</h2>
-<div id="b573af2f" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> spotdesirability <span class="im">import</span> DTarget</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a DTarget object</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>dtarget <span class="op">=</span> DTarget(low<span class="op">=</span><span class="dv">0</span>, target<span class="op">=</span><span class="dv">5</span>, high<span class="op">=</span><span class="dv">10</span>, low_scale<span class="op">=</span><span class="dv">1</span>, high_scale<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Predict desirability for a range of inputs</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>inputs <span class="op">=</span> np.array([<span class="op">-</span><span class="dv">5</span>, <span class="dv">0</span>, <span class="fl">2.5</span>, <span class="dv">5</span>, <span class="fl">7.5</span>, <span class="dv">10</span>, <span class="dv">15</span>])</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>desirability <span class="op">=</span> dtarget.predict(inputs)</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(desirability)</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># [0.   0.   0.5  1.   0.5  0.   0.  ]</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the desirability function</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>dtarget.plot()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[ 0.   0.   0.5  1.   0.5 -0.   0. ]</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="utils.desirability.DTarget_files/figure-html/cell-2-output-2.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="methods" class="level2">
-<h2 class="anchored" data-anchor-id="methods">Methods</h2>
+<section id="spotdesirability.functions.rsm" class="level1">
+<h1>functions.rsm</h1>
+<p><code>functions.rsm</code></p>
+<section id="functions" class="level2">
+<h2 class="anchored" data-anchor-id="functions">Functions</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -634,79 +486,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="#spotdesirability.utils.desirability.DTarget.predict">predict</a></td>
-<td>Predicts the desirability values for the given input data.</td>
-</tr>
-</tbody>
-</table>
-<section id="spotdesirability.utils.desirability.DTarget.predict" class="level3">
-<h3 class="anchored" data-anchor-id="spotdesirability.utils.desirability.DTarget.predict">predict</h3>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>utils.desirability.DTarget.predict(newdata<span class="op">=</span><span class="va">None</span>, missing<span class="op">=</span><span class="va">None</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Predicts the desirability values for the given input data.</p>
-<section id="parameters" class="level4 doc-section doc-section-parameters">
-<h4 class="doc-section doc-section-parameters anchored" data-anchor-id="parameters">Parameters</h4>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>newdata</td>
-<td><a href="`array`">array</a> - <a href="`like`">like</a></td>
-<td>The input data for which to compute desirability values. If None, an empty array is used. Defaults to None.</td>
-<td><code>None</code></td>
+<td><a href="`~spotdesirability.functions.rsm.activity_pred`"></a></td>
+<td>Predicts the thermal activity based on the input vector x.</td>
 </tr>
 <tr class="even">
-<td>missing</td>
-<td><a href="`float`">float</a></td>
-<td>The value to use for missing inputs. Defaults to the object’s <code>missing</code> attribute.</td>
-<td><code>None</code></td>
+<td><a href="`~spotdesirability.functions.rsm.conversion_pred`"></a></td>
+<td>Predicts the percent conversion based on the input vector x.</td>
 </tr>
-</tbody>
-</table>
-</section>
-<section id="returns" class="level4 doc-section doc-section-returns">
-<h4 class="doc-section doc-section-returns anchored" data-anchor-id="returns">Returns</h4>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
 <tr class="odd">
-<td></td>
-<td><a href="`numpy`">numpy</a>.<a href="`numpy.ndarray`">ndarray</a></td>
-<td>The desirability values for the input data.</td>
+<td><a href="`~spotdesirability.functions.rsm.rsm_opt`"></a></td>
+<td>Optimization function to calculate desirability.</td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="examples-1" class="level4 doc-section doc-section-examples">
-<h4 class="doc-section doc-section-examples anchored" data-anchor-id="examples-1">Examples</h4>
-<div id="eac44794" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> spotdesirability <span class="im">import</span> DTarget</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a DTarget object</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>dtarget <span class="op">=</span> DTarget(low<span class="op">=</span><span class="dv">0</span>, target<span class="op">=</span><span class="dv">5</span>, high<span class="op">=</span><span class="dv">10</span>, low_scale<span class="op">=</span><span class="dv">1</span>, high_scale<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>inputs <span class="op">=</span> np.array([<span class="op">-</span><span class="dv">5</span>, <span class="dv">0</span>, <span class="fl">2.5</span>, <span class="dv">5</span>, <span class="fl">7.5</span>, <span class="dv">10</span>, <span class="dv">15</span>])</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>desirability <span class="op">=</span> dtarget.predict(inputs)</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(desirability)</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># [0.   0.   0.5  1.   0.5  0.   0.  ]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[ 0.   0.   0.5  1.   0.5 -0.   0. ]</code></pre>
-</div>
-</div>
 
 
-</section>
 </section>
 </section>
 
@@ -1138,7 +932,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </div>   
     <div class="nav-footer-center">
 <p>Copyright © 2004-2026 Thomas Bartz-Beielstein | <a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL-3.0-or-later</a></p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sequential-parameter-optimization/spotdesirability/edit/main/reference/utils.desirability.DTarget.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sequential-parameter-optimization/spotdesirability/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sequential-parameter-optimization/spotdesirability/edit/main/reference/functions.rsm.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sequential-parameter-optimization/spotdesirability/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
