@@ -4,14 +4,24 @@
     "href": "docs/reference/utils.html",
     "title": "utils",
     "section": "",
-    "text": "utils\nutils\nUtils module for spotdesirability.\nThis module provides utility classes and functions for desirability function calculations and analysis."
+    "text": "utils\nutils\nUtils module for spotdesirability.\nThis module provides utility classes and functions for desirability function calculations and analysis.",
+    "crumbs": [
+      "API Reference",
+      "Desirability Classes",
+      "utils"
+    ]
   },
   {
     "objectID": "docs/reference/plot.html",
     "href": "docs/reference/plot.html",
     "title": "plot",
     "section": "",
-    "text": "plot\nplot\nPlot module for spotdesirability.\nThis module provides plotting utilities for visualizing Central Composite Designs and other experimental designs."
+    "text": "plot\nplot\nPlot module for spotdesirability.\nThis module provides plotting utilities for visualizing Central Composite Designs and other experimental designs.",
+    "crumbs": [
+      "API Reference",
+      "Plotting",
+      "plot"
+    ]
   },
   {
     "objectID": "docs/reference/index.html",
@@ -73,7 +83,12 @@
     "href": "docs/reference/functions.html",
     "title": "functions",
     "section": "",
-    "text": "functions\nfunctions\nFunctions module for spotdesirability.\nThis module provides various test functions and optimization functions for desirability analysis and response surface methodology."
+    "text": "functions\nfunctions\nFunctions module for spotdesirability.\nThis module provides various test functions and optimization functions for desirability analysis and response surface methodology.",
+    "crumbs": [
+      "API Reference",
+      "RSM Functions",
+      "functions"
+    ]
   },
   {
     "objectID": "examples.html",
@@ -166,55 +181,95 @@
     "href": "docs/reference/data_utils.html",
     "title": "data_utils",
     "section": "",
-    "text": "data_utils\n\n\n\n\n\n\n\n\n\nName\nDescription\n\n\n\n\nget_data_folder_path\nReturns the absolute path to the data folder located in the package."
+    "text": "data_utils\n\n\n\n\n\n\n\n\n\nName\nDescription\n\n\n\n\nget_data_folder_path\nReturns the absolute path to the data folder located in the package.",
+    "crumbs": [
+      "API Reference",
+      "Data Utilities",
+      "data_utils"
+    ]
   },
   {
     "objectID": "docs/reference/data_utils.html#functions",
     "href": "docs/reference/data_utils.html#functions",
     "title": "data_utils",
     "section": "",
-    "text": "Name\nDescription\n\n\n\n\nget_data_folder_path\nReturns the absolute path to the data folder located in the package."
+    "text": "Name\nDescription\n\n\n\n\nget_data_folder_path\nReturns the absolute path to the data folder located in the package.",
+    "crumbs": [
+      "API Reference",
+      "Data Utilities",
+      "data_utils"
+    ]
   },
   {
     "objectID": "docs/reference/functions.rsm.html",
     "href": "docs/reference/functions.rsm.html",
     "title": "functions.rsm",
     "section": "",
-    "text": "functions.rsm\n\n\n\n\n\n\n\n\n\nName\nDescription\n\n\n\n\nactivity_pred\nPredicts the thermal activity based on the input vector x.\n\n\nconversion_pred\nPredicts the percent conversion based on the input vector x.\n\n\nrsm_opt\nOptimization function to calculate desirability."
+    "text": "functions.rsm\n\n\n\n\n\n\n\n\n\nName\nDescription\n\n\n\n\nactivity_pred\nPredicts the thermal activity based on the input vector x.\n\n\nconversion_pred\nPredicts the percent conversion based on the input vector x.\n\n\nrsm_opt\nOptimization function to calculate desirability.",
+    "crumbs": [
+      "API Reference",
+      "RSM Functions",
+      "functions.rsm"
+    ]
   },
   {
     "objectID": "docs/reference/functions.rsm.html#functions",
     "href": "docs/reference/functions.rsm.html#functions",
     "title": "functions.rsm",
     "section": "",
-    "text": "Name\nDescription\n\n\n\n\nactivity_pred\nPredicts the thermal activity based on the input vector x.\n\n\nconversion_pred\nPredicts the percent conversion based on the input vector x.\n\n\nrsm_opt\nOptimization function to calculate desirability."
+    "text": "Name\nDescription\n\n\n\n\nactivity_pred\nPredicts the thermal activity based on the input vector x.\n\n\nconversion_pred\nPredicts the percent conversion based on the input vector x.\n\n\nrsm_opt\nOptimization function to calculate desirability.",
+    "crumbs": [
+      "API Reference",
+      "RSM Functions",
+      "functions.rsm"
+    ]
   },
   {
     "objectID": "docs/reference/plot.ccd.html",
     "href": "docs/reference/plot.ccd.html",
     "title": "plot.ccd",
     "section": "",
-    "text": "plot.ccd\n\n\n\n\n\n\n\n\n\nName\nDescription\n\n\n\n\nplotCCD\nPlots a Central Composite Design (CCD) for k=3 with customizable viewpoint."
+    "text": "plot.ccd\n\n\n\n\n\n\n\n\n\nName\nDescription\n\n\n\n\nplotCCD\nPlots a Central Composite Design (CCD) for k=3 with customizable viewpoint.",
+    "crumbs": [
+      "API Reference",
+      "Plotting",
+      "plot.ccd"
+    ]
   },
   {
     "objectID": "docs/reference/plot.ccd.html#functions",
     "href": "docs/reference/plot.ccd.html#functions",
     "title": "plot.ccd",
     "section": "",
-    "text": "Name\nDescription\n\n\n\n\nplotCCD\nPlots a Central Composite Design (CCD) for k=3 with customizable viewpoint."
+    "text": "Name\nDescription\n\n\n\n\nplotCCD\nPlots a Central Composite Design (CCD) for k=3 with customizable viewpoint.",
+    "crumbs": [
+      "API Reference",
+      "Plotting",
+      "plot.ccd"
+    ]
   },
   {
     "objectID": "docs/reference/utils.desirability.html",
     "href": "docs/reference/utils.desirability.html",
     "title": "utils.desirability",
     "section": "",
-    "text": "utils.desirability\n\n\n\n\n\n\n\n\n\nName\nDescription\n\n\n\n\nDArb\nImplements an arbitrary desirability function.\n\n\nDBox\nImplements a box-like desirability function.\n\n\nDCategorical\nImplements a desirability function for categorical inputs.\n\n\nDMax\nImplements a desirability function for maximization.\n\n\nDMin\nImplements a desirability function for minimization.\n\n\nDOverall\nCombines multiple desirability objects into an overall desirability function.\n\n\nDTarget\nImplements a desirability function for target optimization.\n\n\nDesirabilityBase\nBase class for all desirability functions."
+    "text": "utils.desirability\n\n\n\n\n\n\n\n\n\nName\nDescription\n\n\n\n\nDArb\nImplements an arbitrary desirability function.\n\n\nDBox\nImplements a box-like desirability function.\n\n\nDCategorical\nImplements a desirability function for categorical inputs.\n\n\nDMax\nImplements a desirability function for maximization.\n\n\nDMin\nImplements a desirability function for minimization.\n\n\nDOverall\nCombines multiple desirability objects into an overall desirability function.\n\n\nDTarget\nImplements a desirability function for target optimization.\n\n\nDesirabilityBase\nBase class for all desirability functions.",
+    "crumbs": [
+      "API Reference",
+      "Desirability Classes",
+      "utils.desirability"
+    ]
   },
   {
     "objectID": "docs/reference/utils.desirability.html#classes",
     "href": "docs/reference/utils.desirability.html#classes",
     "title": "utils.desirability",
     "section": "",
-    "text": "Name\nDescription\n\n\n\n\nDArb\nImplements an arbitrary desirability function.\n\n\nDBox\nImplements a box-like desirability function.\n\n\nDCategorical\nImplements a desirability function for categorical inputs.\n\n\nDMax\nImplements a desirability function for maximization.\n\n\nDMin\nImplements a desirability function for minimization.\n\n\nDOverall\nCombines multiple desirability objects into an overall desirability function.\n\n\nDTarget\nImplements a desirability function for target optimization.\n\n\nDesirabilityBase\nBase class for all desirability functions."
+    "text": "Name\nDescription\n\n\n\n\nDArb\nImplements an arbitrary desirability function.\n\n\nDBox\nImplements a box-like desirability function.\n\n\nDCategorical\nImplements a desirability function for categorical inputs.\n\n\nDMax\nImplements a desirability function for maximization.\n\n\nDMin\nImplements a desirability function for minimization.\n\n\nDOverall\nCombines multiple desirability objects into an overall desirability function.\n\n\nDTarget\nImplements a desirability function for target optimization.\n\n\nDesirabilityBase\nBase class for all desirability functions.",
+    "crumbs": [
+      "API Reference",
+      "Desirability Classes",
+      "utils.desirability"
+    ]
   }
 ]
