@@ -574,8 +574,8 @@ class DArb(DesirabilityBase):
             ValueError: If `x` or `d` has fewer than two values.
         """
         super().__init__()
-        self.x = np.atleast_1d(x)
-        self.d = np.atleast_1d(d)
+        self.x = np.atleast_1d(x).astype(float)
+        self.d = np.atleast_1d(d).astype(float)
 
         if np.any(self.d > 1) or np.any(self.d < 0):
             raise ValueError("The desirability values must be 0 <= d <= 1.")
