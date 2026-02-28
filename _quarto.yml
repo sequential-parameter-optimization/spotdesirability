@@ -27,7 +27,7 @@ project:
     - "cookbook.qmd"
     - "download.qmd"
     - "examples.qmd"
-    - "reference/**/*.qmd"
+    - "docs/reference/**/*.qmd"
 
 filters:
   - docs/interlinks.lua
@@ -87,25 +87,25 @@ website:
           - section: "Desirability Classes"
             contents:
               - text: "utils"
-                file: docs/reference/spotdesirability.utils.qmd
+                file: docs/reference/utils.qmd
               - text: "utils.desirability"
-                file: docs/reference/spotdesirability.utils.desirability.qmd
+                file: docs/reference/utils.desirability.qmd
           - section: "RSM Functions"
             contents:
               - text: "functions"
-                file: docs/reference/spotdesirability.functions.qmd
+                file: docs/reference/functions.qmd
               - text: "functions.rsm"
-                file: docs/reference/spotdesirability.functions.rsm.qmd
+                file: docs/reference/functions.rsm.qmd
           - section: "Plotting"
             contents:
               - text: "plot"
-                file: docs/reference/spotdesirability.plot.qmd
+                file: docs/reference/plot.qmd
               - text: "plot.ccd"
-                file: docs/reference/spotdesirability.plot.ccd.qmd
+                file: docs/reference/plot.ccd.qmd
           - section: "Data Utilities"
             contents:
               - text: "data_utils"
-                file: docs/reference/spotdesirability.data_utils.qmd
+                file: docs/reference/data_utils.qmd
 
   # ── Page footer ───────────────────────────────────────────────────────────
   page-footer:
