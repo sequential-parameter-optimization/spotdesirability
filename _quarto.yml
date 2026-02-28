@@ -1,103 +1,113 @@
-# =============================================================================
-# _quarto.yml  —  Quarto project + quartodoc API reference configuration
-# =============================================================================
-# Run `quartodoc build --config _quarto.yml` before `quarto render`.
-# Generated files land in docs/reference/ and are committed to the repo (or
-# generated fresh in CI before every render — see docs.yml workflow).
+# SPDX-FileCopyrightText: 2026 bartzbeielstein
 #
-# Documentation: https://machow.github.io/quartodoc/
+# SPDX-License-Identifier: GPL-2.0-or-later
+#
+# =============================================================================
+# _quarto.yml  —  spotdesirability Documentation
+# =============================================================================
+# Master project configuration for Quarto.
+#
+# Build pipeline:
+#   1. quartodoc build     → docs/reference/*.qmd  (API autodoc)
+#   2. quarto render       → _site/  (full HTML site)
+#   3. quarto publish      → gh-pages branch
+#
+# ⚠️ Safety-critical note: pin Quarto and quartodoc versions in CI to
+#     guarantee reproducible renders across audit cycles.
 # =============================================================================
 
 project:
   type: website
   output-dir: _site
 
+  # Explicitly allowlist what gets rendered.
+  render:
+    - "index.qmd"
+    - "about.qmd"
+    - "cookbook.qmd"
+    - "download.qmd"
+    - "examples.qmd"
+    - "reference/**/*.qmd"
+
+# Website metadata & navigation
+# =============================================================================
 website:
   title: "spotdesirability"
   description: "Python implementation of desirability functions for multivariate optimisation"
-  repo-url: https://github.com/sequential-parameter-optimization/spotdesirability
+  site-url: "https://sequential-parameter-optimization.github.io/spotdesirability/"
+  repo-url: "https://github.com/sequential-parameter-optimization/spotdesirability"
   repo-actions: [edit, issue]
+
+  # ── Minimal top bar (search + GitHub icon only) ───────────────────────────
   navbar:
-    left:
-      - text: "Home"
-        href: index.qmd
-      - text: "Guides"
-        href: cookbook.qmd
-      - text: "Reference"
-        href: reference/index.qmd
+    background: primary
+    search: true
+    right:
+      - icon: github
+        href: "https://github.com/sequential-parameter-optimization/spotdesirability"
+        aria-label: "GitHub repository"
+
+  # ── Left sidebar (primary navigation) ────────────────────────────────────
   sidebar:
-    style: "floating"
+    style: "docked"       # matches MkDocs Material "navigation.sections" feel
+    search: false         # already in navbar
+    collapse-level: 1     # top-level sections default to collapsed
     contents:
+      - text: "Home"
+        file: index.qmd
       - section: "Getting Started"
         contents:
-          - index.qmd
           - download.qmd
           - examples.qmd
       - section: "Guides"
         contents:
           - cookbook.qmd
-      - section: "Reference"
-        contents:
-          - reference/index.qmd
       - section: "About"
         contents:
           - about.qmd
           - SECURITY.md
           - CHANGELOG.md
 
-quartodoc:
-  package: spotdesirability
-  # Path to the Python source tree (relative to this file)
-  source_dir: src
-  # Output directory for generated .qmd stub files
-  dir: reference
-  # Google Docstring parser — matches the project's docstring style
-  parser: google
-  # Enable cross-package interlinks using @-style references in docstrings
-  render_interlinks: true
+      - section: "API Reference"
+        contents:
+          - text: "Overview"
+            file: reference/index.qmd
+          - section: "Desirability Classes"
+            contents:
+              - text: "utils"
+                file: reference/spotdesirability.utils.qmd
+              - text: "utils.desirability"
+                file: reference/spotdesirability.utils.desirability.qmd
+          - section: "RSM Functions"
+            contents:
+              - text: "functions"
+                file: reference/spotdesirability.functions.qmd
+              - text: "functions.rsm"
+                file: reference/spotdesirability.functions.rsm.qmd
+          - section: "Plotting"
+            contents:
+              - text: "plot"
+                file: reference/spotdesirability.plot.qmd
+              - text: "plot.ccd"
+                file: reference/spotdesirability.plot.ccd.qmd
+          - section: "Data Utilities"
+            contents:
+              - text: "data_utils"
+                file: reference/spotdesirability.data_utils.qmd
 
-  sections:
+  # ── Page footer ───────────────────────────────────────────────────────────
+  page-footer:
+    center: |
+      Copyright © 2004-2026 Thomas Bartz-Beielstein |
+      [AGPL-3.0-or-later](https://www.gnu.org/licenses/agpl-3.0.html)
 
-    # ── Desirability Classes ──────────────────────────────────────────────────
-    - title: "Desirability Classes"
-      desc: |
-        Core desirability function classes for multivariate optimisation.
-        Implements the Derringer & Suich (1980) desirability framework.
-      contents:
-        - utils.desirability.DesirabilityBase
-        - utils.desirability.DMax
-        - utils.desirability.DMin
-        - utils.desirability.DTarget
-        - utils.desirability.DArb
-        - utils.desirability.DBox
-        - utils.desirability.DCategorical
-        - utils.desirability.DOverall
+  search:
+    location: navbar
+    type: overlay
 
-    # ── RSM Functions ─────────────────────────────────────────────────────────
-    - title: "RSM Functions"
-      desc: |
-        Response Surface Methodology (RSM) helper functions for the
-        Derringer & Suich case study.
-      contents:
-        - functions.rsm.conversion_pred
-        - functions.rsm.activity_pred
-        - functions.rsm.rsm_opt
-
-    # ── Plotting ──────────────────────────────────────────────────────────────
-    - title: "Plotting"
-      desc: |
-        Visualisation utilities for Central Composite Designs (CCD) and
-        desirability surfaces.
-      contents:
-        - plot.ccd.plotCCD
-
-    # ── Data Utilities ────────────────────────────────────────────────────────
-    - title: "Data Utilities"
-      desc: |
-        Data loading and processing utilities.
-      contents:
-        - data_utils
-
+# =============================================================================
+# HTML output format
+# =============================================================================
 format:
   html:
     theme:
@@ -109,7 +119,41 @@ format:
     code-copy: true
     code-fold: false
     highlight-style: github
+    # Math: built-in MathJax allows $...$ and $$...$$ directly
     html-math-method: mathjax
     smooth-scroll: true
     link-external-icon: true
     link-external-newwindow: true
+
+# =============================================================================
+# quartodoc — API reference generation
+# =============================================================================
+quartodoc:
+  package: spotdesirability
+  source_dir: src
+  dir: reference
+  parser: google
+  render_interlinks: true
+  
+  # CRITICAL FIX: The next two parameters force quartodoc to generate pages 
+  # for underlying module classes/functions.
+  options:
+    children: linked
+
+  # This section lists all top-level targets.
+  sections:
+    - title: "Desirability Classes"
+      contents:
+        - utils
+        - utils.desirability
+    - title: "RSM Functions"
+      contents:
+        - functions
+        - functions.rsm
+    - title: "Plotting"
+      contents:
+        - plot
+        - plot.ccd
+    - title: "Data Utilities"
+      contents:
+        - data_utils
