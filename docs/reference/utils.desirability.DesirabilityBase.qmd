@@ -1,0 +1,31 @@
+# utils.desirability.DesirabilityBase { #spotdesirability.utils.desirability.DesirabilityBase }
+
+```python
+utils.desirability.DesirabilityBase()
+```
+
+Base class for all desirability functions.
+
+Provides a method to print class attributes and extend the range of values.
+
+## Functions {.doc-section .doc-section-functions}
+
+
+Prints the attributes of the class object in a generic and recursive manner.
+
+
+Extends the range of values by a given factor.
+
+## References {.doc-section .doc-section-references}
+
+Many thanks to Max Kuhn for his implementation of the 'desirability' package in R.
+This class is based on the 'desirability' package in R, see:
+https://cran.r-project.org/package=desirability
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [](`~spotdesirability.utils.desirability.DesirabilityBase.extend_range`) | Extend the range of values by a given factor. |
+| [](`~spotdesirability.utils.desirability.DesirabilityBase.plot`) | Plots the continuous desirability functions, i.e., `DMax`, `DMin`, and `DTarget`. |
+| [](`~spotdesirability.utils.desirability.DesirabilityBase.print_class_attributes`) | Prints the attributes of the class object in a generic and recursive manner. |

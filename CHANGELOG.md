@@ -1,3 +1,15 @@
+## <small>0.0.27-rc.1 (2026-02-28)</small>
+
+* Merge branch 'main' into develop ([1b23893](https://github.com/sequential-parameter-optimization/spotdesirability/commit/1b23893))
+* ci: register spotdesirability jupyter kernel before quarto render ([f7302f1](https://github.com/sequential-parameter-optimization/spotdesirability/commit/f7302f1))
+* ci: use patched quartodoc_build.py script to handle griffe incompatibility ([87e6221](https://github.com/sequential-parameter-optimization/spotdesirability/commit/87e6221))
+* docs: explicit quartodoc configuration to generate pages for individual classes and functions ([daf3d93](https://github.com/sequential-parameter-optimization/spotdesirability/commit/daf3d93))
+* chore(release): 0.0.26-rc.3 [skip ci] ([630b561](https://github.com/sequential-parameter-optimization/spotdesirability/commit/630b561))
+* fix(docs): resolve broken link targets to quartodoc pages ([c810716](https://github.com/sequential-parameter-optimization/spotdesirability/commit/c810716))
+
+## <small>0.0.26-rc.3 (2026-02-28)</small>
+
+* fix(docs): resolve broken link targets to quartodoc pages ([c810716](https://github.com/sequential-parameter-optimization/spotdesirability/commit/c810716))
 ## <small>0.0.26 (2026-02-28)</small>
 
 * Merge branch 'main' into develop ([7a2309d](https://github.com/sequential-parameter-optimization/spotdesirability/commit/7a2309d))

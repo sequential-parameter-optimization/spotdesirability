@@ -1,0 +1,56 @@
+# utils.desirability.DCategorical { #spotdesirability.utils.desirability.DCategorical }
+
+```python
+utils.desirability.DCategorical(values, tol=None, missing=None)
+```
+
+Implements a desirability function for categorical inputs.
+
+This class allows users to define desirability values for specific categorical inputs.
+
+## Attributes {.doc-section .doc-section-attributes}
+
+| Name    | Type             | Description                                                                                       |
+|---------|------------------|---------------------------------------------------------------------------------------------------|
+| values  | [dict](`dict`)   | A dictionary where keys are category names (strings) and values are desirability scores (floats). |
+| tol     | [float](`float`) | A tolerance value to replace desirability values of 0. Defaults to None.                          |
+| missing | [float](`float`) | The value to use for missing inputs. Defaults to a non-informative value.                         |
+
+## Functions {.doc-section .doc-section-functions}
+
+
+Predicts the desirability values for the given categorical input data.
+
+
+Plots the desirability function for the categorical inputs.
+
+## References {.doc-section .doc-section-references}
+
+Many thanks to Max Kuhn for his implementation of the 'desirability' package in R.
+This class is based on the 'desirability' package in R, see:
+https://cran.r-project.org/package=desirability
+
+## Examples {.doc-section .doc-section-examples}
+
+```{python}
+from spotdesirability import DCategorical
+import matplotlib.pyplot as plt
+# Define desirability values for categories
+values = {"A": 0.1, "B": 0.9, "C": 0.5}
+# Create a DCategorical object
+dcat = DCategorical(values)
+# Predict desirability for a list of categories
+inputs = ["A", "B", "C"]
+desirability = dcat.predict(inputs)
+print(desirability)
+# [0.1 0.9 0.5]
+# Plot the desirability function
+dcat.plot()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [](`~spotdesirability.utils.desirability.DCategorical.plot`) | Plots the desirability function for the categorical inputs. |
+| [](`~spotdesirability.utils.desirability.DCategorical.predict`) | Predicts the desirability values for the given categorical input data. |

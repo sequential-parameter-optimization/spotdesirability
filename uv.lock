@@ -3692,7 +3692,7 @@ wheels = [
 
 [[package]]
 name = "spotdesirability"
-version = "0.0.25"
+version = "0.0.26rc2"
 source = { editable = "." }
 dependencies = [
     { name = "build" },

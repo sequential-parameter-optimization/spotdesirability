@@ -16,6 +16,8 @@
 #     guarantee reproducible renders across audit cycles.
 # =============================================================================
 
+jupyter: spotdesirability
+
 project:
   type: website
   output-dir: _site
@@ -27,7 +29,7 @@ project:
     - "cookbook.qmd"
     - "download.qmd"
     - "examples.qmd"
-    - "reference/**/*.qmd"
+    - "docs/reference/**/*.qmd"
 
 filters:
   - docs/interlinks.lua
@@ -87,25 +89,51 @@ website:
           - section: "Desirability Classes"
             contents:
               - text: "utils"
-                file: docs/reference/spotdesirability.utils.qmd
+                file: docs/reference/utils.qmd
               - text: "utils.desirability"
-                file: docs/reference/spotdesirability.utils.desirability.qmd
+                file: docs/reference/utils.desirability.qmd
+              - text: "DesirabilityBase"
+                file: docs/reference/utils.desirability.DesirabilityBase.qmd
+              - text: "DMax"
+                file: docs/reference/utils.desirability.DMax.qmd
+              - text: "DMin"
+                file: docs/reference/utils.desirability.DMin.qmd
+              - text: "DTarget"
+                file: docs/reference/utils.desirability.DTarget.qmd
+              - text: "DArb"
+                file: docs/reference/utils.desirability.DArb.qmd
+              - text: "DBox"
+                file: docs/reference/utils.desirability.DBox.qmd
+              - text: "DCategorical"
+                file: docs/reference/utils.desirability.DCategorical.qmd
+              - text: "DOverall"
+                file: docs/reference/utils.desirability.DOverall.qmd
           - section: "RSM Functions"
             contents:
               - text: "functions"
-                file: docs/reference/spotdesirability.functions.qmd
+                file: docs/reference/functions.qmd
               - text: "functions.rsm"
-                file: docs/reference/spotdesirability.functions.rsm.qmd
+                file: docs/reference/functions.rsm.qmd
+              - text: "conversion_pred"
+                file: docs/reference/functions.rsm.conversion_pred.qmd
+              - text: "activity_pred"
+                file: docs/reference/functions.rsm.activity_pred.qmd
+              - text: "rsm_opt"
+                file: docs/reference/functions.rsm.rsm_opt.qmd
           - section: "Plotting"
             contents:
               - text: "plot"
-                file: docs/reference/spotdesirability.plot.qmd
+                file: docs/reference/plot.qmd
               - text: "plot.ccd"
-                file: docs/reference/spotdesirability.plot.ccd.qmd
+                file: docs/reference/plot.ccd.qmd
+              - text: "plotCCD"
+                file: docs/reference/plot.ccd.plotCCD.qmd
           - section: "Data Utilities"
             contents:
               - text: "data_utils"
-                file: docs/reference/spotdesirability.data_utils.qmd
+                file: docs/reference/data_utils.qmd
+              - text: "get_data_folder_path"
+                file: docs/reference/data_utils.get_data_folder_path.qmd
 
   # ── Page footer ───────────────────────────────────────────────────────────
   page-footer:
@@ -158,14 +186,27 @@ quartodoc:
       contents:
         - utils
         - utils.desirability
+        - utils.desirability.DesirabilityBase
+        - utils.desirability.DMax
+        - utils.desirability.DMin
+        - utils.desirability.DTarget
+        - utils.desirability.DArb
+        - utils.desirability.DBox
+        - utils.desirability.DCategorical
+        - utils.desirability.DOverall
     - title: "RSM Functions"
       contents:
         - functions
         - functions.rsm
+        - functions.rsm.conversion_pred
+        - functions.rsm.activity_pred
+        - functions.rsm.rsm_opt
     - title: "Plotting"
       contents:
         - plot
         - plot.ccd
+        - plot.ccd.plotCCD
     - title: "Data Utilities"
       contents:
         - data_utils
+        - data_utils.get_data_folder_path

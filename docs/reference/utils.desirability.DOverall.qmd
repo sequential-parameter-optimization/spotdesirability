@@ -1,0 +1,53 @@
+# utils.desirability.DOverall { #spotdesirability.utils.desirability.DOverall }
+
+```python
+utils.desirability.DOverall(*d_objs)
+```
+
+Combines multiple desirability objects into an overall desirability function.
+
+This class computes the overall desirability by combining individual desirability objects
+using the geometric mean of their desirability scores.
+
+## Attributes {.doc-section .doc-section-attributes}
+
+| Name   | Type           | Description                                                       |
+|--------|----------------|-------------------------------------------------------------------|
+| d_objs | [list](`list`) | A list of desirability objects (e.g., DMax, DMin, DTarget, etc.). |
+
+## Functions {.doc-section .doc-section-functions}
+
+
+Predicts the overall desirability based on the individual desirability objects.
+
+## References {.doc-section .doc-section-references}
+
+Many thanks to Max Kuhn for his implementation of the 'desirability' package in R.
+This class is based on the 'desirability' package in R, see:
+https://cran.r-project.org/package=desirability
+
+## Examples {.doc-section .doc-section-examples}
+
+```{python}
+from spotdesirability import DOverall, DMax, DMin
+import numpy as np
+# Create individual desirability objects
+dmax = DMax(low=0, high=10, scale=1)
+dmin = DMin(low=5, high=15, scale=1)
+# Combine them into an overall desirability object
+doverall = DOverall(dmax, dmin)
+# Predict overall desirability for a set of inputs
+inputs = np.array([[5, 10], [0, 15], [10, 5]])
+overall_desirability = doverall.predict(inputs)
+print(overall_desirability)
+# Predict individual and overall desirabilities
+individual, overall = doverall.predict(inputs, all=True)
+print("Individual:", individual)
+print("Overall:", overall)
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [](`~spotdesirability.utils.desirability.DOverall.predict`) | Predicts the overall desirability based on the individual desirability objects. |

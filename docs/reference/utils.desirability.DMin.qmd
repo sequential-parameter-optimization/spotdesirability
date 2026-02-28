@@ -1,0 +1,58 @@
+# utils.desirability.DMin { #spotdesirability.utils.desirability.DMin }
+
+```python
+utils.desirability.DMin(low, high, scale=1, tol=None, missing=None)
+```
+
+Implements a desirability function for minimization.
+
+The desirability function assigns a value of 1 for inputs below the `low` threshold,
+a value of 0 for inputs above the `high` threshold, and scales the desirability
+between 1 and 0 for inputs within the range `[low, high]` using a specified scale factor.
+
+## Attributes {.doc-section .doc-section-attributes}
+
+| Name    | Type             | Description                                                               |
+|---------|------------------|---------------------------------------------------------------------------|
+| low     | [float](`float`) | The lower threshold for the desirability function.                        |
+| high    | [float](`float`) | The upper threshold for the desirability function.                        |
+| scale   | [float](`float`) | The scaling factor for the desirability function. Must be greater than 0. |
+| tol     | [float](`float`) | A tolerance value to replace desirability values of 0. Defaults to None.  |
+| missing | [float](`float`) | The value to use for missing inputs. Defaults to a non-informative value. |
+
+## Functions {.doc-section .doc-section-functions}
+
+
+Predicts the desirability values for the given input data.
+
+
+Plots the desirability function.
+
+## References {.doc-section .doc-section-references}
+
+Many thanks to Max Kuhn for his implementation of the 'desirability' package in R.
+This class is based on the 'desirability' package in R, see:
+https://cran.r-project.org/package=desirability
+
+## Examples {.doc-section .doc-section-examples}
+
+```{python}
+from spotdesirability import DMin
+import numpy as np
+import matplotlib.pyplot as plt
+# Create a DMin object
+dmin = DMin(low=0, high=10, scale=1)
+# Predict desirability for a range of inputs
+inputs = np.array([-5, 0, 5, 10, 15])
+desirability = dmin.predict(inputs)
+print(desirability)
+# [1. 1. 0.5 0. 0.]
+# Plot the desirability function
+dmin.plot()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [](`~spotdesirability.utils.desirability.DMin.predict`) | Predicts the desirability values for the given input data. |
