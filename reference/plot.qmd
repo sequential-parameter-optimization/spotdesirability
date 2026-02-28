@@ -1,0 +1,8 @@
+# plot { #spotdesirability.plot }
+
+`plot`
+
+Plot module for spotdesirability.
+
+This module provides plotting utilities for visualizing
+Central Composite Designs and other experimental designs.

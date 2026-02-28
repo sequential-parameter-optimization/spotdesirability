@@ -1,0 +1,18 @@
+# utils.desirability { #spotdesirability.utils.desirability }
+
+`utils.desirability`
+
+
+
+## Classes
+
+| Name | Description |
+| --- | --- |
+| [](`~spotdesirability.utils.desirability.DArb`) | Implements an arbitrary desirability function. |
+| [](`~spotdesirability.utils.desirability.DBox`) | Implements a box-like desirability function. |
+| [](`~spotdesirability.utils.desirability.DCategorical`) | Implements a desirability function for categorical inputs. |
+| [](`~spotdesirability.utils.desirability.DMax`) | Implements a desirability function for maximization. |
+| [](`~spotdesirability.utils.desirability.DMin`) | Implements a desirability function for minimization. |
+| [](`~spotdesirability.utils.desirability.DOverall`) | Combines multiple desirability objects into an overall desirability function. |
+| [](`~spotdesirability.utils.desirability.DTarget`) | Implements a desirability function for target optimization. |
+| [](`~spotdesirability.utils.desirability.DesirabilityBase`) | Base class for all desirability functions. |

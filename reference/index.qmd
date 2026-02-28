@@ -2,47 +2,26 @@
 
 ## Desirability Classes
 
-Core desirability function classes for multivariate optimisation.
-Implements the Derringer & Suich (1980) desirability framework.
-
-
 | | |
 | --- | --- |
-| [utils.desirability.DesirabilityBase](utils.desirability.DesirabilityBase.qmd#spotdesirability.utils.desirability.DesirabilityBase) | Base class for all desirability functions. |
-| [utils.desirability.DMax](utils.desirability.DMax.qmd#spotdesirability.utils.desirability.DMax) | Implements a desirability function for maximization. |
-| [utils.desirability.DMin](utils.desirability.DMin.qmd#spotdesirability.utils.desirability.DMin) | Implements a desirability function for minimization. |
-| [utils.desirability.DTarget](utils.desirability.DTarget.qmd#spotdesirability.utils.desirability.DTarget) | Implements a desirability function for target optimization. |
-| [utils.desirability.DArb](utils.desirability.DArb.qmd#spotdesirability.utils.desirability.DArb) | Implements an arbitrary desirability function. |
-| [utils.desirability.DBox](utils.desirability.DBox.qmd#spotdesirability.utils.desirability.DBox) | Implements a box-like desirability function. |
-| [utils.desirability.DCategorical](utils.desirability.DCategorical.qmd#spotdesirability.utils.desirability.DCategorical) | Implements a desirability function for categorical inputs. |
-| [utils.desirability.DOverall](utils.desirability.DOverall.qmd#spotdesirability.utils.desirability.DOverall) | Combines multiple desirability objects into an overall desirability function. |
+| [utils](utils.qmd#spotdesirability.utils) | Utils module for spotdesirability. |
+| [utils.desirability](utils.desirability.qmd#spotdesirability.utils.desirability) |  |
 
 ## RSM Functions
 
-Response Surface Methodology (RSM) helper functions for the
-Derringer & Suich case study.
-
-
 | | |
 | --- | --- |
-| [functions.rsm.conversion_pred](functions.rsm.conversion_pred.qmd#spotdesirability.functions.rsm.conversion_pred) | Predicts the percent conversion based on the input vector x. |
-| [functions.rsm.activity_pred](functions.rsm.activity_pred.qmd#spotdesirability.functions.rsm.activity_pred) | Predicts the thermal activity based on the input vector x. |
-| [functions.rsm.rsm_opt](functions.rsm.rsm_opt.qmd#spotdesirability.functions.rsm.rsm_opt) | Optimization function to calculate desirability. |
+| [functions](functions.qmd#spotdesirability.functions) | Functions module for spotdesirability. |
+| [functions.rsm](functions.rsm.qmd#spotdesirability.functions.rsm) |  |
 
 ## Plotting
 
-Visualisation utilities for Central Composite Designs (CCD) and
-desirability surfaces.
-
-
 | | |
 | --- | --- |
-| [plot.ccd.plotCCD](plot.ccd.plotCCD.qmd#spotdesirability.plot.ccd.plotCCD) | Plots a Central Composite Design (CCD) for k=3 with customizable viewpoint. |
+| [plot](plot.qmd#spotdesirability.plot) | Plot module for spotdesirability. |
+| [plot.ccd](plot.ccd.qmd#spotdesirability.plot.ccd) |  |
 
 ## Data Utilities
-
-Data loading and processing utilities.
-
 
 | | |
 | --- | --- |
