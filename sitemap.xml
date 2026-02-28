@@ -2,54 +2,106 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sequential-parameter-optimization.github.io/spotdesirability/docs/reference/utils.html</loc>
-    <lastmod>2026-02-28T16:22:51.121Z</lastmod>
+    <lastmod>2026-02-28T16:41:20.686Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sequential-parameter-optimization.github.io/spotdesirability/docs/reference/utils.desirability.DesirabilityBase.html</loc>
+    <lastmod>2026-02-28T16:41:20.686Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sequential-parameter-optimization.github.io/spotdesirability/docs/reference/utils.desirability.DOverall.html</loc>
+    <lastmod>2026-02-28T16:41:20.686Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sequential-parameter-optimization.github.io/spotdesirability/docs/reference/utils.desirability.DMax.html</loc>
+    <lastmod>2026-02-28T16:41:20.686Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sequential-parameter-optimization.github.io/spotdesirability/docs/reference/utils.desirability.DBox.html</loc>
+    <lastmod>2026-02-28T16:41:20.686Z</lastmod>
   </url>
   <url>
     <loc>https://sequential-parameter-optimization.github.io/spotdesirability/docs/reference/plot.html</loc>
-    <lastmod>2026-02-28T16:22:51.121Z</lastmod>
+    <lastmod>2026-02-28T16:41:20.686Z</lastmod>
   </url>
   <url>
-    <loc>https://sequential-parameter-optimization.github.io/spotdesirability/docs/reference/index.html</loc>
-    <lastmod>2026-02-28T16:23:51.293Z</lastmod>
+    <loc>https://sequential-parameter-optimization.github.io/spotdesirability/docs/reference/plot.ccd.plotCCD.html</loc>
+    <lastmod>2026-02-28T16:41:20.686Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sequential-parameter-optimization.github.io/spotdesirability/docs/reference/functions.rsm.rsm_opt.html</loc>
+    <lastmod>2026-02-28T16:41:20.686Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sequential-parameter-optimization.github.io/spotdesirability/docs/reference/functions.rsm.conversion_pred.html</loc>
+    <lastmod>2026-02-28T16:41:20.686Z</lastmod>
   </url>
   <url>
     <loc>https://sequential-parameter-optimization.github.io/spotdesirability/docs/reference/functions.html</loc>
-    <lastmod>2026-02-28T16:22:51.121Z</lastmod>
+    <lastmod>2026-02-28T16:41:20.686Z</lastmod>
   </url>
   <url>
-    <loc>https://sequential-parameter-optimization.github.io/spotdesirability/examples.html</loc>
-    <lastmod>2026-02-28T16:22:51.121Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sequential-parameter-optimization.github.io/spotdesirability/cookbook.html</loc>
-    <lastmod>2026-02-28T16:22:51.119Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sequential-parameter-optimization.github.io/spotdesirability/index.html</loc>
-    <lastmod>2026-02-28T16:22:51.121Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sequential-parameter-optimization.github.io/spotdesirability/about.html</loc>
-    <lastmod>2026-02-28T16:22:51.118Z</lastmod>
+    <loc>https://sequential-parameter-optimization.github.io/spotdesirability/docs/reference/data_utils.get_data_folder_path.html</loc>
+    <lastmod>2026-02-28T16:41:20.685Z</lastmod>
   </url>
   <url>
     <loc>https://sequential-parameter-optimization.github.io/spotdesirability/download.html</loc>
-    <lastmod>2026-02-28T16:22:51.121Z</lastmod>
+    <lastmod>2026-02-28T16:41:20.686Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sequential-parameter-optimization.github.io/spotdesirability/about.html</loc>
+    <lastmod>2026-02-28T16:41:20.683Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sequential-parameter-optimization.github.io/spotdesirability/index.html</loc>
+    <lastmod>2026-02-28T16:41:20.687Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sequential-parameter-optimization.github.io/spotdesirability/cookbook.html</loc>
+    <lastmod>2026-02-28T16:41:20.683Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sequential-parameter-optimization.github.io/spotdesirability/examples.html</loc>
+    <lastmod>2026-02-28T16:41:20.686Z</lastmod>
   </url>
   <url>
     <loc>https://sequential-parameter-optimization.github.io/spotdesirability/docs/reference/data_utils.html</loc>
-    <lastmod>2026-02-28T16:22:51.120Z</lastmod>
+    <lastmod>2026-02-28T16:41:20.686Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sequential-parameter-optimization.github.io/spotdesirability/docs/reference/functions.rsm.activity_pred.html</loc>
+    <lastmod>2026-02-28T16:41:20.686Z</lastmod>
   </url>
   <url>
     <loc>https://sequential-parameter-optimization.github.io/spotdesirability/docs/reference/functions.rsm.html</loc>
-    <lastmod>2026-02-28T16:22:51.121Z</lastmod>
+    <lastmod>2026-02-28T16:41:20.686Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sequential-parameter-optimization.github.io/spotdesirability/docs/reference/index.html</loc>
+    <lastmod>2026-02-28T16:41:48.262Z</lastmod>
   </url>
   <url>
     <loc>https://sequential-parameter-optimization.github.io/spotdesirability/docs/reference/plot.ccd.html</loc>
-    <lastmod>2026-02-28T16:22:51.121Z</lastmod>
+    <lastmod>2026-02-28T16:41:20.686Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sequential-parameter-optimization.github.io/spotdesirability/docs/reference/utils.desirability.DArb.html</loc>
+    <lastmod>2026-02-28T16:41:20.686Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sequential-parameter-optimization.github.io/spotdesirability/docs/reference/utils.desirability.DCategorical.html</loc>
+    <lastmod>2026-02-28T16:41:20.686Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sequential-parameter-optimization.github.io/spotdesirability/docs/reference/utils.desirability.DMin.html</loc>
+    <lastmod>2026-02-28T16:41:20.686Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sequential-parameter-optimization.github.io/spotdesirability/docs/reference/utils.desirability.DTarget.html</loc>
+    <lastmod>2026-02-28T16:41:20.686Z</lastmod>
   </url>
   <url>
     <loc>https://sequential-parameter-optimization.github.io/spotdesirability/docs/reference/utils.desirability.html</loc>
-    <lastmod>2026-02-28T16:22:51.121Z</lastmod>
+    <lastmod>2026-02-28T16:41:20.686Z</lastmod>
   </url>
 </urlset>
