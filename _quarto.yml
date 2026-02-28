@@ -16,8 +16,6 @@
 #     guarantee reproducible renders across audit cycles.
 # =============================================================================
 
-jupyter: spotdesirability
-
 project:
   type: website
   output-dir: _site
