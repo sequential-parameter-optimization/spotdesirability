@@ -29,6 +29,18 @@ project:
     - "examples.qmd"
     - "reference/**/*.qmd"
 
+filters:
+  - docs/interlinks.lua
+
+interlinks:
+  sources:
+    python:
+      url: "https://docs.python.org/3/"
+    pandas:
+      url: "https://pandas.pydata.org/docs/"
+    numpy:
+      url: "https://numpy.org/doc/stable/"
+
 # Website metadata & navigation
 # =============================================================================
 website:
@@ -71,29 +83,29 @@ website:
       - section: "API Reference"
         contents:
           - text: "Overview"
-            file: reference/index.qmd
+            file: docs/reference/index.qmd
           - section: "Desirability Classes"
             contents:
               - text: "utils"
-                file: reference/spotdesirability.utils.qmd
+                file: docs/reference/spotdesirability.utils.qmd
               - text: "utils.desirability"
-                file: reference/spotdesirability.utils.desirability.qmd
+                file: docs/reference/spotdesirability.utils.desirability.qmd
           - section: "RSM Functions"
             contents:
               - text: "functions"
-                file: reference/spotdesirability.functions.qmd
+                file: docs/reference/spotdesirability.functions.qmd
               - text: "functions.rsm"
-                file: reference/spotdesirability.functions.rsm.qmd
+                file: docs/reference/spotdesirability.functions.rsm.qmd
           - section: "Plotting"
             contents:
               - text: "plot"
-                file: reference/spotdesirability.plot.qmd
+                file: docs/reference/spotdesirability.plot.qmd
               - text: "plot.ccd"
-                file: reference/spotdesirability.plot.ccd.qmd
+                file: docs/reference/spotdesirability.plot.ccd.qmd
           - section: "Data Utilities"
             contents:
               - text: "data_utils"
-                file: reference/spotdesirability.data_utils.qmd
+                file: docs/reference/spotdesirability.data_utils.qmd
 
   # ── Page footer ───────────────────────────────────────────────────────────
   page-footer:
@@ -131,7 +143,7 @@ format:
 quartodoc:
   package: spotdesirability
   source_dir: src
-  dir: reference
+  dir: docs/reference
   parser: google
   render_interlinks: true
   

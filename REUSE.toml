@@ -52,7 +52,7 @@ SPDX-FileCopyrightText = "2026 bartzbeielstein"
 SPDX-License-Identifier = "GPL-2.0-or-later"
 
 [[annotations]]
-path = ["**/__pycache__/**", ".pytest_cache/**", "site/**", "dist/**", "_site/**"]
+path = ["**/__pycache__/**", ".pytest_cache/**", "site/**", "dist/**", "_site/**", "_inv/**"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2026 bartzbeielstein"
 SPDX-License-Identifier = "GPL-2.0-or-later"

@@ -1,0 +1,13 @@
+# functions.rsm { #spotdesirability.functions.rsm }
+
+`functions.rsm`
+
+
+
+## Functions
+
+| Name | Description |
+| --- | --- |
+| [](`~spotdesirability.functions.rsm.activity_pred`) | Predicts the thermal activity based on the input vector x. |
+| [](`~spotdesirability.functions.rsm.conversion_pred`) | Predicts the percent conversion based on the input vector x. |
+| [](`~spotdesirability.functions.rsm.rsm_opt`) | Optimization function to calculate desirability. |

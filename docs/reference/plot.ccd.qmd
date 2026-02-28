@@ -1,0 +1,11 @@
+# plot.ccd { #spotdesirability.plot.ccd }
+
+`plot.ccd`
+
+
+
+## Functions
+
+| Name | Description |
+| --- | --- |
+| [](`~spotdesirability.plot.ccd.plotCCD`) | Plots a Central Composite Design (CCD) for k=3 with customizable viewpoint. |

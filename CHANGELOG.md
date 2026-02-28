@@ -1,3 +1,17 @@
+## <small>0.0.26-rc.2 (2026-02-28)</small>
+
+* docs: generated reference files ([133906f](https://github.com/sequential-parameter-optimization/spotdesirability/commit/133906f))
+* fix(docs): move quartodoc outputs to docs/reference, pin quarto to 1.8.27, fix DArb type error ([6018312](https://github.com/sequential-parameter-optimization/spotdesirability/commit/6018312))
+
+## <small>0.0.26-rc.1 (2026-02-28)</small>
+
+* fix: interlinks activated ([3054ea4](https://github.com/sequential-parameter-optimization/spotdesirability/commit/3054ea4))
+* docs: enable quartodoc cross-project interlinks ([4e20741](https://github.com/sequential-parameter-optimization/spotdesirability/commit/4e20741))
+* docs: implement quartodoc configuration mirroring spotforecast2_safe and ensure REUSE compliance ([e02911e](https://github.com/sequential-parameter-optimization/spotdesirability/commit/e02911e))
+* chore(ci): pin GitHub Actions to full commit SHAs for security hardening ([95ff09f](https://github.com/sequential-parameter-optimization/spotdesirability/commit/95ff09f))
+* chore(release): 0.0.24-rc.2 [skip ci] ([944d278](https://github.com/sequential-parameter-optimization/spotdesirability/commit/944d278))
+* Merge branch 'main' into develop ([7a2309d](https://github.com/sequential-parameter-optimization/spotdesirability/commit/7a2309d))
+
 ## <small>0.0.24-rc.2 (2026-02-27)</small>
 
 * fix: quartodoc ([b5ac3f7](https://github.com/sequential-parameter-optimization/spotdesirability/commit/b5ac3f7))

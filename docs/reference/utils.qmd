@@ -1,0 +1,8 @@
+# utils { #spotdesirability.utils }
+
+`utils`
+
+Utils module for spotdesirability.
+
+This module provides utility classes and functions for
+desirability function calculations and analysis.

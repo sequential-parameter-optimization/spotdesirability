@@ -1,0 +1,28 @@
+# Function reference {.doc .doc-index}
+
+## Desirability Classes
+
+| | |
+| --- | --- |
+| [utils](utils.qmd#spotdesirability.utils) | Utils module for spotdesirability. |
+| [utils.desirability](utils.desirability.qmd#spotdesirability.utils.desirability) |  |
+
+## RSM Functions
+
+| | |
+| --- | --- |
+| [functions](functions.qmd#spotdesirability.functions) | Functions module for spotdesirability. |
+| [functions.rsm](functions.rsm.qmd#spotdesirability.functions.rsm) |  |
+
+## Plotting
+
+| | |
+| --- | --- |
+| [plot](plot.qmd#spotdesirability.plot) | Plot module for spotdesirability. |
+| [plot.ccd](plot.ccd.qmd#spotdesirability.plot.ccd) |  |
+
+## Data Utilities
+
+| | |
+| --- | --- |
+| [data_utils](data_utils.qmd#spotdesirability.data_utils) |  |

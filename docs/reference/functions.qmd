@@ -1,0 +1,8 @@
+# functions { #spotdesirability.functions }
+
+`functions`
+
+Functions module for spotdesirability.
+
+This module provides various test functions and optimization functions
+for desirability analysis and response surface methodology.

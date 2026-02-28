@@ -32,7 +32,7 @@ permissions: read-all
 
 env:
   # ⚠️ Pinned to match production safety standards.
-  QUARTO_VERSION: "1.7.29"
+  QUARTO_VERSION: "1.8.27"
   PYTHON_VERSION: "3.13"
 
 jobs:

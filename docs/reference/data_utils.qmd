@@ -1,0 +1,11 @@
+# data_utils { #spotdesirability.data_utils }
+
+`data_utils`
+
+
+
+## Functions
+
+| Name | Description |
+| --- | --- |
+| [](`~spotdesirability.data_utils.get_data_folder_path`) | Returns the absolute path to the data folder located in the package. |
