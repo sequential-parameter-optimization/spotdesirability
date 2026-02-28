@@ -44,17 +44,17 @@ jobs:
 
     steps:
       - name: Checkout (full history)
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.2.2
         with:
           fetch-depth: 0   # Full history ensures cross-referencing interlinks work safely
 
       - name: Set up Python ${{ env.PYTHON_VERSION }}
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.3.0
         with:
           python-version: ${{ env.PYTHON_VERSION }}
 
       - name: Set up uv
-        uses: astral-sh/setup-uv@v5
+        uses: astral-sh/setup-uv@e58605a9b6da7c637471fab8847a5e5a6b8df081 # v5.2.2
 
       - name: Install Python dependencies
         run: |
@@ -62,7 +62,7 @@ jobs:
           uv sync --group dev
 
       - name: Install Quarto CLI ${{ env.QUARTO_VERSION }}
-        uses: quarto-dev/quarto-actions/setup@v2
+        uses: quarto-dev/quarto-actions/setup@8a96df13519ee81fd526f2dfca5962811136661b # v2.1.2
         with:
           version: ${{ env.QUARTO_VERSION }}
 
@@ -79,7 +79,7 @@ jobs:
         run: uv run quarto render --no-cache
 
       - name: Deploy to GitHub Pages
-        uses: quarto-dev/quarto-actions/publish@v2
+        uses: quarto-dev/quarto-actions/publish@8a96df13519ee81fd526f2dfca5962811136661b # v2.1.2
         with:
           target: gh-pages
           path: _site
