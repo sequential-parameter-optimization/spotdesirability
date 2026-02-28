@@ -545,13 +545,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td>x</td>
-<td><a href="`list`">list</a> or <a href="`numpy`">np</a>.<a href="`numpy.ndarray`">ndarray</a></td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a> or <a href="https://numpy.org/doc/stable/reference/index.html#module-numpy">np</a>.<a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray">ndarray</a></td>
 <td>Input parameters (e.g., time, temperature, catalyst).</td>
 <td><em>required</em></td>
 </tr>
 <tr class="even">
 <td>d_object</td>
-<td><a href="`spotdesirability.utils.desirability.DOverall`">DOverall</a></td>
+<td><code>DOverall</code></td>
 <td>Overall desirability object.</td>
 <td><em>required</em></td>
 </tr>
@@ -563,13 +563,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td>space</td>
-<td><a href="`str`">str</a></td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></td>
 <td>Design space (“square” or “circular”).</td>
 <td><code>'square'</code></td>
 </tr>
 <tr class="odd">
 <td>alpha</td>
-<td><a href="`float`">float</a></td>
+<td><a href="https://docs.python.org/3/library/functions.html#float">float</a></td>
 <td>Axial distance for the design space. Default is 1.682 for a rotatable CCD.</td>
 <td><code>1.682</code></td>
 </tr>
@@ -589,7 +589,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td>float</td>
-<td><a href="`float`">float</a></td>
+<td><a href="https://docs.python.org/3/library/functions.html#float">float</a></td>
 <td>Negative desirability.</td>
 </tr>
 </tbody>
@@ -608,7 +608,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td></td>
-<td><a href="`ValueError`">ValueError</a></td>
+<td><a href="https://docs.python.org/3/library/exceptions.html#ValueError">ValueError</a></td>
 <td>If <code>space</code> is not “square” or “circular”.</td>
 </tr>
 </tbody>
@@ -616,7 +616,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="examples" class="level2 doc-section doc-section-examples">
 <h2 class="doc-section doc-section-examples anchored" data-anchor-id="examples">Examples</h2>
-<div id="39681851" class="cell" data-execution_count="1">
+<div id="47ec52b5" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> spotdesirability <span class="im">import</span> DOverall, rsm_opt, DTarget, conversion_pred, activity_pred</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>d_object <span class="op">=</span> DOverall(DTarget(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>), DTarget(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>))</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>prediction_funcs <span class="op">=</span> [conversion_pred, activity_pred]</span>

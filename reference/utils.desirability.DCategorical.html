@@ -544,17 +544,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td>values</td>
-<td><a href="`dict`">dict</a></td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a></td>
 <td>A dictionary where keys are category names (strings) and values are desirability scores (floats).</td>
 </tr>
 <tr class="even">
 <td>tol</td>
-<td><a href="`float`">float</a></td>
+<td><a href="https://docs.python.org/3/library/functions.html#float">float</a></td>
 <td>A tolerance value to replace desirability values of 0. Defaults to None.</td>
 </tr>
 <tr class="odd">
 <td>missing</td>
-<td><a href="`float`">float</a></td>
+<td><a href="https://docs.python.org/3/library/functions.html#float">float</a></td>
 <td>The value to use for missing inputs. Defaults to a non-informative value.</td>
 </tr>
 </tbody>
@@ -571,7 +571,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="examples" class="level2 doc-section doc-section-examples">
 <h2 class="doc-section doc-section-examples anchored" data-anchor-id="examples">Examples</h2>
-<div id="27c050b8" class="cell" data-execution_count="1">
+<div id="df34a14b" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> spotdesirability <span class="im">import</span> DCategorical</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Define desirability values for categories</span></span>
@@ -641,31 +641,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td>non_inform</td>
-<td><a href="`bool`">bool</a></td>
+<td><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></td>
 <td>Whether to display the non-informative value as a dashed line. Defaults to True.</td>
 <td><code>True</code></td>
 </tr>
 <tr class="even">
 <td>xlabel</td>
-<td><a href="`str`">str</a></td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></td>
 <td>Label for the x-axis. Defaults to “Category”.</td>
 <td><code>'Category'</code></td>
 </tr>
 <tr class="odd">
 <td>ylabel</td>
-<td><a href="`str`">str</a></td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></td>
 <td>Label for the y-axis. Defaults to “Desirability”.</td>
 <td><code>'Desirability'</code></td>
 </tr>
 <tr class="even">
 <td>figsize</td>
-<td><a href="`tuple`">tuple</a></td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#tuple">tuple</a></td>
 <td>Size of the figure (width, height) in inches. Defaults to (10, 8).</td>
 <td><code>(10, 8)</code></td>
 </tr>
 <tr class="odd">
 <td>**kwargs</td>
-<td><a href="`typing.Dict`">Dict</a>[<a href="`str`">str</a>, <a href="`typing.Any`">Any</a>]</td>
+<td><a href="https://docs.python.org/3/library/typing.html#typing.Dict">Dict</a>[<a href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]</td>
 <td>Additional keyword arguments for the plot.</td>
 <td><code>{}</code></td>
 </tr>
@@ -674,7 +674,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="examples-1" class="level4 doc-section doc-section-examples">
 <h4 class="doc-section doc-section-examples anchored" data-anchor-id="examples-1">Examples</h4>
-<div id="ab659dc8" class="cell" data-execution_count="2">
+<div id="83649d81" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> spotdesirability <span class="im">import</span> DCategorical</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>values <span class="op">=</span> {<span class="st">"A"</span>: <span class="fl">0.1</span>, <span class="st">"B"</span>: <span class="fl">0.9</span>, <span class="st">"C"</span>: <span class="fl">0.5</span>}</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>dcat <span class="op">=</span> DCategorical(values)</span>
@@ -715,13 +715,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td>newdata</td>
-<td><a href="`list`">list</a> or <a href="`array`">array</a> - <a href="`like`">like</a></td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a> or <a href="https://docs.python.org/3/library/array.html#module-array">array</a> - <code>like</code></td>
 <td>A list or array of categorical inputs. If None, an empty array is used. Defaults to None.</td>
 <td><code>None</code></td>
 </tr>
 <tr class="even">
 <td>missing</td>
-<td><a href="`float`">float</a></td>
+<td><a href="https://docs.python.org/3/library/functions.html#float">float</a></td>
 <td>The value to use for missing inputs. Defaults to the object’s <code>missing</code> attribute.</td>
 <td><code>None</code></td>
 </tr>
@@ -741,7 +741,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td></td>
-<td><a href="`numpy`">numpy</a>.<a href="`numpy.ndarray`">ndarray</a></td>
+<td><a href="https://numpy.org/doc/stable/reference/index.html#module-numpy">numpy</a>.<a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray">ndarray</a></td>
 <td>The desirability values for the input data.</td>
 </tr>
 </tbody>
@@ -760,7 +760,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td></td>
-<td><a href="`ValueError`">ValueError</a></td>
+<td><a href="https://docs.python.org/3/library/exceptions.html#ValueError">ValueError</a></td>
 <td>If a category in <code>newdata</code> is not in the allowed categories.</td>
 </tr>
 </tbody>
@@ -768,7 +768,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="examples-2" class="level4 doc-section doc-section-examples">
 <h4 class="doc-section doc-section-examples anchored" data-anchor-id="examples-2">Examples</h4>
-<div id="05c53438" class="cell" data-execution_count="3">
+<div id="bc4ff62a" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> spotdesirability <span class="im">import</span> DCategorical</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>values <span class="op">=</span> {<span class="st">"A"</span>: <span class="fl">0.1</span>, <span class="st">"B"</span>: <span class="fl">0.9</span>, <span class="st">"C"</span>: <span class="fl">0.5</span>}</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>dcat <span class="op">=</span> DCategorical(values)</span>

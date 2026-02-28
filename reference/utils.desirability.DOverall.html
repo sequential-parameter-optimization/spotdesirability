@@ -543,7 +543,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td>d_objs</td>
-<td><a href="`list`">list</a></td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a></td>
 <td>A list of desirability objects (e.g., DMax, DMin, DTarget, etc.).</td>
 </tr>
 </tbody>
@@ -559,7 +559,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="examples" class="level2 doc-section doc-section-examples">
 <h2 class="doc-section doc-section-examples anchored" data-anchor-id="examples">Examples</h2>
-<div id="c6c708df" class="cell" data-execution_count="1">
+<div id="b04bb98c" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> spotdesirability <span class="im">import</span> DOverall, DMax, DMin</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create individual desirability objects</span></span>
@@ -616,13 +616,13 @@ Overall: [ 0.5 -0.   1. ]</code></pre>
 <tbody>
 <tr class="odd">
 <td>newdata</td>
-<td><a href="`list`">list</a> or <a href="`numpy`">numpy</a>.<a href="`numpy.ndarray`">ndarray</a></td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#list">list</a> or <a href="https://numpy.org/doc/stable/reference/index.html#module-numpy">numpy</a>.<a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray">ndarray</a></td>
 <td>A list or array of predicted outcomes, one for each desirability object.</td>
 <td><em>required</em></td>
 </tr>
 <tr class="even">
 <td>all</td>
-<td><a href="`bool`">bool</a></td>
+<td><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></td>
 <td>Whether to return individual desirabilities along with the overall desirability. Defaults to False.</td>
 <td><code>False</code></td>
 </tr>
@@ -642,7 +642,7 @@ Overall: [ 0.5 -0.   1. ]</code></pre>
 <tbody>
 <tr class="odd">
 <td></td>
-<td><a href="`float`">float</a> or <a href="`tuple`">tuple</a></td>
+<td><a href="https://docs.python.org/3/library/functions.html#float">float</a> or <a href="https://docs.python.org/3/library/stdtypes.html#tuple">tuple</a></td>
 <td>The overall desirability score, or a tuple of individual and overall desirabilities if <code>all=True</code>.</td>
 </tr>
 </tbody>
@@ -661,7 +661,7 @@ Overall: [ 0.5 -0.   1. ]</code></pre>
 <tbody>
 <tr class="odd">
 <td></td>
-<td><a href="`ValueError`">ValueError</a></td>
+<td><a href="https://docs.python.org/3/library/exceptions.html#ValueError">ValueError</a></td>
 <td>If the number of columns in <code>newdata</code> does not match the number of desirability objects.</td>
 </tr>
 </tbody>
@@ -669,7 +669,7 @@ Overall: [ 0.5 -0.   1. ]</code></pre>
 </section>
 <section id="examples-1" class="level4 doc-section doc-section-examples">
 <h4 class="doc-section doc-section-examples anchored" data-anchor-id="examples-1">Examples</h4>
-<div id="f2ae98a3" class="cell" data-execution_count="2">
+<div id="e385e5dd" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> spotdesirability <span class="im">import</span> DOverall, DMax, DMin</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create individual desirability objects</span></span>
