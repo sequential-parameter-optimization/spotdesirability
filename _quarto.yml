@@ -29,6 +29,18 @@ project:
     - "examples.qmd"
     - "reference/**/*.qmd"
 
+filters:
+  - docs/interlinks.lua
+
+interlinks:
+  sources:
+    python:
+      url: "https://docs.python.org/3/"
+    pandas:
+      url: "https://pandas.pydata.org/docs/"
+    numpy:
+      url: "https://numpy.org/doc/stable/"
+
 # Website metadata & navigation
 # =============================================================================
 website:
