@@ -1,0 +1,7 @@
+# data_utils.get_data_folder_path { #spotdesirability.data_utils.get_data_folder_path }
+
+```python
+data_utils.get_data_folder_path()
+```
+
+Returns the absolute path to the data folder located in the package.

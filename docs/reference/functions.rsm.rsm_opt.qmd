@@ -1,0 +1,47 @@
+# functions.rsm.rsm_opt { #spotdesirability.functions.rsm.rsm_opt }
+
+```python
+functions.rsm.rsm_opt(
+    x,
+    d_object,
+    prediction_funcs,
+    space='square',
+    alpha=1.682,
+)
+```
+
+Optimization function to calculate desirability.
+Optimizers minimize, so we return negative desirability.
+
+## Parameters {.doc-section .doc-section-parameters}
+
+| Name             | Type                                                       | Description                                                                | Default    |
+|------------------|------------------------------------------------------------|----------------------------------------------------------------------------|------------|
+| x                | [list](`list`) or [np](`numpy`).[ndarray](`numpy.ndarray`) | Input parameters (e.g., time, temperature, catalyst).                      | _required_ |
+| d_object         | [DOverall](`spotdesirability.utils.desirability.DOverall`) | Overall desirability object.                                               | _required_ |
+| prediction_funcs | list of callables                                          | List of prediction functions to calculate outcomes.                        | _required_ |
+| space            | [str](`str`)                                               | Design space ("square" or "circular").                                     | `'square'` |
+| alpha            | [float](`float`)                                           | Axial distance for the design space. Default is 1.682 for a rotatable CCD. | `1.682`    |
+
+## Returns {.doc-section .doc-section-returns}
+
+| Name   | Type             | Description            |
+|--------|------------------|------------------------|
+| float  | [float](`float`) | Negative desirability. |
+
+## Raises {.doc-section .doc-section-raises}
+
+| Name   | Type                       | Description                               |
+|--------|----------------------------|-------------------------------------------|
+|        | [ValueError](`ValueError`) | If `space` is not "square" or "circular". |
+
+## Examples {.doc-section .doc-section-examples}
+
+```{python}
+from spotdesirability import DOverall, rsm_opt, DTarget, conversion_pred, activity_pred
+d_object = DOverall(DTarget(0, 0.5, 1), DTarget(0, 0.5, 1))
+prediction_funcs = [conversion_pred, activity_pred]
+x = [1.0, 2.0, 3.0]
+desirability = rsm_opt(x, d_object, prediction_funcs)
+print(desirability)
+```
