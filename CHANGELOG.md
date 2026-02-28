@@ -1,3 +1,9 @@
+## <small>0.0.24-rc.2 (2026-02-27)</small>
+
+* fix: quartodoc ([b5ac3f7](https://github.com/sequential-parameter-optimization/spotdesirability/commit/b5ac3f7))
+* docs: README ([d3ed255](https://github.com/sequential-parameter-optimization/spotdesirability/commit/d3ed255))
+* docs: README ([d75f20d](https://github.com/sequential-parameter-optimization/spotdesirability/commit/d75f20d))
+* Update README.md ([45c4f35](https://github.com/sequential-parameter-optimization/spotdesirability/commit/45c4f35))
 ## <small>0.0.25 (2026-02-27)</small>
 
 * Merge pull request #13 from sequential-parameter-optimization/develop ([e476484](https://github.com/sequential-parameter-optimization/spotdesirability/commit/e476484)), closes [#13](https://github.com/sequential-parameter-optimization/spotdesirability/issues/13)
