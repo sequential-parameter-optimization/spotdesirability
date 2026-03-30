@@ -1,3 +1,23 @@
+## <small>0.1.2-rc.1 (2026-03-30)</small>
+
+* Merge branch 'main' into dependabot/uv/authlib-1.6.9 ([068affd](https://github.com/sequential-parameter-optimization/spotdesirability/commit/068affd))
+* Merge branch 'main' into develop ([54d1b82](https://github.com/sequential-parameter-optimization/spotdesirability/commit/54d1b82))
+* Merge pull request #24 from sequential-parameter-optimization/dependabot/uv/authlib-1.6.9 ([a108d39](https://github.com/sequential-parameter-optimization/spotdesirability/commit/a108d39)), closes [#24](https://github.com/sequential-parameter-optimization/spotdesirability/issues/24)
+* Merge pull request #25 from sequential-parameter-optimization/dependabot/github_actions/actions-ffd1 ([4172ca7](https://github.com/sequential-parameter-optimization/spotdesirability/commit/4172ca7)), closes [#25](https://github.com/sequential-parameter-optimization/spotdesirability/issues/25)
+* Merge pull request #26 from sequential-parameter-optimization/dependabot/uv/requests-2.33.0 ([5975db4](https://github.com/sequential-parameter-optimization/spotdesirability/commit/5975db4)), closes [#26](https://github.com/sequential-parameter-optimization/spotdesirability/issues/26)
+* Merge pull request #27 from sequential-parameter-optimization/dependabot/pip/python-deps-d0a4681fe4 ([e0a6543](https://github.com/sequential-parameter-optimization/spotdesirability/commit/e0a6543)), closes [#27](https://github.com/sequential-parameter-optimization/spotdesirability/issues/27)
+* Merge pull request #28 from sequential-parameter-optimization/dependabot/uv/cryptography-46.0.6 ([24f3105](https://github.com/sequential-parameter-optimization/spotdesirability/commit/24f3105)), closes [#28](https://github.com/sequential-parameter-optimization/spotdesirability/issues/28)
+* Merge pull request #30 from sequential-parameter-optimization/dependabot/uv/nltk-3.9.4 ([747233f](https://github.com/sequential-parameter-optimization/spotdesirability/commit/747233f)), closes [#30](https://github.com/sequential-parameter-optimization/spotdesirability/issues/30)
+* Merge pull request #32 from sequential-parameter-optimization/dependabot/uv/pygments-2.20.0 ([401b0ce](https://github.com/sequential-parameter-optimization/spotdesirability/commit/401b0ce)), closes [#32](https://github.com/sequential-parameter-optimization/spotdesirability/issues/32)
+* fix: compressor data and qquartodoc (with README) ([7a4e661](https://github.com/sequential-parameter-optimization/spotdesirability/commit/7a4e661))
+* chore(deps-dev): update uv-build requirement in the python-deps group ([b0cf6a8](https://github.com/sequential-parameter-optimization/spotdesirability/commit/b0cf6a8))
+* chore(deps): bump authlib from 1.6.8 to 1.6.9 ([266e37c](https://github.com/sequential-parameter-optimization/spotdesirability/commit/266e37c))
+* chore(deps): bump cryptography from 46.0.5 to 46.0.6 ([ce97b7c](https://github.com/sequential-parameter-optimization/spotdesirability/commit/ce97b7c))
+* chore(deps): bump nltk from 3.9.3 to 3.9.4 ([663cc10](https://github.com/sequential-parameter-optimization/spotdesirability/commit/663cc10))
+* chore(deps): bump pygments from 2.19.2 to 2.20.0 ([9e8ff43](https://github.com/sequential-parameter-optimization/spotdesirability/commit/9e8ff43))
+* chore(deps): bump requests from 2.32.5 to 2.33.0 ([4eb6f40](https://github.com/sequential-parameter-optimization/spotdesirability/commit/4eb6f40))
+* chore(deps): bump the actions group across 1 directory with 5 updates ([68c0ae1](https://github.com/sequential-parameter-optimization/spotdesirability/commit/68c0ae1))
+
 ## <small>0.1.1 (2026-03-30)</small>
 
 * Merge branch 'main' into develop ([28fd17d](https://github.com/sequential-parameter-optimization/spotdesirability/commit/28fd17d))
