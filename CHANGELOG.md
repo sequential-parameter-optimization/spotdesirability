@@ -1,3 +1,9 @@
+## <small>0.1.1-rc.1 (2026-03-30)</small>
+
+* Merge branch 'main' into develop ([28fd17d](https://github.com/sequential-parameter-optimization/spotdesirability/commit/28fd17d))
+* chore(release): 0.1.0-rc.2 [skip ci] ([704f840](https://github.com/sequential-parameter-optimization/spotdesirability/commit/704f840))
+* fix: reuse compliance ([afa3754](https://github.com/sequential-parameter-optimization/spotdesirability/commit/afa3754))
+
 ## 0.1.0-rc.2 (2026-03-30)
 
 * fix: reuse compliance ([afa3754](https://github.com/sequential-parameter-optimization/spotdesirability/commit/afa3754))
