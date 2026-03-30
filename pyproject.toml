@@ -1,10 +1,10 @@
 [build-system]
-requires = ["uv_build>=0.9.18,<0.11.0"]
+requires = ["uv_build>=0.9.18,<0.12.0"]
 build-backend = "uv_build"
 
 [project]
 name = "spotdesirability"
-version = "0.1.1rc1"
+version = "0.1.1"
 authors = [
   { name="T. Bartz-Beielstein", email="tbb@bartzundbartz.de" }
 ]
