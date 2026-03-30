@@ -558,7 +558,7 @@
     "href": "docs/reference/data_utils.html",
     "title": "data_utils",
     "section": "",
-    "text": "data_utils\n\n\n\n\n\nName\nDescription\n\n\n\n\nget_data_folder_path\nReturns the absolute path to the data folder located in the package.",
+    "text": "data_utils\n\n\n\n\n\nName\nDescription\n\n\n\n\nget_data_folder_path\nReturns the absolute path to the data folder located in the package.\n\n\nload_compressor_data\nLoads the normalized compressor datasets X and Z.",
     "crumbs": [
       "API Reference",
       "Data Utilities",
@@ -570,7 +570,7 @@
     "href": "docs/reference/data_utils.html#functions",
     "title": "data_utils",
     "section": "",
-    "text": "Name\nDescription\n\n\n\n\nget_data_folder_path\nReturns the absolute path to the data folder located in the package.",
+    "text": "Name\nDescription\n\n\n\n\nget_data_folder_path\nReturns the absolute path to the data folder located in the package.\n\n\nload_compressor_data\nLoads the normalized compressor datasets X and Z.",
     "crumbs": [
       "API Reference",
       "Data Utilities",
