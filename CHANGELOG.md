@@ -1,3 +1,16 @@
+## <small>0.1.1-rc.1 (2026-03-30)</small>
+
+* Merge branch 'main' into develop ([28fd17d](https://github.com/sequential-parameter-optimization/spotdesirability/commit/28fd17d))
+* chore(release): 0.1.0-rc.2 [skip ci] ([704f840](https://github.com/sequential-parameter-optimization/spotdesirability/commit/704f840))
+* fix: reuse compliance ([afa3754](https://github.com/sequential-parameter-optimization/spotdesirability/commit/afa3754))
+
+## 0.1.0-rc.2 (2026-03-30)
+
+* fix: reuse compliance ([afa3754](https://github.com/sequential-parameter-optimization/spotdesirability/commit/afa3754))
+* Merge branch 'main' into develop ([f1ba590](https://github.com/sequential-parameter-optimization/spotdesirability/commit/f1ba590))
+* Merge pull request #19 from sequential-parameter-optimization/develop ([3ea8e0f](https://github.com/sequential-parameter-optimization/spotdesirability/commit/3ea8e0f)), closes [#19](https://github.com/sequential-parameter-optimization/spotdesirability/issues/19)
+* Merge pull request #20 from sequential-parameter-optimization/develop ([1cb9963](https://github.com/sequential-parameter-optimization/spotdesirability/commit/1cb9963)), closes [#20](https://github.com/sequential-parameter-optimization/spotdesirability/issues/20)
+* chore(release): 0.0.27 [skip ci] ([cef5110](https://github.com/sequential-parameter-optimization/spotdesirability/commit/cef5110))
 ## 0.1.0 (2026-03-30)
 
 * Merge branch 'main' into develop ([f1ba590](https://github.com/sequential-parameter-optimization/spotdesirability/commit/f1ba590))

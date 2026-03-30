@@ -4,7 +4,7 @@ SPDX-PackageSupplier = "bartzbeielstein <32470350+bartzbeielstein@users.noreply.
 SPDX-PackageDownloadLocation = "https://github.com/sequential-parameter-optimization/spotdesirability"
 
 [[annotations]]
-path = [".gitignore", ".releaserc.json", ".vscode/settings.json", "makefile.sh", "pyproject.toml", "uv.lock", "tox.ini", "_quarto.yml"]
+path = [".gitignore", ".releaserc.json", ".vscode/settings.json", "makefile.sh", "pyproject.toml", "uv.lock", "tox.ini", "_quarto.yml", "MANIFEST.in"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2026 bartzbeielstein"
 SPDX-License-Identifier = "GPL-2.0-or-later"
