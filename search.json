@@ -456,26 +456,93 @@
     ]
   },
   {
-    "objectID": "docs/reference/data_utils.get_data_folder_path.html",
-    "href": "docs/reference/data_utils.get_data_folder_path.html",
-    "title": "data_utils.get_data_folder_path",
+    "objectID": "docs/reference/data_utils.load_compressor_data.html",
+    "href": "docs/reference/data_utils.load_compressor_data.html",
+    "title": "data_utils.load_compressor_data",
     "section": "",
-    "text": "data_utils.get_data_folder_path\ndata_utils.get_data_folder_path()\nReturns the absolute path to the data folder located in the package.",
+    "text": "data_utils.load_compressor_data()\nLoads the normalized compressor datasets X and Z.\nThis function reads df_x_normalized.csv and df_z_normalized.csv from the spotdesirability.datasets module and returns them as pandas DataFrames. The datasets represent the values of \\(X\\) and \\(Z\\) respectively.",
     "crumbs": [
       "API Reference",
       "Data Utilities",
-      "get_data_folder_path"
+      "load_compressor_data"
     ]
   },
   {
-    "objectID": "download.html",
-    "href": "download.html",
-    "title": "Install spotdesirability",
+    "objectID": "docs/reference/data_utils.load_compressor_data.html#returns",
+    "href": "docs/reference/data_utils.load_compressor_data.html#returns",
+    "title": "data_utils.load_compressor_data",
+    "section": "Returns",
+    "text": "Returns\n\n\n\nName\nType\nDescription\n\n\n\n\n\npd.DataFrame\nTuple[pd.DataFrame, pd.DataFrame]: A tuple containing the datasets X and Z\n\n\n\npd.DataFrame\nas pandas DataFrames respectively.",
+    "crumbs": [
+      "API Reference",
+      "Data Utilities",
+      "load_compressor_data"
+    ]
+  },
+  {
+    "objectID": "docs/reference/data_utils.load_compressor_data.html#raises",
+    "href": "docs/reference/data_utils.load_compressor_data.html#raises",
+    "title": "data_utils.load_compressor_data",
+    "section": "Raises",
+    "text": "Raises\n\n\n\nName\nType\nDescription\n\n\n\n\n\nFileNotFoundError\nIf the datasets cannot be found.\n\n\n\nRuntimeError\nIf there is an issue reading the CSV data.",
+    "crumbs": [
+      "API Reference",
+      "Data Utilities",
+      "load_compressor_data"
+    ]
+  },
+  {
+    "objectID": "docs/reference/data_utils.load_compressor_data.html#example",
+    "href": "docs/reference/data_utils.load_compressor_data.html#example",
+    "title": "data_utils.load_compressor_data",
+    "section": "Example",
+    "text": "Example\n\nimport spotdesirability.data_utils as du\n\ndf_x, df_z = du.load_compressor_data()",
+    "crumbs": [
+      "API Reference",
+      "Data Utilities",
+      "load_compressor_data"
+    ]
+  },
+  {
+    "objectID": "examples.html",
+    "href": "examples.html",
+    "title": "SPOT Examples",
     "section": "",
-    "text": "Install spotdesirability\npip install spotdesirability",
+    "text": "SPOT Examples\nExamples can be found in the spotoptim Cookbook, e.g., Sequential Parameter Optimization Cookbook.",
     "crumbs": [
       "Getting Started",
-      "Install spotdesirability"
+      "SPOT Examples"
+    ]
+  },
+  {
+    "objectID": "cookbook.html",
+    "href": "cookbook.html",
+    "title": "Sequential Parameter Optimization Cookbook",
+    "section": "",
+    "text": "Sequential Parameter Optimization Cookbook\nThe following is a cookbook of hyperparameter tuning recipes. It is not meant to be exhaustive, but instead act as a place to capture a number of the common patterns used in hyperparameter tuning.\nSequential Parameter Optimization Cookbook",
+    "crumbs": [
+      "Guides",
+      "Sequential Parameter Optimization Cookbook"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "spotdesirability",
+    "section": "",
+    "text": "spotdesirability implements the Derringer & Suich (1980) desirability framework, providing a flexible set of tools for multi-objective optimization through desirability functions. spotdesirability is a Python implementation of the R package desirability, which provides S3 classes for multivariate optimization using the desirability function by Derringer and Suich (1980). The R desirability package is maintained and developed by Max Kuhn. It is is available on CRAN: https://CRAN.R-project.org/package=desirability, DOI: https://doi.org/10.32614/CRAN.package.desirability\n\n\nThe conversion_pred function implements a second-order Response Surface Methodology (RSM) model. It predicts percent conversion based on three coded factors: x1 (Reaction Time), x2 (Temperature), and x3 (Amount of Catalyst).\nThe model equation is: y = 81.09 + 1.03x1 + 4.04x2 + 6.20x3 - 1.84x1^2 + 2.94x2^2 - 5.19x3^2 + 2.22x1x2 + 11.38x1x3 - 3.88x2x3\n\n\nThe following living code block demonstrates how to use the function with numpy arrays:\n\nimport numpy as np\nfrom spotdesirability.functions.rsm import conversion_pred\n\n# Define input parameters [x1, x2, x3]\nx = np.array([1.0, 0.5, -0.2])\n\n# Calculate predicted conversion\npred = conversion_pred(x)\n\nprint(f\"Predicted conversion for {x}: {pred:.2f}%\")\n\nPredicted conversion for [ 1.   0.5 -0.2]: 80.81%\n\n\n\nDocumentation: See the Sequential Parameter Optimization Cookbook for a guide on using desirability functions with scikit-learn, PyTorch, and more.\nAPI Reference: Detailed documentation of all classes and functions can be found in the Reference section.\nNews: For updates related to this project and other SPOT tools, visit SPOTSeven.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#python-implementation-of-desirability-functions-for-multivariate-optimisation",
+    "href": "index.html#python-implementation-of-desirability-functions-for-multivariate-optimisation",
+    "title": "spotdesirability",
+    "section": "",
+    "text": "spotdesirability implements the Derringer & Suich (1980) desirability framework, providing a flexible set of tools for multi-objective optimization through desirability functions. spotdesirability is a Python implementation of the R package desirability, which provides S3 classes for multivariate optimization using the desirability function by Derringer and Suich (1980). The R desirability package is maintained and developed by Max Kuhn. It is is available on CRAN: https://CRAN.R-project.org/package=desirability, DOI: https://doi.org/10.32614/CRAN.package.desirability\n\n\nThe conversion_pred function implements a second-order Response Surface Methodology (RSM) model. It predicts percent conversion based on three coded factors: x1 (Reaction Time), x2 (Temperature), and x3 (Amount of Catalyst).\nThe model equation is: y = 81.09 + 1.03x1 + 4.04x2 + 6.20x3 - 1.84x1^2 + 2.94x2^2 - 5.19x3^2 + 2.22x1x2 + 11.38x1x3 - 3.88x2x3\n\n\nThe following living code block demonstrates how to use the function with numpy arrays:\n\nimport numpy as np\nfrom spotdesirability.functions.rsm import conversion_pred\n\n# Define input parameters [x1, x2, x3]\nx = np.array([1.0, 0.5, -0.2])\n\n# Calculate predicted conversion\npred = conversion_pred(x)\n\nprint(f\"Predicted conversion for {x}: {pred:.2f}%\")\n\nPredicted conversion for [ 1.   0.5 -0.2]: 80.81%\n\n\n\nDocumentation: See the Sequential Parameter Optimization Cookbook for a guide on using desirability functions with scikit-learn, PyTorch, and more.\nAPI Reference: Detailed documentation of all classes and functions can be found in the Reference section.\nNews: For updates related to this project and other SPOT tools, visit SPOTSeven.",
+    "crumbs": [
+      "Home"
     ]
   },
   {
@@ -512,45 +579,26 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "spotdesirability",
+    "objectID": "download.html",
+    "href": "download.html",
+    "title": "Install spotdesirability",
     "section": "",
-    "text": "spotdesirability implements the Derringer & Suich (1980) desirability framework, providing a flexible set of tools for multi-objective optimization through desirability functions. spotdesirability is a Python implementation of the R package desirability, which provides S3 classes for multivariate optimization using the desirability function by Derringer and Suich (1980). The R desirability package is maintained and developed by Max Kuhn. It is is available on CRAN: https://CRAN.R-project.org/package=desirability, DOI: https://doi.org/10.32614/CRAN.package.desirability\n\n\nThe conversion_pred function implements a second-order Response Surface Methodology (RSM) model. It predicts percent conversion based on three coded factors: x1 (Reaction Time), x2 (Temperature), and x3 (Amount of Catalyst).\nThe model equation is: y = 81.09 + 1.03x1 + 4.04x2 + 6.20x3 - 1.84x1^2 + 2.94x2^2 - 5.19x3^2 + 2.22x1x2 + 11.38x1x3 - 3.88x2x3\n\n\nThe following living code block demonstrates how to use the function with numpy arrays:\n\nimport numpy as np\nfrom spotdesirability.functions.rsm import conversion_pred\n\n# Define input parameters [x1, x2, x3]\nx = np.array([1.0, 0.5, -0.2])\n\n# Calculate predicted conversion\npred = conversion_pred(x)\n\nprint(f\"Predicted conversion for {x}: {pred:.2f}%\")\n\nPredicted conversion for [ 1.   0.5 -0.2]: 80.81%\n\n\n\nDocumentation: See the Sequential Parameter Optimization Cookbook for a guide on using desirability functions with scikit-learn, PyTorch, and more.\nAPI Reference: Detailed documentation of all classes and functions can be found in the Reference section.\nNews: For updates related to this project and other SPOT tools, visit SPOTSeven.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#python-implementation-of-desirability-functions-for-multivariate-optimisation",
-    "href": "index.html#python-implementation-of-desirability-functions-for-multivariate-optimisation",
-    "title": "spotdesirability",
-    "section": "",
-    "text": "spotdesirability implements the Derringer & Suich (1980) desirability framework, providing a flexible set of tools for multi-objective optimization through desirability functions. spotdesirability is a Python implementation of the R package desirability, which provides S3 classes for multivariate optimization using the desirability function by Derringer and Suich (1980). The R desirability package is maintained and developed by Max Kuhn. It is is available on CRAN: https://CRAN.R-project.org/package=desirability, DOI: https://doi.org/10.32614/CRAN.package.desirability\n\n\nThe conversion_pred function implements a second-order Response Surface Methodology (RSM) model. It predicts percent conversion based on three coded factors: x1 (Reaction Time), x2 (Temperature), and x3 (Amount of Catalyst).\nThe model equation is: y = 81.09 + 1.03x1 + 4.04x2 + 6.20x3 - 1.84x1^2 + 2.94x2^2 - 5.19x3^2 + 2.22x1x2 + 11.38x1x3 - 3.88x2x3\n\n\nThe following living code block demonstrates how to use the function with numpy arrays:\n\nimport numpy as np\nfrom spotdesirability.functions.rsm import conversion_pred\n\n# Define input parameters [x1, x2, x3]\nx = np.array([1.0, 0.5, -0.2])\n\n# Calculate predicted conversion\npred = conversion_pred(x)\n\nprint(f\"Predicted conversion for {x}: {pred:.2f}%\")\n\nPredicted conversion for [ 1.   0.5 -0.2]: 80.81%\n\n\n\nDocumentation: See the Sequential Parameter Optimization Cookbook for a guide on using desirability functions with scikit-learn, PyTorch, and more.\nAPI Reference: Detailed documentation of all classes and functions can be found in the Reference section.\nNews: For updates related to this project and other SPOT tools, visit SPOTSeven.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "cookbook.html",
-    "href": "cookbook.html",
-    "title": "Sequential Parameter Optimization Cookbook",
-    "section": "",
-    "text": "Sequential Parameter Optimization Cookbook\nThe following is a cookbook of hyperparameter tuning recipes. It is not meant to be exhaustive, but instead act as a place to capture a number of the common patterns used in hyperparameter tuning.\nSequential Parameter Optimization Cookbook",
-    "crumbs": [
-      "Guides",
-      "Sequential Parameter Optimization Cookbook"
-    ]
-  },
-  {
-    "objectID": "examples.html",
-    "href": "examples.html",
-    "title": "SPOT Examples",
-    "section": "",
-    "text": "SPOT Examples\nExamples can be found in the spotoptim Cookbook, e.g., Sequential Parameter Optimization Cookbook.",
+    "text": "Install spotdesirability\npip install spotdesirability",
     "crumbs": [
       "Getting Started",
-      "SPOT Examples"
+      "Install spotdesirability"
+    ]
+  },
+  {
+    "objectID": "docs/reference/data_utils.get_data_folder_path.html",
+    "href": "docs/reference/data_utils.get_data_folder_path.html",
+    "title": "data_utils.get_data_folder_path",
+    "section": "",
+    "text": "data_utils.get_data_folder_path\ndata_utils.get_data_folder_path()\nReturns the absolute path to the data folder located in the package.",
+    "crumbs": [
+      "API Reference",
+      "Data Utilities",
+      "get_data_folder_path"
     ]
   },
   {
@@ -654,7 +702,7 @@
     "href": "docs/reference/index.html",
     "title": "Function reference",
     "section": "",
-    "text": "utils\nUtils module for spotdesirability.\n\n\nutils.desirability\n\n\n\nutils.desirability.DesirabilityBase\nBase class for all desirability functions.\n\n\nutils.desirability.DMax\nImplements a desirability function for maximization.\n\n\nutils.desirability.DMin\nImplements a desirability function for minimization.\n\n\nutils.desirability.DTarget\nImplements a desirability function for target optimization.\n\n\nutils.desirability.DArb\nImplements an arbitrary desirability function.\n\n\nutils.desirability.DBox\nImplements a box-like desirability function.\n\n\nutils.desirability.DCategorical\nImplements a desirability function for categorical inputs.\n\n\nutils.desirability.DOverall\nCombines multiple desirability objects into an overall desirability function.\n\n\n\n\n\n\n\n\n\nfunctions\nFunctions module for spotdesirability.\n\n\nfunctions.rsm\n\n\n\nfunctions.rsm.conversion_pred\nPredicts the percent conversion based on the input vector x.\n\n\nfunctions.rsm.activity_pred\nPredicts the thermal activity based on the input vector x.\n\n\nfunctions.rsm.rsm_opt\nOptimization function to calculate desirability.\n\n\n\n\n\n\n\n\n\nplot\nPlot module for spotdesirability.\n\n\nplot.ccd\n\n\n\nplot.ccd.plotCCD\nPlots a Central Composite Design (CCD) for k=3 with customizable viewpoint.\n\n\n\n\n\n\n\n\n\ndata_utils\n\n\n\ndata_utils.get_data_folder_path\nReturns the absolute path to the data folder located in the package.",
+    "text": "utils\nUtils module for spotdesirability.\n\n\nutils.desirability\n\n\n\nutils.desirability.DesirabilityBase\nBase class for all desirability functions.\n\n\nutils.desirability.DMax\nImplements a desirability function for maximization.\n\n\nutils.desirability.DMin\nImplements a desirability function for minimization.\n\n\nutils.desirability.DTarget\nImplements a desirability function for target optimization.\n\n\nutils.desirability.DArb\nImplements an arbitrary desirability function.\n\n\nutils.desirability.DBox\nImplements a box-like desirability function.\n\n\nutils.desirability.DCategorical\nImplements a desirability function for categorical inputs.\n\n\nutils.desirability.DOverall\nCombines multiple desirability objects into an overall desirability function.\n\n\n\n\n\n\n\n\n\nfunctions\nFunctions module for spotdesirability.\n\n\nfunctions.rsm\n\n\n\nfunctions.rsm.conversion_pred\nPredicts the percent conversion based on the input vector x.\n\n\nfunctions.rsm.activity_pred\nPredicts the thermal activity based on the input vector x.\n\n\nfunctions.rsm.rsm_opt\nOptimization function to calculate desirability.\n\n\n\n\n\n\n\n\n\nplot\nPlot module for spotdesirability.\n\n\nplot.ccd\n\n\n\nplot.ccd.plotCCD\nPlots a Central Composite Design (CCD) for k=3 with customizable viewpoint.\n\n\n\n\n\n\n\n\n\ndata_utils\n\n\n\ndata_utils.get_data_folder_path\nReturns the absolute path to the data folder located in the package.\n\n\ndata_utils.load_compressor_data\nLoads the normalized compressor datasets X and Z.",
     "crumbs": [
       "API Reference",
       "Overview"
@@ -698,7 +746,7 @@
     "href": "docs/reference/index.html#data-utilities",
     "title": "Function reference",
     "section": "",
-    "text": "data_utils\n\n\n\ndata_utils.get_data_folder_path\nReturns the absolute path to the data folder located in the package.",
+    "text": "data_utils\n\n\n\ndata_utils.get_data_folder_path\nReturns the absolute path to the data folder located in the package.\n\n\ndata_utils.load_compressor_data\nLoads the normalized compressor datasets X and Z.",
     "crumbs": [
       "API Reference",
       "Overview"
