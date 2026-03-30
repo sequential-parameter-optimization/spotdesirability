@@ -5,6 +5,16 @@
 * Merge pull request #19 from sequential-parameter-optimization/develop ([3ea8e0f](https://github.com/sequential-parameter-optimization/spotdesirability/commit/3ea8e0f)), closes [#19](https://github.com/sequential-parameter-optimization/spotdesirability/issues/19)
 * Merge pull request #20 from sequential-parameter-optimization/develop ([1cb9963](https://github.com/sequential-parameter-optimization/spotdesirability/commit/1cb9963)), closes [#20](https://github.com/sequential-parameter-optimization/spotdesirability/issues/20)
 * chore(release): 0.0.27 [skip ci] ([cef5110](https://github.com/sequential-parameter-optimization/spotdesirability/commit/cef5110))
+## 0.1.0 (2026-03-30)
+
+* Merge branch 'main' into develop ([f1ba590](https://github.com/sequential-parameter-optimization/spotdesirability/commit/f1ba590))
+* Merge pull request #20 from sequential-parameter-optimization/develop ([1cb9963](https://github.com/sequential-parameter-optimization/spotdesirability/commit/1cb9963)), closes [#20](https://github.com/sequential-parameter-optimization/spotdesirability/issues/20)
+* Merge pull request #29 from sequential-parameter-optimization/develop ([aadbaa6](https://github.com/sequential-parameter-optimization/spotdesirability/commit/aadbaa6)), closes [#29](https://github.com/sequential-parameter-optimization/spotdesirability/issues/29)
+* Update uv.lock ([815d778](https://github.com/sequential-parameter-optimization/spotdesirability/commit/815d778))
+* chore(release): 0.1.0-rc.1 [skip ci] ([deacdec](https://github.com/sequential-parameter-optimization/spotdesirability/commit/deacdec))
+* feat: compressor data ([1685d7d](https://github.com/sequential-parameter-optimization/spotdesirability/commit/1685d7d))
+* ci: install spotdesirability jupyter kernel using --sys-prefix instead of --user ([d5139de](https://github.com/sequential-parameter-optimization/spotdesirability/commit/d5139de))
+* ci: remove explicit jupyter kernel dependencies to fix CI kernel resolution ([18402c5](https://github.com/sequential-parameter-optimization/spotdesirability/commit/18402c5))
 
 ## 0.1.0-rc.1 (2026-03-30)
 
