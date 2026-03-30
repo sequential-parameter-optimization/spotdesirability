@@ -1,3 +1,45 @@
+## <small>0.1.1 (2026-03-30)</small>
+
+* Merge branch 'main' into develop ([28fd17d](https://github.com/sequential-parameter-optimization/spotdesirability/commit/28fd17d))
+* Merge pull request #22 from sequential-parameter-optimization/dependabot/uv/tornado-6.5.5 ([a2b10c5](https://github.com/sequential-parameter-optimization/spotdesirability/commit/a2b10c5)), closes [#22](https://github.com/sequential-parameter-optimization/spotdesirability/issues/22)
+* Merge pull request #23 from sequential-parameter-optimization/dependabot/uv/black-26.3.1 ([e4dc208](https://github.com/sequential-parameter-optimization/spotdesirability/commit/e4dc208)), closes [#23](https://github.com/sequential-parameter-optimization/spotdesirability/issues/23)
+* Merge pull request #31 from sequential-parameter-optimization/develop ([f3f10d3](https://github.com/sequential-parameter-optimization/spotdesirability/commit/f3f10d3)), closes [#31](https://github.com/sequential-parameter-optimization/spotdesirability/issues/31)
+* chore(deps-dev): bump black from 26.1.0 to 26.3.1 ([9063a30](https://github.com/sequential-parameter-optimization/spotdesirability/commit/9063a30))
+* chore(deps): bump tornado from 6.5.4 to 6.5.5 ([dea1df6](https://github.com/sequential-parameter-optimization/spotdesirability/commit/dea1df6))
+* chore(release): 0.1.0-rc.2 [skip ci] ([704f840](https://github.com/sequential-parameter-optimization/spotdesirability/commit/704f840))
+* chore(release): 0.1.1-rc.1 [skip ci] ([633040b](https://github.com/sequential-parameter-optimization/spotdesirability/commit/633040b))
+* fix: reuse compliance ([afa3754](https://github.com/sequential-parameter-optimization/spotdesirability/commit/afa3754))
+
+## <small>0.1.1-rc.1 (2026-03-30)</small>
+
+* Merge branch 'main' into develop ([28fd17d](https://github.com/sequential-parameter-optimization/spotdesirability/commit/28fd17d))
+* chore(release): 0.1.0-rc.2 [skip ci] ([704f840](https://github.com/sequential-parameter-optimization/spotdesirability/commit/704f840))
+* fix: reuse compliance ([afa3754](https://github.com/sequential-parameter-optimization/spotdesirability/commit/afa3754))
+
+## 0.1.0-rc.2 (2026-03-30)
+
+* fix: reuse compliance ([afa3754](https://github.com/sequential-parameter-optimization/spotdesirability/commit/afa3754))
+* Merge branch 'main' into develop ([f1ba590](https://github.com/sequential-parameter-optimization/spotdesirability/commit/f1ba590))
+* Merge pull request #19 from sequential-parameter-optimization/develop ([3ea8e0f](https://github.com/sequential-parameter-optimization/spotdesirability/commit/3ea8e0f)), closes [#19](https://github.com/sequential-parameter-optimization/spotdesirability/issues/19)
+* Merge pull request #20 from sequential-parameter-optimization/develop ([1cb9963](https://github.com/sequential-parameter-optimization/spotdesirability/commit/1cb9963)), closes [#20](https://github.com/sequential-parameter-optimization/spotdesirability/issues/20)
+* chore(release): 0.0.27 [skip ci] ([cef5110](https://github.com/sequential-parameter-optimization/spotdesirability/commit/cef5110))
+## 0.1.0 (2026-03-30)
+
+* Merge branch 'main' into develop ([f1ba590](https://github.com/sequential-parameter-optimization/spotdesirability/commit/f1ba590))
+* Merge pull request #20 from sequential-parameter-optimization/develop ([1cb9963](https://github.com/sequential-parameter-optimization/spotdesirability/commit/1cb9963)), closes [#20](https://github.com/sequential-parameter-optimization/spotdesirability/issues/20)
+* Merge pull request #29 from sequential-parameter-optimization/develop ([aadbaa6](https://github.com/sequential-parameter-optimization/spotdesirability/commit/aadbaa6)), closes [#29](https://github.com/sequential-parameter-optimization/spotdesirability/issues/29)
+* Update uv.lock ([815d778](https://github.com/sequential-parameter-optimization/spotdesirability/commit/815d778))
+* chore(release): 0.1.0-rc.1 [skip ci] ([deacdec](https://github.com/sequential-parameter-optimization/spotdesirability/commit/deacdec))
+* feat: compressor data ([1685d7d](https://github.com/sequential-parameter-optimization/spotdesirability/commit/1685d7d))
+* ci: install spotdesirability jupyter kernel using --sys-prefix instead of --user ([d5139de](https://github.com/sequential-parameter-optimization/spotdesirability/commit/d5139de))
+* ci: remove explicit jupyter kernel dependencies to fix CI kernel resolution ([18402c5](https://github.com/sequential-parameter-optimization/spotdesirability/commit/18402c5))
+
+## 0.1.0-rc.1 (2026-03-30)
+
+* feat: compressor data ([1685d7d](https://github.com/sequential-parameter-optimization/spotdesirability/commit/1685d7d))
+* ci: install spotdesirability jupyter kernel using --sys-prefix instead of --user ([d5139de](https://github.com/sequential-parameter-optimization/spotdesirability/commit/d5139de))
+* ci: remove explicit jupyter kernel dependencies to fix CI kernel resolution ([18402c5](https://github.com/sequential-parameter-optimization/spotdesirability/commit/18402c5))
+* Update uv.lock ([815d778](https://github.com/sequential-parameter-optimization/spotdesirability/commit/815d778))
 ## <small>0.0.27 (2026-02-28)</small>
 
 * Merge branch 'main' into develop ([1b23893](https://github.com/sequential-parameter-optimization/spotdesirability/commit/1b23893))
