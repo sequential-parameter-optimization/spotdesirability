@@ -13,6 +13,11 @@ on:
 # Principle of Least Privilege: Base permissions are read-only
 permissions: read-all
 
+# Cancel stale runs when a new push arrives on the same branch or PR.
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   reuse:
     name: REUSE Compliance

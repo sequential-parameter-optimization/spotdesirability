@@ -9,3 +9,4 @@
 | Name | Description |
 | --- | --- |
 | [](`~spotdesirability.data_utils.get_data_folder_path`) | Returns the absolute path to the data folder located in the package. |
+| [](`~spotdesirability.data_utils.load_compressor_data`) | Loads the normalized compressor datasets X and Z. |

@@ -132,6 +132,8 @@ website:
                 file: docs/reference/data_utils.qmd
               - text: "get_data_folder_path"
                 file: docs/reference/data_utils.get_data_folder_path.qmd
+              - text: "load_compressor_data"
+                file: docs/reference/data_utils.load_compressor_data.qmd
 
   # ── Page footer ───────────────────────────────────────────────────────────
   page-footer:
@@ -208,3 +210,4 @@ quartodoc:
       contents:
         - data_utils
         - data_utils.get_data_folder_path
+        - data_utils.load_compressor_data

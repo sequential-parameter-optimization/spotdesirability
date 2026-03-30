@@ -30,7 +30,7 @@ def load_compressor_data() -> Tuple[pd.DataFrame, pd.DataFrame]:
         RuntimeError: If there is an issue reading the CSV data.
 
     Example:
-        ```python
+        ```{python}
         import spotdesirability.data_utils as du
 
         df_x, df_z = du.load_compressor_data()

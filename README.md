@@ -70,7 +70,52 @@ Alternatively, you can clone the repository and install it manually.
 
 ## Documentation
 
+### Availability
+
 The documentation is available at: [https://sequential-parameter-optimization.github.io/spotdesirability/](https://sequential-parameter-optimization.github.io/spotdesirability/)
+
+### Local Build
+
+It can be built locally using `quartodoc`  als follows:
+
+```bash
+# Step 1 — Regenerate the API reference .qmd stubs from docstrings
+uv run python docs/quartodoc_build.py
+uv run quartodoc interlinks
+
+# Step 2 — Render the full site
+uv run quarto render --no-cache
+
+# Output lands in _site/index.html
+```
+
+### Add New Functions, Classes, or Methods
+
+
+1. Write the function with a Google-style docstring
+2. Add it to _quarto.yml → quartodoc.sections[].contents
+3. Add it to _quarto.yml → website.sidebar[].contents
+4. Run (as above): uv run python docs/quartodoc_build.py && uv run quartodoc interlinks
+5. Run (as above): uv run quarto render --no-cache
+
+Here is an example how to modify `_quarto.yml`:
+
+```yaml
+# quartodoc section (stub generation)
+- title: "Data Utilities"
+  contents:
+    - data_utils
+    - data_utils.get_data_folder_path
+    - data_utils.load_compressor_data   # ← added
+
+# sidebar nav
+- section: "Data Utilities"
+  contents:
+    - text: "load_compressor_data"      # ← added
+      file: docs/reference/data_utils.load_compressor_data.qmd
+```
+
+Note: The `file` entry matches the path in the `src` folder, where the Python code is located. Only add `.qmd` to the file name and replace the `/` with `.`. Then add `docs/reference/` in front of the file name.
 
 
 ## Citation
