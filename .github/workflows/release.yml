@@ -9,6 +9,11 @@ on:
 # Principle of Least Privilege: Base permissions are read-only
 permissions: read-all
 
+# Serialize releases per-branch; never cancel an in-progress release.
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   release:
     name: Create Release
@@ -129,3 +134,74 @@ jobs:
               sleep 10
             fi
           done
+
+  # ---------------------------------------------------------------------------
+  # Back-merge: keep develop in sync after every main release
+  # ---------------------------------------------------------------------------
+  # Why: semantic-release commits CHANGELOG.md + pyproject.toml back to main.
+  # Without this job, develop diverges and the next develop→main PR conflicts.
+  # Strategy: use the built-in GITHUB_TOKEN (no extra secret needed) to open a
+  # PR via the pre-installed `gh` CLI. If branch-protection requires a review
+  # the PR waits; otherwise it can be auto-merged by the repo owner. The step
+  # is idempotent: if main is already merged into develop, or a PR already
+  # exists, it exits gracefully.
+  back-merge:
+    name: Back-merge main → develop
+    runs-on: ubuntu-latest
+    needs: release
+    # Only needed after production releases on main, not for rc on develop.
+    if: github.ref == 'refs/heads/main'
+    permissions:
+      contents: write       # required to push/read branches
+      pull-requests: write  # required to open the PR
+
+    steps:
+      - name: Checkout (full history)
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
+        with:
+          fetch-depth: 0
+          # Use the default GITHUB_TOKEN; gh CLI picks it up via GH_TOKEN below.
+
+      - name: Check whether a back-merge is needed
+        id: sync-check
+        run: |
+          git fetch origin develop
+          AHEAD=$(git rev-list --count origin/develop..HEAD)
+          echo "main is ${AHEAD} commit(s) ahead of develop"
+          echo "needed=${AHEAD}" >> "$GITHUB_OUTPUT"
+
+      - name: Open back-merge PR (main → develop)
+        if: steps.sync-check.outputs.needed != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VERSION=$(grep '^version = ' pyproject.toml | sed 's/version = "\(.*\)"/\1/')
+
+          # Idempotency: skip if an open PR already targets develop from main.
+          EXISTING=$(gh pr list \
+            --base develop --head main \
+            --state open \
+            --json number \
+            --jq '.[0].number' 2>/dev/null || true)
+
+          if [ -n "$EXISTING" ]; then
+            echo "Back-merge PR #${EXISTING} already open. Nothing to do."
+            exit 0
+          fi
+
+          gh pr create \
+            --base develop \
+            --head main \
+            --title "chore: back-merge release ${VERSION} (main → develop)" \
+            --body "$(cat <<'EOF'
+          Automated back-merge created by the Release workflow.
+
+          Release ${VERSION} committed updated files (CHANGELOG.md, pyproject.toml)
+          back to main. This PR syncs those changes into develop so the next
+          develop → main pull request has no conflicts.
+
+          Merge this PR as soon as convenient.
+          EOF
+          )"
+
+          echo "✓ Back-merge PR created for release ${VERSION}"

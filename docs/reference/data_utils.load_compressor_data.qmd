@@ -1,0 +1,33 @@
+# data_utils.load_compressor_data { #spotdesirability.data_utils.load_compressor_data }
+
+```python
+data_utils.load_compressor_data()
+```
+
+Loads the normalized compressor datasets X and Z.
+
+This function reads df_x_normalized.csv and df_z_normalized.csv from the
+spotdesirability.datasets module and returns them as pandas DataFrames.
+The datasets represent the values of $X$ and $Z$ respectively.
+
+## Returns {.doc-section .doc-section-returns}
+
+| Name   | Type                                           | Description                                                                |
+|--------|------------------------------------------------|----------------------------------------------------------------------------|
+|        | [pd](`pandas`).[DataFrame](`pandas.DataFrame`) | Tuple[pd.DataFrame, pd.DataFrame]: A tuple containing the datasets X and Z |
+|        | [pd](`pandas`).[DataFrame](`pandas.DataFrame`) | as pandas DataFrames respectively.                                         |
+
+## Raises {.doc-section .doc-section-raises}
+
+| Name   | Type                                     | Description                                |
+|--------|------------------------------------------|--------------------------------------------|
+|        | [FileNotFoundError](`FileNotFoundError`) | If the datasets cannot be found.           |
+|        | [RuntimeError](`RuntimeError`)           | If there is an issue reading the CSV data. |
+
+## Example {.doc-section .doc-section-example}
+
+```{python}
+import spotdesirability.data_utils as du
+
+df_x, df_z = du.load_compressor_data()
+```

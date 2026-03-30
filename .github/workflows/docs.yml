@@ -19,8 +19,7 @@ name: Documentation
 on:
   push:
     branches:
-      - main
-      - develop
+      - main        # Production docs only; develop pushes are not deployed.
     paths:
       - '**/*.qmd'
       - '_quarto.yml'
@@ -29,6 +28,12 @@ on:
   workflow_dispatch:
 
 permissions: read-all
+
+# Prevent concurrent deployments from overwriting each other on gh-pages.
+# A docs build can take several minutes; let it finish rather than cancel.
+concurrency:
+  group: docs-deploy
+  cancel-in-progress: false
 
 env:
   # ⚠️ Pinned to match production safety standards.
