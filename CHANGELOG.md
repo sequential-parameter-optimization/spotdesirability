@@ -1,3 +1,15 @@
+## <small>0.1.1 (2026-03-30)</small>
+
+* Merge branch 'main' into develop ([28fd17d](https://github.com/sequential-parameter-optimization/spotdesirability/commit/28fd17d))
+* Merge pull request #22 from sequential-parameter-optimization/dependabot/uv/tornado-6.5.5 ([a2b10c5](https://github.com/sequential-parameter-optimization/spotdesirability/commit/a2b10c5)), closes [#22](https://github.com/sequential-parameter-optimization/spotdesirability/issues/22)
+* Merge pull request #23 from sequential-parameter-optimization/dependabot/uv/black-26.3.1 ([e4dc208](https://github.com/sequential-parameter-optimization/spotdesirability/commit/e4dc208)), closes [#23](https://github.com/sequential-parameter-optimization/spotdesirability/issues/23)
+* Merge pull request #31 from sequential-parameter-optimization/develop ([f3f10d3](https://github.com/sequential-parameter-optimization/spotdesirability/commit/f3f10d3)), closes [#31](https://github.com/sequential-parameter-optimization/spotdesirability/issues/31)
+* chore(deps-dev): bump black from 26.1.0 to 26.3.1 ([9063a30](https://github.com/sequential-parameter-optimization/spotdesirability/commit/9063a30))
+* chore(deps): bump tornado from 6.5.4 to 6.5.5 ([dea1df6](https://github.com/sequential-parameter-optimization/spotdesirability/commit/dea1df6))
+* chore(release): 0.1.0-rc.2 [skip ci] ([704f840](https://github.com/sequential-parameter-optimization/spotdesirability/commit/704f840))
+* chore(release): 0.1.1-rc.1 [skip ci] ([633040b](https://github.com/sequential-parameter-optimization/spotdesirability/commit/633040b))
+* fix: reuse compliance ([afa3754](https://github.com/sequential-parameter-optimization/spotdesirability/commit/afa3754))
+
 ## <small>0.1.1-rc.1 (2026-03-30)</small>
 
 * Merge branch 'main' into develop ([28fd17d](https://github.com/sequential-parameter-optimization/spotdesirability/commit/28fd17d))
