@@ -1,3 +1,9 @@
+## 0.1.0-rc.1 (2026-03-30)
+
+* feat: compressor data ([1685d7d](https://github.com/sequential-parameter-optimization/spotdesirability/commit/1685d7d))
+* ci: install spotdesirability jupyter kernel using --sys-prefix instead of --user ([d5139de](https://github.com/sequential-parameter-optimization/spotdesirability/commit/d5139de))
+* ci: remove explicit jupyter kernel dependencies to fix CI kernel resolution ([18402c5](https://github.com/sequential-parameter-optimization/spotdesirability/commit/18402c5))
+* Update uv.lock ([815d778](https://github.com/sequential-parameter-optimization/spotdesirability/commit/815d778))
 ## <small>0.0.27 (2026-02-28)</small>
 
 * Merge branch 'main' into develop ([1b23893](https://github.com/sequential-parameter-optimization/spotdesirability/commit/1b23893))
